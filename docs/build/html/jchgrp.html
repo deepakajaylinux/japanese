@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chgrpコマンド &mdash; kevellja 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="kevellja 1.0.0 documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="index.html">kevellja 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chgrp">
+<h1>chgrpコマンド<a class="headerlink" href="#chgrp" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ファイルとディレクトリは、所有者とグループの両方に属します。グループには、通常、すべてが同じグループに属する、ユーザの集合で構成されています。 3の最初のセットは、読み取り、書き込み、およびファイルの所有者の権限を実行している。</p>
+<p>グループはまた、1ユーザー、ファイルを作成し、通常のユーザーで構成することができます。 rootユーザーを含むシステム、上の各ユーザーは、そのユーザーによるアクセスを確保し、彼または彼女が唯一のメンバーである彼または彼女自身のグループが割り当てられます。 3の第二セットは、読み取り、書き込み、およびファイルのためのユーザー·グループに属している人のための実行権限をです。</p>
+<p>rootユーザー、システム管理者は、また、rootユーザのみがメンバーであるルートグループに属しているシステムファイルのほとんどを所有している。 / etcディレクトリにある設定ファイルのようなほとんどの管理ファイルは、rootユーザーが所有し、rootグループに属している。通常のユーザーが読んで、プログラムの場合には、また、それらを実行できるのに対し、rootユーザーのみが、それらを変更する権限を持っている</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、変更するグループモジュールの使用状況を判断するのに役立ちます。ユーザーは、このモジュールを実行する別の方法/形式について知って来る。このコマンドは、このコマンドの目的を知ることが、エンドユーザーをガイドします。与えられた以下のコマンドと同じのスクリーンショットである。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Chgrp <span class="nb">help</span>
+</pre></div>
+</div>
+<p>スクリーンショットの図的表現は、以下のとおりである</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  cleopatra Chgrp <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>handles file group ownership changing functions.
+
+ Chgrp, chgrp
+
+       - path
+       Will change the file group ownership of a path
+       example: cleopatra chgrp path --yes --guess --recursive --path<span class="o">=</span>/a/file/path --group<span class="o">=</span>golden
+
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>パス<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーがパスのファイルグループ所有権を変更する必要がある場合、下記のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra chgrp path –yes –guess –recursive –path<span class="o">=</span>/”File path” –group<span class="o">=</span>”group name”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>代替パラメータ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>コマンドラインで使用することができる2つの別のパラメータがある。</p>
+<p>chgrp, Chgrp</p>
+<p>例えば： cleopatra Chgrp path/ cleopatra chgrp path</p>
+</div>
+<div class="section" id="id4">
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>他のユーザーがファイルにアクセスすることができるかもしれないが、唯一の所有者は、その権限を変更することができます。あなたは、ファイルのパーミッ  ションの1を制御するために他のユーザーを与えたい場合は、他のユーザーに自分自身からのファイルの所有者を変更することができます。</li>
+<li>また、chgrpコマンドを使用して、ファイルやディレクトリのグループを変更することができます。chgrpコマンドは、最初の引数としてファイルやディレクト  リのための新しいグループの名前を取ります。</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chgrpコマンド</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">パス</a></li>
+<li><a class="reference internal" href="#id3">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
+</ul>
+</li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/jchgrp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="index.html">kevellja 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, kevells.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>
