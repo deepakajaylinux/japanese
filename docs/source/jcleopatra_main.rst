@@ -1,5 +1,5 @@
 
-Jouer avec Modules Cléopâtre
+クレオパトラモジュールと遊ぶ              
 =============================
 
 .. toctree::
