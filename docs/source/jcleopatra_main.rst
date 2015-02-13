@@ -3,7 +3,7 @@ Jouer avec Modules Cléopâtre
 =============================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 6
     
 
    japachevhosteditor
