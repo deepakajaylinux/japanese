@@ -1,0 +1,664 @@
+[main]
+host = http://kevellpharaohtools.readthedocs.org/en/latest/
+type = PO
+
+[kevelldocument.skipfish]
+file_filter = locale/<lang>/LC_MESSAGES/skipfish.po
+source_file = _build/locale/skipfish.pot
+source_lang = en
+
+[kevelldocument.phpeclipse]
+file_filter = locale/<lang>/LC_MESSAGES/phpeclipse.po
+source_file = _build/locale/phpeclipse.pot
+source_lang = en
+
+[kevelldocument.phpstorm]
+file_filter = locale/<lang>/LC_MESSAGES/phpstorm.po
+source_file = _build/locale/phpstorm.pot
+source_lang = en
+
+[kevelldocument.cleophlagrant]
+file_filter = locale/<lang>/LC_MESSAGES/cleophlagrant.po
+source_file = _build/locale/cleophlagrant.pot
+source_lang = en
+
+[kevelldocument.mysqladmin]
+file_filter = locale/<lang>/LC_MESSAGES/mysqladmin.po
+source_file = _build/locale/mysqladmin.pot
+source_lang = en
+
+[kevelldocument.phpmodules1]
+file_filter = locale/<lang>/LC_MESSAGES/phpmodules1.po
+source_file = _build/locale/phpmodules1.pot
+source_lang = en
+
+[kevelldocument.juser]
+file_filter = locale/<lang>/LC_MESSAGES/juser.po
+source_file = _build/locale/juser.pot
+source_lang = en
+
+[kevelldocument.aptana]
+file_filter = locale/<lang>/LC_MESSAGES/aptana.po
+source_file = _build/locale/aptana.pot
+source_lang = en
+
+[kevelldocument.phpedit]
+file_filter = locale/<lang>/LC_MESSAGES/phpedit.po
+source_file = _build/locale/phpedit.pot
+source_lang = en
+
+[kevelldocument.firefox24]
+file_filter = locale/<lang>/LC_MESSAGES/firefox24.po
+source_file = _build/locale/firefox24.pot
+source_lang = en
+
+[kevelldocument.Testingkamen_main]
+file_filter = locale/<lang>/LC_MESSAGES/Testingkamen_main.po
+source_file = _build/locale/Testingkamen_main.pot
+source_lang = en
+
+[kevelldocument.gitlab]
+file_filter = locale/<lang>/LC_MESSAGES/gitlab.po
+source_file = _build/locale/gitlab.pot
+source_lang = en
+
+[kevelldocument.chgrp1]
+file_filter = locale/<lang>/LC_MESSAGES/chgrp1.po
+source_file = _build/locale/chgrp1.pot
+source_lang = en
+
+[kevelldocument.apachereverseproxy]
+file_filter = locale/<lang>/LC_MESSAGES/apachereverseproxy.po
+source_file = _build/locale/apachereverseproxy.pot
+source_lang = en
+
+[kevelldocument.environmentconfig]
+file_filter = locale/<lang>/LC_MESSAGES/environmentconfig.po
+source_file = _build/locale/environmentconfig.pot
+source_lang = en
+
+[kevelldocument.jetty]
+file_filter = locale/<lang>/LC_MESSAGES/jetty.po
+source_file = _build/locale/jetty.pot
+source_lang = en
+
+[kevelldocument.testmodule]
+file_filter = locale/<lang>/LC_MESSAGES/testmodule.po
+source_file = _build/locale/testmodule.pot
+source_lang = en
+
+[kevelldocument.systemdetection]
+file_filter = locale/<lang>/LC_MESSAGES/systemdetection.po
+source_file = _build/locale/systemdetection.pot
+source_lang = en
+
+[kevelldocument.cache]
+file_filter = locale/<lang>/LC_MESSAGES/cache.po
+source_file = _build/locale/cache.pot
+source_lang = en
+
+[kevelldocument.phpconf]
+file_filter = locale/<lang>/LC_MESSAGES/phpconf.po
+source_file = _build/locale/phpconf.pot
+source_lang = en
+
+[kevelldocument.runcommand]
+file_filter = locale/<lang>/LC_MESSAGES/runcommand.po
+source_file = _build/locale/runcommand.pot
+source_lang = en
+
+[kevelldocument.logging_cleo]
+file_filter = locale/<lang>/LC_MESSAGES/logging_cleo.po
+source_file = _build/locale/logging_cleo.pot
+source_lang = en
+
+[kevelldocument.process]
+file_filter = locale/<lang>/LC_MESSAGES/process.po
+source_file = _build/locale/process.pot
+source_lang = en
+
+[kevelldocument.lighttpdControl_dapper]
+file_filter = locale/<lang>/LC_MESSAGES/lighttpdControl_dapper.po
+source_file = _build/locale/lighttpdControl_dapper.pot
+source_lang = en
+
+[kevelldocument.teamcity]
+file_filter = locale/<lang>/LC_MESSAGES/teamcity.po
+source_file = _build/locale/teamcity.pot
+source_lang = en
+
+[kevelldocument.gitkeysafe]
+file_filter = locale/<lang>/LC_MESSAGES/gitkeysafe.po
+source_file = _build/locale/gitkeysafe.pot
+source_lang = en
+
+[kevelldocument.devtools]
+file_filter = locale/<lang>/LC_MESSAGES/devtools.po
+source_file = _build/locale/devtools.pot
+source_lang = en
+
+[kevelldocument.netbeans]
+file_filter = locale/<lang>/LC_MESSAGES/netbeans.po
+source_file = _build/locale/netbeans.pot
+source_lang = en
+
+[kevelldocument.dbinstall]
+file_filter = locale/<lang>/LC_MESSAGES/dbinstall.po
+source_file = _build/locale/dbinstall.pot
+source_lang = en
+
+[kevelldocument.phake]
+file_filter = locale/<lang>/LC_MESSAGES/phake.po
+source_file = _build/locale/phake.pot
+source_lang = en
+
+[kevelldocument.Dapperstrano_main]
+file_filter = locale/<lang>/LC_MESSAGES/Dapperstrano_main.po
+source_file = _build/locale/Dapperstrano_main.pot
+source_lang = en
+
+[kevelldocument.autossh]
+file_filter = locale/<lang>/LC_MESSAGES/autossh.po
+source_file = _build/locale/autossh.pot
+source_lang = en
+
+[kevelldocument.phpcs]
+file_filter = locale/<lang>/LC_MESSAGES/phpcs.po
+source_file = _build/locale/phpcs.pot
+source_lang = en
+
+[kevelldocument.jrush]
+file_filter = locale/<lang>/LC_MESSAGES/jrush.po
+source_file = _build/locale/jrush.pot
+source_lang = en
+
+[kevelldocument.apacheserver]
+file_filter = locale/<lang>/LC_MESSAGES/apacheserver.po
+source_file = _build/locale/apacheserver.pot
+source_lang = en
+
+[kevelldocument.copy]
+file_filter = locale/<lang>/LC_MESSAGES/copy.po
+source_file = _build/locale/copy.pot
+source_lang = en
+
+[kevelldocument.chgrp]
+file_filter = locale/<lang>/LC_MESSAGES/chgrp.po
+source_file = _build/locale/chgrp.pot
+source_lang = en
+
+[kevelldocument.jarticle]
+file_filter = locale/<lang>/LC_MESSAGES/jarticle.po
+source_file = _build/locale/jarticle.pot
+source_lang = en
+
+[kevelldocument.zendserver]
+file_filter = locale/<lang>/LC_MESSAGES/zendserver.po
+source_file = _build/locale/zendserver.pot
+source_lang = en
+
+[kevelldocument.cassandra]
+file_filter = locale/<lang>/LC_MESSAGES/cassandra.po
+source_file = _build/locale/cassandra.pot
+source_lang = en
+
+[kevelldocument.sftp]
+file_filter = locale/<lang>/LC_MESSAGES/sftp.po
+source_file = _build/locale/sftp.pot
+source_lang = en
+
+[kevelldocument.mediatool]
+file_filter = locale/<lang>/LC_MESSAGES/mediatool.po
+source_file = _build/locale/mediatool.pot
+source_lang = en
+
+[kevelldocument.firewall]
+file_filter = locale/<lang>/LC_MESSAGES/firewall.po
+source_file = _build/locale/firewall.pot
+source_lang = en
+
+[kevelldocument.sudonopass]
+file_filter = locale/<lang>/LC_MESSAGES/sudonopass.po
+source_file = _build/locale/sudonopass.pot
+source_lang = en
+
+[kevelldocument.citadel]
+file_filter = locale/<lang>/LC_MESSAGES/citadel.po
+source_file = _build/locale/citadel.pot
+source_lang = en
+
+[kevelldocument.ngnix]
+file_filter = locale/<lang>/LC_MESSAGES/ngnix.po
+source_file = _build/locale/ngnix.pot
+source_lang = en
+
+[kevelldocument.hosteditor]
+file_filter = locale/<lang>/LC_MESSAGES/hosteditor.po
+source_file = _build/locale/hosteditor.pot
+source_lang = en
+
+[kevelldocument.firefox14]
+file_filter = locale/<lang>/LC_MESSAGES/firefox14.po
+source_file = _build/locale/firefox14.pot
+source_lang = en
+
+[kevelldocument.firefox17]
+file_filter = locale/<lang>/LC_MESSAGES/firefox17.po
+source_file = _build/locale/firefox17.pot
+source_lang = en
+
+[kevelldocument.mkdir]
+file_filter = locale/<lang>/LC_MESSAGES/mkdir.po
+source_file = _build/locale/mkdir.pot
+source_lang = en
+
+[kevelldocument.cleo]
+file_filter = locale/<lang>/LC_MESSAGES/cleo.po
+source_file = _build/locale/cleo.pot
+source_lang = en
+
+[kevelldocument.phpmodules]
+file_filter = locale/<lang>/LC_MESSAGES/phpmodules.po
+source_file = _build/locale/phpmodules.pot
+source_lang = en
+
+[kevelldocument.nginxcontrol]
+file_filter = locale/<lang>/LC_MESSAGES/nginxcontrol.po
+source_file = _build/locale/nginxcontrol.pot
+source_lang = en
+
+[kevelldocument.logging_dapper]
+file_filter = locale/<lang>/LC_MESSAGES/logging_dapper.po
+source_file = _build/locale/logging_dapper.pot
+source_lang = en
+
+[kevelldocument.systemdetectio]
+file_filter = locale/<lang>/LC_MESSAGES/systemdetectio.po
+source_file = _build/locale/systemdetectio.pot
+source_lang = en
+
+[kevelldocument.cleopatra]
+file_filter = locale/<lang>/LC_MESSAGES/cleopatra.po
+source_file = _build/locale/cleopatra.pot
+source_lang = en
+
+[kevelldocument.intellij]
+file_filter = locale/<lang>/LC_MESSAGES/intellij.po
+source_file = _build/locale/intellij.pot
+source_lang = en
+
+[kevelldocument.minify]
+file_filter = locale/<lang>/LC_MESSAGES/minify.po
+source_file = _build/locale/minify.pot
+source_lang = en
+
+[kevelldocument.phlagrant]
+file_filter = locale/<lang>/LC_MESSAGES/phlagrant.po
+source_file = _build/locale/phlagrant.pot
+source_lang = en
+
+[kevelldocument.parrallax]
+file_filter = locale/<lang>/LC_MESSAGES/parrallax.po
+source_file = _build/locale/parrallax.pot
+source_lang = en
+
+[kevelldocument.phpunit_testingkamen]
+file_filter = locale/<lang>/LC_MESSAGES/phpunit_testingkamen.po
+source_file = _build/locale/phpunit_testingkamen.pot
+source_lang = en
+
+[kevelldocument.systemdetection_phlagrant]
+file_filter = locale/<lang>/LC_MESSAGES/systemdetection_phlagrant.po
+source_file = _build/locale/systemdetection_phlagrant.pot
+source_lang = en
+
+[kevelldocument.vncpasswd]
+file_filter = locale/<lang>/LC_MESSAGES/vncpasswd.po
+source_file = _build/locale/vncpasswd.pot
+source_lang = en
+
+[kevelldocument.jenkins]
+file_filter = locale/<lang>/LC_MESSAGES/jenkins.po
+source_file = _build/locale/jenkins.pot
+source_lang = en
+
+[kevelldocument.hhvm]
+file_filter = locale/<lang>/LC_MESSAGES/hhvm.po
+source_file = _build/locale/hhvm.pot
+source_lang = en
+
+[kevelldocument.ApacheModules]
+file_filter = locale/<lang>/LC_MESSAGES/ApacheModules.po
+source_file = _build/locale/ApacheModules.pot
+source_lang = en
+
+[kevelldocument.vnc]
+file_filter = locale/<lang>/LC_MESSAGES/vnc.po
+source_file = _build/locale/vnc.pot
+source_lang = en
+
+[kevelldocument.run_command]
+file_filter = locale/<lang>/LC_MESSAGES/run_command.po
+source_file = _build/locale/run_command.pot
+source_lang = en
+
+[kevelldocument.gittools]
+file_filter = locale/<lang>/LC_MESSAGES/gittools.po
+source_file = _build/locale/gittools.pot
+source_lang = en
+
+[kevelldocument.project]
+file_filter = locale/<lang>/LC_MESSAGES/project.po
+source_file = _build/locale/project.pot
+source_lang = en
+
+[kevelldocument.lighthttpd]
+file_filter = locale/<lang>/LC_MESSAGES/lighthttpd.po
+source_file = _build/locale/lighthttpd.pot
+source_lang = en
+
+[kevelldocument.mysqlserver]
+file_filter = locale/<lang>/LC_MESSAGES/mysqlserver.po
+source_file = _build/locale/mysqlserver.pot
+source_lang = en
+
+[kevelldocument.modulemanager]
+file_filter = locale/<lang>/LC_MESSAGES/modulemanager.po
+source_file = _build/locale/modulemanager.pot
+source_lang = en
+
+[kevelldocument.firefox33]
+file_filter = locale/<lang>/LC_MESSAGES/firefox33.po
+source_file = _build/locale/firefox33.pot
+source_lang = en
+
+[kevelldocument.memcached]
+file_filter = locale/<lang>/LC_MESSAGES/memcached.po
+source_file = _build/locale/memcached.pot
+source_lang = en
+
+[kevelldocument.hostname]
+file_filter = locale/<lang>/LC_MESSAGES/hostname.po
+source_file = _build/locale/hostname.pot
+source_lang = en
+
+[kevelldocument.xvfb]
+file_filter = locale/<lang>/LC_MESSAGES/xvfb.po
+source_file = _build/locale/xvfb.pot
+source_lang = en
+
+[kevelldocument.jconfiguration]
+file_filter = locale/<lang>/LC_MESSAGES/jconfiguration.po
+source_file = _build/locale/jconfiguration.pot
+source_lang = en
+
+[kevelldocument.virtualbox]
+file_filter = locale/<lang>/LC_MESSAGES/virtualbox.po
+source_file = _build/locale/virtualbox.pot
+source_lang = en
+
+[kevelldocument.file]
+file_filter = locale/<lang>/LC_MESSAGES/file.po
+source_file = _build/locale/file.pot
+source_lang = en
+
+[kevelldocument.sshharden]
+file_filter = locale/<lang>/LC_MESSAGES/sshharden.po
+source_file = _build/locale/sshharden.pot
+source_lang = en
+
+[kevelldocument.phpdox]
+file_filter = locale/<lang>/LC_MESSAGES/phpdox.po
+source_file = _build/locale/phpdox.pot
+source_lang = en
+
+[kevelldocument.python]
+file_filter = locale/<lang>/LC_MESSAGES/python.po
+source_file = _build/locale/python.pot
+source_lang = en
+
+[kevelldocument.copy1]
+file_filter = locale/<lang>/LC_MESSAGES/copy1.po
+source_file = _build/locale/copy1.pot
+source_lang = en
+
+[kevelldocument.varnish]
+file_filter = locale/<lang>/LC_MESSAGES/varnish.po
+source_file = _build/locale/varnish.pot
+source_lang = en
+
+[kevelldocument.firefox]
+file_filter = locale/<lang>/LC_MESSAGES/firefox.po
+source_file = _build/locale/firefox.pot
+source_lang = en
+
+[kevelldocument.templating]
+file_filter = locale/<lang>/LC_MESSAGES/templating.po
+source_file = _build/locale/templating.pot
+source_lang = en
+
+[kevelldocument.jrush_main]
+file_filter = locale/<lang>/LC_MESSAGES/jrush_main.po
+source_file = _build/locale/jrush_main.pot
+source_lang = en
+
+[kevelldocument.box]
+file_filter = locale/<lang>/LC_MESSAGES/box.po
+source_file = _build/locale/box.pot
+source_lang = en
+
+[kevelldocument.systemdetection_testingkamen]
+file_filter = locale/<lang>/LC_MESSAGES/systemdetection_testingkamen.po
+source_file = _build/locale/systemdetection_testingkamen.pot
+source_lang = en
+
+[kevelldocument.version]
+file_filter = locale/<lang>/LC_MESSAGES/version.po
+source_file = _build/locale/version.pot
+source_lang = en
+
+[kevelldocument.mongodb]
+file_filter = locale/<lang>/LC_MESSAGES/mongodb.po
+source_file = _build/locale/mongodb.pot
+source_lang = en
+
+[kevelldocument.gitbucket]
+file_filter = locale/<lang>/LC_MESSAGES/gitbucket.po
+source_file = _build/locale/gitbucket.pot
+source_lang = en
+
+[kevelldocument.environmentconfigdapper]
+file_filter = locale/<lang>/LC_MESSAGES/environmentconfigdapper.po
+source_file = _build/locale/environmentconfigdapper.pot
+source_lang = en
+
+[kevelldocument.tomcat]
+file_filter = locale/<lang>/LC_MESSAGES/tomcat.po
+source_file = _build/locale/tomcat.pot
+source_lang = en
+
+[kevelldocument.svn]
+file_filter = locale/<lang>/LC_MESSAGES/svn.po
+source_file = _build/locale/svn.pot
+source_lang = en
+
+[kevelldocument.port]
+file_filter = locale/<lang>/LC_MESSAGES/port.po
+source_file = _build/locale/port.pot
+source_lang = en
+
+[kevelldocument.openoffice]
+file_filter = locale/<lang>/LC_MESSAGES/openoffice.po
+source_file = _build/locale/openoffice.pot
+source_lang = en
+
+[kevelldocument.phpcodebeautifier]
+file_filter = locale/<lang>/LC_MESSAGES/phpcodebeautifier.po
+source_file = _build/locale/phpcodebeautifier.pot
+source_lang = en
+
+[kevelldocument.phpunit]
+file_filter = locale/<lang>/LC_MESSAGES/phpunit.po
+source_file = _build/locale/phpunit.pot
+source_lang = en
+
+[kevelldocument.testingkamen]
+file_filter = locale/<lang>/LC_MESSAGES/testingkamen.po
+source_file = _build/locale/testingkamen.pot
+source_lang = en
+
+[kevelldocument.redis]
+file_filter = locale/<lang>/LC_MESSAGES/redis.po
+source_file = _build/locale/redis.pot
+source_lang = en
+
+[kevelldocument.jenkinsplugins]
+file_filter = locale/<lang>/LC_MESSAGES/jenkinsplugins.po
+source_file = _build/locale/jenkinsplugins.pot
+source_lang = en
+
+[kevelldocument.behatcleo]
+file_filter = locale/<lang>/LC_MESSAGES/behatcleo.po
+source_file = _build/locale/behatcleo.pot
+source_lang = en
+
+[kevelldocument.GETTING-STARTED]
+file_filter = locale/<lang>/LC_MESSAGES/GETTING-STARTED.po
+source_file = _build/locale/GETTING-STARTED.pot
+source_lang = en
+
+[kevelldocument.cucumber]
+file_filter = locale/<lang>/LC_MESSAGES/cucumber.po
+source_file = _build/locale/cucumber.pot
+source_lang = en
+
+[kevelldocument.dapperstrano]
+file_filter = locale/<lang>/LC_MESSAGES/dapperstrano.po
+source_file = _build/locale/dapperstrano.pot
+source_lang = en
+
+[kevelldocument.phpssh]
+file_filter = locale/<lang>/LC_MESSAGES/phpssh.po
+source_file = _build/locale/phpssh.pot
+source_lang = en
+
+[kevelldocument.phpvm]
+file_filter = locale/<lang>/LC_MESSAGES/phpvm.po
+source_file = _build/locale/phpvm.pot
+source_lang = en
+
+[kevelldocument.systemdetection_jrush]
+file_filter = locale/<lang>/LC_MESSAGES/systemdetection_jrush.po
+source_file = _build/locale/systemdetection_jrush.pot
+source_lang = en
+
+[kevelldocument.composermodule]
+file_filter = locale/<lang>/LC_MESSAGES/composermodule.po
+source_file = _build/locale/composermodule.pot
+source_lang = en
+
+[kevelldocument.service]
+file_filter = locale/<lang>/LC_MESSAGES/service.po
+source_file = _build/locale/service.pot
+source_lang = en
+
+[kevelldocument.apacheconf]
+file_filter = locale/<lang>/LC_MESSAGES/apacheconf.po
+source_file = _build/locale/apacheconf.pot
+source_lang = en
+
+[kevelldocument.ubuntucompiler]
+file_filter = locale/<lang>/LC_MESSAGES/ubuntucompiler.po
+source_file = _build/locale/ubuntucompiler.pot
+source_lang = en
+
+[kevelldocument.sftp_dapper]
+file_filter = locale/<lang>/LC_MESSAGES/sftp_dapper.po
+source_file = _build/locale/sftp_dapper.pot
+source_lang = en
+
+[kevelldocument.phpapc]
+file_filter = locale/<lang>/LC_MESSAGES/phpapc.po
+source_file = _build/locale/phpapc.pot
+source_lang = en
+
+[kevelldocument.newrelic]
+file_filter = locale/<lang>/LC_MESSAGES/newrelic.po
+source_file = _build/locale/newrelic.pot
+source_lang = en
+
+[kevelldocument.video]
+file_filter = locale/<lang>/LC_MESSAGES/video.po
+source_file = _build/locale/video.pot
+source_lang = en
+
+[kevelldocument.extension]
+file_filter = locale/<lang>/LC_MESSAGES/extension.po
+source_file = _build/locale/extension.pot
+source_lang = en
+
+[kevelldocument.awstats]
+file_filter = locale/<lang>/LC_MESSAGES/awstats.po
+source_file = _build/locale/awstats.pot
+source_lang = en
+
+[kevelldocument.node]
+file_filter = locale/<lang>/LC_MESSAGES/node.po
+source_file = _build/locale/node.pot
+source_lang = en
+
+[kevelldocument.java]
+file_filter = locale/<lang>/LC_MESSAGES/java.po
+source_file = _build/locale/java.pot
+source_lang = en
+
+[kevelldocument.chown]
+file_filter = locale/<lang>/LC_MESSAGES/chown.po
+source_file = _build/locale/chown.pot
+source_lang = en
+
+[kevelldocument.wireframesketcher]
+file_filter = locale/<lang>/LC_MESSAGES/wireframesketcher.po
+source_file = _build/locale/wireframesketcher.pot
+source_lang = en
+
+[kevelldocument.apachecontrol]
+file_filter = locale/<lang>/LC_MESSAGES/apachecontrol.po
+source_file = _build/locale/apachecontrol.pot
+source_lang = en
+
+[kevelldocument.mysqltool]
+file_filter = locale/<lang>/LC_MESSAGES/mysqltool.po
+source_file = _build/locale/mysqltool.pot
+source_lang = en
+
+[kevelldocument.index]
+file_filter = locale/<lang>/LC_MESSAGES/index.po
+source_file = _build/locale/index.pot
+source_lang = en
+
+[kevelldocument.behat]
+file_filter = locale/<lang>/LC_MESSAGES/behat.po
+source_file = _build/locale/behat.pot
+source_lang = en
+
+[kevelldocument.postgresserver]
+file_filter = locale/<lang>/LC_MESSAGES/postgresserver.po
+source_file = _build/locale/postgresserver.pot
+source_lang = en
+
+[kevelldocument.chmod]
+file_filter = locale/<lang>/LC_MESSAGES/chmod.po
+source_file = _build/locale/chmod.pot
+source_lang = en
+
+[kevelldocument.jmeter]
+file_filter = locale/<lang>/LC_MESSAGES/jmeter.po
+source_file = _build/locale/jmeter.pot
+source_lang = en
+
+[kevelldocument.phpci]
+file_filter = locale/<lang>/LC_MESSAGES/phpci.po
+source_file = _build/locale/phpci.pot
+source_lang = en
+
