@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ApacheReverseProxy &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="next" title="ApacheServer" href="japacheserver.html" />
+    <link rel="prev" title="ApacheModules" href="japachemodules.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">ApacheReverseProxy</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">ユーザーのメリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="japachemodules.html"
+         title="Previous Chapter: ApacheModules">&laquo; ApacheModules</a></li>
+  <li><a href="japacheserver.html"
+         title="Next Chapter: ApacheServer">ApacheServer &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/japachereverseproxy.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="apachereverseproxy">
+<h1>ApacheReverseProxy<a class="headerlink" href="#apachereverseproxy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュール ライブラリ関数のインストールを目指します。インストール中に、ライブラリ関数、それは既存の空室状況をチェックはライブラリ関数。それの管理とアプリケーション設定を構成するのに役立ちます。ユーザーは、アプリケーション設定の既定値を指定できます。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドの使用、またとオプションのアクションを実行することができます注意してくださいユーザー取得について説明します。アウトが表示されます、代替
+ようにコーディング Apache がリバース プロキシ モジュールの下に help コマンドの使用、次のように与えられる</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheReverseProxyModules <span class="nb">help</span>
+</pre></div>
+</div>
+<p>以下に示す撮影画面ヘルプ コマンドの使用方法の絵の表現を与えます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp/# cleopatra ApacheReverseProxyModules <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>is part of Core and provides you  with a method by which you can configure Application Settings.
+You can configure default application settings, ie: mysql admin user, host, pass
+
+ApacheReverseProxyModules, apache-reverse-proxy-modules, apache-proxy-mods, apacheproxymodules, apache-lb-mods,
+apache-load-balancer-modules
+
+- install
+      Installs Load Balancer/Reverse Proxy Apache Modules
+      example: cleopatra apache-lb-mods install
+
+------------------------------
+End Help
+****************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>以下に、コマンドを入力することができる場合は、apache をインストールするユーザーの願いリバース プロキシ モジュール システムに</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheReverseProxyModules install
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="41%" />
+<col width="11%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">必要な</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install ReverseProxy
+ApacheModules (Y/N)</td>
+<td>代わりにReverseProxy ApacheModulesのユーザーは、
+次のパラメータを指定することができます。
+ApacheReverseProxyModules,
+apache-reverse-proxy-modules, apache- proxy-mods,
+apacheproxymodules, apache-lb-mods,
+apache-load-balancer, modules</td>
+<td>Y(Yes)</td>
+<td>Yのようなユーザ入力は、
+Apacheのリバースプロキシモジュール
+がインストールされます場合は</td>
+</tr>
+<tr class="row-odd"><td>Install ReverseProxy
+ApacheModules (Y/N)</td>
+<td>代わりにReverseProxy ApacheModulesのユーザーは、
+次のパラメータを指定することができます。
+ApacheReverseProxyModules,
+apache-reverse-proxy-modules, apache- proxy-mods,
+apacheproxymodules, apache-lb-mods,
+apache-load-balancer, modules|</td>
+<td>N(No)</td>
+<td>N等のユーザ入力した場合、
+プロセスの意志がインストールから突
+然終了を取得します。</td>
+</tr>
+</tbody>
+</table>
+<p>インストール中に、リバース プロキシ モジュール、状態情報、パッケージ一覧のビルド依存関係ツリーは読み取ります。すべてのパッケージがない場合は、新しいパッケージがインストールされます。スクリーン ショットは以下に示すグラフィカル インストールのプロセスについて説明します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#: cleopatra ApacheReverseProxyModules install
+Install Apache Rev. Proxy Modules? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Apache Proxy Mods!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ libapache2-mod-proxy-html
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">229</span> not upgraded.
+Need to get 1,464 B of archives.
+After this operation, 22.5 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/universe libapache2-mod-proxy-html amd64 1:2.4.7-1ubuntu4.1 <span class="o">[</span>1,464 B<span class="o">]</span>
+Fetched 1,464 B in 1s <span class="o">(</span>1,323 B/s<span class="o">)</span>
+Selecting previously unselected package libapache2-mod-proxy-html.
+<span class="o">(</span>Reading database ... <span class="m">181545</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libapache2-mod-proxy-html_1%3a2.4.7-1ubuntu4.1_amd64.deb ...
+Unpacking libapache2-mod-proxy-html <span class="o">(</span>1:2.4.7-1ubuntu4.1<span class="o">)</span> ...
+Setting up libapache2-mod-proxy-html <span class="o">(</span>1:2.4.7-1ubuntu4.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libapache2-mod-proxy-html from the Packager Apt executed correctly
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libxml2-dev from the Packager Apt is already installed, so not installing
+Creating /tmp/cleopatra-temp-script-49127207421.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-49127207421.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-49127207421.sh Permissions
+Executing /tmp/cleopatra-temp-script-49127207421.sh
+Considering dependency proxy_balancer <span class="k">for</span> lbmethod_byrequests:
+Considering dependency proxy <span class="k">for</span> proxy_balancer:
+Enabling module proxy.
+Considering dependency <span class="nb">alias </span><span class="k">for</span> proxy_balancer:
+Module <span class="nb">alias </span>already enabled
+Considering dependency slotmem_shm <span class="k">for</span> proxy_balancer:
+Enabling module slotmem_shm.
+Enabling module proxy_balancer.
+Enabling module lbmethod_byrequests.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-49127207421.sh Removed
+Creating /tmp/cleopatra-temp-script-12740464083.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-12740464083.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-12740464083.sh Permissions
+Executing /tmp/cleopatra-temp-script-12740464083.sh
+Module proxy already enabled
+Temp File /tmp/cleopatra-temp-script-12740464083.sh Removed
+Creating /tmp/cleopatra-temp-script-61839737362.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-61839737362.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-61839737362.sh Permissions
+Executing /tmp/cleopatra-temp-script-61839737362.sh
+Considering dependency proxy <span class="k">for</span> proxy_http:
+Module proxy already enabled
+Enabling module proxy_http.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-61839737362.sh Removed
+Creating /tmp/cleopatra-temp-script-22752304452.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-22752304452.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-22752304452.sh Permissions
+Executing /tmp/cleopatra-temp-script-22752304452.sh
+ERROR: Module mod_proxy_http does not exist!
+Temp File /tmp/cleopatra-temp-script-22752304452.sh Removed
+Creating /tmp/cleopatra-temp-script-19250932602.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-19250932602.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-19250932602.sh Permissions
+Executing /tmp/cleopatra-temp-script-19250932602.sh
+Considering dependency proxy <span class="k">for</span> proxy_ftp:
+Module proxy already enabled
+Enabling module proxy_ftp.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-19250932602.sh Removed
+Creating /tmp/cleopatra-temp-script-38556602379.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-38556602379.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-38556602379.sh Permissions
+Executing /tmp/cleopatra-temp-script-38556602379.sh
+Considering dependency proxy <span class="k">for</span> proxy_connect:
+Module proxy already enabled
+Enabling module proxy_connect.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-38556602379.sh Removed
+Creating /tmp/cleopatra-temp-script-85272088847.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-85272088847.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-85272088847.sh Permissions
+Executing /tmp/cleopatra-temp-script-85272088847.sh
+Considering dependency proxy <span class="k">for</span> proxy_ajp:
+Module proxy already enabled
+Enabling module proxy_ajp.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-85272088847.sh Removed
+Creating /tmp/cleopatra-temp-script-31029043648.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-31029043648.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-31029043648.sh Permissions
+Executing /tmp/cleopatra-temp-script-31029043648.sh
+Considering dependency proxy <span class="k">for</span> proxy_wstunnel:
+Module proxy already enabled
+Enabling module proxy_wstunnel.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-31029043648.sh Removed
+Creating /tmp/cleopatra-temp-script-2400353229.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-2400353229.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-2400353229.sh Permissions
+Executing /tmp/cleopatra-temp-script-2400353229.sh
+Considering dependency proxy <span class="k">for</span> proxy_balancer:
+Module proxy already enabled
+Considering dependency <span class="nb">alias </span><span class="k">for</span> proxy_balancer:
+Module <span class="nb">alias </span>already enabled
+Considering dependency slotmem_shm <span class="k">for</span> proxy_balancer:
+Module slotmem_shm already enabled
+Module proxy_balancer already enabled
+Temp File /tmp/cleopatra-temp-script-2400353229.sh Removed
+Creating /tmp/cleopatra-temp-script-88564779807.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-88564779807.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-88564779807.sh Permissions
+Executing /tmp/cleopatra-temp-script-88564779807.sh
+Enabling module cache.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-88564779807.sh Removed
+Creating /tmp/cleopatra-temp-script-68936090528.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-68936090528.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-68936090528.sh Permissions
+Executing /tmp/cleopatra-temp-script-68936090528.sh
+Enabling module headers.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/cleopatra-temp-script-68936090528.sh Removed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Restarting apache2 service
+Output of config <span class="nb">test </span>was:
+apache2: Syntax error on line <span class="m">214</span> of /etc/apache2/apache2.conf: Could not open configuration file /etc/apache2/httpd.conf: No such file or dir ectory.
+Action <span class="s1">&#39;configtest&#39;</span> failed.
+The Apache error log may have more information.
+* Restarting web server apache2
+  ...fail!
+* The apache2 configtest failed.
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ApacheReverseProxyModules: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>ユーザーのメリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>利用可能なパッケージ リストを表示し、順番に不足していると必要なパッケージをインストールします。
+逆のプロキシは、任意のクライアントに代わっての固定のリンク先に転送します。</li>
+<li>それは 1 つのサーバーから大規模なウェブサイトにホストされているコンテンツが組み込まれています。</li>
+<li>それは、アプリケーション設定を構成するのに役立ちます。</li>
+<li>それは裕福なセント OS とも ubuntu のように。</li>
+<li>宣言で使用されるパラメーターは大文字と小文字を区別する加えられた利点であります。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/japachereverseproxy.rst">
+          ApacheReverseProxy
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

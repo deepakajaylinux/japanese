@@ -1,0 +1,120 @@
+==============
+ApacheServer
+==============
+
+あらすじ
+-----------
+
+このモジュールを目指して Apache サーバーをインストールします。すべての要求なしインストール中 apache サーバの現在のバージョンに自動的にインストールされます。
+
+ヘルプ コマンド
+-----------------
+
+Help コマンドは、目的とこのモジュールで使用できるコマンドについて説明します。また、特定のモジュールをインストールするコマンドについて説明します。
+
+.. code-block:: bash
+
+ 		cleopatra ApacheServer help
+
+
+スクリーン ショットは、下図のように、このモジュールの下に help コマンドの使用状況を視覚的に表します。
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# cleopatra ApacheServer help
+ ******************************
+
+
+  This command is part of Core and provides you  with a method by which you can install Apache HTTP Server
+
+  ApacheServer, apache-server, apacheserver
+
+        - install
+        Installs Apache HTTP Server
+        example: cleopatra apacheserver install
+
+ ------------------------------
+ End Help
+ ******************************
+
+
+インストール
+---------------
+
+単に、下記のコマンドを使用してこのクレオパトラの下で特定のツールをインストールする方が簡単です。
+
+
+.. code-block:: bash
+
+		cleopatra ApacheServer install
+
+上記のコマンドを与えた後、ツールは確認します。
+
+Install Apache Server? (Y/N)
+
+Y として入力を与える場合、モジュールが正常にインストールします。
+
+インストールでスクリーン ショット下記手順やコマンドについて視覚的に説明する必要があります。
+
+.. code-block:: bash
+
+ kevell@corp:/# cleopatra apacheserver install
+ Install Apache Server? (Y/N) 
+ Y
+ *******************************
+ *        Pharaoh Tools        *
+ *         Apache Server!        *
+ *******************************
+ [Pharaoh Logging] Package apache2 from the Packager Apt is already installed, so not installing
+ [Pharaoh Logging] Restarting apache2 service
+ AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+ * Restarting web server apache2
+   ...done.
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Installer:
+ --------------------------------------------
+ ApacheServer: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+
+オプション
+------------
+
+.. cssclass:: table-bordered
+
+ +-----------------------+--------------------------------------------+---------------+-------------------------------------------+
+ | パラメーター          | 代替パラメーター                           | 必要な        | コメント                                  |
+ +=======================+============================================+===============+===========================================+
+ |Install Apache         | の代わりに ApacheServer, Instead of        | Yes           | ユーザーとしてイエス入力を与えた場合は、  |
+ |Server? (Y/N)          | ApacheServer, 我々は使用することができます |               | インストールを続行します                  | 
+ |                       | apache-server, apacheserver また.          |               |                                           |
+ +-----------------------+--------------------------------------------+---------------+-------------------------------------------+
+ |Install Apache         | の代わりに ApacheServer, Instead of        | No            | ユーザーには、入力を与えない場合は、      |
+ |Server? (Y/N)          | ApacheServer, 我々は使用することができます |               | インストールプロセスを終了します          |
+ |                       | apache-server, apacheserver また.|         |               |                                           |
+ +-----------------------+--------------------------------------------+---------------+-------------------------------------------+
+
+
+
+バージョン
+------------
+
+ツールの処理中は最も最近の更新バージョンを自動的にグラブはおよびインストールの準備ができて得るためにそれを作る。
+
+
+エンドユーザーへの利点
+---------------------------
+
+* このモジュールは apache サーバーをインストールすることができます。サーバーのインストール中にユーザーの作業が簡単になりますその
+  apache サーバの現在のバージョンを自動的にチェックします。
+* それは裕福なセント OS とも Ubuntu のように。
+* 宣言で使用されるパラメーターは大文字と小文字を区別する加えられた利点であります。

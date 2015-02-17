@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>クレオパトラモジュールと遊ぶ &mdash; KEVELL 0.1 documentation</title>
+    <title>ApacheServer &mdash; KEVELL 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -31,8 +31,9 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
-    <link rel="next" title="ApacheModules" href="japachemodules.html" />
-    <link rel="prev" title="Pharaohtoolsドキュメント" href="index.html" />
+    <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="next" title="ApacheVHostEditor" href="japachevhosteditor.html" />
+    <link rel="prev" title="ApacheModules" href="japachemodules.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -79,7 +80,7 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">クレオパトラモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
 </ul>
 </ul>
 </li>
@@ -87,7 +88,15 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">クレオパトラモジュールと遊ぶ</a></li>
+<li><a class="reference internal" href="#">ApacheServer</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">バージョン</a></li>
+<li><a class="reference internal" href="#id6">エンドユーザーへの利点</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -96,10 +105,10 @@
             
               
                 
-  <li><a href="index.html"
-         title="Previous Chapter: Pharaohtoolsドキュメント">&laquo; Pharaohtoolsドキュメ...</a></li>
   <li><a href="japachemodules.html"
-         title="Next Chapter: ApacheModules">ApacheModules &raquo;</a></li>
+         title="Previous Chapter: ApacheModules">&laquo; ApacheModules</a></li>
+  <li><a href="japachevhosteditor.html"
+         title="Next Chapter: ApacheVHostEditor">ApacheVHostEdito... &raquo;</a></li>
               
             
             
@@ -107,7 +116,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/jcleopatra_main.txt"
+  <a href="_sources/japacheserver.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -135,7 +144,7 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">クレオパトラモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
 </ul>
 </ul>
 
@@ -144,81 +153,123 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="id1">
-<h1>クレオパトラモジュールと遊ぶ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="japachemodules.html">ApacheModules</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="japachemodules.html#id1">あらすじ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachemodules.html#id2">ヘルプ コマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachemodules.html#id3">インストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachemodules.html#id4">利点</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="japachereverseproxy.html">ApacheReverseProxy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="japachereverseproxy.html#id1">あらすじ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachereverseproxy.html#id2">ヘルプ コマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachereverseproxy.html#id3">インストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachereverseproxy.html#id4">オプション</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachereverseproxy.html#id5">ユーザーのメリット</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="japacheserver.html">ApacheServer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="japacheserver.html#id1">あらすじ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japacheserver.html#id2">ヘルプ コマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japacheserver.html#id3">インストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japacheserver.html#id4">オプション</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japacheserver.html#id5">バージョン</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japacheserver.html#id6">エンドユーザーへの利点</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="japachevhosteditor.html">ApacheVHostEditor</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#help">Helpコマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id2">代替パラメータ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id3">加える</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id4">追加 - バランサ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id5">削除する</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id6">リスト</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id7">有効にする</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id8">無効にする</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japachevhosteditor.html#id9">メリット</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="japtana.html">Aptana</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="japtana.html#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japtana.html#help">Helpコマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japtana.html#id2">インストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japtana.html#id3">アンインストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japtana.html#id4">プラットフォームと言語サポート</a></li>
-<li class="toctree-l2"><a class="reference internal" href="japtana.html#id5">メリット</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="jautopilot.html">Autopilot</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="jautopilot.html#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jautopilot.html#help">Helpコマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jautopilot.html#id2">インストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jautopilot.html#id3">実行する</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jautopilot.html#id4">オプション</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jautopilot.html#id5">メリット</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="jcassandra.html">Cassandra</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="jcassandra.html#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jcassandra.html#help">helpコマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jcassandra.html#id2">インストール</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jcassandra.html#id3">オプション</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jcassandra.html#id4">メリット</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="jchgrp.html">Chgrp</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="jchgrp.html#id1">概要</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jchgrp.html#help">helpコマンド</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jchgrp.html#id2">パス</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jchgrp.html#id3">代替パラメータ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jchgrp.html#id4">メリット</a></li>
-</ul>
-</li>
+  <div class="section" id="apacheserver">
+<h1>ApacheServer<a class="headerlink" href="#apacheserver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールを目指して Apache サーバーをインストールします。すべての要求なしインストール中 apache サーバの現在のバージョンに自動的にインストールされます。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドは、目的とこのモジュールで使用できるコマンドについて説明します。また、特定のモジュールをインストールするコマンドについて説明します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheServer <span class="nb">help</span>
+</pre></div>
+</div>
+<p>スクリーン ショットは、下図のように、このモジュールの下に help コマンドの使用状況を視覚的に表します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ApacheServer <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you  with a method by which you can install Apache HTTP Server
+
+ ApacheServer, apache-server, apacheserver
+
+       - install
+       Installs Apache HTTP Server
+       example: cleopatra apacheserver install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>単に、下記のコマンドを使用してこのクレオパトラの下で特定のツールをインストールする方が簡単です。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra ApacheServer install
+</pre></div>
+</div>
+<p>上記のコマンドを与えた後、ツールは確認します。</p>
+<p>Install Apache Server? (Y/N)</p>
+<p>Y として入力を与える場合、モジュールが正常にインストールします。</p>
+<p>インストールでスクリーン ショット下記手順やコマンドについて視覚的に説明する必要があります。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra apacheserver install
+Install Apache Server? (Y/N)
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Apache Server!        *
+*******************************
+[Pharaoh Logging] Package apache2 from the Packager Apt is already installed, so not installing
+[Pharaoh Logging] Restarting apache2 service
+AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 127.0.1.1. Set the &#39;ServerName&#39; directive globally to suppress this message
+* Restarting web server apache2
+  ...done.
+... All done!
+*******************************
+Thanks for installing , visit www.pharaohtools.com for more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ApacheServer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="35%" />
+<col width="12%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">必要な</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Apache
+Server? (Y/N)</td>
+<td>の代わりに ApacheServer, Instead of
+ApacheServer, 我々は使用することができます
+apache-server, apacheserver また.</td>
+<td>Yes</td>
+<td>ユーザーとしてイエス入力を与えた場合は、
+インストールを続行します</td>
+</tr>
+<tr class="row-odd"><td>Install Apache
+Server? (Y/N)</td>
+<td>の代わりに ApacheServer, Instead of
+ApacheServer, 我々は使用することができます
+apache-server, apacheserver また.|</td>
+<td>No</td>
+<td>ユーザーには、入力を与えない場合は、
+インストールプロセスを終了します</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>バージョン<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>ツールの処理中は最も最近の更新バージョンを自動的にグラブはおよびインストールの準備ができて得るためにそれを作る。</p>
+</div>
+<div class="section" id="id6">
+<h2>エンドユーザーへの利点<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>このモジュールは apache サーバーをインストールすることができます。サーバーのインストール中にユーザーの作業が簡単になりますその
+apache サーバの現在のバージョンを自動的にチェックします。</li>
+<li>それは裕福なセント OS とも Ubuntu のように。</li>
+<li>宣言で使用されるパラメーターは大文字と小文字を区別する加えられた利点であります。</li>
 </ul>
 </div>
 </div>
@@ -279,8 +330,8 @@
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jcleopatra_main.rst">
-          クレオパトラモジュールと遊ぶ
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/japacheserver.rst">
+          ApacheServer
         </a> on GitHub.
       </li>
 
