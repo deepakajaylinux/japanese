@@ -17,4 +17,6 @@
    jbehat
    jcassandra
    jchgrp
+   jchmode
+   jchown
 
