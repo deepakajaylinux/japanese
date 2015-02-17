@@ -14,6 +14,7 @@
    japachevhosteditor
    japtana
    jautopilot
+   jbehat
    jcassandra
    jchgrp
 

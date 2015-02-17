@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Behat &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="next" title="Cassandra" href="jcassandra.html" />
+    <link rel="prev" title="Autopilot" href="jautopilot.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Behat</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">バージョン</a></li>
+<li><a class="reference internal" href="#id5">ユーザーのメリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jautopilot.html"
+         title="Previous Chapter: Autopilot">&laquo; Autopilot</a></li>
+  <li><a href="jcassandra.html"
+         title="Next Chapter: Cassandra">Cassandra &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jbehat.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="behat">
+<h1>Behat<a class="headerlink" href="#behat" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールを目指す最も最近のバージョン behat をインストールします。これは、php スクリプトのテストに役立ちます。Php スクリプトのエラーを識別するユーザーを容易にします。有効および無効のテンプレートを強調表示されます。Git は、behat のサポート ソフトウェアとして機能します。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドの使用、またとオプションのアクションを実行することができます注意してくださいユーザー取得について説明します。アウト宣言で使用することができます、代替パラメーターが表示されます。それは behat の最新バージョンをインストールするコマンドを指定します。</p>
+<p>確認のための符号化 behat の下の help コマンドの使用、次のように与えられます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra behat <span class="nb">help</span>
+</pre></div>
+</div>
+<p>スクリーン ショット下記説明ヘルプ コマンドの使い方について視覚的に。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra behat <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Behat.
+
+ Behat, behat
+
+       - install
+       Installs the latest version of behat
+       example: cleopatra behat install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>次のコマンドを使用して、インストールを達成することができます behat の最新バージョンをインストールする必要がある場合</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra behat install
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、次のプロセスに関与しているインストールを表形式で示すように</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="16%" />
+<col width="38%" />
+<col width="12%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">必要な</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Behat? (Y/N)</td>
+<td>その代わりbehatの、我々はまた、
+Behatを使用することができます</td>
+<td>Yes</td>
+<td>ユーザーとしてイエス入力を与えた場合は、
+インストールが続行されます。</td>
+</tr>
+<tr class="row-odd"><td>Install Behat? (Y/N)</td>
+<td>その代わりbehatの、我々はまた、
+Behatを使用することができます|</td>
+<td>No</td>
+<td>ユーザーには、入力を与えない場合は、
+インストールプロセスを終了します。</td>
+</tr>
+</tbody>
+</table>
+<p>次の手順を behat のインストールに関連する場合は、ユーザー Y として入力することにより、インストールの進行</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="30%" />
+<col width="10%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">パス</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data
+directory (Default)</td>
+<td>“/opt/behat(corresponding module)”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラムのデータディレク
+トリを使用してインストールを続行する場合、
+それらはYESと入力をすることができます</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>User specific</td>
+<td>No (End
+Slash)</td>
+<td>ユーザーが自分自身のプログラムデータディレクトリを続行
+したい場合は、入力Nとして、そして手に、
+彼らは場所を所有指定することができます</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory (Default)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>ユーザーは、イエス彼らが入力をできるデフォルトプログラ
+ム実行ディレクトリを使用してインストールを続行した場合</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>User specific</td>
+<td>No (End
+Slash)</td>
+<td>ユーザーが独自のプログラム実行ディレクトリを使用してイ
+ンストールを続行したい場合は、それらは、
+Nとして入力することができ、手に、彼らは場所を所有&gt;し
+て指定します|</td>
+</tr>
+</tbody>
+</table>
+<p>下に示すスクリーン ショットは、インストールに必要な手順については、絵の表現を与えます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra behat install
+Install Behat ? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          Behat         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/behat&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+Creating /tmp/cleopatra-temp-script-69243074239.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-69243074239.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-69243074239.sh Permissions
+Executing /tmp/cleopatra-temp-script-69243074239.sh
+--2015-01-27 15:31:39--  https://getcomposer.org/installer
+Resolving getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>... 87.98.253.108
+Connecting to getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span><span class="p">|</span>87.98.253.108<span class="p">|</span>:443... connected.
+HTTP request sent, awaiting response... <span class="m">200</span> OK
+Length: unspecified <span class="o">[</span>text/plain<span class="o">]</span>
+Saving to: ‘installer’
+
+   <span class="o">[</span>              &lt;<span class="o">=</span>&gt;                                                                                     <span class="o">]</span> 2,74,634    48.9KB/s   in 5.5s
+
+2015-01-27 15:31:47 <span class="o">(</span>48.9 KB/s<span class="o">)</span> - ‘installer’ saved <span class="o">[</span>274634<span class="o">]</span>
+
+All settings correct <span class="k">for</span> using Composer
+Downloading...
+
+Composer successfully installed to: /opt/behat/behat/composer.phar
+</pre></div>
+</div>
+<p>インストール中に、behat、ユーザーは、プログラムのデータ ディレクトリとプログラム エグゼキュータ ディレクトリを指定できます。</p>
+<p>上記のスクリーン ショットでは、プログラムのデータ ディレクトリと遺言執行者の指定に関する構文について説明します。</p>
+</div>
+<div class="section" id="id4">
+<h2>バージョン<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>インストール中に、behat、最も最近の版はあなたのマシンにインストールされます。</p>
+<p>これは他と比較されたときにクレオパトラの下で behat モジュールの追加の利点です。</p>
+</div>
+<div class="section" id="id5">
+<h2>ユーザーのメリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ガイドは、php スクリプトのエラーを識別します。</li>
+<li>調整、インストール作業の実行中、更新されたバージョンが自動的にユーザーに提供するように、最も最近のバージョンを検索する必要はありません。</li>
+<li>ユーザーことができますフレームし、駆動開発の動作を指定する behat の機能を使用します。</li>
+<li>ビヘイビアー駆動開発の支援によって、ユーザー独自のスクリプトの資質を確認できます。</li>
+<li>それは裕福なセント Os とも ubuntu のように。</li>
+<li>宣言で使用されるパラメーターは大文字と小文字を区別する加えられた利点であります。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jbehat.rst">
+          Behat
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
