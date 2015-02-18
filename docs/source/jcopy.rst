@@ -1,0 +1,115 @@
+======
+Copy
+======
+
+あらすじ
+-------------
+
+コピーは、Linux のシェルで入力したコマンドは 1 つの場所から別のおそらく別のファイル システムにファイルをコピーします。変更しないままに、元のファイルと新しいファイルは、同じまたは別の名前を必要があります。コピーは、ファイルまたはディレクトリのコピーを作成するコマンドです。
+
+Linux でファイルがコピー方法は、配布とファイル ・ システムによって異なります。Linux のすべてのバージョンが、コマンドラインからファイルをコピーします。両方のテキスト ベースのファイルマネージャーと使用できる GUI の数もあります。
+
+例えば、あなたの作業ディレクトリに picture.jpg という名前のファイルがあるし、した画像と呼ばれるそれのコピーを作成したいとしましょう。コマンドを実行して、ファイルがコピーされます。ここでは、picture.jpg は、コピー操作のソースと画像した目的地です。両方ファイルは現在の作業ディレクトリに存在します。
+
+ソースと宛先ファイル可能性がありますも別のディレクトリに存在します。例えば、/ホーム/チャック/backup ディレクトリにファイル/home/chuck/pictures/picture.jpg のコピーを作成します。リンク先のファイルも名前になります picture.jpg。
+
+ヘルプ コマンド
+----------------------
+
+このコマンドは、コピー モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。
+
+.. code-block:: bash
+        
+	        cleopatra copy help
+
+コピー コマンドのスクリーン ショットの絵の表現は以下します。
+
+
+.. code-block:: bash
+
+ kevell@corp:/# cleopatra copy help
+ ******************************
+
+
+  This command handles file copying functions.
+
+  Copy, copy
+
+        - put
+        Will ask you for details for servers, then copy a file or directory from local to remote
+        example: cleopatra copy put
+        example: cleopatra copy put --yes --source="/tmp/file" --target="/home/user/file"
+
+ ------------------------------
+ End Help
+ ******************************
+
+
+入れてください。
+--------------------
+
+私達を他の宛先にソース ファイルをコピーする必要があるとき、特定のコマンドの下、プロセスが実行されます。
+
+
+.. code-block:: bash
+        
+	        cleopatra copy put
+
+
+ソース ファイルのパスとターゲット ファイルのパスが求められます。
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# cleopatra copy put
+ Copy files? (Y/N) 
+ Y
+ Enter source file path
+ /kevell.html
+ Enter target file path
+ /home/desktop
+ [Pharaoh Logging] [Copy] Executing cp -r /kevell.html /home/desktop
+ ******************************
+
+
+ Copy Result: Success
+ ------------------------------
+ Copy Finished
+ ******************************
+
+
+前記のコマンドラインで元とコピー先のパスを与えることができる別のオプションがあります。
+
+
+.. code-block:: bash
+
+ kevells@corp:/# cleopatra copy put --yes --source="/kevell.html" --target="/opt"
+ [Pharaoh Logging] [Copy] Executing cp -r /kevell.html /opt
+ ******************************
+
+
+ Copy Result: Success
+ ------------------------------
+ Copy Finished
+ ******************************
+
+
+代替パラメーター
+---------------------
+
+
+コマンド ・ ラインのコピー、コピーに使用できる 2 つの代替パラメーターがあります。
+
+例: cleopatra copy put/ cleopatra Copy help
+
+
+
+利点
+--------------
+
+* このコマンドは、ファイルまたはディレクトリのコピーを作成するのに役立ちます。
+* ファイルやディレクトリをコピー ソースから 1 つのコマンドを使用して宛先を
+* 出力先ディレクトリ名だけが十分によい同じ名前を持つ別の 1 つのフォルダーからファイルをコピーする場合
+* ディレクトリ (およびそのすべての内容) 先の再帰的なオプション-r と共にソースからコピーすることができます。
+ 

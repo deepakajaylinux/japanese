@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Citadel &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="prev" title="ChromeDriver" href="jchromedriver.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Citadel</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">構成</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jchromedriver.html"
+         title="Previous Chapter: ChromeDriver">&laquo; ChromeDriver</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jcitadel.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="citadel">
+<h1>Citadel<a class="headerlink" href="#citadel" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>シタデルは、完全な機能豊富なオープン ソースのグループウェア プラットフォーム。シタデル システムは非常に汎用性です。テキスト ベースのインタ フェース、AJAX スタイルの web インターフェイスなど多くの人気のある PIM クライアント SMTP、POP、IMAP を使用して、ユーザーに提示する多数のフロント エンドを提供しています。これらのすべては同時に使用することができます。</p>
+<p>また、非常にスケーラブルです。設備の整ったシタデル サーバーは多数の同時ユーザーをサポートできるだけでなく、ルームとその内容を共有する城砦ノードの分散ネットワークを作成することもできます。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、シタデル モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。宣言で使用されている代替パラメーターはヘルプ オプションの下で明確に定義されます。このコマンドをインストールに使用するコマンドを知っているエンド ・ ユーザーのガイドします。以下に、コマンド。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra  Citadel <span class="nb">help</span>
+</pre></div>
+</div>
+<p>スクリーン ショットの絵の表現は以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Citadel <span class="nb">help</span>
+******************************
+
+
+ This module installs Citadel Server and provides configuration
+
+ Citadel, citadel-server, citadel
+
+       - install
+       Installs Citadel Server
+       example: cleopatra citadel install
+
+       - configure
+       Configure E-Mail with Citadel Server
+       example: cleopatra citadel configure
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>シタデル サーバー マシンにインストールする必要があるとき城砦スイートをインストールするには、次のコマンドを入力できます。システムがインストールの手順を実行します。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>               cleopatra Citadel  install
+
+
+
+kevell@corp:/# cleopatra Citadel install
+Install Citadel Server? (Y/N)
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Citadel Server!     *
+*******************************
+Creating /tmp/cleopatra-temp-script-11993825383.sh
+chmod 755 /tmp/cleopatra-temp-script-11993825383.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-11993825383.sh Permissions
+Executing /tmp/cleopatra-temp-script-11993825383.sh
+Temp File /tmp/cleopatra-temp-script-11993825383.sh Removed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ debconf-utils
+0 upgraded, 1 newly installed, 0 to remove and 228 not upgraded.
+Need to get 57.4 kB of archives.
+After this operation, 157 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main debconf-utils all 1.5.51ubuntu2 [57.4 kB]
+Fetched 57.4 kB in 2s (24.6 kB/s)
+Selecting previously unselected package debconf-utils.
+(Reading database ... 180308 files and directories currently installed.)
+Preparing to unpack .../debconf-utils_1.5.51ubuntu2_all.deb ...
+Unpacking debconf-utils (1.5.51ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+Setting up debconf-utils (1.5.51ubuntu2) ...
+[Pharaoh Logging] Adding Package debconf-utils from the Packager Apt executed correctly
+[Pharaoh Logging] Stopping apache2 service
+* Stopping web server apache2
+*
+Creating /tmp/cleopatra-temp-script-74031405363.sh
+chmod 755 /tmp/cleopatra-temp-script-74031405363.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-74031405363.sh Permissions
+Executing /tmp/cleopatra-temp-script-74031405363.sh
+Temp File /tmp/cleopatra-temp-script-74031405363.sh Removed
+apache2_invoke: Enable configuration javascript-common
+invoke-rc.d: initscript apache2, action &quot;reload&quot; failed.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  citadel-client citadel-mta citadel-server citadel-webcit javascript-common
+ libc-ares2 libcitadel4 libev4 libjs-prototype libjs-scriptaculous
+ libsieve2-1 tinymce
+Suggested packages:
+ localepurge
+Recommended packages:
+ db4.6-util
+The following NEW packages will be installed:
+ citadel-client citadel-mta citadel-server citadel-suite citadel-webcit
+ javascript-common libc-ares2 libcitadel4 libev4 libjs-prototype
+ libjs-scriptaculous libsieve2-1 tinymce
+0 upgraded, 13 newly installed, 0 to remove and 228 not upgraded.
+Need to get 1,993 kB of archives.
+After this operation, 8,897 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libc-ares2 amd64 1.10.0-2 [38.5 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main javascript-common all 11 [6,066 B]
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjs-prototype all 1.7.1-3 [44.2 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjs-scriptaculous all 1.9.0-2 [107 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libsieve2-1 amd64 2.2.6-1.2 [73.1 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu/ trusty/universe tinymce all 3.4.8+dfsg0-1 [488 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libcitadel4 amd64 8.24-1 [60.5 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-client amd64 8.24-1 [78.5 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libev4 amd64 1:4.15-3 [29.6 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-server amd64 8.24-1 [348 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-mta amd64 8.24-1 [4,520 B]
+Get:12 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-webcit amd64 8.24-dfsg-1 [712 kB]
+Get:13 http://in.archive.ubuntu.com/ubuntu/ trusty/universe citadel-suite all 8.24-dfsg-1 [3,542 B]
+Preconfiguring packages ...
+Fetched 1,993 kB in 16s (122 kB/s)
+Selecting previously unselected package libc-ares2:amd64.
+(Reading database ... 180340 files and directories currently installed.)
+Preparing to unpack .../libc-ares2_1.10.0-2_amd64.deb ...
+Unpacking libc-ares2:amd64 (1.10.0-2) ...
+Selecting previously unselected package javascript-common.
+Preparing to unpack .../javascript-common_11_all.deb ...
+Unpacking javascript-common (11) ...
+Selecting previously unselected package libjs-prototype.
+Preparing to unpack .../libjs-prototype_1.7.1-3_all.deb ...
+Unpacking libjs-prototype (1.7.1-3) ...
+Selecting previously unselected package libjs-scriptaculous.
+Preparing to unpack .../libjs-scriptaculous_1.9.0-2_all.deb ...
+Unpacking libjs-scriptaculous (1.9.0-2) ...
+Selecting previously unselected package libsieve2-1.
+Preparing to unpack .../libsieve2-1_2.2.6-1.2_amd64.deb ...
+Unpacking libsieve2-1 (2.2.6-1.2) ...
+Selecting previously unselected package tinymce.
+Preparing to unpack .../tinymce_3.4.8+dfsg0-1_all.deb ...
+Unpacking tinymce (3.4.8+dfsg0-1) ...
+Selecting previously unselected package libcitadel4.
+Preparing to unpack .../libcitadel4_8.24-1_amd64.deb ...
+Unpacking libcitadel4 (8.24-1) ...
+Selecting previously unselected package citadel-client.
+Preparing to unpack .../citadel-client_8.24-1_amd64.deb ...
+Unpacking citadel-client (8.24-1) ...
+Selecting previously unselected package libev4.
+Preparing to unpack .../libev4_1%3a4.15-3_amd64.deb ...
+Unpacking libev4 (1:4.15-3) ...
+Selecting previously unselected package citadel-server.
+Preparing to unpack .../citadel-server_8.24-1_amd64.deb ...
+Unpacking citadel-server (8.24-1) ...
+Selecting previously unselected package citadel-mta.
+Preparing to unpack .../citadel-mta_8.24-1_amd64.deb ...
+Unpacking citadel-mta (8.24-1) ...
+Selecting previously unselected package citadel-webcit.
+Preparing to unpack .../citadel-webcit_8.24-dfsg-1_amd64.deb ...
+Unpacking citadel-webcit (8.24-dfsg-1) ...
+Selecting previously unselected package citadel-suite.
+Preparing to unpack .../citadel-suite_8.24-dfsg-1_all.deb ...
+Unpacking citadel-suite (8.24-dfsg-1) ...
+Processing triggers for man-db (2.6.7.1-1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+ureadahead will be reprofiled on next reboot
+Setting up libc-ares2:amd64 (1.10.0-2) ...
+Setting up javascript-common (11) ...
+* Reloading web server apache2
+*
+* Apache2 is not running
+Setting up libjs-prototype (1.7.1-3) ...
+Setting up libjs-scriptaculous (1.9.0-2) ...
+Setting up libsieve2-1 (2.2.6-1.2) ...
+Setting up tinymce (3.4.8+dfsg0-1) ...
+Setting up libcitadel4 (8.24-1) ...
+Setting up citadel-client (8.24-1) ...
+Adding group `citadel&#39; (GID 126) ...
+Done.
+Adding system user `citadel&#39; (UID 118) ...
+Adding new user `citadel&#39; (UID 118) with group `citadel&#39; ...
+Not creating home directory `/var/lib/citadel&#39;.
+Setting up libev4 (1:4.15-3) ...
+Setting up citadel-server (8.24-1) ...
+Setting up citadel-webcit (8.24-dfsg-1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up citadel-mta (8.24-1) ...
+Setting up citadel-suite (8.24-dfsg-1) ...
+Processing triggers for libc-bin (2.19-0ubuntu6) ...
+[Pharaoh Logging] Adding Package citadel-suite from the Packager Apt executed correctly
+[Pharaoh Logging] Restarting citadel service
+sendcommand: started (pid=4943) connecting to Citadel server at /var/run/citadel/citadel-admin.socket
+200 udayakumar Citadel server ADMIN CONNECTION ready.
+DOWN
+231 Shutting down server.  Goodbye.
+sendcommand: processing ended.
+....................... All done!
+*******************************
+Thanks for installing , visit www.pharaohtools.com for more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Citadel: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="40%" />
+<col width="9%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">代替パラメータ</th>
+<th class="head">オプション</th>
+<th class="head">注釈</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cleopatra Citadel
+Install? (Y/N)</td>
+<td>3つの代替のパラメータのいずれかは、
+コマンドで使用することができる- Citadel,
+citadel-server, citadel
+例: Cleopatra citadel-server Install</td>
+<td>Y</td>
+<td>ユーザーがこのオプションを提供すると、
+システムはインストールプロセスを開始します</td>
+</tr>
+<tr class="row-odd"><td>cleopatra Citadel
+Install? (Y/N)</td>
+<td>3つの代替のパラメータのいずれかは、
+コマンドで使用することができる- Citadel,
+citadel-server, citadel
+例: Cleopatra citadel-server Install|</td>
+<td>N</td>
+<td>ユーザーがこのオプションを提供すると、
+システムはインストールプロセスを停止します</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h2>構成<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、シタデル サーバーを構成するのに役立ちます。一度、下特定のコマンドが実行されるシステムが提供する各セクションの既定値を任意に変更が行われる場合、ユーザー データを提供できます。構成を使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Citadel configure
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>E メール、カレンダー/スケジューリング、アドレス帳</li>
+<li>掲示板、メーリング リスト サーバーをインスタント メッセージング</li>
+<li>複数ドメインのサポート</li>
+<li>直感的な魅力的な AJAX スタイル web インターフェイス</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jcitadel.rst">
+          Citadel
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

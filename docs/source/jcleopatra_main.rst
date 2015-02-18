@@ -20,3 +20,13 @@
    jchmode
    jchown
    jchrome
+   jchromedriver
+   jcitadel
+   jcleopatra
+   jcomposer
+   jcopy
+
+
+
+
+
