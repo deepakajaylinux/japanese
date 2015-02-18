@@ -19,4 +19,4 @@
    jchgrp
    jchmode
    jchown
-
+   jchrome

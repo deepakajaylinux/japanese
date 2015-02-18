@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Chrome &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="prev" title="Chown" href="jchown.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Chrome</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jchown.html"
+         title="Previous Chapter: Chown">&laquo; Chown</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jchrome.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jcleopatra_main.html">クレオパトラモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="chrome">
+<h1>Chrome<a class="headerlink" href="#chrome" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Google のクロムは web ページやアプリケーションその優れた JavaScript レンダリングのための電光石火の速さで実行される別の web ブラウザーです。
+エンジン。</p>
+<p>クロムは、WebKit のレイアウト エンジンを使用して Google によって作成された無料の web ブラウザーです。Chrome はその非常にシンプルでミニマルなデザインに知られており、そこに最速のブラウザーとしてもてはやさ。Chrome は現在、世界で最も広く使用される web ブラウザーです。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、クロムの使用量を決定するのに役立ちます。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Chrome <span class="nb">help</span>
+</pre></div>
+</div>
+<p>上記のコマンドの絵の表現は以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Chrome <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you  with a method by which you can install Chrome from your package
+ manager
+
+ Chrome, chrome
+
+       - install
+       Installs Chrome
+       example: cleopatra chrome install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>オープン ターミナルと Linux では、同じマシンに Chrome をインストールする必要があるときにインストールするには、次のコマンドを入力します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>cleopatra Chrome install
+</pre></div>
+</div>
+<p>上記のコマンドの絵の表現は以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra chrome install
+Install Chrome? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         GoogleChrome        *
+*******************************
+Creating /tmp/cleopatra-temp-script-93431196740.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-93431196740.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-93431196740.sh Permissions
+Executing /tmp/cleopatra-temp-script-93431196740.sh
+OK
+Temp File /tmp/cleopatra-temp-script-93431196740.sh Removed
+Creating /tmp/cleopatra-temp-script-93753948068.sh
+chmod <span class="m">755</span> /tmp/cleopatra-temp-script-93753948068.sh 2&gt;/dev/null
+Changing /tmp/cleopatra-temp-script-93753948068.sh Permissions
+Executing /tmp/cleopatra-temp-script-93753948068.sh
+Hit http://downloads.hipchat.com stable InRelease
+Ign http://security.ubuntu.com trusty-security InRelease
+Hit http://security.ubuntu.com trusty-security Release.gpg
+Hit http://downloads.hipchat.com stable/main amd64 Packages
+Hit http://downloads.hipchat.com stable/main i386 Packages
+Hit http://security.ubuntu.com trusty-security Release
+Ign http://in.archive.ubuntu.com trusty InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://security.ubuntu.com trusty-security/restricted Sources
+Ign http://in.archive.ubuntu.com trusty-updates InRelease
+Ign http://in.archive.ubuntu.com trusty-backports InRelease
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://security.ubuntu.com trusty-security/multiverse Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty Release.gpg
+Hit http://security.ubuntu.com trusty-security/restricted amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/multiverse amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main i386 Packages
+Hit http://security.ubuntu.com trusty-security/restricted i386 Packages
+Hit http://security.ubuntu.com trusty-security/universe i386 Packages
+Hit http://security.ubuntu.com trusty-security/multiverse i386 Packages
+Get:1 http://in.archive.ubuntu.com trusty-updates Release.gpg <span class="o">[</span><span class="m">933</span> B<span class="o">]</span>
+Ign http://extras.ubuntu.com trusty InRelease
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://extras.ubuntu.com trusty Release.gpg
+Hit http://security.ubuntu.com trusty-security/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports Release.gpg
+Hit http://security.ubuntu.com trusty-security/restricted Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://in.archive.ubuntu.com trusty Release
+Get:2 http://dl.hhvm.com trusty InRelease <span class="o">[</span>2,104 B<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com trusty-updates Release <span class="o">[</span>62.0 kB<span class="o">]</span>
+Get:4 http://dl.hhvm.com trusty/main amd64 Packages <span class="o">[</span>1,683 B<span class="o">]</span>
+Hit http://extras.ubuntu.com trusty Release
+Hit http://dl.hhvm.com trusty/main i386 Packages
+Ign http://downloads.hipchat.com stable/main Translation-en_IN
+Ign http://downloads.hipchat.com stable/main Translation-en
+Ign http://dl.hhvm.com trusty/main Translation-en_IN
+Ign http://dl.hhvm.com trusty/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports Release
+Hit http://in.archive.ubuntu.com trusty/main Sources
+Hit http://in.archive.ubuntu.com trusty/restricted Sources
+Hit http://in.archive.ubuntu.com trusty/universe Sources
+Hit http://in.archive.ubuntu.com trusty/multiverse Sources
+Hit http://in.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted i386 Packages
+Hit http://in.archive.ubuntu.com trusty/universe i386 Packages
+Hit http://in.archive.ubuntu.com trusty/multiverse i386 Packages
+Hit http://in.archive.ubuntu.com trusty/main Translation-en
+Hit http://extras.ubuntu.com trusty/main Sources
+Hit http://in.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://extras.ubuntu.com trusty/main amd64 Packages
+Hit http://extras.ubuntu.com trusty/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty/universe Translation-en
+Get:5 http://in.archive.ubuntu.com trusty-updates/main Sources <span class="o">[</span><span class="m">160</span> kB<span class="o">]</span>
+Ign http://extras.ubuntu.com trusty/main Translation-en_IN
+Ign http://extras.ubuntu.com trusty/main Translation-en
+Get:6 http://in.archive.ubuntu.com trusty-updates/restricted Sources <span class="o">[</span>2,061 B<span class="o">]</span>
+Get:7 http://in.archive.ubuntu.com trusty-updates/universe Sources <span class="o">[</span>99.4 kB<span class="o">]</span>
+Get:8 http://in.archive.ubuntu.com trusty-updates/multiverse Sources <span class="o">[</span>4,502 B<span class="o">]</span>
+Get:9 http://in.archive.ubuntu.com trusty-updates/main amd64 Packages <span class="o">[</span><span class="m">411</span> kB<span class="o">]</span>
+Get:10 http://in.archive.ubuntu.com trusty-updates/restricted amd64 Packages <span class="o">[</span>8,875 B<span class="o">]</span>
+Get:11 http://in.archive.ubuntu.com trusty-updates/universe amd64 Packages <span class="o">[</span><span class="m">243</span> kB<span class="o">]</span>
+Get:12 http://in.archive.ubuntu.com trusty-updates/multiverse amd64 Packages <span class="o">[</span>11.1 kB<span class="o">]</span>
+Get:13 http://in.archive.ubuntu.com trusty-updates/main i386 Packages <span class="o">[</span><span class="m">401</span> kB<span class="o">]</span>
+Get:14 http://in.archive.ubuntu.com trusty-updates/restricted i386 Packages <span class="o">[</span>8,846 B<span class="o">]</span>
+Get:15 http://in.archive.ubuntu.com trusty-updates/universe i386 Packages <span class="o">[</span><span class="m">243</span> kB<span class="o">]</span>
+Get:16 http://in.archive.ubuntu.com trusty-updates/multiverse i386 Packages <span class="o">[</span>11.3 kB<span class="o">]</span>
+Hit http://in.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/main Sources
+Hit http://in.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://in.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://in.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/restricted i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/universe i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/universe Translation-en
+Ign http://in.archive.ubuntu.com trusty/main Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/multiverse Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/restricted Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/universe Translation-en_IN
+Fetched 1,671 kB in 5min 51s <span class="o">(</span>4,761 B/s<span class="o">)</span>
+Reading package lists...
+Temp File /tmp/cleopatra-temp-script-93753948068.sh Removed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Creating File /etc/apt/sources.list.d/google.list
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File deb http://dl.google.com/linux/chrome/deb/ stable main
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File deb http://dl.google.com/linux/chrome/deb/ stable main
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Chrome: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="36%" />
+<col width="11%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>cleopatra Chrome
+Install? (Y/N)</td>
+<td>二つの代替パラメーターのいずれかをコマンド
+に使用することができる- Chrome ,
+例: cleopatra chrome Install</td>
+<td>Y</td>
+<td>ユーザがオプションを提供すると、
+システムはインストールプロセスを開始します</td>
+</tr>
+<tr class="row-odd"><td>cleopatra Chrome
+Install? (Y/N)</td>
+<td>二つの代替パラメーターのいずれかをコマンド
+に使用することができる- Chrome ,
+例: cleopatra chrome Install|</td>
+<td>N</td>
+<td>ユーザがオプションを提供すると、
+システムはインストールプロセスを停止します</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>クロムは非常に高速のウェブブラウザーです。;ロードし、非常に迅速にページが表示されます。</li>
+<li>難易度は、せず、個別のウィンドウにタブをドラッグし、できますあなたのマウスで再び。</li>
+<li>Google のクロムは、非常に基本的なシンプルなデザインを使用すること。</li>
+<li>スタートアップ ページ訪問した最も頻繁にページの一覧し、クリックし、簡単にアクセスすることができます。</li>
+<li>Chrome は自動的にあなたの便宜のため理解する言語にページを変換します。</li>
+<li>あなたはいつでもあなたのアドレスバーをインターネットを検索できます。</li>
+<li>あなたのタブのいずれかのサイトがクラッシュした場合他の開いたタブは受けません。</li>
+<li>新しいのクロムを使用してログに記録されることがなく、インターネットを参照可能性がありますプライベート機能: インコグニート。</li>
+<li>Firefox と Safari とは異なり、ブラウザーのテーマと色を変更できます。</li>
+<li>Chrome はエクスプ ローラーと FireFox よりも高速です。</li>
+<li>クロム秒のみにインストールします。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jchrome.rst">
+          Chrome
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
