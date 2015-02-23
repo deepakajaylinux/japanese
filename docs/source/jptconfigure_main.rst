@@ -22,10 +22,9 @@
    jchrome
    jchromedriver
    jcitadel
-   jcleopatra
    jcomposer
    jcopy
-
+   jptconfigure
 
 
 
