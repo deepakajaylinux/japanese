@@ -49,7 +49,7 @@ chmod はファイルまたはディレクトリのアクセス許可を変更�
 
 .. code-block:: bash
         
-	        cleopatra Chmod help
+	        ptconfigure Chmod help
 
 
 
@@ -58,7 +58,7 @@ chmod はファイルまたはディレクトリのアクセス許可を変更�
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra Chmod help
+ kevell@corp:/# ptconfigure Chmod help
  ******************************
 
 
@@ -68,7 +68,7 @@ chmod はファイルまたはディレクトリのアクセス許可を変更�
 
         - path
         Will change the file permission mode of a path
-        example: cleopatra chmod path --yes --guess --recursive --path=/a/file/path --mode=0777
+        example: ptconfigure chmod path --yes --guess --recursive --path=/a/file/path --mode=0777
 
 
  ------------------------------
@@ -90,7 +90,7 @@ Chmod のパスは、ファイル システム オブジェクト (ファイル�
 
 .. code-block:: bash
         
-	        cleopatra chmod path –yes –guess –recursive –path=/”File path” –mode=0777
+	        ptconfigure chmod path –yes –guess –recursive –path=/”File path” –mode=0777
 
 
 
@@ -103,7 +103,7 @@ Chmod のパスは、ファイル システム オブジェクト (ファイル�
 chmod, Chmod
 
 
-例：cleopatra Chmode path/ cleopatra chmod path
+例：ptconfigure Chmode path/ ptconfigure chmod path
 
 
 利点

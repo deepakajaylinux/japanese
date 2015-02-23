@@ -16,13 +16,13 @@ helpコマンド
 
 .. code-block:: bash
         
-	        cleopatra cassandra help
+	        ptconfigure cassandra help
 
 上記のコマンドの絵画表現は、以下の通りです
 
 .. code-block:: bash
 
- kevells@corp:/# cleopatra cassandra help
+ kevell@corp:/# ptconfigure cassandra help
 
  ******************************
 
@@ -33,7 +33,7 @@ helpコマンド
 
         - install
         Installs the latest version of Cassandra
-        example: cleopatra cassandra install
+        example: ptconfigure cassandra install
 
  ------------------------------
  End Help
@@ -46,13 +46,13 @@ helpコマンド
 
 .. code-block:: bash
 
-                cleopatra cassandra install
+                ptconfigure cassandra install
 
 上記のコマンドの絵画表現は、以下の通りです
 
 .. code-block:: bash
 
- kevells@corp:/#  cleopatra cassandra install
+ kevell@corp:/#  ptconfigure cassandra install
 
  Install Cassandra? (Y/N) 
  Y
@@ -60,10 +60,10 @@ helpコマンド
  *        Pharaoh Tools        *
  *         Cassandra!        *
  *******************************
- Creating /tmp/cleopatra-temp-script-10553509319.sh
- chmod 755 /tmp/cleopatra-temp-script-10553509319.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-10553509319.sh Permissions
- Executing /tmp/cleopatra-temp-script-10553509319.sh
+ Creating /tmp/ptconfigure-temp-script-10553509319.sh
+ chmod 755 /tmp/ptconfigure-temp-script-10553509319.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-10553509319.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-10553509319.sh
  gpg: directory `/home/deepak/.gnupg' created
  gpg: new configuration file `/home/deepak/.gnupg/gpg.conf' created
  gpg: WARNING: options in `/home/deepak/.gnupg/gpg.conf' are not yet active during this run
@@ -267,7 +267,7 @@ helpコマンド
  Get:41 http://us.archive.ubuntu.com precise/main Translation-en [726 kB]
  Get:42 http://us.archive.ubuntu.com precise/universe Translation-en [3341 kB]
  Fetched 10.2 MB in 4min 2s (42.1 kB/s)
- Temp File /tmp/cleopatra-temp-script-10553509319.sh Removed
+ Temp File /tmp/ptconfigure-temp-script-10553509319.sh Removed
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
  W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages (/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages)
@@ -324,23 +324,23 @@ helpコマンド
  +-------------------------------+---------------------------------------------+-------------+---------------------------------------+
  | パラメータ                    | 代替パラメータ                              | オプション  | 注釈                                  |
  +===============================+=============================================+=============+=======================================+
- |cleopatra cassandra Install    | コマンドラインで使用することができる2つの   | Y           | システムは、インストールプロセスを開  |
+ |ptconfigure cassandra Install  | コマンドラインで使用することができる2つの   | Y           | システムは、インストールプロセスを開  |
  |                               | 別のパラメータがある。Cassandra , cassandra |             | 始します                              |
- |                               | 例えば：cleopatra cassandra install,        |             |                                       |
- |                               |         cleopatra Cassandra install         |             |                                       |
+ |                               | 例えば：ptconfigure cassandra install,      |             |                                       |
+ |                               |         ptconfigure Cassandra install       |             |                                       |
  +-------------------------------+---------------------------------------------+-------------+---------------------------------------+
- |cleopatra cassandra Install    | コマンドラインで使用することができる2つの   | N           | システムは、インストール·プロセス     |
+ |ptconfigure cassandra Install  | コマンドラインで使用することができる2つの   | N           | システムは、インストール·プロセス     |
  |                               | 別のパラメータがある。Cassandra , cassandra |             | を停止し、                            |
- |                               | 例えば：cleopatra cassandra install,        |             |                                       |
- |                               |         cleopatra Cassandra install|        |             |                                       |
+ |                               | 例えば：ptconfigure cassandra install,      |             |                                       |
+ |                               |         ptconfigure Cassandra install|      |             |                                       |
  +-------------------------------+---------------------------------------------+-------------+---------------------------------------+
 
 
 メリット
 ------------
 
-* 分権 – クラスタ内のすべてのノードが同じ役割を持っています。単一障害点があ りません。データは、クラスター（ので、各ノードは異なるデータを含む）  に分散されますが、すべての要求にサービスを提供することができ、すべてのノードと全くマスターはありません。-
-* 複製およびマルチデータセンターのレプリケーションをサポート - レプリケーション戦略は設定可能です。カサンドラは、複数のデータセンター間で、多数   のノードを展開するために、分散システムとして設計されている。カサンドラの分散アーキテクチャの主な機能は、具体的にフェールオーバーおよび災害復旧  のために、冗長性を確保するため、複数データセンターの展開に合わせて調整されている。
+* 分権 – クラスタ内のすべてのノードが同じ役割を持っています。単一障害点があ りません。データは、クラスター（ので、各ノードは異なるデータを含む）   に分散されますが、すべての要求にサービスを提供することができ、すべてのノードと全くマスターはありません。-
+* 複製およびマルチデータセンターのレプリケーションをサポート - レプリケーション戦略は設定可能です。カサンドラは、複数のデータセンター間で、多数    のノードを展開するために、分散システムとして設計されている。カサンドラの分散アーキテクチャの主な機能は、具体的にフェールオーバーおよび災害復旧   のために、冗長性を確保するため、複数データセンターの展開に合わせて調整されている。
 * スケーラビリティ - 読み、スループット、新しいマシンがアプリケーションへのダウンタイムなしまたは中断、追加された直線的に、両方の増加を書きます
-* フォールトトレラント - データは、自動的にフォールトトレランスのために複数のノードに複製されます。複数のデータセンター間のレプリケーションがサ   ポートされています。失敗したノードは、ダウンタイムなしで置き換えることができる。
-* 調整可能な一貫性 - 書き込み、一貫性の調整可能なレベルを提供読み込み、からのすべての方法は、真ん中の定足数レベルで、「すべてのレプリカのための   ブロック読み出しを可能にするには」を「失敗することはありません書き込み」。
+* フォールトトレラント - データは、自動的にフォールトトレランスのために複数のノードに複製されます。複数のデータセンター間のレプリケーションがサ    ポートされています。失敗したノードは、ダウンタイムなしで置き換えることができる。
+* 調整可能な一貫性 - 書き込み、一貫性の調整可能なレベルを提供読み込み、からのすべての方法は、真ん中の定足数レベルで、「すべてのレプリカのための    ブロック読み出しを可能にするには」を「失敗することはありません書き込み」。

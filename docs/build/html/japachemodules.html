@@ -160,11 +160,11 @@
 <div class="section" id="id2">
 <h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>このヘルプ コマンドは、特定のモジュールの目的について説明します。インストールの構文ヘルプ コマンドの下で描かれています。また、宣言に使用できる代替のパラメーターを一覧表示されます。Help コマンドは、エンドユーザーが動作するように簡単です。次のコマンドはこのモジュールの使用についてユーザーをガイドします。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra apache modules <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apache modules <span class="nb">help</span>
 </pre></div>
 </div>
 <p>コマンドを与えた後、コマンドはヘルプ オプションをリストアップします。次のスクリーン ショットは、このモジュールの使用のための視覚効果を与えます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ApacheModules <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ApacheModules <span class="nb">help</span>
 ******************************
 
 
@@ -175,7 +175,7 @@
 
        - install
        Installs common apache Modules
-       example: cleopatra apache-modules install
+       example: ptconfigure apache-modules install
 
 ------------------------------
 End Help
@@ -185,8 +185,8 @@ End Help
 </div>
 <div class="section" id="id3">
 <h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>インストールは、モジュールをインストールするこのクレオパトラの下、下記コマンドを使用するだけで困難なプロセスではありません。</p>
-<div class="highlight-bash"><div class="highlight"><pre>Install apache-modules install
+<p>インストールは、単に以下のコマンドを使用してptconfigureの下で、このモジュールをインストールすることは困難なプロセスではありません、</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apache-modules install
 </pre></div>
 </div>
 <p>それを聞いてきます、コマンドを与えた後</p>
@@ -196,7 +196,7 @@ End Help
 <p>&#8216;Y&#8217; と入力を与えると、モジュールが正常にインストールされます。
 場合として入力を与える &#8216; ñ &#8216;、インストール出てくるし、。</p>
 <p>次のスクリーン ショットは、このモジュールのインストールの視覚効果を与えます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  cleopatra apache-modules install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptconfigure apache-modules install
 Install Apache Modules? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
@@ -220,26 +220,26 @@ Unpacking libxml2-dev:amd64 <span class="o">(</span>2.9.1+dfsg1-3ubuntu4.4<span 
 Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
 Setting up libxml2-dev:amd64 <span class="o">(</span>2.9.1+dfsg1-3ubuntu4.4<span class="o">)</span> ...
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libxml2-dev from the Packager Apt executed correctly
-Creating /tmp/cleopatra-temp-script-11435369770.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-11435369770.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-11435369770.sh Permissions
-Executing /tmp/cleopatra-temp-script-11435369770.sh
+Creating /tmp/ptconfigure-temp-script-11435369770.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-11435369770.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-11435369770.sh Permissions
+Executing /tmp/ptconfigure-temp-script-11435369770.sh
 Enabling module rewrite.
 To activate the new configuration, you need to run:
  service apache2 restart
-Temp File /tmp/cleopatra-temp-script-11435369770.sh Removed
-Creating /tmp/cleopatra-temp-script-95277456152.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-95277456152.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-95277456152.sh Permissions
-Executing /tmp/cleopatra-temp-script-95277456152.sh
+Temp File /tmp/ptconfigure-temp-script-11435369770.sh Removed
+Creating /tmp/ptconfigure-temp-script-95277456152.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-95277456152.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-95277456152.sh Permissions
+Executing /tmp/ptconfigure-temp-script-95277456152.sh
 Considering dependency filter <span class="k">for</span> deflate:
 Module filter already enabled
 Module deflate already enabled
-Temp File /tmp/cleopatra-temp-script-95277456152.sh Removed
-Creating /tmp/cleopatra-temp-script-1351048337.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-1351048337.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-1351048337.sh Permissions
-Executing /tmp/cleopatra-temp-script-1351048337.sh
+Temp File /tmp/ptconfigure-temp-script-95277456152.sh Removed
+Creating /tmp/ptconfigure-temp-script-1351048337.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-1351048337.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-1351048337.sh Permissions
+Executing /tmp/ptconfigure-temp-script-1351048337.sh
 Considering dependency setenvif <span class="k">for</span> ssl:
 Module setenvif already enabled
 Considering dependency mime <span class="k">for</span> ssl:
@@ -250,14 +250,14 @@ Enabling module ssl.
 See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
 To activate the new configuration, you need to run:
   service apache2 restart
-Temp File /tmp/cleopatra-temp-script-1351048337.sh Removed
+Temp File /tmp/ptconfigure-temp-script-1351048337.sh Removed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libapache2-mod-php5 from the Packager Apt is already installed, so not installing
-Creating /tmp/cleopatra-temp-script-89813944614.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-89813944614.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-89813944614.sh Permissions
-Executing /tmp/cleopatra-temp-script-89813944614.sh
+Creating /tmp/ptconfigure-temp-script-89813944614.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-89813944614.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-89813944614.sh Permissions
+Executing /tmp/ptconfigure-temp-script-89813944614.sh
 Module php5 already enabled
-Temp File /tmp/cleopatra-temp-script-89813944614.sh Removed
+Temp File /tmp/ptconfigure-temp-script-89813944614.sh Removed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Restarting apache2 service
 Output of config <span class="nb">test </span>was:
 apache2: Syntax error on line <span class="m">214</span> of /etc/apache2/apache2.conf: Could not open configuration file /etc/apache2/httpd.conf: No such file or
@@ -285,7 +285,7 @@ Installer Finished
 <div class="table-bordered section" id="id4">
 <h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>モジュールは、クレオパトラとリンクへの援助です。</li>
+<li>モジュールはptconfigureとリンクするの援助である。</li>
 <li>インストール中に Apache モジュール、それは構成ファイルが黙認されます。</li>
 <li>構成ファイルが、システムで利用可能なない場合このモジュールは自動的にインストールされます。</li>
 </ul>

@@ -32,6 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="next" title="Chmode" href="jchmode.html" />
     <link rel="prev" title="Cassandra" href="jcassandra.html" />
 
 
@@ -105,6 +106,8 @@
                 
   <li><a href="jcassandra.html"
          title="Previous Chapter: Cassandra">&laquo; Cassandra</a></li>
+  <li><a href="jchmode.html"
+         title="Next Chapter: Chmode">Chmode &raquo;</a></li>
               
             
             
@@ -160,11 +163,11 @@
 <div class="section" id="help">
 <h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、変更するグループモジュールの使用状況を判断するのに役立ちます。ユーザーは、このモジュールを実行する別の方法/形式について知って来る。このコマンドは、このコマンドの目的を知ることが、エンドユーザーをガイドします。与えられた以下のコマンドと同じのスクリーンショットである。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra Chgrp <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Chgrp <span class="nb">help</span>
 </pre></div>
 </div>
 <p>スクリーンショットの図的表現は、以下のとおりである</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  cleopatra Chgrp <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptconfigure Chgrp <span class="nb">help</span>
 ******************************
 
 
@@ -174,7 +177,7 @@
 
        - path
        Will change the file group ownership of a path
-       example: cleopatra chgrp path --yes --guess --recursive --path<span class="o">=</span>/a/file/path --group<span class="o">=</span>golden
+       example: ptconfigure chgrp path --yes --guess --recursive --path<span class="o">=</span>/a/file/path --group<span class="o">=</span>golden
 
 
 ------------------------------
@@ -186,7 +189,7 @@ End Help
 <div class="section" id="id2">
 <h2>パス<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>ユーザーがパスのファイルグループ所有権を変更する必要がある場合、下記のコマンドは、プロセスを実行します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra chgrp path –yes –guess –recursive –path<span class="o">=</span>/”File path” –group<span class="o">=</span>”group name”
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure chgrp path –yes –guess –recursive –path<span class="o">=</span>/”File path” –group<span class="o">=</span>”group name”
 </pre></div>
 </div>
 </div>
@@ -194,13 +197,13 @@ End Help
 <h2>代替パラメータ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>コマンドラインで使用することができる2つの別のパラメータがある。</p>
 <p>chgrp, Chgrp</p>
-<p>例えば： cleopatra Chgrp path/ cleopatra chgrp path</p>
+<p>例えば： ptconfigure Chgrp path/ ptconfigure chgrp path</p>
 </div>
 <div class="section" id="id4">
 <h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>他のユーザーがファイルにアクセスすることができるかもしれないが、唯一の所有者は、その権限を変更することができます。あなたは、ファイルのパーミッ  ションの1を制御するために他のユーザーを与えたい場合は、他のユーザーに自分自身からのファイルの所有者を変更することができます。</li>
-<li>また、chgrpコマンドを使用して、ファイルやディレクトリのグループを変更することができます。chgrpコマンドは、最初の引数としてファイルやディレクト  リのための新しいグループの名前を取ります。</li>
+<li>他のユーザーがファイルにアクセスすることができるかもしれないが、唯一の所有者は、その権限を変更することができます。あなたは、ファイルのパーミッ   ションの1を制御するために他のユーザーを与えたい場合は、他のユーザーに自分自身からのファイルの所有者を変更することができます。</li>
+<li>また、chgrpコマンドを使用して、ファイルやディレクトリのグループを変更することができます。chgrpコマンドは、最初の引数としてファイルやディレクト   リのための新しいグループの名前を取ります。</li>
 </ul>
 </div>
 </div>

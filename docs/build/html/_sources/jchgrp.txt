@@ -18,13 +18,13 @@ helpコマンド
 
 .. code-block:: bash
         
-	        cleopatra Chgrp help
+	        ptconfigure Chgrp help
 
 スクリーンショットの図的表現は、以下のとおりである
 
 .. code-block:: bash
 
- kevell@corp:/#  cleopatra Chgrp help
+ kevell@corp:/#  ptconfigure Chgrp help
  ******************************
 
 
@@ -34,7 +34,7 @@ helpコマンド
 
         - path
         Will change the file group ownership of a path
-        example: cleopatra chgrp path --yes --guess --recursive --path=/a/file/path --group=golden
+        example: ptconfigure chgrp path --yes --guess --recursive --path=/a/file/path --group=golden
 
 
  ------------------------------
@@ -49,7 +49,7 @@ helpコマンド
 
 .. code-block:: bash
         
-	        cleopatra chgrp path –yes –guess –recursive –path=/”File path” –group=”group name”
+	        ptconfigure chgrp path –yes –guess –recursive –path=/”File path” –group=”group name”
 	
 
 代替パラメータ
@@ -59,12 +59,12 @@ helpコマンド
 
 chgrp, Chgrp
 
-例えば： cleopatra Chgrp path/ cleopatra chgrp path
+例えば： ptconfigure Chgrp path/ ptconfigure chgrp path
 
 
 メリット
 ------------
 
-* 他のユーザーがファイルにアクセスすることができるかもしれないが、唯一の所有者は、その権限を変更することができます。あなたは、ファイルのパーミッ  ションの1を制御するために他のユーザーを与えたい場合は、他のユーザーに自分自身からのファイルの所有者を変更することができます。
-* また、chgrpコマンドを使用して、ファイルやディレクトリのグループを変更することができます。chgrpコマンドは、最初の引数としてファイルやディレクト  リのための新しいグループの名前を取ります。
+* 他のユーザーがファイルにアクセスすることができるかもしれないが、唯一の所有者は、その権限を変更することができます。あなたは、ファイルのパーミッ   ションの1を制御するために他のユーザーを与えたい場合は、他のユーザーに自分自身からのファイルの所有者を変更することができます。
+* また、chgrpコマンドを使用して、ファイルやディレクトリのグループを変更することができます。chgrpコマンドは、最初の引数としてファイルやディレクト   リのための新しいグループの名前を取ります。
 

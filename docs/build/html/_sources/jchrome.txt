@@ -17,14 +17,14 @@ Google のクロムは web ページやアプリケーションその優れた J
 
 .. code-block:: bash
         
-	        cleopatra Chrome help
+	        ptconfigure Chrome help
 
 上記のコマンドの絵の表現は以下します。
 
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra Chrome help
+ kevell@corp:/# ptconfigure Chrome help
  ******************************
 
 
@@ -35,7 +35,7 @@ Google のクロムは web ページやアプリケーションその優れた J
 
         - install
         Installs Chrome
-        example: cleopatra chrome install
+        example: ptconfigure chrome install
 
  ------------------------------
  End Help
@@ -50,7 +50,7 @@ Google のクロムは web ページやアプリケーションその優れた J
 
 .. code-block:: bash
         
-	        cleopatra Chrome install
+	        ptconfigure Chrome install
 
 
 上記のコマンドの絵の表現は以下します。
@@ -58,23 +58,23 @@ Google のクロムは web ページやアプリケーションその優れた J
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra chrome install
+ kevell@corp:/# ptconfigure chrome install
  Install Chrome? (Y/N) 
  Y
  *******************************
  *        Pharaoh Tools        *
  *         GoogleChrome        *
  *******************************
- Creating /tmp/cleopatra-temp-script-93431196740.sh
- chmod 755 /tmp/cleopatra-temp-script-93431196740.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-93431196740.sh Permissions
- Executing /tmp/cleopatra-temp-script-93431196740.sh
+ Creating /tmp/ptconfigure-temp-script-93431196740.sh
+ chmod 755 /tmp/ptconfigure-temp-script-93431196740.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-93431196740.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-93431196740.sh
  OK
- Temp File /tmp/cleopatra-temp-script-93431196740.sh Removed
- Creating /tmp/cleopatra-temp-script-93753948068.sh
- chmod 755 /tmp/cleopatra-temp-script-93753948068.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-93753948068.sh Permissions
- Executing /tmp/cleopatra-temp-script-93753948068.sh
+ Temp File /tmp/ptconfigure-temp-script-93431196740.sh Removed
+ Creating /tmp/ptconfigure-temp-script-93753948068.sh
+ chmod 755 /tmp/ptconfigure-temp-script-93753948068.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-93753948068.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-93753948068.sh
  Hit http://downloads.hipchat.com stable InRelease
  Ign http://security.ubuntu.com trusty-security InRelease
  Hit http://security.ubuntu.com trusty-security Release.gpg
@@ -175,7 +175,7 @@ Google のクロムは web ページやアプリケーションその優れた J
  Ign http://in.archive.ubuntu.com trusty/universe Translation-en_IN
  Fetched 1,671 kB in 5min 51s (4,761 B/s)
  Reading package lists...
- Temp File /tmp/cleopatra-temp-script-93753948068.sh Removed
+ Temp File /tmp/ptconfigure-temp-script-93753948068.sh Removed
  [Pharaoh Logging] [File] Creating File /etc/apt/sources.list.d/google.list
  [Pharaoh Logging] [File] Reading File deb http://dl.google.com/linux/chrome/deb/ stable main
  [Pharaoh Logging] [File] Reading File deb http://dl.google.com/linux/chrome/deb/ stable main
@@ -203,13 +203,13 @@ Google のクロムは web ページやアプリケーションその優れた J
  +-------------------------+-----------------------------------------------+--------------+--------------------------------------------+
  | パラメーター            | 代替パラメーター                              | オプション   | コメント                                   |
  +=========================+===============================================+==============+============================================+
- |cleopatra Chrome         | 二つの代替パラメーターのいずれかをコマンド    | Y            | ユーザがオプションを提供すると、           |
+ |ptconfigure Chrome       | 二つの代替パラメーターのいずれかをコマンド    | Y            | ユーザがオプションを提供すると、           |
  |Install? (Y/N)           | に使用することができる- Chrome ,              |              | システムはインストールプロセスを開始します |
- |                         | 例: cleopatra chrome Install                  |              |                                            |
+ |                         | 例: ptconfigure chrome Install                |              |                                            |
  +-------------------------+-----------------------------------------------+--------------+--------------------------------------------+
- |cleopatra Chrome         | 二つの代替パラメーターのいずれかをコマンド    | N            | ユーザがオプションを提供すると、           |
+ |ptconfigure Chrome       | 二つの代替パラメーターのいずれかをコマンド    | N            | ユーザがオプションを提供すると、           |
  |Install? (Y/N)           | に使用することができる- Chrome ,              |              | システムはインストールプロセスを停止します |
- |                         | 例: cleopatra chrome Install|                 |              |                                            |
+ |                         | 例: ptconfigure chrome Install|               |              |                                            |
  +-------------------------+-----------------------------------------------+--------------+--------------------------------------------+
 
 

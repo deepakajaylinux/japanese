@@ -32,6 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="next" title="PTConfigure" href="jcleopatra.html" />
     <link rel="prev" title="ChromeDriver" href="jchromedriver.html" />
 
 
@@ -105,6 +106,8 @@
                 
   <li><a href="jchromedriver.html"
          title="Previous Chapter: ChromeDriver">&laquo; ChromeDriver</a></li>
+  <li><a href="jcleopatra.html"
+         title="Next Chapter: PTConfigure">PTConfigure &raquo;</a></li>
               
             
             
@@ -159,11 +162,11 @@
 <div class="section" id="id2">
 <h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、シタデル モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。宣言で使用されている代替パラメーターはヘルプ オプションの下で明確に定義されます。このコマンドをインストールに使用するコマンドを知っているエンド ・ ユーザーのガイドします。以下に、コマンド。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra  Citadel <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure  Citadel <span class="nb">help</span>
 </pre></div>
 </div>
 <p>スクリーン ショットの絵の表現は以下します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Citadel <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Citadel <span class="nb">help</span>
 ******************************
 
 
@@ -173,11 +176,11 @@
 
        - install
        Installs Citadel Server
-       example: cleopatra citadel install
+       example: ptconfigure citadel install
 
        - configure
        Configure E-Mail with Citadel Server
-       example: cleopatra citadel configure
+       example: ptconfigure citadel configure
 
 ------------------------------
 End Help
@@ -188,22 +191,22 @@ End Help
 <div class="section" id="id3">
 <h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>シタデル サーバー マシンにインストールする必要があるとき城砦スイートをインストールするには、次のコマンドを入力できます。システムがインストールの手順を実行します。以下に、コマンドと同じのスクリーン ショット。</p>
-<div class="highlight-bash"><div class="highlight"><pre>               cleopatra Citadel  install
+<div class="highlight-bash"><div class="highlight"><pre>       ptconfigure Citadel  install
 
 
 
-kevell@corp:/# cleopatra Citadel install
+kevell@corp:/# ptconfigure Citadel install
 Install Citadel Server? (Y/N)
 Y
 *******************************
 *        Pharaoh Tools        *
 *         Citadel Server!     *
 *******************************
-Creating /tmp/cleopatra-temp-script-11993825383.sh
-chmod 755 /tmp/cleopatra-temp-script-11993825383.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-11993825383.sh Permissions
-Executing /tmp/cleopatra-temp-script-11993825383.sh
-Temp File /tmp/cleopatra-temp-script-11993825383.sh Removed
+Creating /tmp/ptconfigure-temp-script-11993825383.sh
+chmod 755 /tmp/ptconfigure-temp-script-11993825383.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-11993825383.sh Permissions
+Executing /tmp/ptconfigure-temp-script-11993825383.sh
+Temp File /tmp/ptconfigure-temp-script-11993825383.sh Removed
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -224,11 +227,11 @@ Setting up debconf-utils (1.5.51ubuntu2) ...
 [Pharaoh Logging] Stopping apache2 service
 * Stopping web server apache2
 *
-Creating /tmp/cleopatra-temp-script-74031405363.sh
-chmod 755 /tmp/cleopatra-temp-script-74031405363.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-74031405363.sh Permissions
-Executing /tmp/cleopatra-temp-script-74031405363.sh
-Temp File /tmp/cleopatra-temp-script-74031405363.sh Removed
+Creating /tmp/ptconfigure-temp-script-74031405363.sh
+chmod 755 /tmp/ptconfigure-temp-script-74031405363.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-74031405363.sh Permissions
+Executing /tmp/ptconfigure-temp-script-74031405363.sh
+Temp File /tmp/ptconfigure-temp-script-74031405363.sh Removed
 apache2_invoke: Enable configuration javascript-common
 invoke-rc.d: initscript apache2, action &quot;reload&quot; failed.
 Reading package lists...
@@ -366,22 +369,25 @@ Installer Finished
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>cleopatra Citadel
+<tr class="row-even"><td>ptconfigure Citadel
 Install? (Y/N)</td>
 <td>3つの代替のパラメータのいずれかは、
 コマンドで使用することができる- Citadel,
 citadel-server, citadel
-例: Cleopatra citadel-server Install</td>
+例: ptconfigure citadel-server Install</td>
 <td>Y</td>
 <td>ユーザーがこのオプションを提供すると、
 システムはインストールプロセスを開始します</td>
 </tr>
-<tr class="row-odd"><td>cleopatra Citadel
-Install? (Y/N)</td>
-<td>3つの代替のパラメータのいずれかは、
-コマンドで使用することができる- Citadel,
-citadel-server, citadel
-例: Cleopatra citadel-server Install|</td>
+<tr class="row-odd"><td colspan="2"><p class="first">ptconfigure Citadel         | 3つの代替のパラメータのいずれかは、
+Install? (Y/N)            | コマンドで使用することができる- Citadel,</p>
+<blockquote class="last">
+<div><div class="line-block">
+<div class="line">citadel-server, citadel</div>
+<div class="line">例: ptconfigure citadel-server Install|</div>
+</div>
+</div></blockquote>
+</td>
 <td>N</td>
 <td>ユーザーがこのオプションを提供すると、
 システムはインストールプロセスを停止します</td>
@@ -392,7 +398,7 @@ citadel-server, citadel
 <div class="section" id="id4">
 <h2>構成<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、シタデル サーバーを構成するのに役立ちます。一度、下特定のコマンドが実行されるシステムが提供する各セクションの既定値を任意に変更が行われる場合、ユーザー データを提供できます。構成を使用するコマンドを次に示します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra Citadel configure
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Citadel configure
 </pre></div>
 </div>
 </div>

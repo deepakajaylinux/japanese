@@ -33,7 +33,7 @@
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
     <link rel="next" title="Chgrp" href="jchgrp.html" />
-    <link rel="prev" title="Autopilot" href="jautopilot.html" />
+    <link rel="prev" title="Behat" href="jbehat.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -104,8 +104,8 @@
             
               
                 
-  <li><a href="jautopilot.html"
-         title="Previous Chapter: Autopilot">&laquo; Autopilot</a></li>
+  <li><a href="jbehat.html"
+         title="Previous Chapter: Behat">&laquo; Behat</a></li>
   <li><a href="jchgrp.html"
          title="Next Chapter: Chgrp">Chgrp &raquo;</a></li>
               
@@ -162,11 +162,11 @@
 <div class="section" id="help">
 <h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、カサンドラモジュールの使用状況を判断するのに役立ちます。ユーザーは、このモジュールを実行する別の方法/形式について知って来る。このコマンドは、このコマンドの目的を知ることが、エンドユーザーをガイドします。与えられた以下のコマンドと同じのスクリーンショットである。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cassandra <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cassandra <span class="nb">help</span>
 </pre></div>
 </div>
 <p>上記のコマンドの絵画表現は、以下の通りです</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# cleopatra cassandra <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure cassandra <span class="nb">help</span>
 
 ******************************
 
@@ -177,7 +177,7 @@
 
        - install
        Installs the latest version of Cassandra
-       example: cleopatra cassandra install
+       example: ptconfigure cassandra install
 
 ------------------------------
 End Help
@@ -188,11 +188,11 @@ End Help
 <div class="section" id="id2">
 <h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、システム内のカサンドラを設置するのに役立ちます。以下のコマンドは、インストールのプロセスを実行します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra cassandra install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure cassandra install
 </pre></div>
 </div>
 <p>上記のコマンドの絵画表現は、以下の通りです</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/#  cleopatra cassandra install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptconfigure cassandra install
 
 Install Cassandra? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
@@ -200,10 +200,10 @@ Y
 *        Pharaoh Tools        *
 *         Cassandra!        *
 *******************************
-Creating /tmp/cleopatra-temp-script-10553509319.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-10553509319.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-10553509319.sh Permissions
-Executing /tmp/cleopatra-temp-script-10553509319.sh
+Creating /tmp/ptconfigure-temp-script-10553509319.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-10553509319.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-10553509319.sh Permissions
+Executing /tmp/ptconfigure-temp-script-10553509319.sh
 gpg: directory <span class="sb">`</span>/home/deepak/.gnupg<span class="s1">&#39; created</span>
 <span class="s1">gpg: new configuration file `/home/deepak/.gnupg/gpg.conf&#39;</span> created
 gpg: WARNING: options in <span class="sb">`</span>/home/deepak/.gnupg/gpg.conf<span class="s1">&#39; are not yet active during this run</span>
@@ -407,7 +407,7 @@ Hit http://in.archive.ubuntu.com trusty-backports/universe Translation-en
 Get:41 http://us.archive.ubuntu.com precise/main Translation-en <span class="o">[</span><span class="m">726</span> kB<span class="o">]</span>
 Get:42 http://us.archive.ubuntu.com precise/universe Translation-en <span class="o">[</span><span class="m">3341</span> kB<span class="o">]</span>
 Fetched 10.2 MB in 4min 2s <span class="o">(</span>42.1 kB/s<span class="o">)</span>
-Temp File /tmp/cleopatra-temp-script-10553509319.sh Removed
+Temp File /tmp/ptconfigure-temp-script-10553509319.sh Removed
 W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
 W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
 W: Duplicate sources.list entry http://repos.zend.com/zend-server/6.1/deb/ server/non-free amd64 Packages <span class="o">(</span>/var/lib/apt/lists/repos.zend.com_zend-server_6.1_deb_dists_server_non-free_binary-amd64_Packages<span class="o">)</span>
@@ -475,23 +475,23 @@ Installer Finished
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>cleopatra cassandra Install</td>
+<tr class="row-even"><td>ptconfigure cassandra Install</td>
 <td><p class="first">コマンドラインで使用することができる2つの
 別のパラメータがある。Cassandra , cassandra
-例えば：cleopatra cassandra install,</p>
+例えば：ptconfigure cassandra install,</p>
 <blockquote class="last">
-<div>cleopatra Cassandra install</div></blockquote>
+<div>ptconfigure Cassandra install</div></blockquote>
 </td>
 <td>Y</td>
 <td>システムは、インストールプロセスを開
 始します</td>
 </tr>
-<tr class="row-odd"><td>cleopatra cassandra Install</td>
+<tr class="row-odd"><td>ptconfigure cassandra Install</td>
 <td><p class="first">コマンドラインで使用することができる2つの
 別のパラメータがある。Cassandra , cassandra
-例えば：cleopatra cassandra install,</p>
+例えば：ptconfigure cassandra install,</p>
 <blockquote class="last">
-<div>cleopatra Cassandra install|</div></blockquote>
+<div>ptconfigure Cassandra install|</div></blockquote>
 </td>
 <td>N</td>
 <td>システムは、インストール·プロセス
@@ -503,11 +503,11 @@ Installer Finished
 <div class="section" id="id4">
 <h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>分権 – クラスタ内のすべてのノードが同じ役割を持っています。単一障害点があ りません。データは、クラスター（ので、各ノードは異なるデータを含む）  に分散されますが、すべての要求にサービスを提供することができ、すべてのノードと全くマスターはありません。-</li>
-<li>複製およびマルチデータセンターのレプリケーションをサポート - レプリケーション戦略は設定可能です。カサンドラは、複数のデータセンター間で、多数   のノードを展開するために、分散システムとして設計されている。カサンドラの分散アーキテクチャの主な機能は、具体的にフェールオーバーおよび災害復旧  のために、冗長性を確保するため、複数データセンターの展開に合わせて調整されている。</li>
+<li>分権 – クラスタ内のすべてのノードが同じ役割を持っています。単一障害点があ りません。データは、クラスター（ので、各ノードは異なるデータを含む）   に分散されますが、すべての要求にサービスを提供することができ、すべてのノードと全くマスターはありません。-</li>
+<li>複製およびマルチデータセンターのレプリケーションをサポート - レプリケーション戦略は設定可能です。カサンドラは、複数のデータセンター間で、多数    のノードを展開するために、分散システムとして設計されている。カサンドラの分散アーキテクチャの主な機能は、具体的にフェールオーバーおよび災害復旧   のために、冗長性を確保するため、複数データセンターの展開に合わせて調整されている。</li>
 <li>スケーラビリティ - 読み、スループット、新しいマシンがアプリケーションへのダウンタイムなしまたは中断、追加された直線的に、両方の増加を書きます</li>
-<li>フォールトトレラント - データは、自動的にフォールトトレランスのために複数のノードに複製されます。複数のデータセンター間のレプリケーションがサ   ポートされています。失敗したノードは、ダウンタイムなしで置き換えることができる。</li>
-<li>調整可能な一貫性 - 書き込み、一貫性の調整可能なレベルを提供読み込み、からのすべての方法は、真ん中の定足数レベルで、「すべてのレプリカのための   ブロック読み出しを可能にするには」を「失敗することはありません書き込み」。</li>
+<li>フォールトトレラント - データは、自動的にフォールトトレランスのために複数のノードに複製されます。複数のデータセンター間のレプリケーションがサ    ポートされています。失敗したノードは、ダウンタイムなしで置き換えることができる。</li>
+<li>調整可能な一貫性 - 書き込み、一貫性の調整可能なレベルを提供読み込み、からのすべての方法は、真ん中の定足数レベルで、「すべてのレプリカのための    ブロック読み出しを可能にするには」を「失敗することはありません書き込み」。</li>
 </ul>
 </div>
 </div>

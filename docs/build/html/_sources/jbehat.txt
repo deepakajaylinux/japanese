@@ -16,14 +16,14 @@ Help コマンドの使用、またとオプションのアクションを実行
 
 .. code-block:: bash
 
-		cleopatra behat help
+		ptconfigure behat help
 
 スクリーン ショット下記説明ヘルプ コマンドの使い方について視覚的に。
 
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra behat help
+ kevell@corp:/# ptconfigure behat help
  ******************************
 
 
@@ -33,7 +33,7 @@ Help コマンドの使用、またとオプションのアクションを実行
 
         - install
         Installs the latest version of behat
-        example: cleopatra behat install
+        example: ptconfigure behat install
 
  ------------------------------
  End Help
@@ -47,7 +47,7 @@ Help コマンドの使用、またとオプションのアクションを実行
 
 .. code-block:: bash
 
-	cleopatra behat install
+	ptconfigure behat install
 
 上記のコマンドを入力した後、次のプロセスに関与しているインストールを表形式で示すように
 
@@ -97,7 +97,7 @@ Help コマンドの使用、またとオプションのアクションを実行
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra behat install
+ kevell@corp:/# ptconfigure behat install
  Install Behat ? (Y/N) 
  Y
  *******************************
@@ -108,10 +108,10 @@ Help コマンドの使用、またとオプションのアクションを実行
  
  What is the program executor directory? Found "/usr/bin" - use this? (Enter nothing for yes, No Trailing Slash)
 
- Creating /tmp/cleopatra-temp-script-69243074239.sh
- chmod 755 /tmp/cleopatra-temp-script-69243074239.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-69243074239.sh Permissions
- Executing /tmp/cleopatra-temp-script-69243074239.sh
+ Creating /tmp/ptconfigure-temp-script-69243074239.sh
+ chmod 755 /tmp/ptconfigure-temp-script-69243074239.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-69243074239.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-69243074239.sh
  --2015-01-27 15:31:39--  https://getcomposer.org/installer
  Resolving getcomposer.org (getcomposer.org)... 87.98.253.108
  Connecting to getcomposer.org (getcomposer.org)|87.98.253.108|:443... connected.
@@ -139,7 +139,7 @@ Help コマンドの使用、またとオプションのアクションを実行
 
 インストール中に、behat、最も最近の版はあなたのマシンにインストールされます。
 
-これは他と比較されたときにクレオパトラの下で behat モジュールの追加の利点です。
+他と比較した場合、これはptconfigure下behatモジュールの追加の利点である。
 
 
 ユーザーのメリット

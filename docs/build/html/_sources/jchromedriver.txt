@@ -14,7 +14,7 @@ ChromeDriver
 
 .. code-block:: bash
 
-		cleopatra ChromeDriver help
+		ptconfigure ChromeDriver help
 
 
 ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、クロム ドライバーの下で help コマンドについて視覚化します。
@@ -23,7 +23,7 @@ ChromeDriver
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra ChromeDriver help
+ kevell@corp:/# ptconfigure ChromeDriver help
 
  ******************************
 
@@ -38,7 +38,7 @@ ChromeDriver
         - install
         Installs ChromeDriver. Note, you'll also need Java installed
         as it is a prerequisite for ChromeDriver
-        example: cleopatra chromedriver install
+        example: ptconfigure chromedriver install
 
  ------------------------------
  End Help
@@ -51,7 +51,7 @@ ChromeDriver
 
 .. code-block:: bash
 
-		cleopatra chromedriver install
+		ptconfigure chromedriver install
 
 
 
@@ -106,7 +106,7 @@ ChromeDriver
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra chromedriver install
+ kevell@corp:/# ptconfigure chromedriver install
 
  Install ChromeDriver Server? (Y/N) 
  Y
@@ -128,14 +128,14 @@ ChromeDriver
  (10) 2.8 
  (11) 2.9 
  11
- PHP Notice:  Undefined index: version in /opt/cleopatra/cleopatra/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
+ PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
  [Pharaoh Logging] Ensure module install is not checking versions
  [Pharaoh Logging] Module Java reports itself as Installed
  [Pharaoh Logging] Not installing as already installed
- Creating /tmp/cleopatra-temp-script-26804823734.sh
- chmod 755 /tmp/cleopatra-temp-script-26804823734.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-26804823734.sh Permissions
- Executing /tmp/cleopatra-temp-script-26804823734.sh
+ Creating /tmp/ptconfigure-temp-script-26804823734.sh
+ chmod 755 /tmp/ptconfigure-temp-script-26804823734.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-26804823734.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-26804823734.sh
  --2015-02-02 21:35:49--  http://chromedriver.storage.googleapis.com//chromedriver_linux64.zip
  Resolving chromedriver.storage.googleapis.com (chromedriver.storage.googleapis.com)... 74.125.236.44, 74.125.236.43, 74.125.236.42, ...
  Connecting to chromedriver.storage.googleapis.com (chromedriver.storage.googleapis.com)|74.125.236.44|:80... connected.
@@ -144,7 +144,7 @@ ChromeDriver
  
  mv: cannot stat '/tmp/chromedriver/*': No such file or directory
  unzip:  cannot find or open chromedriver_linux64.zip, chromedriver_linux64.zip.zip or chromedriver_linux64.zip.ZIP.
- Temp File /tmp/cleopatra-temp-script-26804823734.sh Removed
+ Temp File /tmp/ptconfigure-temp-script-26804823734.sh Removed
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more

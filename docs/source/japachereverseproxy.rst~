@@ -59,22 +59,22 @@ Help コマンドの使用、またとオプションのアクションを実行
 
 
  +-----------------------+---------------------------------------------------+--------------+------------------------------------+
- | パラメーター          | 代替パラメーター                                  | 必要な       | コメント                           |
+ | パラメーター            | 代替パラメーター                                    | 必要な        | コメント                             |
  +=======================+===================================================+==============+====================================+
- |Install ReverseProxy   | 代わりにReverseProxy ApacheModulesのユーザーは、  | Y(Yes)       | Yのようなユーザ入力は、            |
- |ApacheModules (Y/N)    | 次のパラメータを指定することができます。          |              | Apacheのリバースプロキシモジュール |
- |                       | ApacheReverseProxyModules,                        |              | がインストールされます場合は       |
- |                       | apache-reverse-proxy-modules, apache- proxy-mods, |              |                                    |
- |                       | apacheproxymodules, apache-lb-mods,               |              |                                    |
- |                       | apache-load-balancer, modules                     |              |                                    |
- +-----------------------+---------------------------------------------------+--------------+------------------------------------+
- |Install ReverseProxy   | 代わりにReverseProxy ApacheModulesのユーザーは、  | N(No)        | N等のユーザ入力した場合、          |
- |ApacheModules (Y/N)    | 次のパラメータを指定することができます。          |              | プロセスの意志がインストールから突 |
- |                       | ApacheReverseProxyModules,                        |              | 然終了を取得します。               |
- |                       | apache-reverse-proxy-modules, apache- proxy-mods, |              |                                    |
- |                       | apacheproxymodules, apache-lb-mods,               |              |                                    |
- |                       | apache-load-balancer, modules|                    |              |                                    |
- +-----------------------+---------------------------------------------------+--------------+------------------------------------+
+ |Install ReverseProxy   | 代わりにReverseProxy ApacheModulesのユーザーは、     | Y(Yes)       | Yのようなユーザ入力は、                |
+ |ApacheModules (Y/N)    | 次のパラメータを指定することができます。                 |              | Apacheのリバースプロキシモジュール      |
+ |                       | ApacheReverseProxyModules,                        |              | がインストールされます場合は            |
+ |                       | apache-reverse-proxy-modules, apache- proxy-mods, |              |                                     |
+ |                       | apacheproxymodules, apache-lb-mods,               |              |                                     |
+ |                       | apache-load-balancer, modules                     |              |                                     |
+ +-----------------------+---------------------------------------------------+--------------+-------------------------------------+
+ |Install ReverseProxy   | 代わりにReverseProxy ApacheModulesのユーザーは、     | N(No)        | N等のユーザ入力した場合、             |
+ |ApacheModules (Y/N)    | 次のパラメータを指定することができます。                 |              | プロセスの意志がインストールから突      |
+ |                       | ApacheReverseProxyModules,                        |              | 然終了を取得します。                   |
+ |                       | apache-reverse-proxy-modules, apache- proxy-mods, |              |                                     |
+ |                       | apacheproxymodules, apache-lb-mods,               |              |                                     |
+ |                       | apache-load-balancer, modules|                    |              |                                     |
+ +-----------------------+---------------------------------------------------+--------------+-------------------------------------+
 
 
 インストール中に、リバース プロキシ モジュール、状態情報、パッケージ一覧のビルド依存関係ツリーは読み取ります。すべてのパッケージがない場合は、新しいパッケージがインストールされます。スクリーン ショットは以下に示すグラフィカル インストールのプロセスについて説明します。

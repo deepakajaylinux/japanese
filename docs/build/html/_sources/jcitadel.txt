@@ -17,7 +17,7 @@ Citadel
 
 .. code-block:: bash
      	
-		cleopatra  Citadel help
+		ptconfigure  Citadel help
 
 
 スクリーン ショットの絵の表現は以下します。
@@ -26,7 +26,7 @@ Citadel
 .. code-block:: bash
  
 
- kevell@corp:/# cleopatra Citadel help
+ kevell@corp:/# ptconfigure Citadel help
  ******************************
 
 
@@ -36,11 +36,11 @@ Citadel
 
         - install
         Installs Citadel Server
-        example: cleopatra citadel install
+        example: ptconfigure citadel install
 
         - configure
         Configure E-Mail with Citadel Server
-        example: cleopatra citadel configure
+        example: ptconfigure citadel configure
 
  ------------------------------
  End Help
@@ -54,22 +54,22 @@ Citadel
 
 .. code-block:: bash
        
-	        cleopatra Citadel  install
+	ptconfigure Citadel  install
 
 
 
- kevell@corp:/# cleopatra Citadel install
+ kevell@corp:/# ptconfigure Citadel install
  Install Citadel Server? (Y/N) 
  Y
  *******************************
  *        Pharaoh Tools        *
  *         Citadel Server!     *
  *******************************
- Creating /tmp/cleopatra-temp-script-11993825383.sh
- chmod 755 /tmp/cleopatra-temp-script-11993825383.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-11993825383.sh Permissions
- Executing /tmp/cleopatra-temp-script-11993825383.sh
- Temp File /tmp/cleopatra-temp-script-11993825383.sh Removed
+ Creating /tmp/ptconfigure-temp-script-11993825383.sh
+ chmod 755 /tmp/ptconfigure-temp-script-11993825383.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-11993825383.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-11993825383.sh
+ Temp File /tmp/ptconfigure-temp-script-11993825383.sh Removed
  Reading package lists...
  Building dependency tree...
  Reading state information...
@@ -90,11 +90,11 @@ Citadel
  [Pharaoh Logging] Stopping apache2 service
  * Stopping web server apache2
  * 
- Creating /tmp/cleopatra-temp-script-74031405363.sh
- chmod 755 /tmp/cleopatra-temp-script-74031405363.sh 2>/dev/null
- Changing /tmp/cleopatra-temp-script-74031405363.sh Permissions
- Executing /tmp/cleopatra-temp-script-74031405363.sh
- Temp File /tmp/cleopatra-temp-script-74031405363.sh Removed
+ Creating /tmp/ptconfigure-temp-script-74031405363.sh
+ chmod 755 /tmp/ptconfigure-temp-script-74031405363.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-74031405363.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-74031405363.sh
+ Temp File /tmp/ptconfigure-temp-script-74031405363.sh Removed
  apache2_invoke: Enable configuration javascript-common
  invoke-rc.d: initscript apache2, action "reload" failed.
  Reading package lists...
@@ -225,15 +225,15 @@ Citadel
  +--------------------------+------------------------------------------------------+------------+--------------------------------------------+
  | パラメータ               | 代替パラメータ                                       | オプション | 注釈                                       |
  +==========================+======================================================+============+============================================+
- |cleopatra Citadel         | 3つの代替のパラメータのいずれかは、                  | Y          | ユーザーがこのオプションを提供すると、     |
+ |ptconfigure Citadel       | 3つの代替のパラメータのいずれかは、                  | Y          | ユーザーがこのオプションを提供すると、     |
  |Install? (Y/N)            | コマンドで使用することができる- Citadel,             |            | システムはインストールプロセスを開始します |
  |                          | citadel-server, citadel                              |            |                                            |
- |                          | 例: Cleopatra citadel-server Install                 |            |                                            |
+ |                          | 例: ptconfigure citadel-server Install               |            |                                            |
  +--------------------------+------------------------------------------------------+------------+--------------------------------------------+
- |cleopatra Citadel         | 3つの代替のパラメータのいずれかは、                  | N          | ユーザーがこのオプションを提供すると、     |
+ |ptconfigure Citadel         | 3つの代替のパラメータのいずれかは、                | N          | ユーザーがこのオプションを提供すると、     |
  |Install? (Y/N)            | コマンドで使用することができる- Citadel,             |            | システムはインストールプロセスを停止します |
  |                          | citadel-server, citadel                              |            |                                            |
- |                          | 例: Cleopatra citadel-server Install|                |            |                                            |
+ |                          | 例: ptconfigure citadel-server Install|              |            |                                            |
  +--------------------------+------------------------------------------------------+------------+--------------------------------------------+
 
 
@@ -245,7 +245,7 @@ Citadel
 
 .. code-block:: bash
          
-	        cleopatra Citadel configure
+	        ptconfigure Citadel configure
 
 利点
 --------

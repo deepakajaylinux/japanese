@@ -14,7 +14,7 @@ Help コマンドは、目的とこのモジュールで使用できるコマン
 
 .. code-block:: bash
 
- 		cleopatra ApacheServer help
+ 		ptconfigure ApacheServer help
 
 
 スクリーン ショットは、下図のように、このモジュールの下に help コマンドの使用状況を視覚的に表します。
@@ -23,7 +23,7 @@ Help コマンドは、目的とこのモジュールで使用できるコマン
 .. code-block:: bash
 
 
- kevell@corp:/# cleopatra ApacheServer help
+ kevell@corp:/# ptconfigure ApacheServer help
  ******************************
 
 
@@ -33,7 +33,7 @@ Help コマンドは、目的とこのモジュールで使用できるコマン
 
         - install
         Installs Apache HTTP Server
-        example: cleopatra apacheserver install
+        example: ptconfigure apacheserver install
 
  ------------------------------
  End Help
@@ -43,12 +43,12 @@ Help コマンドは、目的とこのモジュールで使用できるコマン
 インストール
 ---------------
 
-単に、下記のコマンドを使用してこのクレオパトラの下で特定のツールをインストールする方が簡単です。
+それは、単に以下のコマンドを使用してptconfigureの下で、この特定のツールをインストールする方が簡単です、
 
 
 .. code-block:: bash
 
-		cleopatra ApacheServer install
+		ptconfigure ApacheServer install
 
 上記のコマンドを与えた後、ツールは確認します。
 
@@ -60,7 +60,7 @@ Y として入力を与える場合、モジュールが正常にインストー
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra apacheserver install
+ kevell@corp:/# ptconfigure apacheserver install
  Install Apache Server? (Y/N) 
  Y
  *******************************

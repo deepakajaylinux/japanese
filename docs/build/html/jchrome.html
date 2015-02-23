@@ -32,6 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="next" title="ChromeDriver" href="jchromedriver.html" />
     <link rel="prev" title="Chown" href="jchown.html" />
 
 
@@ -105,6 +106,8 @@
                 
   <li><a href="jchown.html"
          title="Previous Chapter: Chown">&laquo; Chown</a></li>
+  <li><a href="jchromedriver.html"
+         title="Next Chapter: ChromeDriver">ChromeDriver &raquo;</a></li>
               
             
             
@@ -160,11 +163,11 @@
 <div class="section" id="id2">
 <h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、クロムの使用量を決定するのに役立ちます。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra Chrome <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Chrome <span class="nb">help</span>
 </pre></div>
 </div>
 <p>上記のコマンドの絵の表現は以下します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra Chrome <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Chrome <span class="nb">help</span>
 ******************************
 
 
@@ -175,7 +178,7 @@
 
        - install
        Installs Chrome
-       example: cleopatra chrome install
+       example: ptconfigure chrome install
 
 ------------------------------
 End Help
@@ -186,27 +189,27 @@ End Help
 <div class="section" id="id3">
 <h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>オープン ターミナルと Linux では、同じマシンに Chrome をインストールする必要があるときにインストールするには、次のコマンドを入力します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra Chrome install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Chrome install
 </pre></div>
 </div>
 <p>上記のコマンドの絵の表現は以下します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra chrome install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure chrome install
 Install Chrome? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
 *******************************
 *        Pharaoh Tools        *
 *         GoogleChrome        *
 *******************************
-Creating /tmp/cleopatra-temp-script-93431196740.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-93431196740.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-93431196740.sh Permissions
-Executing /tmp/cleopatra-temp-script-93431196740.sh
+Creating /tmp/ptconfigure-temp-script-93431196740.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-93431196740.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-93431196740.sh Permissions
+Executing /tmp/ptconfigure-temp-script-93431196740.sh
 OK
-Temp File /tmp/cleopatra-temp-script-93431196740.sh Removed
-Creating /tmp/cleopatra-temp-script-93753948068.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-93753948068.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-93753948068.sh Permissions
-Executing /tmp/cleopatra-temp-script-93753948068.sh
+Temp File /tmp/ptconfigure-temp-script-93431196740.sh Removed
+Creating /tmp/ptconfigure-temp-script-93753948068.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-93753948068.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-93753948068.sh Permissions
+Executing /tmp/ptconfigure-temp-script-93753948068.sh
 Hit http://downloads.hipchat.com stable InRelease
 Ign http://security.ubuntu.com trusty-security InRelease
 Hit http://security.ubuntu.com trusty-security Release.gpg
@@ -307,7 +310,7 @@ Ign http://in.archive.ubuntu.com trusty/restricted Translation-en_IN
 Ign http://in.archive.ubuntu.com trusty/universe Translation-en_IN
 Fetched 1,671 kB in 5min 51s <span class="o">(</span>4,761 B/s<span class="o">)</span>
 Reading package lists...
-Temp File /tmp/cleopatra-temp-script-93753948068.sh Removed
+Temp File /tmp/ptconfigure-temp-script-93753948068.sh Removed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Creating File /etc/apt/sources.list.d/google.list
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File deb http://dl.google.com/linux/chrome/deb/ stable main
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File deb http://dl.google.com/linux/chrome/deb/ stable main
@@ -343,20 +346,20 @@ Installer Finished
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>cleopatra Chrome
+<tr class="row-even"><td>ptconfigure Chrome
 Install? (Y/N)</td>
 <td>二つの代替パラメーターのいずれかをコマンド
 に使用することができる- Chrome ,
-例: cleopatra chrome Install</td>
+例: ptconfigure chrome Install</td>
 <td>Y</td>
 <td>ユーザがオプションを提供すると、
 システムはインストールプロセスを開始します</td>
 </tr>
-<tr class="row-odd"><td>cleopatra Chrome
+<tr class="row-odd"><td>ptconfigure Chrome
 Install? (Y/N)</td>
 <td>二つの代替パラメーターのいずれかをコマンド
 に使用することができる- Chrome ,
-例: cleopatra chrome Install|</td>
+例: ptconfigure chrome Install|</td>
 <td>N</td>
 <td>ユーザがオプションを提供すると、
 システムはインストールプロセスを停止します</td>

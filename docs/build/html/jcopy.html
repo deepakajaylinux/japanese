@@ -161,11 +161,11 @@
 <div class="section" id="id2">
 <h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、コピー モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra copy <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure copy <span class="nb">help</span>
 </pre></div>
 </div>
 <p>コピー コマンドのスクリーン ショットの絵の表現は以下します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra copy <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure copy <span class="nb">help</span>
 ******************************
 
 
@@ -175,8 +175,8 @@
 
        - put
        Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from <span class="nb">local </span>to remote
-       example: cleopatra copy put
-       example: cleopatra copy put --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
+       example: ptconfigure copy put
+       example: ptconfigure copy put --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
 
 ------------------------------
 End Help
@@ -187,11 +187,11 @@ End Help
 <div class="section" id="id3">
 <h2>入れてください。<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>私達を他の宛先にソース ファイルをコピーする必要があるとき、特定のコマンドの下、プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra copy put
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure copy put
 </pre></div>
 </div>
 <p>ソース ファイルのパスとターゲット ファイルのパスが求められます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra copy put
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure copy put
 Copy files? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
 Enter <span class="nb">source </span>file path
@@ -209,7 +209,7 @@ Copy Finished
 </pre></div>
 </div>
 <p>前記のコマンドラインで元とコピー先のパスを与えることができる別のオプションがあります。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# cleopatra copy put --yes --source<span class="o">=</span><span class="s2">&quot;/kevell.html&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/opt&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# ptconfigure copy put --yes --source<span class="o">=</span><span class="s2">&quot;/kevell.html&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/opt&quot;</span>
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>Copy<span class="o">]</span> Executing cp -r /kevell.html /opt
 ******************************
 
@@ -224,7 +224,7 @@ Copy Finished
 <div class="section" id="id4">
 <h2>代替パラメーター<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>コマンド ・ ラインのコピー、コピーに使用できる 2 つの代替パラメーターがあります。</p>
-<p>例: cleopatra copy put/ cleopatra Copy help</p>
+<p>例: ptconfigure copy put/ ptconfigure Copy help</p>
 </div>
 <div class="section" id="id5">
 <h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>

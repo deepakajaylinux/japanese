@@ -32,6 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
+    <link rel="next" title="Citadel" href="jcitadel.html" />
     <link rel="prev" title="Chrome" href="jchrome.html" />
 
 
@@ -104,6 +105,8 @@
                 
   <li><a href="jchrome.html"
          title="Previous Chapter: Chrome">&laquo; Chrome</a></li>
+  <li><a href="jcitadel.html"
+         title="Next Chapter: Citadel">Citadel &raquo;</a></li>
               
             
             
@@ -157,11 +160,11 @@
 <div class="section" id="id2">
 <h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>ヘルプ コマンド同様目的に関してユーザーを導くようにクロム ドライバー モジュールに含まれているオプションについて。ヘルプ コマンド クローム ドライバー モジュールの代替パラメーターが一覧表示されます。また、Chrome ドライバ モジュールをインストールするための構文について説明します。クロム ドライバー モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra ChromeDriver <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ChromeDriver <span class="nb">help</span>
 </pre></div>
 </div>
 <p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、クロム ドライバーの下で help コマンドについて視覚化します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra ChromeDriver help
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ChromeDriver help
 
 ******************************
 
@@ -176,7 +179,7 @@
        - install
        Installs ChromeDriver. Note, you&#39;ll also need Java installed
        as it is a prerequisite for ChromeDriver
-       example: cleopatra chromedriver install
+       example: ptconfigure chromedriver install
 
 ------------------------------
 End Help
@@ -187,7 +190,7 @@ End Help
 <div class="section" id="id3">
 <h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>あなたのマシンに chrome のドライバーをインストールように、次のコマンドを使用するだけで実行できます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra chromedriver install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure chromedriver install
 </pre></div>
 </div>
 <p>上記のコマンドを入力した後、次の操作が発生します表形式で表示されます。</p>
@@ -247,7 +250,7 @@ chromedriverserver また|</td>
 </div>
 <p>ユーザーがそのバージョンの要件に応じて 11 0 から番号を指定します。</p>
 <p>後のバージョンを指定するユーザー インストールのプロセスが開始して、次のスクリーン ショットから絵として描かれている完了を取得します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra chromedriver install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure chromedriver install
 
 Install ChromeDriver Server? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
@@ -269,14 +272,14 @@ Enter Chrome Driver Version
 <span class="o">(</span>10<span class="o">)</span> 2.8
 <span class="o">(</span>11<span class="o">)</span> 2.9
 11
-PHP Notice:  Undefined index: version in /opt/cleopatra/cleopatra/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
+PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/ChromeDriver/Model/ChromeDriverAllLinux.php on line 42
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
-Creating /tmp/cleopatra-temp-script-26804823734.sh
-chmod <span class="m">755</span> /tmp/cleopatra-temp-script-26804823734.sh 2&gt;/dev/null
-Changing /tmp/cleopatra-temp-script-26804823734.sh Permissions
-Executing /tmp/cleopatra-temp-script-26804823734.sh
+Creating /tmp/ptconfigure-temp-script-26804823734.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-26804823734.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-26804823734.sh Permissions
+Executing /tmp/ptconfigure-temp-script-26804823734.sh
 --2015-02-02 21:35:49--  http://chromedriver.storage.googleapis.com//chromedriver_linux64.zip
 Resolving chromedriver.storage.googleapis.com <span class="o">(</span>chromedriver.storage.googleapis.com<span class="o">)</span>... 74.125.236.44, 74.125.236.43, 74.125.236.42, ...
 Connecting to chromedriver.storage.googleapis.com <span class="o">(</span>chromedriver.storage.googleapis.com<span class="o">)</span><span class="p">|</span>74.125.236.44<span class="p">|</span>:80... connected.
@@ -285,7 +288,7 @@ HTTP request sent, awaiting response... <span class="m">404</span> Not Found
 
 mv: cannot stat <span class="s1">&#39;/tmp/chromedriver/*&#39;</span>: No such file or directory
 unzip:  cannot find or open chromedriver_linux64.zip, chromedriver_linux64.zip.zip or chromedriver_linux64.zip.ZIP.
-Temp File /tmp/cleopatra-temp-script-26804823734.sh Removed
+Temp File /tmp/ptconfigure-temp-script-26804823734.sh Removed
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more

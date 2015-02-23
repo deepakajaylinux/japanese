@@ -20,14 +20,14 @@ Linux でファイルがコピー方法は、配布とファイル ・ システ
 
 .. code-block:: bash
         
-	        cleopatra copy help
+	        ptconfigure copy help
 
 コピー コマンドのスクリーン ショットの絵の表現は以下します。
 
 
 .. code-block:: bash
 
- kevell@corp:/# cleopatra copy help
+ kevell@corp:/# ptconfigure copy help
  ******************************
 
 
@@ -37,8 +37,8 @@ Linux でファイルがコピー方法は、配布とファイル ・ システ
 
         - put
         Will ask you for details for servers, then copy a file or directory from local to remote
-        example: cleopatra copy put
-        example: cleopatra copy put --yes --source="/tmp/file" --target="/home/user/file"
+        example: ptconfigure copy put
+        example: ptconfigure copy put --yes --source="/tmp/file" --target="/home/user/file"
 
  ------------------------------
  End Help
@@ -53,7 +53,7 @@ Linux でファイルがコピー方法は、配布とファイル ・ システ
 
 .. code-block:: bash
         
-	        cleopatra copy put
+	        ptconfigure copy put
 
 
 ソース ファイルのパスとターゲット ファイルのパスが求められます。
@@ -62,7 +62,7 @@ Linux でファイルがコピー方法は、配布とファイル ・ システ
 .. code-block:: bash
 
 
- kevell@corp:/# cleopatra copy put
+ kevell@corp:/# ptconfigure copy put
  Copy files? (Y/N) 
  Y
  Enter source file path
@@ -84,7 +84,7 @@ Linux でファイルがコピー方法は、配布とファイル ・ システ
 
 .. code-block:: bash
 
- kevells@corp:/# cleopatra copy put --yes --source="/kevell.html" --target="/opt"
+ kevells@corp:/# ptconfigure copy put --yes --source="/kevell.html" --target="/opt"
  [Pharaoh Logging] [Copy] Executing cp -r /kevell.html /opt
  ******************************
 
@@ -101,7 +101,7 @@ Linux でファイルがコピー方法は、配布とファイル ・ システ
 
 コマンド ・ ラインのコピー、コピーに使用できる 2 つの代替パラメーターがあります。
 
-例: cleopatra copy put/ cleopatra Copy help
+例: ptconfigure copy put/ ptconfigure Copy help
 
 
 

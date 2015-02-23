@@ -32,7 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="クレオパトラモジュールと遊ぶ" href="jcleopatra_main.html" />
-    <link rel="prev" title="Cleopatra" href="jcleopatra.html" />
+    <link rel="next" title="Copy" href="jcopy.html" />
+    <link rel="prev" title="PTConfigure" href="jcleopatra.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -103,7 +104,9 @@
               
                 
   <li><a href="jcleopatra.html"
-         title="Previous Chapter: Cleopatra">&laquo; Cleopatra</a></li>
+         title="Previous Chapter: PTConfigure">&laquo; PTConfigure</a></li>
+  <li><a href="jcopy.html"
+         title="Next Chapter: Copy">Copy &raquo;</a></li>
               
             
             
@@ -158,10 +161,10 @@
 <div class="section" id="id2">
 <h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、作曲家モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドは代替パラメーターとインストール用のコマンドについて、エンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra composer <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure composer <span class="nb">help</span>
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# cleopatra composer <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure composer <span class="nb">help</span>
 ******************************
 
 
@@ -171,7 +174,7 @@
 
        - install
        Installs the latest version of composer
-       example: cleopatra composer install
+       example: ptconfigure composer install
 
 ------------------------------
 End Help
@@ -182,7 +185,7 @@ End Help
 <div class="section" id="id3">
 <h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>ユーザー マシンで作曲家のモジュールをインストールする必要がある場合、特定のコマンドの下のインストール プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>cleopatra composer install
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure composer install
 </pre></div>
 </div>
 <p>インストール中に、システムを求める、ディレクトリ名、あなたのパスを設定したい場合はあなたのパスを定義できます。定義によって続いた &#8216;/&#8217; のシンボルをあなたのパスには。既定のパスを使用して Enter キーを押します。</p>
@@ -204,14 +207,14 @@ End Help
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>cleopatra composer
+<tr class="row-even"><td>ptconfigure composer
 Install? (Y/N)</td>
 <td>使用できる2つの別のパラメータがある。
 Composer , composer</td>
 <td>Y</td>
 <td>システムは、インストールプロセスを開始します</td>
 </tr>
-<tr class="row-odd"><td>cleopatra composer
+<tr class="row-odd"><td>ptconfigure composer
 Install? (Y/N)</td>
 <td>使用できる2つの別のパラメータがある。
 Composer , composer|</td>
@@ -221,7 +224,7 @@ Composer , composer|</td>
 </tbody>
 </table>
 <p>インストール コマンドのスクリーン ショットは以下します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>cleopatra composer install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>ptconfigure composer install
 Install Composer - Update to latest version ? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
@@ -237,17 +240,17 @@ remote: Counting objects: 6, <span class="k">done</span>.
 remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
 Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
 Checking connectivity... <span class="k">done</span>.
-PHP Warning:  mkdir<span class="o">()</span>: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 192
+PHP Warning:  mkdir<span class="o">()</span>: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 192
 cp: cannot create directory ‘/opt/composer’: Permission denied
 Program Data folder populated
 Program Executor Deleted <span class="k">if</span> existed
-PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
-PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 174
-PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/composer<span class="o">)</span>: failed to open stream: Permission denied in /opt/cleopatra/cleopatra/src/Modules/CleopatraRequired/Model/BasePHPApp.php on line 214
+PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
+PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
+PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
+PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/composer<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 214
 chmod: cannot access ‘/opt/composer’: No such file or directory
 chmod: cannot access ‘/usr/bin/composer’: No such file or directory
 ... All <span class="k">done</span>!
