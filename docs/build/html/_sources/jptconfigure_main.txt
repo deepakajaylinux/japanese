@@ -24,7 +24,10 @@ ptconfigureモジュールと遊ぶ
    jcitadel
    jcomposer
    jcopy
+   jdevelopertools
+   jenvironmentconfig
    jptconfigure
+   jptdeploy
 
 
 
