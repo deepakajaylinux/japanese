@@ -26,6 +26,24 @@ ptconfigureモジュールと遊ぶ
    jcopy
    jdevelopertools
    jenvironmentconfig
+   jfile
+   jfirefox
+   jfirefox14
+   jfirefox17
+   jfirefox24
+   jfirefox33
+   jfirewall
+   jgitbucket
+   jgitkeysafe
+   jgitlab
+   jgittools
+   jhaproxy
+   jhhvm
+   jhostname
+   jinstallpackage
+   jintellij
+   jinvoke
+   jjrush
    jptconfigure
    jptdeploy
 

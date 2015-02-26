@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>HHVM &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Hostname" href="jhostname.html" />
+    <link rel="prev" title="HAProxy" href="jhaproxy.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">HHVM</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">国連のインストール</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jhaproxy.html"
+         title="Previous Chapter: HAProxy">&laquo; HAProxy</a></li>
+  <li><a href="jhostname.html"
+         title="Next Chapter: Hostname">Hostname &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jhhvm.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="hhvm">
+<h1>HHVM<a class="headerlink" href="#hhvm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールは、インストールを容易に、国連 HHVM 人気ビルド サーバー コンピューターをインストールします。ヒップホップ仮想マシン （HHVM） は、ジャスト イン タイム (JIT) コンパイルに基づいてプロセス仮想マシン ハックと PHP のプログラミング言語のための実行エンジンを務めています。JIT コンパイルの原則を使用して、実行される PHP やハックのコード最初であり動的に x 86 64 マシン コードに変換して、最適化されたネイティブで実行される中間のヒップホップ バイト コード (HHBC) に変換されます。今後のテーマで HHVM モジュールについてみてみましょう。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドと同様、目的に関するユーザー ガイドとして HHVM モジュールに含まれているオプションについて。それは HHVM モジュールの代替パラメーターが一覧表示されます。また、HHVM モジュールをインストールするための構文について説明します。HHVM モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure HHVM <span class="nb">help</span>
+</pre></div>
+</div>
+<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、HHVM の下で help コマンドについて視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure HHVM <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install HHVM, the popular Build Server.
+
+ HHVM, hhvm
+
+       - install
+       Installs HHVM through package manager
+       example: ptconfigure hhvm install
+
+       - uninstall
+       Uninstalls HHVM through package manager
+       example: ptconfigure hhvm uninstall
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーのマシンに HHVM をインストールするために使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure HHVM install
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、次のプロセスが発生します表形式で表示されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="32%" />
+<col width="9%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">代替パラメータ</th>
+<th class="head">オプション</th>
+<th class="head">注釈</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install HHVM? (Y/N)</td>
+<td>代わりにHHVMの我々はまた、hhvm使用する
+ことができます。</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、
+インストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install HHVM? (Y/N)</td>
+<td>代わりにHHVMの我々はまた、hhvm使用する
+ことができます。</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、
+インストールプロセスを終了したい場合は|</td>
+</tr>
+</tbody>
+</table>
+<p>最後に、インストール プロセスを完了を取得します。次のスクリーン ショットは、絵 HHVM をインストールするプロセスを表します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure HHVM install
+Install HHVM? (Y/N)
+Y
+*******************************
+*        Pharaoh Tools        *
+*          ! HHVM !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-41870275104.sh
+chmod 755 /tmp/ptconfigure-temp-script-41870275104.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-41870275104.sh Permissions
+Executing /tmp/ptconfigure-temp-script-41870275104.sh
+--2015-01-16 14:19:14--  http://dl.hhvm.com/conf/hhvm.gpg.key
+Resolving dl.hhvm.com (dl.hhvm.com)... 140.211.166.134
+Connecting to dl.hhvm.com (dl.hhvm.com)|140.211.166.134|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1707 (1.7K) [application/pgp-keys]
+Saving to: ‘STDOUT’
+
+100%[=====================================================================================================&gt;] 1,707       --.-K/s   in 0.001s
+
+2015-01-16 14:19:16 (1.68 MB/s) - written to stdout [1707/1707]
+
+OK
+deb http://dl.hhvm.com/ubuntu trusty main
+Get:1 http://dl.hhvm.com trusty InRelease [2,104 B]
+Hit http://downloads.hipchat.com stable InRelease
+Ign http://security.ubuntu.com trusty-security InRelease
+Ign http://extras.ubuntu.com trusty InRelease
+Ign http://in.archive.ubuntu.com trusty InRelease
+Get:2 http://security.ubuntu.com trusty-security Release.gpg [933 B]
+Hit http://downloads.hipchat.com stable/main amd64 Packages
+Get:3 http://dl.hhvm.com trusty/main amd64 Packages [1,669 B]
+Hit http://extras.ubuntu.com trusty Release.gpg
+Get:4 http://security.ubuntu.com trusty-security Release [62.0 kB]
+Ign http://in.archive.ubuntu.com trusty-updates InRelease
+Hit http://downloads.hipchat.com stable/main i386 Packages
+Get:5 http://dl.hhvm.com trusty/main i386 Packages [20 B]
+Hit http://extras.ubuntu.com trusty Release
+Ign http://in.archive.ubuntu.com trusty-backports InRelease
+Hit http://extras.ubuntu.com trusty/main Sources
+Hit http://in.archive.ubuntu.com trusty Release.gpg
+Hit http://extras.ubuntu.com trusty/main amd64 Packages
+Get:6 http://security.ubuntu.com trusty-security/main Sources [63.1 kB]
+Get:7 http://in.archive.ubuntu.com trusty-updates Release.gpg [933 B]
+Hit http://extras.ubuntu.com trusty/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports Release.gpg
+Get:8 http://security.ubuntu.com trusty-security/restricted Sources [2,061 B]
+Hit http://in.archive.ubuntu.com trusty Release
+Get:9 http://security.ubuntu.com trusty-security/universe Sources [17.4 kB]
+Get:10 http://in.archive.ubuntu.com trusty-updates Release [62.0 kB]
+Get:11 http://security.ubuntu.com trusty-security/multiverse Sources [716 B]
+Get:12 http://security.ubuntu.com trusty-security/main amd64 Packages [196 kB]
+Ign http://downloads.hipchat.com stable/main Translation-en_IN
+Ign http://dl.hhvm.com trusty/main Translation-en_IN
+Ign http://downloads.hipchat.com stable/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports Release
+Ign http://dl.hhvm.com trusty/main Translation-en
+Hit http://in.archive.ubuntu.com trusty/main Sources
+Get:13 http://security.ubuntu.com trusty-security/restricted amd64 Packages [8,875 B]
+Get:14 http://security.ubuntu.com trusty-security/universe amd64 Packages [84.2 kB]
+Hit http://in.archive.ubuntu.com trusty/restricted Sources
+Hit http://in.archive.ubuntu.com trusty/universe Sources
+Ign http://extras.ubuntu.com trusty/main Translation-en_IN
+Hit http://in.archive.ubuntu.com trusty/multiverse Sources
+Get:15 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [1,166 B]
+Ign http://extras.ubuntu.com trusty/main Translation-en
+Get:16 http://security.ubuntu.com trusty-security/main i386 Packages [187 kB]
+Hit http://in.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://in.archive.ubuntu.com trusty/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty/restricted i386 Packages
+Get:17 http://security.ubuntu.com trusty-security/restricted i386 Packages [8,846 B]
+Hit http://in.archive.ubuntu.com trusty/universe i386 Packages
+Get:18 http://security.ubuntu.com trusty-security/universe i386 Packages [84.2 kB]
+Hit http://in.archive.ubuntu.com trusty/multiverse i386 Packages
+Get:19 http://security.ubuntu.com trusty-security/multiverse i386 Packages [1,412 B]
+Hit http://in.archive.ubuntu.com trusty/main Translation-en
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://security.ubuntu.com trusty-security/restricted Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://in.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty/universe Translation-en
+Get:20 http://in.archive.ubuntu.com trusty-updates/main Sources [155 kB]
+Get:21 http://in.archive.ubuntu.com trusty-updates/restricted Sources [2,061 B]
+Get:22 http://in.archive.ubuntu.com trusty-updates/universe Sources [97.6 kB]
+Get:23 http://in.archive.ubuntu.com trusty-updates/multiverse Sources [3,550 B]
+Get:24 http://in.archive.ubuntu.com trusty-updates/main amd64 Packages [398 kB]
+Get:25 http://in.archive.ubuntu.com trusty-updates/restricted amd64 Packages [8,875 B]
+Get:26 http://in.archive.ubuntu.com trusty-updates/universe amd64 Packages [239 kB]
+Get:27 http://in.archive.ubuntu.com trusty-updates/multiverse amd64 Packages [9,373 B]
+Get:28 http://in.archive.ubuntu.com trusty-updates/main i386 Packages [390 kB]
+Get:29 http://in.archive.ubuntu.com trusty-updates/restricted i386 Packages [8,846 B]
+Get:30 http://in.archive.ubuntu.com trusty-updates/universe i386 Packages [240 kB]
+Get:31 http://in.archive.ubuntu.com trusty-updates/multiverse i386 Packages [9,567 B]
+Hit http://in.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/main Sources
+Hit http://in.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://in.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://in.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/main i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/restricted i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/universe i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse i386 Packages
+Hit http://in.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://in.archive.ubuntu.com trusty-backports/universe Translation-en
+Ign http://in.archive.ubuntu.com trusty/main Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/multiverse Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/restricted Translation-en_IN
+Ign http://in.archive.ubuntu.com trusty/universe Translation-en_IN
+Fetched 2,347 kB in 42s (55.6 kB/s)
+Reading package lists...
+Temp File /tmp/ptconfigure-temp-script-41870275104.sh Removed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libboost-filesystem1.54.0 libboost-program-options1.54.0
+ libboost-regex1.54.0 libboost-thread1.54.0 libgflags2 libgoogle-glog0
+ libjemalloc1 libmemcached10 libonig2 libtbb2 libunwind8
+The following NEW packages will be installed:
+ hhvm libboost-filesystem1.54.0 libboost-program-options1.54.0
+ libboost-regex1.54.0 libboost-thread1.54.0 libgflags2 libgoogle-glog0
+ libjemalloc1 libmemcached10 libonig2 libtbb2 libunwind8
+0 upgraded, 12 newly installed, 0 to remove and 228 not upgraded.
+Need to get 13.8 MB of archives.
+After this operation, 4,036 kB of additional disk space will be used.
+Get:1 http://dl.hhvm.com/ubuntu/ trusty/main hhvm amd64 3.4.2~trusty [12.9 MB]
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-filesystem1.54.0 amd64 1.54.0-4ubuntu3.1 [34.2 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-program-options1.54.0 amd64 1.54.0-4ubuntu3.1 [115 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-regex1.54.0 amd64 1.54.0-4ubuntu3.1 [261 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-thread1.54.0 amd64 1.54.0-4ubuntu3.1 [26.5 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgflags2 amd64 2.0-1.1ubuntu1 [65.9 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu/ trusty/main libunwind8 amd64 1.1-2.2ubuntu3 [48.3 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgoogle-glog0 amd64 0.3.3-1 [61.3 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu/ trusty/main libmemcached10 amd64 1.0.8-1ubuntu2 [83.4 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libjemalloc1 amd64 3.5.1-2 [76.8 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libonig2 amd64 5.9.1-1ubuntu1 [89.1 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libtbb2 amd64 4.2~20130725-1.1ubuntu1 [94.7 kB]
+Fetched 13.8 MB in 4min 15s (54.2 kB/s)
+Selecting previously unselected package libboost-filesystem1.54.0:amd64.
+(Reading database ... 180191 files and directories currently installed.)
+Preparing to unpack .../libboost-filesystem1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-filesystem1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libboost-program-options1.54.0:amd64.
+Preparing to unpack .../libboost-program-options1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-program-options1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libboost-regex1.54.0:amd64.
+Preparing to unpack .../libboost-regex1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-regex1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libboost-thread1.54.0:amd64.
+Preparing to unpack .../libboost-thread1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-thread1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libgflags2.
+Preparing to unpack .../libgflags2_2.0-1.1ubuntu1_amd64.deb ...
+Unpacking libgflags2 (2.0-1.1ubuntu1) ...
+Selecting previously unselected package libunwind8.
+Preparing to unpack .../libunwind8_1.1-2.2ubuntu3_amd64.deb ...
+Unpacking libunwind8 (1.1-2.2ubuntu3) ...
+Selecting previously unselected package libgoogle-glog0.
+Preparing to unpack .../libgoogle-glog0_0.3.3-1_amd64.deb ...
+Unpacking libgoogle-glog0 (0.3.3-1) ...
+Selecting previously unselected package libmemcached10:amd64.
+Preparing to unpack .../libmemcached10_1.0.8-1ubuntu2_amd64.deb ...
+Unpacking libmemcached10:amd64 (1.0.8-1ubuntu2) ...
+Selecting previously unselected package libjemalloc1.
+Preparing to unpack .../libjemalloc1_3.5.1-2_amd64.deb ...
+Unpacking libjemalloc1 (3.5.1-2) ...
+Selecting previously unselected package libonig2.
+Preparing to unpack .../libonig2_5.9.1-1ubuntu1_amd64.deb ...
+Unpacking libonig2 (5.9.1-1ubuntu1) ...
+Selecting previously unselected package libtbb2.
+Preparing to unpack .../libtbb2_4.2~20130725-1.1ubuntu1_amd64.deb ...
+Unpacking libtbb2 (4.2~20130725-1.1ubuntu1) ...
+Selecting previously unselected package hhvm.
+Preparing to unpack .../hhvm_3.4.2~trusty_amd64.deb ...
+Unpacking hhvm (3.4.2~trusty) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+ureadahead will be reprofiled on next reboot
+Setting up libboost-filesystem1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libboost-program-options1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libboost-regex1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libboost-thread1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libgflags2 (2.0-1.1ubuntu1) ...
+Setting up libunwind8 (1.1-2.2ubuntu3) ...
+Setting up libgoogle-glog0 (0.3.3-1) ...
+Setting up libmemcached10:amd64 (1.0.8-1ubuntu2) ...
+Setting up libjemalloc1 (3.5.1-2) ...
+Setting up libonig2 (5.9.1-1ubuntu1) ...
+Setting up libtbb2 (4.2~20130725-1.1ubuntu1) ...
+Setting up hhvm (3.4.2~trusty) ...
+********************************************************************
+* HHVM is installed.
+*
+* Running PHP web scripts with HHVM is done by having your webserver talk to HHVM
+* over FastCGI. Install nginx or Apache, and then:
+* $ sudo /usr/share/hhvm/install_fastcgi.sh
+* $ sudo /etc/init.d/hhvm restart
+* (if using nginx)  $ sudo /etc/init.d/nginx restart
+* (if using apache) $ sudo /etc/init.d/apache restart
+*
+* Detailed FastCGI directions are online at:
+* https://github.com/facebook/hhvm/wiki/FastCGI
+*
+* If you&#39;re using HHVM to run web scripts, you probably want it to start at boot:
+* $ sudo update-rc.d hhvm defaults
+*
+* Running command-line scripts with HHVM requires no special setup:
+* $ hhvm whatever.php
+*
+* You can use HHVM for /usr/bin/php even if you have php-cli installed:
+* $ sudo /usr/bin/update-alternatives --install /usr/bin/php php /usr/bin/hhvm 60
+********************************************************************
+Processing triggers for libc-bin (2.19-0ubuntu6) ...
+[Pharaoh Logging] Adding Package hhvm from the Packager Apt executed correctly
+... All done!
+*******************************
+Thanks for installing , visit www.pharaohtools.com for more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+HHVM: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>国連のインストール<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>国連は hhvm をインストールするために使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure HHVM uninstall
+</pre></div>
+</div>
+<p>上記のコマンドのスクリーン ショットは以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure hhvm uninstall
+
+Uninstall HHVM? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! HHVM !        *
+*******************************
+PHP Warning:  Illegal string offset <span class="s1">&#39;object&#39;</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 290
+PHP Warning:  Illegal string offset <span class="s1">&#39;method&#39;</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 290
+PHP Warning:  Illegal string offset <span class="s1">&#39;params&#39;</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 290
+PHP Warning:  call_user_func_array<span class="o">()</span> expects parameter <span class="m">1</span> to be a valid callback, class <span class="s1">&#39;p&#39;</span> not found in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 290
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+HHVM: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>パラメーターにおいてヘルプおよびインストール ＆ アンインストール操作されている大文字小文字を区別しながらも有利です
+他の人をに比べてください。</li>
+<li>それは両方の Ubuntu と同様、裕福なセントの OS として。</li>
+<li>HHVM は web サーバーのスループットにつながるライブの型情報を使用してより効率的なネイティブ コードを生成する能力を持っていて、
+低待機時間です。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jhhvm.rst">
+          HHVM
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

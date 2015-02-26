@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gittools &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="HAProxy" href="jhaproxy.html" />
+    <link rel="prev" title="Gitlab" href="jgitlab.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Gittools</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jgitlab.html"
+         title="Previous Chapter: Gitlab">&laquo; Gitlab</a></li>
+  <li><a href="jhaproxy.html"
+         title="Next Chapter: HAProxy">HAProxy &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jgittools.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="gittools">
+<h1>Gittools<a class="headerlink" href="#gittools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Gittools は、速度、データ整合性、および分散、非リニア ワークフローのサポートに重点を置いて分散リビジョン管理システムです。
+このモジュールは、更新されたバージョンにインストールを持ち上げます。インストール中にそれはまた gitfrom、git コア、gitcole、ptconfigure の下で gitfrom をインストールできます。自動化が可能です。それはユーザーフレンドリー Ubuntu とセント OS。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドのヘルプガイド ptconfigure についてユーザー。それ以下の時間がかかることができるので自動的にインストールされます。ユーザーのすべてのタイプに適しています。次のヘルプのコマンドは、gittools インストールのユーザーを支援します。このコマンドライン引数に関する情報が表示されるコマンドの名前を指定します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gittools <span class="nb">help</span>
+</pre></div>
+</div>
+<p>コマンドの入力後は使い方を示しています。スクリーン ショットは、このコマンドの機能を表現できます。</p>
+<p>Y
+.. code-block:: bash</p>
+<blockquote>
+<div><blockquote>
+<div><p>This command allows you to install Git and a set of common Git Tools. These include
+Git - the distributed source control manager, git Core a supplement to Git, Gitk
+which is a GUI for git, and git-cola, which is also a Git GUI.</p>
+<p>GitTools, gittools, git-tools</p>
+<blockquote>
+<div><ul class="simple">
+<li>install</li>
+</ul>
+<p>Installs the latest version of Git Tools
+example: ptconfigure gittools install</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>インストールには規定または操作の準備がインストールされている機器を作るに必要なサービスへの接続が含まれます。それはモジュールをインストールする gittools ptconfigure の下でちょうど、下記のコマンドを使用してマニフェスト プロセスです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gittools install
+</pre></div>
+</div>
+<p>それは質問攻めにコマンド入力活性化後。</p>
+<p>ユーザーはい自動的にインストールされます gittools システムからのチェックを入力します。次のスクリーン ショットは、それを示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gittools install
+Install Git Tools? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         !Git Tools!!        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package git from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package git-core from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+ linux-headers-generic linux-image-generic
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+Suggested packages:
+ git-doc
+The following NEW packages will be installed:
+ gitk
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">299</span> not upgraded.
+Need to get <span class="m">121</span> kB of archives.
+After this operation, 1,250 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main gitk all 1:1.9.1-1ubuntu0.1 <span class="o">[</span><span class="m">121</span> kB<span class="o">]</span>
+Fetched <span class="m">121</span> kB in 19s <span class="o">(</span>6,077 B/s<span class="o">)</span>
+Selecting previously unselected package gitk.
+<span class="o">(</span>Reading database ... <span class="m">176395</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../gitk_1%3a1.9.1-1ubuntu0.1_all.deb ...
+Unpacking gitk <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Setting up gitk <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package gitk from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+ linux-headers-generic linux-image-generic
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+The following extra packages will be installed:
+ libjs-jquery libjs-underscore
+Suggested packages:
+ python-pyinotify python-simplejson javascript-common
+Recommended packages:
+ xxdiff
+The following NEW packages will be installed:
+ git-cola libjs-jquery libjs-underscore
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">299</span> not upgraded.
+Need to get <span class="m">363</span> kB of archives.
+After this operation, 1,886 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libjs-jquery all 1.7.2+dfsg-2ubuntu1 <span class="o">[</span>78.8 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main libjs-underscore all 1.4.4-2ubuntu1 <span class="o">[</span>45.6 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe git-cola all 1.9.3-1 <span class="o">[</span><span class="m">239</span> kB<span class="o">]</span>
+Fetched <span class="m">363</span> kB in 1min 3s <span class="o">(</span>5,679 B/s<span class="o">)</span>
+Selecting previously unselected package libjs-jquery.
+<span class="o">(</span>Reading database ... <span class="m">176413</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libjs-jquery_1.7.2+dfsg-2ubuntu1_all.deb ...
+Unpacking libjs-jquery <span class="o">(</span>1.7.2+dfsg-2ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libjs-underscore.
+Preparing to unpack .../libjs-underscore_1.4.4-2ubuntu1_all.deb ...
+Unpacking libjs-underscore <span class="o">(</span>1.4.4-2ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package git-cola.
+Preparing to unpack .../git-cola_1.9.3-1_all.deb ...
+Unpacking git-cola <span class="o">(</span>1.9.3-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers <span class="k">for</span> mime-support <span class="o">(</span>3.54ubuntu1<span class="o">)</span> ...
+Setting up libjs-jquery <span class="o">(</span>1.7.2+dfsg-2ubuntu1<span class="o">)</span> ...
+Setting up libjs-underscore <span class="o">(</span>1.4.4-2ubuntu1<span class="o">)</span> ...
+Setting up git-cola <span class="o">(</span>1.9.3-1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package git-cola from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+GitTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<p>次の手順では、迅速な処理のインストール</p>
+<p>ステップ 1: Install gittools ?(Y/N)
+ステップ 2: の場合、ユーザーは、システム Y を与えることができますバージョンを確認し、インストール
+N は、ユーザーがインストールを終了する場合は、ステップ 3 に。</p>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="36%" />
+<col width="9%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install gittools?
+(Y/N)</td>
+<td>代わりにgittoolsを使用するのでは、
+我々は使用することができます GitTools,
+gittools, git-tools</td>
+<td>Y(Yes)</td>
+<td>それはgitのをインストールし、
+ptconfigure下の共通gittoolsのセットになります。</td>
+</tr>
+<tr class="row-odd"><td>Install gittools?
+(Y/N)</td>
+<td>代わりにgittoolsを使用するのでは、
+我々は使用することができます GitTools,
+gittools, git-tools|</td>
+<td>N(No)</td>
+<td>システム出口インストール</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Gittools は、複雑なワークフローに関連付けられます。</li>
+<li>Gittools によって粒状コミットので簡単に他のバージョン コントロール システム （VCS） よりユーザーで決定できる正確
+次のコミットでなければなりません。</li>
+<li>ユーザー ワークフローの符号化を向上させる Gittools。</li>
+<li>git コーラは、高度な Git commit ツール、git gui に似ています。</li>
+<li>git コーラ グラフィカルなビューアー、簡単に、インタラクティブなステージング、inotify のサポートを備えています。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jgittools.rst">
+          Gittools
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Firewall &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Gitbucket" href="jgitbucket.html" />
+    <link rel="prev" title="FireFox33" href="jfirefox33.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Firewall</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">オプション</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jfirefox33.html"
+         title="Previous Chapter: FireFox33">&laquo; FireFox33</a></li>
+  <li><a href="jgitbucket.html"
+         title="Next Chapter: Gitbucket">Gitbucket &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jfirewall.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="firewall">
+<h1>Firewall<a class="headerlink" href="#firewall" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ファイアウォールは、ネットワークのセキュリティ システム、適用されているルールのセットに基づいて着信および発信のネットワーク トラフィックを制御します。ファイアウォールは、ソフトウェア ソリューションとハードウェア ・ アプライアンスの両方に存在します。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このヘルプ コマンド アシスト ptconfigureについてユーザー。ユーザーのアクセス許可をについて説明します。
+ユーザーの願いに従って変更を行うことができます。ヘルプ イメージを案内します。それを視覚化しよう。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Firewall <span class="nb">help</span>
+</pre></div>
+</div>
+<p>上記のコマンドのスクリーン ショットは以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Firewall <span class="nb">help</span>
+******************************
+This <span class="nb">command </span>allows you to modify create or modify firewalls
+
+ Firewall, firewall
+
+       - <span class="nb">enable</span>
+<span class="nb">       </span>Enable system firewall
+       example: ptconfigure firewall <span class="nb">enable</span>
+
+       - disable
+       Disable system firewall
+       example: ptconfigure firewall disable
+
+       - allow
+       Allow a Firewall rule
+       example: ptconfigure firewall allow --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - deny
+       Deny a Firewall rule. Allow connection attempts to be ignored and <span class="nb">time </span>out.
+       example: ptconfigure firewall deny --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - reject
+       Reject a Firewall rule. Terminate connections attempts with an error to the connector.
+       example: ptconfigure firewall reject --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - limit
+       Limit a Firewall rule. ufw will deny connections <span class="k">if</span> an IP address has attempted
+       to initiate <span class="m">6</span> or more connections in the last <span class="m">30</span> seconds.
+       example: ptconfigure firewall limit --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - delete
+       Delete a Firewall rule.
+       example: ptconfigure firewall delete --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - insert
+       Insert a Firewall rule.
+       example: ptconfigure firewall insert --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - reset
+       Reset a Firewall rule.
+       example: ptconfigure firewall reset --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+       - default
+       Set default policy, should be allow, deny, or reject
+       example: ptconfigure firewall default --policy<span class="o">=</span><span class="s2">&quot;deny&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>オプション<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ファイアウォール規則は、あなたのニーズ、要件とセキュリティ脅威のレベルに従ってカスタマイズできます。ユーザーを作成したり、ファイアウォール ルールとしてそのような条件に基づいて無効にします。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="14%" />
+<col width="52%" />
+<col width="34%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">関数</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>IP address</td>
+<td>あなたが思う捕食され、特定のIPアドレスまたはIPアドレスの
+範囲を、遮断する</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>Enable</td>
+<td>システムのファイアウォールを有効にする</td>
+<td>ptconfigure firewall enable</td>
+</tr>
+<tr class="row-even"><td>Disable</td>
+<td>無効にするシステムのファイアウォール</td>
+<td>ptconfigure firewall disable</td>
+</tr>
+<tr class="row-odd"><td>Allow</td>
+<td>ファイアウォールルールを許可する</td>
+<td>ptconfigure firewall allow –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Deny</td>
+<td>許可接続の試行は無視されるとアウト時間</td>
+<td>ptconfigure firewall deny –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Reject</td>
+<td>コネクタへのエラーで接続試行を終了</td>
+<td>ptconfigure firewall reject –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Limit</td>
+<td>IPアドレスが6を開始するか、最後の30秒以上の接続しようとし
+た場合、UFWは接続を拒否します。</td>
+<td>ptconfigure firewall limit –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Delete</td>
+<td>ファイアウォールルールを削除</td>
+<td>ptconfigure firewall delete –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Insert</td>
+<td>ファイアウォールルールを挿入します</td>
+<td>ptconfigure firewall insert –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-odd"><td>Reset</td>
+<td>ファイアウォールルールをリセット</td>
+<td>ptconfigure firewall reset –firewall-
+rule=”ssh/tcp”</td>
+</tr>
+<tr class="row-even"><td>Default</td>
+<td>デフォルトポリシーは、拒否または拒否、許可するべきである.</td>
+<td>ptconfigure firewall default – policy
+=”deny”|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ファイアウォール アクセスできなくなります不要なシステムにネットワーク接続を介して識別し、危険なポートを介した通信を防止します。</li>
+<li>システムが多くの異なる認識ポートを介した通信やファイアウォールはこれらを求めるか、ユーザーに警告せずに許可する傾向があります。</li>
+<li>ファイアウォールも、外からの「疑わしい」活動をを検出できます。 します</li>
+<li>ユーザーは彼らの願いによると自分のルールを設定できます。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jfirewall.rst">
+          Firewall
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

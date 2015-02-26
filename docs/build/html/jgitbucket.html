@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gitbucket &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="GitKeySafe" href="jgitkeysafe.html" />
+    <link rel="prev" title="Firewall" href="jfirewall.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Gitbucket</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jfirewall.html"
+         title="Previous Chapter: Firewall">&laquo; Firewall</a></li>
+  <li><a href="jgitkeysafe.html"
+         title="Next Chapter: GitKeySafe">GitKeySafe &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jgitbucket.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="gitbucket">
+<h1>Gitbucket<a class="headerlink" href="#gitbucket" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Git は、速度、データの整合性と分散、非線形のワークフローのサポートに重点を置いて分散リビジョン管理システムです。Git は、ソフトウェア開発のための広く採用されているバージョン管理システムです。</p>
+<p>Git の作業ディレクトリは完全な歴史、完全版を追跡する機能、ネットワーク アクセスや中央サーバに依存しないと本格的なリポジトリです。</p>
+<p>GitBucket は、Scala で書かれた設置が簡単な Github クローンです。以下の基本的な機能を提供しています：</p>
+<ul class="simple">
+<li>パブリック/プライベート Git リポジトリ (http アクセスのみ)</li>
+<li>リポジトリ ビューアー （オンラインのファイルの編集などの高度な機能は実装されていません)</li>
+<li>リポジトリ検索 (コードおよび問題)</li>
+<li>Wiki</li>
+<li>の問題</li>
+<li>フォーク/要求をプル</li>
+<li>メール通知</li>
+<li>活動のタイムライン</li>
+<li>ユーザ管理 (管理者用)</li>
+<li>（Github の組織) のようなグループします。</li>
+<li>LDAP 統合</li>
+<li>グラバター サポート</li>
+<li>実行可能 war ファイル</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、gitbucket モジュールの使用状況を判断するのに役立ちます。ユーザーは、このモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gitbucket <span class="nb">help</span>
+</pre></div>
+</div>
+<p>上記のコマンドのスクリーン ショットは以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gitbucket <span class="nb">help</span>
+******************************
+ This <span class="nb">command </span>allows you to install a full Git Bucket installation on to a server
+ The dependencies <span class="k">for</span> GitBucket are also installed.
+
+ GitBucket, gitbucket, git-bucket
+
+       - install
+       Installs the latest version of GitBucket on a system
+       example: ptconfigure gitbucket install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>とき、ユーザーのマシンで gitbucket モジュールをインストールする必要があります。特定のコマンドの下のインストール プロセスが実行されます。
+インストール中に、システムはリポジトリ ルート ディレクトリを求めます。ユーザーがパスを定義します。既定のディレクトリはありません。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gitbucket install
+</pre></div>
+</div>
+<p>上記のコマンドのスクリーン ショットは以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gitbucket install
+Install Git Bucket? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         !GitBucket!        *
+*******************************
+PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/GitBucket/Model/GitBucketUbuntu.php on line 67
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Command <span class="s1">&#39;git&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> No <span class="nb">command</span> <span class="s1">&#39;gitk&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> No <span class="nb">command</span> <span class="s1">&#39;git-cola&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Installing as not installed
+*******************************
+*        Pharaoh Tools        *
+*         !Git Tools!!        *
+*******************************
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package git from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ git-core
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get 1,458 B of archives.
+After this operation, 21.5 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main git-core all 1:1.9.1-1ubuntu0.1 <span class="o">[</span>1,458 B<span class="o">]</span>
+Fetched 1,458 B in 1s <span class="o">(</span><span class="m">783</span> B/s<span class="o">)</span>
+Selecting previously unselected package git-core.
+<span class="o">(</span>Reading database ... <span class="m">182763</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../git-core_1%3a1.9.1-1ubuntu0.1_all.deb ...
+Unpacking git-core <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+Setting up git-core <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package git-core from the Packager Apt executed correctly
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ git-doc
+The following NEW packages will be installed:
+ gitk
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get <span class="m">121</span> kB of archives.
+After this operation, 1,250 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main gitk all 1:1.9.1-1ubuntu0.1 <span class="o">[</span><span class="m">121</span> kB<span class="o">]</span>
+Fetched <span class="m">121</span> kB in 2s <span class="o">(</span>43.1 kB/s<span class="o">)</span>
+Selecting previously unselected package gitk.
+<span class="o">(</span>Reading database ... <span class="m">182764</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../gitk_1%3a1.9.1-1ubuntu0.1_all.deb ...
+Unpacking gitk <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Setting up gitk <span class="o">(</span>1:1.9.1-1ubuntu0.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package gitk from the Packager Apt executed correctly
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libjs-jquery libjs-underscore
+Suggested packages:
+ python-pyinotify python-simplejson javascript-common
+Recommended packages:
+ xxdiff
+The following NEW packages will be installed:
+ git-cola libjs-jquery libjs-underscore
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get <span class="m">363</span> kB of archives.
+After this operation, 1,886 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libjs-jquery all 1.7.2+dfsg-2ubuntu1 <span class="o">[</span>78.8 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main libjs-underscore all 1.4.4-2ubuntu1 <span class="o">[</span>45.6 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/universe git-cola all 1.9.3-1 <span class="o">[</span><span class="m">239</span> kB<span class="o">]</span>
+Fetched <span class="m">363</span> kB in 13s <span class="o">(</span>27.8 kB/s<span class="o">)</span>
+Selecting previously unselected package libjs-jquery.
+<span class="o">(</span>Reading database ... <span class="m">182782</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libjs-jquery_1.7.2+dfsg-2ubuntu1_all.deb ...
+Unpacking libjs-jquery <span class="o">(</span>1.7.2+dfsg-2ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libjs-underscore.
+Preparing to unpack .../libjs-underscore_1.4.4-2ubuntu1_all.deb ...
+Unpacking libjs-underscore <span class="o">(</span>1.4.4-2ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package git-cola.
+Preparing to unpack .../git-cola_1.9.3-1_all.deb ...
+Unpacking git-cola <span class="o">(</span>1.9.3-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers <span class="k">for</span> mime-support <span class="o">(</span>3.54ubuntu1<span class="o">)</span> ...
+Setting up libjs-jquery <span class="o">(</span>1.7.2+dfsg-2ubuntu1<span class="o">)</span> ...
+Setting up libjs-underscore <span class="o">(</span>1.4.4-2ubuntu1<span class="o">)</span> ...
+Setting up git-cola <span class="o">(</span>1.9.3-1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package git-cola from the Packager Apt executed correctly
+PHP Warning:  file_put_contents<span class="o">(</span>/opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/../../../cleovars<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/AppConfig.php on line 115
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/ptconfigure-temp-script-15361773074.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-15361773074.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-15361773074.sh Permissions
+Executing /tmp/ptconfigure-temp-script-15361773074.sh
+Cloning into <span class="s1">&#39;gitbucket-war&#39;</span>...
+remote: Counting objects: 8, <span class="k">done</span>.
+remote: Total <span class="m">8</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Unpacking objects: 100% <span class="o">(</span>8/8<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+mkdir: cannot create directory ‘/opt/gitbucket/’: Permission denied
+mv: target ‘/opt/gitbucket/’ is not a directory
+Temp File /tmp/ptconfigure-temp-script-15361773074.sh Removed
+Enter Repository Root Directory:
+/
+Program Executor Deleted <span class="k">if</span> existed
+PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/gitbucket<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BaseLinuxApp.php on line 312
+chmod: cannot access ‘/usr/bin/gitbucket’: No such file or directory
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+GitBucket: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="21%" />
+<col width="28%" />
+<col width="13%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure gitbucket
+Install</td>
+<td>GitBucket, gitbucket ,
+git-bucket</td>
+<td>Y(Yes)</td>
+<td>システムは、インストールプロセスを開始します</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure gitbucket
+Install</td>
+<td>GitBucket, gitbucket ,
+git-bucket|</td>
+<td>N(No)</td>
+<td>システムは、インストールを停止し、</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Git 急速な分岐とマージをサポートし、可視化と非線型発展史をナビゲートするための特定のツールが含まれています。</li>
+<li>リポジトリは rsync、FTP、HTTP 経由で公開することができます。 または、Git プロトコルか平文ソケット、または ssh。</li>
+<li>非常に高速でスケーラブルであると説明し、それを示した Git は桁違いのいくつかのバージョン管理システムよりも高速とフェッチ
+ローカルに格納されたリポジトリからバージョン履歴は 100 回をリモート サーバーからフェッチするよりも速くすることができます。
+変更ログ内のキーワードは対応する問題ページ、プル要求ページおよび Wiki ページへのハイパーリンクです。</li>
+<li>変更セット、変更ログの差分です GitBucket リポジトリ ビューアーへのハイパーリンク。
+変更は、WebHook を使用して GitBucket にプッシュされるときに、ビルドをトリガーします。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jgitbucket.rst">
+          Gitbucket
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
