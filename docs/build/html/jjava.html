@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Jrush &mdash; KEVELL 0.1 documentation</title>
+    <title>JAVA &mdash; KEVELL 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
-    <link rel="next" title="PTConfigure" href="jptconfigure.html" />
-    <link rel="prev" title="JenkinsPlugins" href="jjenkinsplugins.html" />
+    <link rel="next" title="Jenkins" href="jjenkins.html" />
+    <link rel="prev" title="Invoke" href="jinvoke.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -88,12 +88,11 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Jrush</a><ul>
+<li><a class="reference internal" href="#">JAVA</a><ul>
 <li><a class="reference internal" href="#id1">あらすじ</a></li>
 <li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
 <li><a class="reference internal" href="#id3">インストール</a></li>
-<li><a class="reference internal" href="#id4">オプション</a></li>
-<li><a class="reference internal" href="#id5">利点</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
 </ul>
 </li>
 </ul>
@@ -104,10 +103,10 @@
             
               
                 
-  <li><a href="jjenkinsplugins.html"
-         title="Previous Chapter: JenkinsPlugins">&laquo; JenkinsPlugins</a></li>
-  <li><a href="jptconfigure.html"
-         title="Next Chapter: PTConfigure">PTConfigure &raquo;</a></li>
+  <li><a href="jinvoke.html"
+         title="Previous Chapter: Invoke">&laquo; Invoke</a></li>
+  <li><a href="jjenkins.html"
+         title="Next Chapter: Jenkins">Jenkins &raquo;</a></li>
               
             
             
@@ -115,7 +114,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/jjrush.txt"
+  <a href="_sources/jjava.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -152,30 +151,31 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="jrush">
-<h1>Jrush<a class="headerlink" href="#jrush" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="java">
+<h1>JAVA<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>このモジュールは、jrush あなたのマシンにインストールするのに役立ちます。また、最新バージョンの更新を容易にします。私たちを見てみましょうどのようにこのモジュール、jrush をインストールするのに役立ちます。</p>
+<p>このモジュールは、オラクルの java JDK 1.7 のバージョンをインストールするのに役立ちます。それはまた構成の java、javac、新しい oracle バージョンと一緒に javaws を容易にします。</p>
 </div>
 <div class="section" id="id2">
 <h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Help コマンドと同様、目的に関するユーザー ガイドとして Jrush モジュールに含まれているオプションについて。それは Jrush モジュールの代替パラメーターが一覧表示されます。また、Jrush モジュールをインストールするための構文について説明します。Jrush モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure JRush <span class="nb">help</span>
+<p>Help コマンドと同様、目的に関するユーザー ガイドとして java モジュールに含まれているオプションについて。ヘルプ コマンドは java モジュールの代替パラメーターが一覧表示されます。また、Java JDK 1.7 をインストールするための構文について説明します。Java モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Java <span class="nb">help</span>
 </pre></div>
 </div>
-<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、JRush の下で help コマンドについて視覚化します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure JRush <span class="nb">help</span>
+<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、java のモジュールの下に、help コマンドについて視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure java <span class="nb">help</span>
 ******************************
 
 
- This <span class="nb">command </span>allows you to install or Update JRush.
+This <span class="nb">command </span>allows you to install Java JDK 1.7 .
 
- JRush, jrush, Jrush, jRush
+Java, java, java17
 
        - install
-       Installs the latest version of jRush
-       example: ptconfigure jRush install
+       Installs a version of Oracle Java JDK 1.7. It will also configure java,
+       javac and javaws to be provided by the new Oracle version.
+       example: ptconfigure java17 install
 
 ------------------------------
 End Help
@@ -185,148 +185,53 @@ End Help
 </div>
 <div class="section" id="id3">
 <h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>ユーザーのマシンに JRush をインストールするために使用するコマンドを次に示します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure JRush install
+<p>ジャワ JDK 1.7 の oracle バージョンをインストールするユーザーのコンピューターには、単に以下のようにコマンドを使用して実行できます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Java install
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>上記のコマンドを入力した後、次の操作が発生します表形式で表示されます。</p>
+<p>上記のコマンドを入力した後、次のプロセスが発生します表形式で表示されます。</p>
 <table border="1" class="table-bordered docutils">
 <colgroup>
 <col width="20%" />
-<col width="36%" />
-<col width="10%" />
+<col width="35%" />
+<col width="11%" />
 <col width="34%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">パラメーター</th>
-<th class="head">代替パラメーター</th>
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">代替パラメータ</th>
 <th class="head">オプション</th>
-<th class="head">コメント</th>
+<th class="head">注釈</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Install JRush - Joomla
-Command Line ? (Y/N)</td>
-<td>代わりにJRushの我々は使用することができます:
-jrush, Jrush.</td>
+<tr class="row-even"><td>Install The Oracle Java
+JDK 1.7? (Y/N)</td>
+<td>の代わりに Oracle Java JDK 1.7,
+以下の選択肢を使用することもできる:
+Java, java, java17</td>
 <td>Y(Yes)</td>
 <td>ユーザーは、Yと入力することができ、
 インストールプロセスを続行したい場合</td>
 </tr>
-<tr class="row-odd"><td>Install JRush - Joomla
-Command Line ? (Y/N)</td>
-<td>代わりにJRushの我々は使用することができます:
-jrush, Jrush.</td>
+<tr class="row-odd"><td>Install The Oracle Java
+JDK 1.7? (Y/N)</td>
+<td>の代わりに Oracle Java JDK 1.7,
+以下の選択肢を使用することもできる:
+Java, java, java17|</td>
 <td>N(No)</td>
 <td>ユーザーは、Nと入力することができ、
-インストールプロセスを終了したい場合は|</td>
+インストールプロセスを終了したい場合は</td>
 </tr>
 </tbody>
 </table>
-<p>ユーザー インストール プロセスの進行を表形式で示すように、次の操作が発生します。</p>
-<table border="1" class="table-bordered docutils">
-<colgroup>
-<col width="18%" />
-<col width="26%" />
-<col width="9%" />
-<col width="47%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">パラメーター</th>
-<th class="head">パス</th>
-<th class="head">オプション</th>
-<th class="head">コメント</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Program data directory
-(デフォルト)</td>
-<td>“/opt/jrush (corresponding
-module)</td>
-<td>Yes</td>
-<td>ユーザーがデフォルトのプログラムのデータディレクトリを使用
-してインストールを続行する場合、それらはYESと入力をすること
-ができます</td>
-</tr>
-<tr class="row-odd"><td>Program data directory</td>
-<td>User specific</td>
-<td>No(End
-slash)</td>
-<td>ユーザーが自分自身のプログラムデータディレクトリを続行したい
-場合は、Nとして、手入力は、自分の場所を指定することができます</td>
-</tr>
-<tr class="row-even"><td>Program executor
-directory (デフォルト)</td>
-<td>“/usr/bin”</td>
-<td>Yes</td>
-<td>ユーザーがデフォルトのプログラム実行ディレクトリを使用してイ
-ンストールを続行する場合、それらはYESと入力をする
-ことができます</td>
-</tr>
-<tr class="row-odd"><td>Program executor
-directory</td>
-<td>User Specific</td>
-<td>N0(End
-slash)</td>
-<td>ユーザーが独自のプログラム実行ディレクトリを続行したい場
-合は、入力Nとして、そして手に、彼らは場所を所
-有指定することができます。|</td>
-</tr>
-</tbody>
-</table>
-<p>インストール中には、次のプロセスが発生します。</p>
-<ul class="simple">
-<li>受信オブジェクトのステータスが表示されます。</li>
-<li>デルタの解決の状態が表示されます。</li>
-<li>接続をチェックします。</li>
-<li>設定プログラムのデータ フォルダーとして表示されます。</li>
-<li>既に存在していた場合に、プログラム エグゼキュータを削除します。</li>
-</ul>
-<p>最後に、Jrush のインストールは完了します。次のスクリーン ショットは、JRush あなたのマシンにインストールするプロセスを示します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure JRush install
-Install JRush - Joomla Command Line ? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
-*******************************
-*        Pharaoh Tools        *
-*         JRush CLI !!        *
-*******************************
-What is the program data directory? Found <span class="s2">&quot;/opt/jrush&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
-
-What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
-
-git clone <span class="s1">&#39;https://github.com/PharaohTools/jrush.git&#39;</span>  /tmp/jrush/jrushCloning into <span class="s1">&#39;/tmp/jrush/jrush&#39;</span>...
-remote: Counting objects: 3452, <span class="k">done</span>.
-remote: Total <span class="m">3452</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
-Receiving objects: 100% <span class="o">(</span>3452/3452<span class="o">)</span>, 2.04 MiB <span class="p">|</span> 50.00 KiB/s, <span class="k">done</span>.
-Resolving deltas: 100% <span class="o">(</span>2097/2097<span class="o">)</span>, <span class="k">done</span>.
-Checking connectivity... <span class="k">done</span>.
-Program Data folder populated
-Program Executor Deleted <span class="k">if</span> existed
-... All <span class="k">done</span>!
-*******************************
-Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
-******************************
-
-
-Single App Installer:
---------------------------------------------
-JRush: Success
-------------------------------
-Installer Finished
-******************************
-</pre></div>
 </div>
-</div>
-<div class="section" id="id5">
-<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>このモジュールを最新のバージョン JRush をインストールするユーザーを容易にします。</li>
-<li>ユーザーは、プログラムのデータ ディレクトリと遺言執行者の独自のパスを選択できます。</li>
-<li>ヘルプとインストールの宣言で使用されるパラメーターは大文字と小文字を区別しながら他の人に比べての利点を追加する必要があります。</li>
-<li>それは裕福な両方セント OS とも ubuntu のように。必要なステータスは、インストール中に明確に監視されます。</li>
+<li>ヘルプおよびインストール操作で使用されるパラメーター大文字小文字が区別されません中に他の人に比べて利点であります。</li>
+<li>それは両方の Ubuntu と同様、裕福なセントの OS として。</li>
+<li>Javaws、java、javac の構成は、新しい oracle バージョンの助けを借りてことができます。</li>
 </ul>
 </div>
 </div>
@@ -387,8 +292,8 @@ Installer Finished
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jjrush.rst">
-          Jrush
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jjava.rst">
+          JAVA
         </a> on GitHub.
       </li>
 

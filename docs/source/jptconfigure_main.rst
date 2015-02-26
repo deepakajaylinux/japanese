@@ -43,6 +43,9 @@ ptconfigureモジュールと遊ぶ
    jinstallpackage
    jintellij
    jinvoke
+   jjava
+   jjenkins
+   jjenkinsplugins
    jjrush
    jptconfigure
    jptdeploy
