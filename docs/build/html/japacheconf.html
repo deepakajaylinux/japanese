@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ptdeploy &mdash; KEVELL 0.1 documentation</title>
+    <title>ApacheConf &mdash; KEVELL 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,7 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
-    <link rel="prev" title="PTConfigure" href="jptconfigure.html" />
+    <link rel="next" title="ApacheModules" href="japachemodules.html" />
+    <link rel="prev" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -87,13 +88,12 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Ptdeploy</a><ul>
-<li><a class="reference internal" href="#id1">あらすじ</a></li>
-<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
-<li><a class="reference internal" href="#id3">インストール</a></li>
-<li><a class="reference internal" href="#id4">確保するため</a></li>
-<li><a class="reference internal" href="#id5">オプション</a></li>
-<li><a class="reference internal" href="#id6">利点</a></li>
+<li><a class="reference internal" href="#">ApacheConf</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">オプション</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
 </ul>
 </li>
 </ul>
@@ -104,8 +104,10 @@
             
               
                 
-  <li><a href="jptconfigure.html"
-         title="Previous Chapter: PTConfigure">&laquo; PTConfigure</a></li>
+  <li><a href="jptconfigure_main.html"
+         title="Previous Chapter: ptconfigureモジュールと遊ぶ">&laquo; ptconfigureモジュール...</a></li>
+  <li><a href="japachemodules.html"
+         title="Next Chapter: ApacheModules">ApacheModules &raquo;</a></li>
               
             
             
@@ -113,7 +115,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/jptdeploy.txt"
+  <a href="_sources/japacheconf.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -150,36 +152,32 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="ptdeploy">
-<h1>Ptdeploy<a class="headerlink" href="#ptdeploy" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="apacheconf">
+<h1>ApacheConf<a class="headerlink" href="#apacheconf" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Ptdeploy は PHP のコードによって自動化された配置、ビルドやリリース機能、web アプリのバージョン管理およびインフラストラクチャとユーザーのアプリケーションを包みます。</p>
-<p>よく展開を構築するために FTP または他アドホック ソリューションからコピーする多くのファイルが必要です。また、企業の自動化ツールの多くが欠落していた。ファラオのツールの下のこれらの不足 ptdeploy を克服するためにしたビルド。PHP は ptdeploy ルビー キャピストラーノでのギャップを埋めると同様。
-このツールは、アプリケーションのプロビジョニングとあなたの箱をビルドします。ユーザーことができます 1 つまたは 2 つの PHP ファイルを自分のシステムにも単純または複雑なアプリケーション展開パターンを設定または、クラウド フレンドリーな展開パターンを速くセットアップします。</p>
-<p>Ptdeploy はモジュラー、オブジェクト指向と拡張可能です。そして、ユーザーは任意の余分なモジュールが必要な場合彼らはすることができます作成要件に基づいて新しいモジュールを追加します。</p>
-<p>この ptdeploy は、単一のファイルにユーザーの展開のすべてのステップをおおわラッパーとして機能します。これは 1 つのコマンドを使用して、アプリケーションのインスタンスを起動することができます。</p>
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールの管理およびインストール Apache の設定を支援します。それはあなたの環境の構成を指定します。それは裕福な ubuntu と同様セント OS のように。</p>
 </div>
-<div class="section" id="id2">
-<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>このコマンドは、ptdeploy モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
-<div class="highlight-bash"><div class="highlight"><pre>       ptconfigure ptdeploy <span class="nb">help</span>
-
-kevell@corp:/# ptconfigure Ptdeploy <span class="nb">help</span>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドは、目的とこのモジュールで使用できるコマンドについて説明します。また、特定のモジュールをインストールするコマンドについて説明します。
+宣言に使用できる代替のパラメーターを示します。ヘルプを宣言するために使用されるコマンドが表示されます以下の通り：</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apacheconf <span class="nb">help</span>
+</pre></div>
+</div>
+<p>スクリーン ショットは、下図のように、このモジュールの下に help コマンドの使用状況を視覚的に表します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure apacheconf <span class="nb">help</span>
 ******************************
 
 
- This <span class="nb">command </span>allows you to update Ptdeploy.
+ This module lets you install a configuration <span class="k">for</span> Apache HTTP Server. The only commands available are this <span class="nb">help</span>
+<span class="nb"> </span>and install.
 
- Ptdeploy, dapper, ptdeploy
+ ApacheConf, apache-configure, apache-configuration, apache-conf, apacheconf
 
        - install
-       Installs the latest version of ptdeploy
-       example: ptconfigure ptdeploy install
-
-       - ensure
-       Installs the latest version of ptdeploy, only <span class="k">if</span> a version is not installed
-       example: ptconfigure ptdeploy ensure
+       Installs a configuration <span class="k">for</span> Apache
+       example: ptconfigure apacheconf install
 
 ------------------------------
 End Help
@@ -187,32 +185,38 @@ End Help
 </pre></div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>このコマンドは私に役立ちますinstall ptdeploy の最新バージョン。特定のコマンドの下のインストール プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptdeploy install
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>単に、下記のコマンドを使用してこのptconfigureの下で特定のツールをインストールする方が簡単です。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure apacheconf install
 </pre></div>
 </div>
-<p>上記のコマンドのスクリーンショットを以下にリストされている</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptdeploy install
-Install ptdeploy ? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+<p>上記のコマンドを与えた後、ツールは確認します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Install Apache conf? <span class="o">(</span>Y/N<span class="o">)</span>
+</pre></div>
+</div>
+<p>Y として入力を与える場合、モジュールが正常にインストールします。</p>
+<p>またロックファイル PidFile、タイムアウト、キープア ライブ、MaxKeepAliveRequest、キープア ライブ タイムアウトのデフォルト以外の値を指定するいくつかのコマンドがスローされます。場合は、ユーザーが与える Y(Yes) と入力自動的に既定値を修正します。ユーザーは N(No) として入力を与える場合、ユーザーから値について尋ねるでしょう。</p>
+<p>インストールでスクリーン ショット下記手順やコマンドについて視覚的に説明する必要があります。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure apacheconf install
+Install Apache Conf? <span class="o">(</span>Y/N<span class="o">)</span>
+y
 *******************************
 *        Pharaoh Tools        *
-*          ptdeploy         *
+*         Apache Conf!        *
 *******************************
-What is the program data directory? Found <span class="s2">&quot;/opt/ptdeploy&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+Set non-default value <span class="k">for</span> LockFile? Default is <span class="si">${</span><span class="nv">APACHE_LOCK_DIR</span><span class="si">}</span>/accept.lock <span class="o">(</span>Y/N<span class="o">)</span>
 
-What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+Set non-default value <span class="k">for</span> PidFile? Default is <span class="si">${</span><span class="nv">APACHE_PID_FILE</span><span class="si">}</span> <span class="o">(</span>Y/N<span class="o">)</span>
 
-git clone <span class="s1">&#39;https://github.com/PharaohTools/ptdeploy.git&#39;</span>  /tmp/ptdeploy/ptdeployCloning into <span class="s1">&#39;/tmp/ptdeploy/ptdeploy&#39;</span>...
-remote: Counting objects: 6989, <span class="k">done</span>.
-remote: Total <span class="m">6989</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 6989
-Receiving objects: 100% <span class="o">(</span>6989/6989<span class="o">)</span>, 2.61 MiB <span class="p">|</span> 176.00 KiB/s, <span class="k">done</span>.
-Resolving deltas: 100% <span class="o">(</span>4335/4335<span class="o">)</span>, <span class="k">done</span>.
-Checking connectivity... <span class="k">done</span>.
-Program Data folder populated
-Program Executor Deleted <span class="k">if</span> existed
+Set non-default value <span class="k">for</span> Timeout? Default is <span class="m">300</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> KeepAlive? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> MaxKeepAliveRequests? Default is <span class="m">100</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> KeepAliveTimeout? Default is <span class="m">5</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
@@ -221,83 +225,57 @@ Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span 
 
 Single App Installer:
 --------------------------------------------
-ptdeploy: Success
+ApacheConf: Success
 ------------------------------
 Installer Finished
 ******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>確保するため<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>このコマンドは私に役立ちますinstall バージョンがインストールされていない場合にのみ ptdeploy の最新バージョン。特定のコマンドの下のインストール プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ptdeploy ensure
-</pre></div>
-</div>
-<p>上記のコマンドのスクリーンショットを以下にリストされている</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ptdeploy ensure
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptdeploy reports itself as Installed
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
-******************************
-
-
-Single App Installer:
---------------------------------------------
-ptdeploy: Success
-------------------------------
-Installer Finished
-******************************
-</pre></div>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>オプション<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>オプション<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="18%" />
-<col width="41%" />
-<col width="13%" />
-<col width="27%" />
+<col width="23%" />
+<col width="34%" />
+<col width="7%" />
+<col width="36%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">パラメーター</th>
 <th class="head">代替パラメーター</th>
-<th class="head">オプション</th>
+<th class="head">必要な</th>
 <th class="head">コメント</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>ptconfigure ptdeploy
-install</td>
-<td>コマンドラインで使用することができる3つの代替
-のパラメータがある。
-Ptdeploy, dapper, ptdeploy
-の例：ptconfigure ptdeploy install /
-ptconfigure dapper install</td>
-<td>Y(Yes)</td>
-<td>システムは、インストール プロセス
-を開始します</td>
+<tr class="row-even"><td>Install Apache conf? (Y/N)</td>
+<td>代わりにApachemoduls、我々は使用すること
+ができますApacheModules, apachemods、
+Apache-modules こうして</td>
+<td>Yes</td>
+<td>ユーザーがYESと入力を与えた場合は、
+モジュールをインストールします。モジュール。</td>
 </tr>
-<tr class="row-odd"><td>ptconfigure ptdeploy
-install</td>
-<td>コマンドラインで使用することができる3つの代替
-のパラメータがある。
-Ptdeploy, dapper, ptdeploy
-の例：ptconfigure ptdeploy install /
-ptconfigure dapper install|</td>
-<td>N(No)</td>
-<td>システムは、インストール プロセ
-スを停止します</td>
+<tr class="row-odd"><td>Install Apache conf? (Y/N)</td>
+<td>代わりにApachemoduls、我々は使用すること
+ができますApacheModules, apachemods、
+Apache-modules こうして|</td>
+<td>No</td>
+<td>ユーザーはNOと入力を与えた場合、
+それは、出口を取得します。</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="id6">
-<h2>利点<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>ホスト ファイル、バーチャル ホスト ファイル、構成ファイルを編集して、データベースを更新しよりすべて自動化できますこれを使用します。</li>
-<li>リモート サーバー管理機能を使用して、ユーザーは任意のサイズのインフラストラクチャ全体にわたる展開を自動化できます。</li>
+<li>モジュールをインストールすると、Apache の構成を管理するエンドユーザーを支援します。</li>
+<li>インストール中に Apache ツール、エンド ・ ユーザーは設計およびこのモジュールを使用して彼らの要件に従って構成を管理できます。</li>
+<li>場合、既に構成創設以来存在する既存のものが上書きされます。</li>
+<li>それは裕福なセント OS とも Ubuntu のように。</li>
+<li>宣言で使用されるパラメーターは大文字と小文字を区別する加えられた利点であります。</li>
 </ul>
 </div>
 </div>
@@ -358,8 +336,8 @@ ptconfigure dapper install|</td>
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jptdeploy.rst">
-          Ptdeploy
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/japacheconf.rst">
+          ApacheConf
         </a> on GitHub.
       </li>
 

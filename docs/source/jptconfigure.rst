@@ -102,12 +102,12 @@ PTConfigure
  |Install ptconfigure ptconfigure  | 使用できる3つのパラメータがある。             | Y(Yes)     | それはptconfigureをインストールします      |
  |Update to latest                 | ptconfigure, cleo, ptconfigure                |            | クレオパトラの下で                         |
  |version? (Y/N)                   | 例: ptconfigure ptconfigure install/          |            |                                            |
- |                                 |     ptconfigure cleo install                  |            |                                            | 	
+ |                                 | ptconfigure cleo install                      |            |                                            | 	
  +---------------------------------+-----------------------------------------------+------------+--------------------------------------------+
  |Install ptconfigure ptconfigure  | 使用できる3つのパラメータがある。             | N(No)      | これは、インストールを終了します           |
  |Update to latest                 | ptconfigure, cleo, ptconfigure                |            |                                            |
  |version? (Y/N)                   | 例: ptconfigure ptconfigure install/          |            |                                            |
- |                                 |     ptconfigure cleo install|                 |            |                                            |
+ |                                 | ptconfigure cleo install|                     |            |                                            |
  +---------------------------------+-----------------------------------------------+------------+--------------------------------------------+
 
 

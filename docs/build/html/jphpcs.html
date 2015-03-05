@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Jrush &mdash; KEVELL 0.1 documentation</title>
+    <title>PHPCS &mdash; KEVELL 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
-    <link rel="next" title="PHPCS" href="jphpcs.html" />
-    <link rel="prev" title="JenkinsPlugins" href="jjenkinsplugins.html" />
+    <link rel="next" title="PTConfigure" href="jptconfigure.html" />
+    <link rel="prev" title="Jrush" href="jjrush.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -88,12 +88,11 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Jrush</a><ul>
+<li><a class="reference internal" href="#">PHPCS</a><ul>
 <li><a class="reference internal" href="#id1">あらすじ</a></li>
 <li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
 <li><a class="reference internal" href="#id3">インストール</a></li>
-<li><a class="reference internal" href="#id4">オプション</a></li>
-<li><a class="reference internal" href="#id5">利点</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
 </ul>
 </li>
 </ul>
@@ -104,10 +103,10 @@
             
               
                 
-  <li><a href="jjenkinsplugins.html"
-         title="Previous Chapter: JenkinsPlugins">&laquo; JenkinsPlugins</a></li>
-  <li><a href="jphpcs.html"
-         title="Next Chapter: PHPCS">PHPCS &raquo;</a></li>
+  <li><a href="jjrush.html"
+         title="Previous Chapter: Jrush">&laquo; Jrush</a></li>
+  <li><a href="jptconfigure.html"
+         title="Next Chapter: PTConfigure">PTConfigure &raquo;</a></li>
               
             
             
@@ -115,7 +114,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/jjrush.txt"
+  <a href="_sources/jphpcs.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -152,30 +151,29 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="jrush">
-<h1>Jrush<a class="headerlink" href="#jrush" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="phpcs">
+<h1>PHPCS<a class="headerlink" href="#phpcs" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>このモジュールは、jrush あなたのマシンにインストールするのに役立ちます。また、最新バージョンの更新を容易にします。私たちを見てみましょうどのようにこのモジュール、jrush をインストールするのに役立ちます。</p>
+<p>このモジュールは、レポから php cs をインストールするのに役立ちます。インストール中に、このモジュールは、最新バージョンを取得します。ユーザーは、プログラムのデータ ディレクトリと遺言執行者の場所を指定できます。最後に結果を明確に報告されます。</p>
 </div>
 <div class="section" id="id2">
 <h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>Help コマンドと同様、目的に関するユーザー ガイドとして Jrush モジュールに含まれているオプションについて。それは Jrush モジュールの代替パラメーターが一覧表示されます。また、Jrush モジュールをインストールするための構文について説明します。Jrush モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure JRush <span class="nb">help</span>
+<p>ヘルプ コマンド同様目的に関してユーザーを導くように php cs モジュールに含まれているオプションについて。また、php の cs をインストールするための構文について説明します。Php cs のヘルプのコマンドは以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPCS <span class="nb">help</span>
 </pre></div>
 </div>
-<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、JRush の下で help コマンドについて視覚化します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure JRush <span class="nb">help</span>
+<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットに PHPCS 下 help コマンドについて視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPCS <span class="nb">help</span>
 ******************************
 
 
- This <span class="nb">command </span>allows you to install or Update JRush.
+This <span class="nb">command </span>allows you to install PHPCS from a GC Repo.
 
- JRush, jrush, Jrush, jRush
-
-       - install
-       Installs the latest version of jRush
-       example: ptconfigure jRush install
+PHPCS
+- install
+Installs the latest version of PHPCS
+example: ptconfigure phpcs install
 
 ------------------------------
 End Help
@@ -185,54 +183,49 @@ End Help
 </div>
 <div class="section" id="id3">
 <h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>ユーザーのマシンに JRush をインストールするために使用するコマンドを次に示します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure JRush install
+<p>PHP の CS をインストールするように、次のコマンドを使用して簡単です：</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPCS install
 </pre></div>
 </div>
-</div>
-<div class="section" id="id4">
-<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>上記のコマンドを入力した後、次の操作が発生します表形式で表示されます。</p>
+<p>次の操作上のコマンドを入力した後で示すように、表形式に発生します。</p>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="20%" />
-<col width="36%" />
+<col width="16%" />
+<col width="35%" />
 <col width="10%" />
-<col width="34%" />
+<col width="39%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">パラメーター</th>
-<th class="head">代替パラメーター</th>
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">代替パラメータ</th>
 <th class="head">オプション</th>
-<th class="head">コメント</th>
+<th class="head">注釈</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Install JRush - Joomla
-Command Line ? (Y/N)</td>
-<td>代わりにJRushの我々は使用することができます:
-jrush, Jrush.</td>
+<tr class="row-even"><td>Install PHPCI? (Y/N)</td>
+<td>その代わりPHPCIの、我々はまた、phpci使用す
+ることができます。</td>
 <td>Y(Yes)</td>
 <td>ユーザーは、Yと入力することができ、
 インストールプロセスを続行したい場合</td>
 </tr>
-<tr class="row-odd"><td>Install JRush - Joomla
-Command Line ? (Y/N)</td>
-<td>代わりにJRushの我々は使用することができます:
-jrush, Jrush.</td>
+<tr class="row-odd"><td>Install PHPCI? (Y/N)</td>
+<td>その代わりPHPCIの、我々はまた、phpci使用す
+ることができます。</td>
 <td>N(No)</td>
 <td>ユーザーは、Nと入力することができ、
-インストールプロセスを終了したい場合は|</td>
+、インストールプロセスを終了したい場合は|</td>
 </tr>
 </tbody>
 </table>
 <p>ユーザー インストール プロセスの進行を表形式で示すように、次の操作が発生します。</p>
 <table border="1" class="table-bordered docutils">
 <colgroup>
+<col width="16%" />
 <col width="18%" />
-<col width="26%" />
-<col width="9%" />
-<col width="47%" />
+<col width="14%" />
+<col width="52%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">パラメーター</th>
@@ -242,66 +235,58 @@ jrush, Jrush.</td>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Program data directory
+<tr class="row-even"><td>Program data
+directory
 (デフォルト)</td>
-<td>“/opt/jrush (corresponding
-module)</td>
+<td>“/opt/phpunit(対応す
+るモジュール)”</td>
 <td>Yes</td>
-<td>ユーザーがデフォルトのプログラムのデータディレクトリを使用
-してインストールを続行する場合、それらはYESと入力をすること
-ができます</td>
+<td>ユーザーがデフォルトのプログラムのデータディレクトリを使用してイ
+ンストールを続行する場合、それらはYESと入力をすることができます</td>
 </tr>
-<tr class="row-odd"><td>Program data directory</td>
-<td>User specific</td>
-<td>No(End
-slash)</td>
-<td>ユーザーが自分自身のプログラムデータディレクトリを続行したい
-場合は、Nとして、手入力は、自分の場所を指定することができます</td>
+<tr class="row-odd"><td>Program data
+directory</td>
+<td>User Specific</td>
+<td>No(エンドス
+ラッシュ)</td>
+<td>ユーザーが自分自身のプログラムデータディレクトリを続行したい場合は、
+入力Nとして、そして手に、彼らは場所を所有指定することができます。</td>
 </tr>
 <tr class="row-even"><td>Program executor
-directory (デフォルト)</td>
+directory
+(デフォルト)</td>
 <td>“/usr/bin”</td>
 <td>Yes</td>
-<td>ユーザーがデフォルトのプログラム実行ディレクトリを使用してイ
-ンストールを続行する場合、それらはYESと入力をする
-ことができます</td>
+<td>ユーザーがデフォルトのプログラム実行ディレクトリを使用してインスト
+ールを続行する場合、それらはYESと入力をすることができます</td>
 </tr>
 <tr class="row-odd"><td>Program executor
 directory</td>
 <td>User Specific</td>
-<td>N0(End
-slash)</td>
-<td>ユーザーが独自のプログラム実行ディレクトリを続行したい場
-合は、入力Nとして、そして手に、彼らは場所を所
-有指定することができます。|</td>
+<td>No(エンドス
+ラッシュ)</td>
+<td>ユーザーが独自のプログラム実行ディレクトリを続行したい場合は、
+入力Nとして、そして手に、彼らは場所を所有指定することができます。|</td>
 </tr>
 </tbody>
 </table>
-<p>インストール中には、次のプロセスが発生します。</p>
-<ul class="simple">
-<li>受信オブジェクトのステータスが表示されます。</li>
-<li>デルタの解決の状態が表示されます。</li>
-<li>接続をチェックします。</li>
-<li>設定プログラムのデータ フォルダーとして表示されます。</li>
-<li>既に存在していた場合に、プログラム エグゼキュータを削除します。</li>
-</ul>
-<p>最後に、Jrush のインストールは完了します。次のスクリーン ショットは、JRush あなたのマシンにインストールするプロセスを示します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure JRush install
-Install JRush - Joomla Command Line ? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+<p>これらのプロセスの後、表形式で示すように、結果はステータスと共に明確に報告されます。次のスクリーン ショットについて説明しますをグラフィカルに PHPCS のインストールに関与するプロセス。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure PHPCS install
+Install PHP Code Sniffer ? <span class="o">(</span>Y/N<span class="o">)</span>
+y
 *******************************
 *        Pharaoh Tools        *
-*         JRush CLI !!        *
+*         PHP CSniffer        *
 *******************************
-What is the program data directory? Found <span class="s2">&quot;/opt/jrush&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+What is the program data directory? Found <span class="s2">&quot;/opt/phpcs&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
 
 What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
 
-git clone <span class="s1">&#39;https://github.com/PharaohTools/jrush.git&#39;</span>  /tmp/jrush/jrushCloning into <span class="s1">&#39;/tmp/jrush/jrush&#39;</span>...
-remote: Counting objects: 3452, <span class="k">done</span>.
-remote: Total <span class="m">3452</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
-Receiving objects: 100% <span class="o">(</span>3452/3452<span class="o">)</span>, 2.04 MiB <span class="p">|</span> 50.00 KiB/s, <span class="k">done</span>.
-Resolving deltas: 100% <span class="o">(</span>2097/2097<span class="o">)</span>, <span class="k">done</span>.
+git clone <span class="s1">&#39;https://github.com/phpengine/ptconfigure-phpcs.git&#39;</span>  /tmp/phpcs/phpcsCloning into <span class="s1">&#39;/tmp/phpcs/phpcs&#39;</span>...
+remote: Counting objects: 862, <span class="k">done</span>.
+remote: Total <span class="m">862</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>862/862<span class="o">)</span>, 491.23 KiB <span class="p">|</span> 64.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>378/378<span class="o">)</span>, <span class="k">done</span>.
 Checking connectivity... <span class="k">done</span>.
 Program Data folder populated
 Program Executor Deleted <span class="k">if</span> existed
@@ -313,20 +298,19 @@ Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span 
 
 Single App Installer:
 --------------------------------------------
-JRush: Success
+PHPCS: Success
 ------------------------------
 Installer Finished
-******************************
+****************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>このモジュールを最新のバージョン JRush をインストールするユーザーを容易にします。</li>
-<li>ユーザーは、プログラムのデータ ディレクトリと遺言執行者の独自のパスを選択できます。</li>
+<li>このモジュールで更新されたバージョンと PHP の CS をインストールするユーザーを容易にします。</li>
+<li>ユーザーは、プログラムのデータ ディレクトリと遺言執行者のための独自のパスを選択できます。</li>
 <li>ヘルプとインストールの宣言で使用されるパラメーターは大文字と小文字を区別しながら他の人に比べての利点を追加する必要があります。</li>
-<li>それは裕福な両方セント OS とも ubuntu のように。必要なステータスは、インストール中に明確に監視されます。</li>
 </ul>
 </div>
 </div>
@@ -387,8 +371,8 @@ Installer Finished
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jjrush.rst">
-          Jrush
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jphpcs.rst">
+          PHPCS
         </a> on GitHub.
       </li>
 

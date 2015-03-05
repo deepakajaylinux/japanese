@@ -476,23 +476,19 @@ Installer Finished
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>ptconfigure cassandra Install</td>
-<td><p class="first">コマンドラインで使用することができる2つの
+<td>コマンドラインで使用することができる2つの
 別のパラメータがある。Cassandra , cassandra
-例えば：ptconfigure cassandra install,</p>
-<blockquote class="last">
-<div>ptconfigure Cassandra install</div></blockquote>
-</td>
+例えば：ptconfigure cassandra install,
+ptconfigure Cassandra install</td>
 <td>Y</td>
 <td>システムは、インストールプロセスを開
 始します</td>
 </tr>
 <tr class="row-odd"><td>ptconfigure cassandra Install</td>
-<td><p class="first">コマンドラインで使用することができる2つの
+<td>コマンドラインで使用することができる2つの
 別のパラメータがある。Cassandra , cassandra
-例えば：ptconfigure cassandra install,</p>
-<blockquote class="last">
-<div>ptconfigure Cassandra install|</div></blockquote>
-</td>
+例えば：ptconfigure cassandra install,
+ptconfigure Cassandra install|</td>
 <td>N</td>
 <td>システムは、インストール·プロセス
 を停止し、</td>
@@ -504,10 +500,11 @@ Installer Finished
 <h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>分権 – クラスタ内のすべてのノードが同じ役割を持っています。単一障害点があ りません。データは、クラスター（ので、各ノードは異なるデータを含む）   に分散されますが、すべての要求にサービスを提供することができ、すべてのノードと全くマスターはありません。-</li>
-<li>複製およびマルチデータセンターのレプリケーションをサポート - レプリケーション戦略は設定可能です。カサンドラは、複数のデータセンター間で、多数    のノードを展開するために、分散システムとして設計されている。カサンドラの分散アーキテクチャの主な機能は、具体的にフェールオーバーおよび災害復旧   のために、冗長性を確保するため、複数データセンターの展開に合わせて調整されている。</li>
+<li>複製およびマルチデータセンターのレプリケーションをサポート - レプリケーション戦略は設定可能です。カサンドラは、複数のデータセンター間で、多数   のノードを展開するために、分散システムとして設計されている。カサンドラの分散アーキテクチャの主な機能は、
+具体的にフェールオーバーおよび災害復旧   のために、冗長性を確保するため、複数データセンターの展開に合わせて調整されている。</li>
 <li>スケーラビリティ - 読み、スループット、新しいマシンがアプリケーションへのダウンタイムなしまたは中断、追加された直線的に、両方の増加を書きます</li>
-<li>フォールトトレラント - データは、自動的にフォールトトレランスのために複数のノードに複製されます。複数のデータセンター間のレプリケーションがサ    ポートされています。失敗したノードは、ダウンタイムなしで置き換えることができる。</li>
-<li>調整可能な一貫性 - 書き込み、一貫性の調整可能なレベルを提供読み込み、からのすべての方法は、真ん中の定足数レベルで、「すべてのレプリカのための    ブロック読み出しを可能にするには」を「失敗することはありません書き込み」。</li>
+<li>フォールトトレラント - データは、自動的にフォールトトレランスのために複数のノードに複製されます。複数のデータセンター間のレプリケーションがサ   ポートされています。失敗したノードは、ダウンタイムなしで置き換えることができる。</li>
+<li>調整可能な一貫性 - 書き込み、一貫性の調整可能なレベルを提供読み込み、からのすべての方法は、真ん中の定足数レベルで、「すべてのレプリカのための   ブロック読み出しを可能にするには」を「失敗することはありません書き込み」。</li>
 </ul>
 </div>
 </div>

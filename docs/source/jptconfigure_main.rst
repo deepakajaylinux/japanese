@@ -7,7 +7,7 @@ ptconfigureモジュールと遊ぶ
     
 
 
-
+   japacheconf
    japachemodules
    japachereverseproxy
    japacheserver
@@ -47,6 +47,7 @@ ptconfigureモジュールと遊ぶ
    jjenkins
    jjenkinsplugins
    jjrush
+   jphpcs
    jptconfigure
    jptdeploy
 

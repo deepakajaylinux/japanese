@@ -230,7 +230,7 @@ Citadel
  |                          | citadel-server, citadel                              |            |                                            |
  |                          | 例: ptconfigure citadel-server Install               |            |                                            |
  +--------------------------+------------------------------------------------------+------------+--------------------------------------------+
- |ptconfigure Citadel         | 3つの代替のパラメータのいずれかは、                | N          | ユーザーがこのオプションを提供すると、     |
+ |ptconfigure Citadel       | 3つの代替のパラメータのいずれかは、                  | N          | ユーザーがこのオプションを提供すると、     |
  |Install? (Y/N)            | コマンドで使用することができる- Citadel,             |            | システムはインストールプロセスを停止します |
  |                          | citadel-server, citadel                              |            |                                            |
  |                          | 例: ptconfigure citadel-server Install|              |            |                                            |
