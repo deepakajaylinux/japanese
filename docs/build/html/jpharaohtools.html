@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PharaohTools &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="PHPAPC" href="jphpapc.html" />
+    <link rel="prev" title="Phake" href="jphake.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PharaohTools</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">確保するため</a></li>
+<li><a class="reference internal" href="#ptdeploy">ptdeploy</a></li>
+<li><a class="reference internal" href="#pttest">pttest</a></li>
+<li><a class="reference internal" href="#jrush">Jrush</a></li>
+<li><a class="reference internal" href="#id5">その他のオプション</a></li>
+<li><a class="reference internal" href="#id6">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jphake.html"
+         title="Previous Chapter: Phake">&laquo; Phake</a></li>
+  <li><a href="jphpapc.html"
+         title="Next Chapter: PHPAPC">PHPAPC &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jpharaohtools.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="pharaohtools">
+<h1>PharaohTools<a class="headerlink" href="#pharaohtools" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ファラオ ツール モジュールは ptdeploy、pttest、Jrush、ptconfigure レポートを生成するをインストールするのに役立ちます。インストールの前に可用性を確保するためにユーザーを容易にします。モジュールが不足して具体的にインストールことができます。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドを作成する方法についてユーザーを導くこの特定のモジュールの ptconfigure の下で使用します。</p>
+<p>それもこの特定のモジュールで実行することができますオプションを認識します。</p>
+<p>スクリーン ショット以下のようには、help コマンドの使用法についての絵の表現を与えます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PharaohTools <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install the Pharaoh Tools which are ready. These include
+ ptconfigure - this Configuration Management tool, ptdeploy - the Automated Deployment tool,
+ and pttest, the <span class="nb">test </span>configuration and automation tool.
+
+ PharaohTools, pharaohtools, pharaoh-tools
+
+       - install
+       Installs the latest version of all of the Pharaoh Tools
+       example: ptconfigure pharaoh-tools install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ファラオ ツール モジュールは、ptdeploy、pttest、Jrush のインストールを包んで、短いルートとして機能します。任意の 1 つの特定のモジュールは、3 つの中で不足している、追加の利点があるだけで特定のモジュールがインストールされます。確認プロセスはモジュールの可用性に関するデータを掴んで重要な役割を果たしています。</p>
+<p>ファラオのツールの下のインストール プロセスに使用されるコマンドは下記します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pharaoh-tools install
+</pre></div>
+</div>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="21%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">使用できる入力オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Pharaoh Tools?
+(Y/N)</td>
+<td>Y(Yes)</td>
+<td>ユーザーの願いは、インストールプロセスを続行する場合は、
+Yなどの入力をすることができます</td>
+</tr>
+<tr class="row-odd"><td>Install Pharaoh Tools?
+(Y/N)</td>
+<td>N(No)</td>
+<td>ユーザーがインストールプロセスを終了したい場合は、Nを使用して簡単に終
+了することができます|</td>
+</tr>
+</tbody>
+</table>
+<p>ファラオのインストール中に工具の行われる次の手順を実行します。</p>
+</div>
+<div class="section" id="id4">
+<h2>確保するため<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ファラオ ツールは利用可能なモジュールを確認します。</li>
+<li>うえで、それはバージョンについてチェックされません。</li>
+</ul>
+</div>
+<div class="section" id="ptdeploy">
+<h2>ptdeploy<a class="headerlink" href="#ptdeploy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>インストールすると、存在の場合、モジュール ptdeploy 自体報告します。</li>
+<li>それはまた ptdeploy モジュールのバージョンを確認します。</li>
+<li>ptdeploy モジュールがない場合、コンピューターで利用可能なその後自動的に ptdeploy は進歩をインストールします。</li>
+</ul>
+</div>
+<div class="section" id="pttest">
+<h2>pttest<a class="headerlink" href="#pttest" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>完了後 ptdeploy をインストールする、それは pttest モジュールを確認します。</li>
+<li>モジュール pttest 存在の場合、インストール自体を報告します。</li>
+<li>pttest モジュールがない場合、コンピューターで利用可能なその後自動的に pttest は進歩をインストールします。</li>
+</ul>
+</div>
+<div class="section" id="jrush">
+<h2>Jrush<a class="headerlink" href="#jrush" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>完了後 pttest をインストールする、それは Jrush モジュールを確認します。</li>
+<li>モジュール Jrush 存在の場合、インストール自体を報告します。</li>
+<li>Jrush モジュールがない場合、コンピューターで利用可能なその後自動的に Jrush は進歩をインストールします。</li>
+</ul>
+<p>3 つすべてのモジュールが既に存在する場合は、下のスクリーン ショットで与えられる例外的なメッセージ表示使用されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pharaoh-tools install
+Install Pharaoh Tools? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Pharaoh Tools        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptdeploy reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module pttest reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptconfigure reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module JRush reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PharaohTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>その他のオプション<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>pttest、ptdeploy のインストール中に、次のオプションとして必要な Jrush ユーザーの入力を。私たちを見てみましょうは、以下のように彼らがしたい場合に、ユーザーが指定できる追加オプションは表形式で表されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="20%" />
+<col width="12%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">パス</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data
+directory (デフォルト)</td>
+<td>“/opt/pttest
+(corresponding module)”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラムのデータディレクトリを使用し
+てインストールを続行する場合、それらはYESと入力をすること
+ができます</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>User specific</td>
+<td>No(エンドス
+ラッシュ)</td>
+<td>ユーザーが自分自身のプログラムデータディレクトリを続行し
+たい場合は、入力Nとして、そして手に、彼らは場所を所有指定す
+ることができます</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory (デフォルト)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラム実行ディレクトリを使用し
+てインストールを続行する場合、それらはYESと入力をすることが
+できます</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>User specific</td>
+<td>No(エンドス
+ラッシュ)</td>
+<td>ユーザーが独自のプログラム実行ディレクトリを続行したい場合は、
+入力Nとして、そして手に、彼らは場所を所有指定することができます。|</td>
+</tr>
+</tbody>
+</table>
+<p>それをインストールするは、git のクローンの場所を指定する、受信デルタ、接続を解決するオブジェクトのオブジェクトの数を表示します。</p>
+<p>次のスクリーン ショットについて説明しますをグラフィカルにファラオ ツールのインストールに関与するプロセス。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pharaoh-tools install
+Install Pharaoh Tools? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Pharaoh Tools        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptdeploy reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module pttest reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ptconfigure reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module JRush reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PharaohTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>利点<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>それはインストールの前に確保するためにユーザーを容易にします。</li>
+<li>ユーザーの任意の特定のモジュールが不足している場合にその特定のモジュールだけをインストールする進むことができます。</li>
+<li>ユーザーは、自分のパスまたは場所のプログラムのデータ ディレクトリと遺言執行者を指定できます。</li>
+<li>インストール ツールが既に例外メッセージがスローされますその後に、マシンで任意の特定のモジュールが既に存在する場合
+インストールされています。</li>
+<li>を回避するモジュールの不要な上書き、それ故にそれは時間を節約します。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jpharaohtools.rst">
+          PharaohTools
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

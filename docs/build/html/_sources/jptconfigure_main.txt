@@ -46,11 +46,45 @@ ptconfigureモジュールと遊ぶ
    jjava
    jjenkins
    jjenkinsplugins
+   jjenkinssudonopass
    jjrush
+   jlighttpdserver
+   jlogging
+   jmediatools
+   jmkdir
+   jmodulemanager
+   jmongodb
+   jmysqladmins
+   jmysqlserver
+   jmysqltools
+   jnagiosserver
+   jnetworktools
+   jnginxserver
+   jnodejs
+   jpackagemanager
+   jparallax
+   jpear
+   jpecl
+   jphake
+   jpharaohtools
+   jphpapc
+   jphpci
+   jphpconf
    jphpcs
+   jphpmd
+   jphpssh
+   jphpstorm
+   jphpunit
+   jphpmodules
+   jping
+   jport
+   jpostgressserver
+   jprocess
    jptconfigure
    jptdeploy
-
-
-
-
+   jpython
+   jra
+   jrubybdd
+   jrubyrvm
+   jrubysystem
+   jruncommand

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Phpci &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="phpconf" href="jphpconf.html" />
+    <link rel="prev" title="PHPAPC" href="jphpapc.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Phpci</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jphpapc.html"
+         title="Previous Chapter: PHPAPC">&laquo; PHPAPC</a></li>
+  <li><a href="jphpconf.html"
+         title="Next Chapter: phpconf">phpconf &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jphpci.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="phpci">
+<h1>Phpci<a class="headerlink" href="#phpci" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>PHPCI は、ptconfigure に適したオープン ソース継続的な統合ツールです。ユーザーが念頭に置いてシンプルに構築してので、セットアップして使用する微風であるジェンキンスを行うことができますすべてはしない、しながら。これは Ubuntu とセントと使いやすさです OS。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドのヘルプガイド Phpci モジュールに関する特定の操作を実行するユーザー。これは、企業のユーザーのすべてのタイプに適しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPCI <span class="nb">help</span>
+</pre></div>
+</div>
+<p>ヘルプ コマンド Phpci モジュールに組み込まれたコマンドの短いリストが表示されます。次のスクリーン ショットはそれを視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPCI <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install PHPCI, the popular Build Server.
+
+ PHPCI, phpci
+
+       - install
+       Installs PHPCI through git, with its dependencies
+       example: ptconfigure phpci install
+
+       - config-default, default-config
+       Installs a default config.yml file <span class="k">for</span> PHPCI
+       example: ptconfigure phpci config-default --yes --guess
+
+       - install-default-database
+       Installs a default database and user <span class="k">for</span> PHPCI
+       example: ptconfigure phpci install-default-database --yes --guess
+           --mysql-admin-user<span class="o">=</span><span class="s2">&quot;root&quot;</span> <span class="c"># guess will provide root</span>
+           --mysql-admin-pass<span class="o">=</span><span class="s2">&quot;some-pass&quot;</span> <span class="c"># guess will provide ptconfigure</span>
+
+ You can install a <span class="nb">complete local </span>version of PHPCI with the following:
+
+ sudo ptconfigure phpci install --yes --guess
+ sudo ptconfigure phpci install-default-database --yes --guess
+ sudo ptconfigure phpci config-default --yes --guess
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールは phpci をインストールするのに役立ちます。このモジュールは作曲家を点検しなければならない最初のステップは、システムかどうか。それがない場合、システムで自動的に、それをインストールします。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Phpci install
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、次のプロセス関与しているインストールのプロセス中に表形式で示されています。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="16%" />
+<col width="33%" />
+<col width="9%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install PHPCI? (Y/N)</td>
+<td>その代わりPHPCIの、我々はまた、phpci
+使用することができます</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、インストールプ
+ロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install PHPCI? (Y/N)</td>
+<td>その代わりPHPCIの、我々はまた、phpci
+使用することができます</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、インストールプ
+ロセスを終了したい場合は|</td>
+</tr>
+</tbody>
+</table>
+<p>場合はインストールを続行すると、インストールの処理中に、次の手順、</p>
+<ul class="simple">
+<li>依存関係ツリーを構築します。</li>
+<li>状態情報を読み込みます。</li>
+<li>リスト アウト、余分なパッケージを自動的にインストールされます。</li>
+<li>リスト アウトは、インストールする提案のパッケージ。</li>
+<li>リスト アウト、新しいパッケージをインストールしています。</li>
+<li>ファイルの数に関する詳細情報はアップグレード新しくインストール、削除、アップグレードされません。</li>
+</ul>
+<p>表形式で表した、ユーザーからの入力が要求されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="15%" />
+<col width="20%" />
+<col width="17%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">パス</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data
+directory (Default)</td>
+<td>“/opt/phpunit(対応す
+るモジュール)”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラムのデータディレクトリを使用
+してインストールを続行する場合、それらはYESと入力をするこ
+とができます</td>
+</tr>
+<tr class="row-odd"><td>Program data
+directory</td>
+<td>User Specific</td>
+<td>No(エンドスラッシュ)</td>
+<td>ユーザーが自分自身のプログラムデータディレクトリを続行したい
+場合は、入力Nとして、そして手に、彼らは場所を所有指定するこ
+とができます。</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory (Default)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラム実行ディレクトリを使用
+してインストールを続行する場合、それらはYESと入力をすることが
+できます</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>User specific</td>
+<td>No(エンドスラッシュ)</td>
+<td>ユーザーが独自のプログラム実行ディレクトリを続行したい場合は、
+入力Nとして、そして手に、彼らは場所を所有指定すること
+ができます。|</td>
+</tr>
+</tbody>
+</table>
+<p>次のスクリーン ショットは、絵インストール上記に説明したプロセスを示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptconfigure phpci install
+Install PHPCI? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          ! PHPCI !        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libmcrypt4
+Suggested packages:
+ libmcrypt-dev mcrypt
+The following NEW packages will be installed:
+ libmcrypt4 php5-mcrypt
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get 77.3 kB of archives.
+After this operation, <span class="m">324</span> kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libmcrypt4 amd64 2.5.8-3.1ubuntu1 <span class="o">[</span>61.9 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/universe php5-mcrypt amd64 5.4.6-0ubuntu5 <span class="o">[</span>15.4 kB<span class="o">]</span>
+Fetched 77.3 kB in 4s <span class="o">(</span>19.1 kB/s<span class="o">)</span>
+Selecting previously unselected package libmcrypt4.
+<span class="o">(</span>Reading database ... <span class="m">182037</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libmcrypt4_2.5.8-3.1ubuntu1_amd64.deb ...
+Unpacking libmcrypt4 <span class="o">(</span>2.5.8-3.1ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package php5-mcrypt.
+Preparing to unpack .../php5-mcrypt_5.4.6-0ubuntu5_amd64.deb ...
+Unpacking php5-mcrypt <span class="o">(</span>5.4.6-0ubuntu5<span class="o">)</span> ...
+Setting up libmcrypt4 <span class="o">(</span>2.5.8-3.1ubuntu1<span class="o">)</span> ...
+Setting up php5-mcrypt <span class="o">(</span>5.4.6-0ubuntu5<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-mcrypt from the Packager Apt executed correctly
+Creating /tmp/ptconfigure-temp-script-82480901916.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-82480901916.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-82480901916.sh Permissions
+Executing /tmp/ptconfigure-temp-script-82480901916.sh
+Temp File /tmp/ptconfigure-temp-script-82480901916.sh Removed
+Creating /tmp/ptconfigure-temp-script-43828918328.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-43828918328.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-43828918328.sh Permissions
+Executing /tmp/ptconfigure-temp-script-43828918328.sh
+Enabling module rewrite.
+To activate the new configuration, you need to run:
+ service apache2 restart
+Temp File /tmp/ptconfigure-temp-script-43828918328.sh Removed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+sh: 1: composer: not found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Composer reports itself as Not Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Installing as not installed
+*******************************
+*        Pharaoh Tools        *
+*          Composer!         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/composer&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone <span class="s1">&#39;https://github.com/phpengine/composer-phar.git&#39;</span>  /tmp/composer/composerCloning into <span class="s1">&#39;/tmp/composer/composer&#39;</span>...
+
+
+remote: Counting objects: 6, <span class="k">done</span>.
+remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+Creating /tmp/ptconfigure-temp-script-34508236330.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-34508236330.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-34508236330.sh Permissions
+Executing /tmp/ptconfigure-temp-script-34508236330.sh
+<span class="c">#!/usr/bin/env php</span>
+Installing block8/phpci <span class="o">(</span>1.5.2<span class="o">)</span>
+ - Installing block8/phpci <span class="o">(</span>1.5.2<span class="o">)</span>
+   Downloading: 100%
+
+Created project in phpci
+Loading composer repositories with package information
+Installing dependencies from lock file
+Warning: The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. Run update to update them.
+Your requirements could not be resolved to an installable <span class="nb">set </span>of packages.
+
+ Problem 1
+   - The requested PHP extension ext-pdo_mysql * is missing from your system.
+
+Temp File /tmp/ptconfigure-temp-script-34508236330.sh Removed
+Creating /tmp/ptconfigure-temp-script-28990655696.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-28990655696.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-28990655696.sh Permissions
+Executing /tmp/ptconfigure-temp-script-28990655696.sh
+sudo: dapperstrano: <span class="nb">command </span>not found
+Temp File /tmp/ptconfigure-temp-script-28990655696.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPCI: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>PHPCI の構成とデータベース ファイルをインストールするために使用します。一方、既存の任意のファイルがある場合、インストール内容を上書きします。</li>
+<li>新しいバージョンを自動的に更新することができます。</li>
+<li>それはユーザーのデータベース インストール願いごとを受け入れることができます。</li>
+<li>継続的な統合が可能です。</li>
+<li>複数の環境</li>
+<li>PDO、mysql、sqlite のような別の亜種と php の構築、debug... など。</li>
+<li>自動フィーチャ検知。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jphpci.rst">
+          Phpci
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

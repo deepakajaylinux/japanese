@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PostgresServer &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Process" href="jprocess.html" />
+    <link rel="prev" title="Port" href="jport.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PostgresServer</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jport.html"
+         title="Previous Chapter: Port">&laquo; Port</a></li>
+  <li><a href="jprocess.html"
+         title="Next Chapter: Process">Process &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jpostgressserver.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="postgresserver">
+<h1>PostgresServer<a class="headerlink" href="#postgresserver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>PostgresServer は、一般的な目的とオブジェクト リレーショナル データベース管理システムです。データベースをインストールする使用します。PostgresServer は、LINUX のようなプラットフォーム上で実行するように設計。PostgresServer は、ポータブル Mac OS X、Solaris、Windows などのさまざまなプラットフォームで実行できるようにします。</p>
+<p>C/C + +、Java などさまざまなプログラミング言語を使用して開発されたカスタム関数を追加することができます。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、PostgresServer モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドは、エンド ユーザー ガイドをいつ、どのように知っているに使用されるコマンドです。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PostgresServer <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PostgresServer  <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>allows you to install the Postgres Server. Currently only
+Postgres Workbench, the Database management GUI provided by Oracle <span class="k">for</span>
+Postgres.
+
+PostgresServer, postgres-server, postgresserver
+
+- install
+Install some Postgres Server Tools through apt-get.
+example: ptconfigure postgres-server install
+
+Notes, during postgres install a root password will be set. First, it<span class="s1">&#39;ll look</span>
+<span class="s1">for the parameter --postgres-root-pass, if this is not set, it&#39;</span>ll look in the
+ptconfigure config <span class="k">for</span> a postgres-default-root-pass setting, and failing both of
+those it will just <span class="nb">set </span>the password <span class="k">for</span> root to ptconfigure.
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>とき、ユーザーのマシンで、モジュールをインストールする必要があります。特定のコマンドの下のインストール プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PostgresServer install
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、実行プロセスは表形式で説明されているよう</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="16%" />
+<col width="40%" />
+<col width="9%" />
+<col width="36%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">代替パラメータ</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Postgres
+Server? (Y/N)</td>
+<td>PostgresServer, postgresserver, postgres-server.
+ユーザーは、上記のいずれかを使用することができます。</td>
+<td>Y</td>
+<td>ユーザーは、Yとして、彼らができるインスト
+ールの入力を続行したい場合は</td>
+</tr>
+<tr class="row-odd"><td>Install Postgres
+Server? (Y/N)</td>
+<td>PostgresServer, postgresserver, postgres-server.
+ユーザーは、上記のいずれかを使用することができます。</td>
+<td>N</td>
+<td>ユーザーの願いは、インストールを終了する場合、
+それらはNとして入力をすることができます|</td>
+</tr>
+</tbody>
+</table>
+<p>場合はインストールを続行すると、インストールの処理中に、次の手順、</p>
+<ul class="simple">
+<li>依存関係ツリーを構築します。</li>
+<li>状態情報を読み込みます。</li>
+<li>リスト アウト、余分なパッケージを自動的にインストールされます。</li>
+<li>リスト アウトは、インストールする提案のパッケージ。</li>
+<li>リスト アウト、新しいパッケージをインストールしています。</li>
+<li>ファイルの数に関する詳細情報はアップグレード新しくインストール、削除、アップグレードされません。</li>
+</ul>
+<p>次のスクリーン ショットは、絵インストール上記に説明したプロセスを示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PostgresServer install
+Install Postgres Server? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         Postgres Server!        *
+*******************************                                                                                                                                        Adding user postgres to group ssl-cert
+
+Creating config file /etc/logrotate.d/postgresql-common with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+ en_us
+Removing obsolete dictionary files:
+* No PostgreSQL clusters exist<span class="p">;</span> see <span class="s2">&quot;man pg_createcluster&quot;</span>
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libpq5 postgresql-9.3 postgresql-client-9.3 postgresql-client-common
+ postgresql-common
+Suggested packages:
+ oidentd ident-server locales-all postgresql-doc-9.3
+The following NEW packages will be installed:
+ libpq5 postgresql postgresql-9.3 postgresql-client-9.3
+ postgresql-client-common postgresql-common
+<span class="m">0</span> upgraded, <span class="m">6</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get 3,666 kB of archives.
+After this operation, 15.4 MB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libpq5 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span>80.6 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-client-common all <span class="m">154</span> <span class="o">[</span>25.4 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-client-9.3 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span><span class="m">782</span> kB<span class="o">]</span>
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-common all <span class="m">154</span> <span class="o">[</span><span class="m">103</span> kB<span class="o">]</span>
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-9.3 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span>2,670 kB<span class="o">]</span>
+Get:6 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql all 9.3+154 <span class="o">[</span>5,088 B<span class="o">]</span>
+Preconfiguring packages ...
+Fetched 3,666 kB in 8min 13s <span class="o">(</span>7,435 B/s<span class="o">)</span>
+Selecting previously unselected package libpq5.
+<span class="o">(</span>Reading database ... <span class="m">181615</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libpq5_9.3.5-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking libpq5 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../postgresql-client-common_154_all.deb ...
+Unpacking postgresql-client-common <span class="o">(</span>154<span class="o">)</span> ...
+Selecting previously unselected package postgresql-client-9.3.
+Preparing to unpack .../postgresql-client-9.3_9.3.5-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking postgresql-client-9.3 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../postgresql-common_154_all.deb ...
+Adding <span class="s1">&#39;diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common&#39;</span>
+Unpacking postgresql-common <span class="o">(</span>154<span class="o">)</span> ...
+Selecting previously unselected package postgresql-9.3.
+Preparing to unpack .../postgresql-9.3_9.3.5-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking postgresql-9.3 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
+Selecting previously unselected package postgresql.
+Preparing to unpack .../postgresql_9.3+154_all.deb ...
+Unpacking postgresql <span class="o">(</span>9.3+154<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+ureadahead will be reprofiled on next reboot
+Setting up libpq5 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
+Setting up postgresql-client-common <span class="o">(</span>154<span class="o">)</span> ...
+Setting up postgresql-client-9.3 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
+update-alternatives: using /usr/share/postgresql/9.3/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz <span class="o">(</span>psql.1.gz<span class="o">)</span> in auto mode
+Setting up postgresql-common <span class="o">(</span>154<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Setting up postgresql-9.3 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
+Creating new cluster 9.3/main ...
+ config /etc/postgresql/9.3/main
+ data   /var/lib/postgresql/9.3/main
+ locale en_IN
+ port   5432
+update-alternatives: using /usr/share/postgresql/9.3/man/man1/postmaster.1.gz to provide /usr/share/man/man1/postmaster.1.gz <span class="o">(</span>postmaster.1.gz<span class="o">)</span> in auto mode
+* Starting PostgreSQL 9.3 database server
+  ...done.
+Setting up postgresql <span class="o">(</span>9.3+154<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package postgresql from the Packager Apt executed correctly
+E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/pool/main/p/postgresql-common/postgresql-contrib_9.3+154_all.deb  Connection failed <span class="o">[</span>IP: 91.189.88.149 80<span class="o">]</span>
+
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libossp-uuid16 postgresql-contrib-9.3
+Suggested packages:
+ uuid libdbd-pg-perl
+The following NEW packages will be installed:
+ libossp-uuid16 postgresql-contrib postgresql-contrib-9.3
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+Need to get <span class="m">435</span> kB of archives.
+After this operation, 2,038 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libossp-uuid16 amd64 1.6.2-1.3ubuntu1 <span class="o">[</span>29.6 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-contrib-9.3 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span><span class="m">400</span> kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-contrib all 9.3+154 <span class="o">[</span>5,106 B<span class="o">]</span>
+Err http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-contrib all 9.3+154
+ Connection failed <span class="o">[</span>IP: 91.189.88.149 80<span class="o">]</span>
+Fetched <span class="m">430</span> kB in 6min 25s <span class="o">(</span>1,114 B/s<span class="o">)</span>
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package postgresql-contrib from the Packager Apt did not execute correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PostgresServer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ユーザの種類</li>
+<li>テーブルの継承</li>
+<li>洗練されたロック機構</li>
+<li>ビュー、ルール、サブ選択してください。</li>
+<li>ネストされたトランザクションを (ポイントを保存）</li>
+<li>ポイント イン タイムのリカバリ</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jpostgressserver.rst">
+          PostgresServer
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ModuleManager &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="MongoDB" href="jmongodb.html" />
+    <link rel="prev" title="Mkdir" href="jmkdir.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">ModuleManager</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">有効にします。</a></li>
+<li><a class="reference internal" href="#id5">無効にします。</a></li>
+<li><a class="reference internal" href="#id6">確保するため</a></li>
+<li><a class="reference internal" href="#id7">アンインストール</a></li>
+<li><a class="reference internal" href="#id8">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jmkdir.html"
+         title="Previous Chapter: Mkdir">&laquo; Mkdir</a></li>
+  <li><a href="jmongodb.html"
+         title="Next Chapter: MongoDB">MongoDB &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jmodulemanager.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="modulemanager">
+<h1>ModuleManager<a class="headerlink" href="#modulemanager" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>モジュール マネージャーの主なスコープは、そのモジュールを管理するユーザーを許可します。主な機能には、インストールが含まれています、有効、無効、確認、アンインストールします。私たちの今後のトピックから手の込んだ方法でモジュール マネージャーのこれらの主要な機能について参照してください。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このモジュール マネージャーのヘルプ コマンドは、モジュール マネージャーの目的に関してユーザー ガイド簡単なユーザー マニュアル、ユーザー インストールなどの主要な機能について説明します有効、無効、確認、それらを宣言する構文と一緒にアンインストールします。また、アウト モジュール マネージャーの代替パラメーターを示します。モジュール マネージャーでヘルプ オプションを宣言するためのコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure ModuleManager <span class="nb">help</span>
+</pre></div>
+</div>
+<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、モジュール マネージャーの下で help コマンドについて視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ModuleManager help
+
+******************************
+
+
+ The Module Manager allows you to manage modules. Install, Ensure, Uninstall, Enable, Disable.
+
+ ModuleManager, module-manager, modulemanager
+
+       - install
+       Installs the latest version of a module. If a module of the same name already exists in your Extensions directory,
+       an error will be thrown.
+       example: ptconfigure module-manager install --module-name=&quot;MyModule&quot; --module-source=&quot;http://git.cleo-modules.com/MyModule.git&quot;
+
+       - ensure
+       Ensures the existence of a module. The module will only be installed if it currently doesn&#39;t exist.
+       example: ptconfigure module-manager ensure --module-name=&quot;MyModule&quot; --module-source=&quot;http://git.cleo-modules.com/MyModule.git&quot;
+
+       - uninstall
+       Uninstalls a Module. This will delete all of the files for this Module
+       example: ptconfigure module-manager enable --module-name=&quot;MyModule&quot;
+
+       - enable
+       Enables a Module. All installed Modules are enabled by default.
+       example: ptconfigure module-manager enable --module-name=&quot;MyModule&quot;
+
+       - disable
+       Disables a Module. The files for this module will still exist, but none will be automatically loaded during execution.
+       example: ptconfigure module-manager disable --module-name=&quot;MyModule&quot;
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>モジュール マネージャーでユーザーのコンピューターにインストールするために使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager install
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、次のプロセスが発生します表形式で表示されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="18%" />
+<col width="38%" />
+<col width="12%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install ModuleManager?
+(Y/N)</td>
+<td>の代わりに module-manager,
+我々は使用することができますmodulemanager,
+ModuleManager</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、
+インストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install ModuleManager?
+(Y/N)</td>
+<td>の代わりに module-manager,
+我々は使用することができますmodulemanager,
+ModuleManager|</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、
+インストールプロセスを終了したい場合は</td>
+</tr>
+</tbody>
+</table>
+<p>場合は、インストールのプロセス中にインストールされます表形式で表示されますように、次の処理が行われます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="13%" />
+<col width="18%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">パス</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program executor directory
+(デフォルト)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラム実行ディレクトリを使用して
+インストールを続行する場合、
+それらはYESと入力をすることができます</td>
+</tr>
+<tr class="row-odd"><td>Program executor directory
+(デフォルト)</td>
+<td>user specific</td>
+<td>No(エンドスラッシュ)</td>
+<td>ユーザーは、Nとして入力することができ、
+独自のプログラム実行ディレクトリを使用してインストールを続行
+する場合は、手で、彼らは場所を所有して指定します|</td>
+</tr>
+</tbody>
+</table>
+<p>最後にインストールに描かれているように完了を取得は、以下のスクリーン ショット。</p>
+</div>
+<div class="section" id="id4">
+<h2>有効にします。<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>有効なプロセス、モジュールの有効化を目指します。インストールされているすべてのモジュールは既定で下記のコマンドを使用して有効に。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager <span class="nb">enable</span> --module-name<span class="o">=</span><span class="s2">&quot;MyModule&quot;</span>
+</pre></div>
+</div>
+<p>このコマンドを入力した後に指定されているモジュールを取得有効になります。</p>
+</div>
+<div class="section" id="id5">
+<h2>無効にします。<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>無効にするプロセスのモジュールを無効にすることを目指します。無効なモジュールのままのファイルが存在するが、彼らは読み込まれませんの実行時。これは、次のコマンドによって達成することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager disable --module-name<span class="o">=</span><span class="s2">&quot;MyModule&quot;</span>
+</pre></div>
+</div>
+<p>このコマンドを入力した後のモジュールを取得します無効を指定します。</p>
+</div>
+<div class="section" id="id6">
+<h2>確保するため<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>役割は、プロセス モジュールの空室状況をチェックすることです確認してください。取得を保証するプロセスの完了後、モジュールはモジュールは、インストールされていないと報告している場合にのみインストールされます。確保するためのプロセスは、下記のコマンドを使用して実行できます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager ensure
+</pre></div>
+</div>
+<p>確認の処理中に、モジュールのバージョンはチェックされません。次のスクリーン ショットは、絵確保するためのプロセスを表しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure module-manager ensure
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module ModuleManager reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+ModuleManager: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>アンインストール<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>アンインストール プロセスは、モジュールのすべてのファイルを削除する使用されます。モジュール マネージャーをアンインストールするために使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure module-manager uninstall
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、次のプロセスが発生します表形式で表示されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="38%" />
+<col width="9%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Un Install ModuleManager?
+(Y/N)</td>
+<td>の代わりにmodule-manager,
+我々は使用することができます modulemanager,
+ModuleManager</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができますアンイ
+ンストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Un Install ModuleManager?
+(Y/N)</td>
+<td>の代わりにmodule-manager,
+我々は使用することができます modulemanager,
+ModuleManager|</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができますアンイ
+ンストールプロセスを終了したい場合は</td>
+</tr>
+</tbody>
+</table>
+<p>場合は、ユーザーが進む国連のインストールの処理中に、国連のインストール、次のプロセスは表形式で表示されますように行われます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="22%" />
+<col width="14%" />
+<col width="17%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">パス</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program executor directory
+(デフォルト)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラム実行ディレクトリとアンインス
+トールを続行する場合、それらはYESと入力をすることができます</td>
+</tr>
+<tr class="row-odd"><td>Program executor directory
+(デフォルト)</td>
+<td>user specific</td>
+<td>No(エンドスラッシュ)</td>
+<td>ユーザーは、Nとして入力することができ、独自のプログラム
+実行ディレクトリとアンインストールを続行する場合は、
+手で、彼らは場所を所有して指定します|</td>
+</tr>
+</tbody>
+</table>
+<p>最後に、国連のインストールはで示されている完了を取得、次のスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>利点<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ヘルプとのインストールで使用されるパラメーターをアンインストール、有効、無効、大文字小文字が区別されません、追加の利点は確保しながら
+他の人をに比べてください。</li>
+<li>それは両方の Ubuntu と同様、裕福なセントの OS として。</li>
+<li>確認プロセス モジュール インストール前に、のチェックの可用性を容易にします。</li>
+<li>場合は、ユーザーは特定のモジュールを無効にしたい彼らはその対応するファイルを削除することがなくそれらを無効にできます。</li>
+<li>中にインストール、アンインストール、ユーザーは、遺言執行者のプログラム ディレクトリの場所を指定できます。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jmodulemanager.rst">
+          ModuleManager
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

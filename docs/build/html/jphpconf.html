@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>phpconf &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="PHPCS" href="jphpcs.html" />
+    <link rel="prev" title="Phpci" href="jphpci.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">phpconf</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jphpci.html"
+         title="Previous Chapter: Phpci">&laquo; Phpci</a></li>
+  <li><a href="jphpcs.html"
+         title="Next Chapter: PHPCS">PHPCS &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jphpconf.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="phpconf">
+<h1>phpconf<a class="headerlink" href="#phpconf" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールをインストールするのと同様 php の設定を管理するよう支援します。ユーザーは、インストールの実行の時に彼らの要件に従って構成をフレームすることができます。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ヘルプ コマンドこの php 設定での作業にユーザーをリードします。また、インストールに使用するコマンドを指定します。ヘルプ コマンドも使用することができますの代替パラメーターを一覧表示します。Php 設定オプションのために使用されるコマンドは以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPConf <span class="nb">help</span>
+</pre></div>
+</div>
+<p>スクリーン ショット下に与えられたは、php の設定でヘルプの使用に関する表現を示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPConf <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and provides you  with a method by which you can install Apache HTTP Server
+
+ PHPConf, php-configure, php-configuration, php-conf, phpconf
+
+       - install
+       Installs a configuration <span class="k">for</span> PHP
+       example: ptconfigure phpconf install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Php の設定をインストールの要件に従って構成をフレームすることができます、ユーザーにとって有益です。インストールに使用するコマンドは次のとおりです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPConf install
+</pre></div>
+</div>
+<p>表形式で表示されますを入力した後、次の操作上記のようにコマンドに発生します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPConf install
+Install PHP Conf? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         PHP Conf!        *
+*******************************
+Set non-default value <span class="k">for</span> user_ini.filename? Default is .user.ini <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What value <span class="k">for</span> user_ini.filename?
+
+Set non-default value <span class="k">for</span> user_ini.cache_ttl? Default is <span class="m">300</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> engine? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> short_open_tag? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> asp_tags? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> precision? Default is <span class="m">14</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> y2k_compliance? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> output_buffering? Default is <span class="m">4096</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> output_handler? Default is  <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> zlib.output_compression? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> zlib.output_compression_level? Default is -1 <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> zlib.output_handler? Default is  <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> implicit_flush? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> unserialize_callback_func? Default is  <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> serialize_precision? Default is <span class="m">17</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> allow_call_time_pass_reference? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode_gid? Default is Off <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode_exec_dir? Default is  <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode_allowed_env_vars? Default is PHP_ <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> safe_mode_protected_env_vars? Default is LD_LIBRARY_PATH <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> open_basedir? Default is  <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> disable_functions? Default is pcntl_alarm,pcntl_fork,pcntl_waitpid,pcntl_wait,pcntl_wifexited,pcntl_wifstopped,pcntl_wifsignaled,pcntl_wexitstatus,pcntl_wtermsig,pcntl_wstopsig,pcntl_signal,pcntl_signal_dispatch,pcntl_get_last_error,pcntl_strerror,pcntl_sigpr ocmask,pcntl_sigwaitinfo,pcntl_sigtimedwait,pcntl_exec,pcntl_getpriority,pcntl_setpriority, <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> disable_classes? Default is  <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> ignore_user_abort? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> realpath_cache_size? Default is 16k <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> realpath_cache_ttl? Default is <span class="m">120</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> zend.enable_gc? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> expose_php? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> max_execution_time? Default is <span class="m">30</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> max_input_time? Default is <span class="m">60</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> max_input_nesting_level? Default is <span class="m">64</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> max_input_vars? Default is <span class="m">1000</span> <span class="o">(</span>Y/N<span class="o">)</span>
+
+Set non-default value <span class="k">for</span> memory_limit? Default is 128M <span class="o">(</span>Y/N<span class="o">)</span>
+
+
+
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPConf: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="31%" />
+<col width="11%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">必要な</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install PHPConf?(Y/N)</td>
+<td>の代わりにPHP Confこれらの代替名を使
+用することができます: php-configure,
+php-conf</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yとして入力することができます
+nstallationプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install PHPConf? (Y/N)</td>
+<td>の代わりにPHP Confこれらの代替名を使
+用することができます: php-configure,
+php-conf|</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、
+インストールプロセスを終了したい場合は</td>
+</tr>
+</tbody>
+</table>
+<p>ユーザー インストールの実行中、インストール プロセスの進行、モジュール構成の既定値を指定し、また問い合わせをユーザーの要件に従って構成をデフォルト以外の値を言及します。インストール中に構成の仕様を以下に示します。</p>
+<ul class="simple">
+<li>User_ini.filename の値</li>
+<li>user_ini.cache_ttl の値ですか？</li>
+<li>エンジンの値です。</li>
+<li>short_open_tag の値です。</li>
+<li>asp_tags の値です。</li>
+<li>精度の値です。</li>
+<li>y2k_compliance の値です。</li>
+<li>:output_buffering の値です。</li>
+<li>出力ハンドラーの値です。</li>
+<li>zlib.output_compression の値です。</li>
+<li>zlib.output_compression_level の値です。</li>
+<li>zlib.output_handler の値です。</li>
+<li>implicit_flush の値です。</li>
+<li>unserialize_callback_func の値です。</li>
+<li>値の精度をシリアル化します。</li>
+<li>allow_call_time_pass_reference の値です。</li>
+<li>セーフモードの値です。</li>
+<li>safe_mode_gid の値です。</li>
+<li>safe_mode_exec_dir の値ですか？</li>
+<li>safe_mode_allowed_env_vars の値です。</li>
+<li>オープン basedir 値です。</li>
+<li>無効にする機能の値。</li>
+<li>disable_classes の値ですか？</li>
+<li>ignore_user_abort の値</li>
+<li>realpath_cache_size の値ですか？</li>
+<li>realpath_cache_ttl の値です。</li>
+<li>zend.enable_gc の値です。</li>
+<li>暴露記事 _php の値です。</li>
+<li>max_execution_time の値です。</li>
+<li>に関する注記の値です。</li>
+<li>max_input_nesting_level の値です。</li>
+<li>max_input_vars の値です。</li>
+<li>memory_limits の値です。</li>
+</ul>
+<p>設定機能の既定値を見て後、ユーザーは彼らの行動を決めることができます。(名) として入力できる場合は、既定値を持つ樽構成値を指定する必要がある場合は Y として入力することができます。スクリーン ショット以下のように視覚的に上記に説明したプロセスについて説明します。</p>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>インストール、ヘルプ コマンドを定義するために使用されるパラメーターの大文字と小文字は区別されません。</li>
+<li>ユーザー インストールの実行時構成機能をフレームすることができます。</li>
+<li>それ動作しますよくセント OS と windows の両方。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jphpconf.rst">
+          phpconf
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>RubyRVM &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="RubySystem" href="jrubysystem.html" />
+    <link rel="prev" title="RubyBDD" href="jrubybdd.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">RubyRVM</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jrubybdd.html"
+         title="Previous Chapter: RubyBDD">&laquo; RubyBDD</a></li>
+  <li><a href="jrubysystem.html"
+         title="Next Chapter: RubySystem">RubySystem &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jrubyrvm.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="rubyrvm">
+<h1>RubyRVM<a class="headerlink" href="#rubyrvm" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Ruby Ruby バージョン Manager(RVM)、しばしば RVM, と略記はルビー、同じデバイス上の複数のインストールを管理するために設計された unix のようなソフトウェア プラットフォームです。Ruby インタプリタ、インストールされている RubyGems、およびドキュメントを含む ruby 環境全体を分割します。Mruby を触っています、JRuby にはこれらが含まれています MacRuby、IronRuby、リニアモーターカー、Rubinius、トパーズ。それはユーザーフレンドリー Ubuntu とセント OS。.</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは目標と Ruby RVM モジュールの下に利用可能なコマンドについて機能することができます。また、Ruby RVM モジュールへのコマンドについて説明します。インストールの前にこのヘルプ コマンドは、その機能を説明を読めば。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure RubyRVM <span class="nb">help</span>
+</pre></div>
+</div>
+<p>次のイメージはまた、このモジュールを明確に理解することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure RubyRVM <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Ruby RVM.
+
+ RubyRVM, rubyrvm, ruby-rvm, rubyRVM
+
+       - install
+       Installs Ruby RVM
+       example: ptconfigure ruby-rvm install
+
+ Ruby is installed the recommended per-user way. To use ruby after the install
+ first run <span class="s2">&quot;source ~/.rvm/scripts/rvm&quot;</span> to get access to the Ruby install <span class="k">for</span>
+ your user, <span class="k">then</span> <span class="s2">&quot;rvm install 1.9.3&quot;</span> <span class="o">(</span>to install, specify version as needed<span class="o">)</span>
+ <span class="k">then</span> <span class="s2">&quot;rvm use 1.9.3&quot;</span> <span class="o">(</span>to <span class="k">select</span> your default version <span class="k">for</span> the session<span class="o">)</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>それはモジュールをインストールする RubyRVM ptconfigure の下でちょうど、下記のコマンドを使用して明白なプロセス</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure RubyRVM install
+</pre></div>
+</div>
+<p>コマンド キーの後に求めることができます。</p>
+<p>Install RubyRVM?(Y/N)</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure RubyRVM install
+Install Ruby RVM? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          !Ruby RVM!!        *
+*******************************
+Enter User To Install As:
+kevell
+Enter Install User Home Dir:
+/home/kevell
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libtinfo-dev
+The following NEW packages will be installed:
+ libreadline6-dev libtinfo-dev
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">289</span> kB of archives.
+After this operation, 1,280 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libtinfo-dev amd64 5.9+20140118-1ubuntu1 <span class="o">[</span>76.3 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main libreadline6-dev amd64 6.3-4ubuntu2 <span class="o">[</span><span class="m">213</span> kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/main libreadline6-dev amd64 6.3-4ubuntu2 <span class="o">[</span><span class="m">213</span> kB<span class="o">]</span>
+Fetched <span class="m">192</span> kB in 2min 21s <span class="o">(</span>1,358 B/s<span class="o">)</span>
+Selecting previously unselected package libtinfo-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">212798</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libtinfo-dev_5.9+20140118-1ubuntu1_amd64.deb ...
+Unpacking libtinfo-dev:amd64 <span class="o">(</span>5.9+20140118-1ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libreadline6-dev:amd64.
+Preparing to unpack .../libreadline6-dev_6.3-4ubuntu2_amd64.deb ...
+Unpacking libreadline6-dev:amd64 <span class="o">(</span>6.3-4ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> install-info <span class="o">(</span>5.2.0.dfsg.1-2<span class="o">)</span> ...
+Setting up libtinfo-dev:amd64 <span class="o">(</span>5.9+20140118-1ubuntu1<span class="o">)</span> ...
+Setting up libreadline6-dev:amd64 <span class="o">(</span>6.3-4ubuntu2<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libreadline6-dev from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libyaml-0-2
+The following NEW packages will be installed:
+ libyaml-0-2 libyaml-dev
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">104</span> kB of archives.
+After this operation, <span class="m">438</span> kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libyaml-0-2 amd64 0.1.4-3ubuntu3.1 <span class="o">[</span>48.1 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libyaml-dev amd64 0.1.4-3ubuntu3.1 <span class="o">[</span>55.9 kB<span class="o">]</span>
+Err http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libyaml-dev amd64 0.1.4-3ubuntu3.1
+ Connection failed <span class="o">[</span>IP: 91.189.92.200 80<span class="o">]</span>
+Get:3 http://security.ubuntu.com/ubuntu/ trusty-security/main libyaml-dev amd64 0.1.4-3ubuntu3.1 <span class="o">[</span>55.9 kB<span class="o">]</span>
+Fetched 75.9 kB in 2min 18s <span class="o">(</span><span class="m">550</span> B/s<span class="o">)</span>
+Selecting previously unselected package libyaml-0-2:amd64.
+<span class="o">(</span>Reading database ... <span class="m">212839</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libyaml-0-2_0.1.4-3ubuntu3.1_amd64.deb ...
+Unpacking libyaml-0-2:amd64 <span class="o">(</span>0.1.4-3ubuntu3.1<span class="o">)</span> ...
+Selecting previously unselected package libyaml-dev:amd64.
+Preparing to unpack .../libyaml-dev_0.1.4-3ubuntu3.1_amd64.deb ...
+Unpacking libyaml-dev:amd64 <span class="o">(</span>0.1.4-3ubuntu3.1<span class="o">)</span> ...
+Setting up libyaml-0-2:amd64 <span class="o">(</span>0.1.4-3ubuntu3.1<span class="o">)</span> ...
+Setting up libyaml-dev:amd64 <span class="o">(</span>0.1.4-3ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.5<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libyaml-dev from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ sqlite3-doc
+The following NEW packages will be installed:
+ libsqlite3-dev
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">439</span> kB of archives.
+After this operation, 1,491 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libsqlite3-dev amd64 3.8.2-1ubuntu2 <span class="o">[</span><span class="m">439</span> kB<span class="o">]</span>
+Fetched <span class="m">439</span> kB in 7s <span class="o">(</span>60.6 kB/s<span class="o">)</span>
+Selecting previously unselected package libsqlite3-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">212853</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libsqlite3-dev_3.8.2-1ubuntu2_amd64.deb ...
+Unpacking libsqlite3-dev:amd64 <span class="o">(</span>3.8.2-1ubuntu2<span class="o">)</span> ...
+Setting up libsqlite3-dev:amd64 <span class="o">(</span>3.8.2-1ubuntu2<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libsqlite3-dev from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ sqlite3-doc
+The following NEW packages will be installed:
+ sqlite3
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get 28.9 kB of archives.
+After this operation, <span class="m">165</span> kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main sqlite3 amd64 3.8.2-1ubuntu2 <span class="o">[</span>28.9 kB<span class="o">]</span>
+Fetched 28.9 kB in 1s <span class="o">(</span>15.4 kB/s<span class="o">)</span>
+Selecting previously unselected package sqlite3.
+<span class="o">(</span>Reading database ... <span class="m">212862</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../sqlite3_3.8.2-1ubuntu2_amd64.deb ...
+Unpacking sqlite3 <span class="o">(</span>3.8.2-1ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up sqlite3 <span class="o">(</span>3.8.2-1ubuntu2<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package sqlite3 from the Packager Apt executed correctly
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libxml2-dev from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ libxslt1-dev
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">407</span> kB of archives.
+After this operation, 2,450 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libxslt1-dev amd64 1.1.28-2build1 <span class="o">[</span><span class="m">407</span> kB<span class="o">]</span>
+Fetched <span class="m">407</span> kB in 10s <span class="o">(</span>40.4 kB/s<span class="o">)</span>
+Selecting previously unselected package libxslt1-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">212867</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libxslt1-dev_1.1.28-2build1_amd64.deb ...
+Unpacking libxslt1-dev:amd64 <span class="o">(</span>1.1.28-2build1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> doc-base <span class="o">(</span>0.10.5<span class="o">)</span> ...
+Processing <span class="m">1</span> added doc-base file...
+Setting up libxslt1-dev:amd64 <span class="o">(</span>1.1.28-2build1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libxslt1-dev from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libbison-dev libsigsegv2 m4
+Suggested packages:
+ bison-doc
+The following NEW packages will be installed:
+ bison libbison-dev libsigsegv2 m4
+<span class="m">0</span> upgraded, <span class="m">4</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">805</span> kB of archives.
+After this operation, 2,220 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libsigsegv2 amd64 2.10-2 <span class="o">[</span>15.0 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main m4 amd64 1.4.17-2ubuntu1 <span class="o">[</span><span class="m">195</span> kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/main libbison-dev amd64 2:3.0.2.dfsg-2 <span class="o">[</span><span class="m">338</span> kB<span class="o">]</span>
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/main bison amd64 2:3.0.2.dfsg-2 <span class="o">[</span><span class="m">257</span> kB<span class="o">]</span>
+Fetched <span class="m">805</span> kB in 16s <span class="o">(</span>47.8 kB/s<span class="o">)</span>
+Selecting previously unselected package libsigsegv2:amd64.
+<span class="o">(</span>Reading database ... <span class="m">213011</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libsigsegv2_2.10-2_amd64.deb ...
+Unpacking libsigsegv2:amd64 <span class="o">(</span>2.10-2<span class="o">)</span> ...
+Selecting previously unselected package m4.
+Preparing to unpack .../m4_1.4.17-2ubuntu1_amd64.deb ...
+Unpacking m4 <span class="o">(</span>1.4.17-2ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libbison-dev:amd64.
+Preparing to unpack .../libbison-dev_2%3a3.0.2.dfsg-2_amd64.deb ...
+Unpacking libbison-dev:amd64 <span class="o">(</span>2:3.0.2.dfsg-2<span class="o">)</span> ...
+Selecting previously unselected package bison.
+Preparing to unpack .../bison_2%3a3.0.2.dfsg-2_amd64.deb ...
+Unpacking bison <span class="o">(</span>2:3.0.2.dfsg-2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> install-info <span class="o">(</span>5.2.0.dfsg.1-2<span class="o">)</span> ...
+Setting up libsigsegv2:amd64 <span class="o">(</span>2.10-2<span class="o">)</span> ...
+Setting up m4 <span class="o">(</span>1.4.17-2ubuntu1<span class="o">)</span> ...
+Setting up libbison-dev:amd64 <span class="o">(</span>2:3.0.2.dfsg-2<span class="o">)</span> ...
+Setting up bison <span class="o">(</span>2:3.0.2.dfsg-2<span class="o">)</span> ...
+update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc <span class="o">(</span>yacc<span class="o">)</span> in auto mode
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.5<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package bison from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ libffi-dev
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get 99.8 kB of archives.
+After this operation, <span class="m">323</span> kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libffi-dev amd64 3.1~rc1+r3.0.13-12 <span class="o">[</span>99.8 kB<span class="o">]</span>
+Fetched 99.8 kB in 2s <span class="o">(</span>43.9 kB/s<span class="o">)</span>
+Selecting previously unselected package libffi-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">213131</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libffi-dev_3.1~rc1+r3.0.13-12_amd64.deb ...
+Unpacking libffi-dev:amd64 <span class="o">(</span>3.1~rc1+r3.0.13-12<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> doc-base <span class="o">(</span>0.10.5<span class="o">)</span> ...
+Processing <span class="m">1</span> added doc-base file...
+Processing triggers <span class="k">for</span> install-info <span class="o">(</span>5.2.0.dfsg.1-2<span class="o">)</span> ...
+Setting up libffi-dev:amd64 <span class="o">(</span>3.1~rc1+r3.0.13-12<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libffi-dev from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ zlib1g-dev
+The following NEW packages will be installed:
+ libmysqlclient-dev zlib1g-dev
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get 1,046 kB of archives.
+After this operation, 6,048 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main zlib1g-dev amd64 1:1.2.8.dfsg-1ubuntu1 <span class="o">[</span><span class="m">183</span> kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libmysqlclient-dev amd64 5.5.41-0ubuntu0.14.04.1 <span class="o">[</span><span class="m">862</span> kB<span class="o">]</span>
+Fetched 1,046 kB in 28s <span class="o">(</span>37.2 kB/s<span class="o">)</span>
+Selecting previously unselected package zlib1g-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">213164</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../zlib1g-dev_1%3a1.2.8.dfsg-1ubuntu1_amd64.deb ...
+Unpacking zlib1g-dev:amd64 <span class="o">(</span>1:1.2.8.dfsg-1ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libmysqlclient-dev.
+Preparing to unpack .../libmysqlclient-dev_5.5.41-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking libmysqlclient-dev <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up zlib1g-dev:amd64 <span class="o">(</span>1:1.2.8.dfsg-1ubuntu1<span class="o">)</span> ...
+Setting up libmysqlclient-dev <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libmysqlclient-dev from the Packager Apt executed correctly
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libmysql-ruby from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ libgdbm-dev
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get 24.9 kB of archives.
+After this operation, <span class="m">144</span> kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgdbm-dev amd64 1.8.3-12build1 <span class="o">[</span>24.9 kB<span class="o">]</span>
+Fetched 24.9 kB in 1s <span class="o">(</span>20.8 kB/s<span class="o">)</span>
+Selecting previously unselected package libgdbm-dev.
+<span class="o">(</span>Reading database ... <span class="m">213260</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libgdbm-dev_1.8.3-12build1_amd64.deb ...
+Unpacking libgdbm-dev <span class="o">(</span>1.8.3-12build1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up libgdbm-dev <span class="o">(</span>1.8.3-12build1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libgdbm-dev from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ ncurses-doc
+The following NEW packages will be installed:
+ libncurses5-dev
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">170</span> kB of archives.
+After this operation, 1,056 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libncurses5-dev amd64 5.9+20140118-1ubuntu1 <span class="o">[</span><span class="m">170</span> kB<span class="o">]</span>
+Fetched <span class="m">170</span> kB in 3s <span class="o">(</span>48.0 kB/s<span class="o">)</span>
+Selecting previously unselected package libncurses5-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">213306</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libncurses5-dev_5.9+20140118-1ubuntu1_amd64.deb ...
+Unpacking libncurses5-dev:amd64 <span class="o">(</span>5.9+20140118-1ubuntu1<span class="o">)</span> ...
+Setting up libncurses5-dev:amd64 <span class="o">(</span>5.9+20140118-1ubuntu1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libncurses5-dev from the Packager Apt executed correctly
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package g++ from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libssl-doc
+The following NEW packages will be installed:
+  libssl-dev libssl-doc
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get 2,038 kB of archives.
+After this operation, 7,809 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libssl-dev amd64 1.0.1f-1ubuntu2.8 <span class="o">[</span>1,071 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libssl-doc all 1.0.1f-1ubuntu2.8 <span class="o">[</span><span class="m">967</span> kB<span class="o">]</span>
+Fetched 2,038 kB in 58s <span class="o">(</span>34.6 kB/s<span class="o">)</span>
+Selecting previously unselected package libssl-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">213343</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libssl-dev_1.0.1f-1ubuntu2.8_amd64.deb ...
+Unpacking libssl-dev:amd64 <span class="o">(</span>1.0.1f-1ubuntu2.8<span class="o">)</span> ...
+Selecting previously unselected package libssl-doc.
+Preparing to unpack .../libssl-doc_1.0.1f-1ubuntu2.8_all.deb ...
+Unpacking libssl-doc <span class="o">(</span>1.0.1f-1ubuntu2.8<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up libssl-dev:amd64 <span class="o">(</span>1.0.1f-1ubuntu2.8<span class="o">)</span> ...
+Setting up libssl-doc <span class="o">(</span>1.0.1f-1ubuntu2.8<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libssl-dev from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ automake autotools-dev
+Suggested packages:
+ autoconf2.13 autoconf-archive gnu-standards autoconf-doc libtool
+The following NEW packages will be installed:
+ autoconf automake autotools-dev
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">877</span> kB of archives.
+After this operation, 3,653 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main autoconf all 2.69-6 <span class="o">[</span><span class="m">322</span> kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main autotools-dev all 20130810.1 <span class="o">[</span>44.3 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/main automake all 1:1.14.1-2ubuntu1 <span class="o">[</span><span class="m">510</span> kB<span class="o">]</span>
+Fetched <span class="m">877</span> kB in 15s <span class="o">(</span>57.6 kB/s<span class="o">)</span>
+Selecting previously unselected package autoconf.
+<span class="o">(</span>Reading database ... <span class="m">214752</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../autoconf_2.69-6_all.deb ...
+Unpacking autoconf <span class="o">(</span>2.69-6<span class="o">)</span> ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../autotools-dev_20130810.1_all.deb ...
+Unpacking autotools-dev <span class="o">(</span>20130810.1<span class="o">)</span> ...
+Selecting previously unselected package automake.
+Preparing to unpack .../automake_1%3a1.14.1-2ubuntu1_all.deb ...
+Unpacking automake <span class="o">(</span>1:1.14.1-2ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> install-info <span class="o">(</span>5.2.0.dfsg.1-2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> doc-base <span class="o">(</span>0.10.5<span class="o">)</span> ...
+Processing <span class="m">1</span> added doc-base file...
+Setting up autoconf <span class="o">(</span>2.69-6<span class="o">)</span> ...
+Setting up autotools-dev <span class="o">(</span>20130810.1<span class="o">)</span> ...
+Setting up automake <span class="o">(</span>1:1.14.1-2ubuntu1<span class="o">)</span> ...
+update-alternatives: using /usr/bin/automake-1.14 to provide /usr/bin/automake <span class="o">(</span>automake<span class="o">)</span> in auto mode
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package autoconf from the Packager Apt executed correctly
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package automake from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libltdl-dev
+Suggested packages:
+  libtool-doc gfortran fortran95-compiler gcj-jdk
+The following NEW packages will be installed:
+ libltdl-dev libtool
+<span class="m">0</span> upgraded, <span class="m">2</span> newly installed, <span class="m">0</span> to remove and <span class="m">17</span> not upgraded.
+Need to get <span class="m">345</span> kB of archives.
+After this operation, 2,400 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libltdl-dev amd64 2.4.2-1.7ubuntu1 <span class="o">[</span><span class="m">157</span> kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main libtool amd64 2.4.2-1.7ubuntu1 <span class="o">[</span><span class="m">188</span> kB<span class="o">]</span>
+Fetched <span class="m">345</span> kB in 10s <span class="o">(</span>33.3 kB/s<span class="o">)</span>
+Selecting previously unselected package libltdl-dev:amd64.
+<span class="o">(</span>Reading database ... <span class="m">214971</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libltdl-dev_2.4.2-1.7ubuntu1_amd64.deb ...
+Unpacking libltdl-dev:amd64 <span class="o">(</span>2.4.2-1.7ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libtool.
+Preparing to unpack .../libtool_2.4.2-1.7ubuntu1_amd64.deb ...
+Unpacking libtool <span class="o">(</span>2.4.2-1.7ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up libltdl-dev:amd64 <span class="o">(</span>2.4.2-1.7ubuntu1<span class="o">)</span> ...
+Setting up libtool <span class="o">(</span>2.4.2-1.7ubuntu1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libtool from the Packager Apt executed correctly
+Creating /tmp/ptconfigure-temp-script-25544965900.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-25544965900.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-25544965900.sh Permissions
+Executing /tmp/ptconfigure-temp-script-25544965900.sh
+Temp File /tmp/ptconfigure-temp-script-25544965900.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+RubyRVM: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<p>場合に、ユーザー入力の Y として、Rubysystem パッケージからインストールします。その他に、それは、画面を終了できます。次のスクリーン ショットを説明することができます。
+それは。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libreadline6-dev from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libyaml-dev from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package libsqlite3-dev from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package sqlite3 from the Packager Apt is already installed, so not installing
+</pre></div>
+</div>
+<p>Libreadline6 開発、libyaml 開発、libsqlites3 dev これらのパッケージは自動的にインストールされます。</p>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="42%" />
+<col width="9%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">パラメーターの代替</th>
+<th class="head" colspan="2">オプション | コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure RubyRVM
+Install</td>
+<td>我々は使用することができますRubyRVM, rubyrvm,
+ruby-rvm, rubyRvm.</td>
+<td colspan="2"><dl class="first last docutils">
+<dt>Y          | システムは、インストールプロセスを</dt>
+<dd><div class="first last line-block">
+<div class="line">開始します</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure RubyRVM
+Install</td>
+<td>我々は使用することができますRubyRVM, rubyrvm,
+ruby-rvm, rubyRvm.</td>
+<td>N</td>
+<td>システムは、インストール·プロセス
+を停止し、|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>RVM は同時に複数のバージョンをインストールしたくない場合でも便利です。</li>
+<li>パッケージ マネージャーからそれを得る （少なくとも ubuntu で) からのインストール ディレクトリを変更、更新されたバージョンを与える、
+既定値です。</li>
+<li>ソースコードからビルド依存関係の負荷を取得し、オプションを構成する必要があります。</li>
+<li>RVM は素晴らしいこれにより、Ruby インストールのデフォルトをお使いのシステムに触れることがなく異なるバージョンをインストールします。</li>
+<li>RVM を持つもう一つの大きな利点は、gemsets - ことは、バージョンに固有のパッチ ・ レベル、できるだけ多くの gemsets を作成することができます。
+ルビー。</li>
+<li>Ruby のシステムは、迅速かつ簡単なオブジェクト指向プログラミング (OOP) の動的な反射、高度なスクリプト言語です。</li>
+<li>Ruby のシステムでは多くの便利で楽しいツールです。展開プロセスで使用されているツールを含みます。</li>
+<li>の平均ルビー システムは通常既に web 開発と一般に極端な知識を持つ経験豊富な専門家
+ソフトウェア エンジニア リングのスキル。</li>
+<li>Ruby プログラミング言語 Ruby システムの主な利点は、開発のスピードと見なされます。</li>
+<li>キャッシュのプロジェクト-主要なインター ネット プロジェクトの開発で最も重要な手順の 1 つ。PHP では、データのさまざまなオプションがあります。
+キャッシュ。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jrubyrvm.rst">
+          RubyRVM
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

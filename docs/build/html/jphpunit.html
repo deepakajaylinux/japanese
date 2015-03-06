@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHP Unit &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="PHPModules" href="jphpmodules.html" />
+    <link rel="prev" title="PHPStorm" href="jphpstorm.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PHP Unit</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jphpstorm.html"
+         title="Previous Chapter: PHPStorm">&laquo; PHPStorm</a></li>
+  <li><a href="jphpmodules.html"
+         title="Next Chapter: PHPModules">PHPModules &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jphpunit.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="php-unit">
+<h1>PHP Unit<a class="headerlink" href="#php-unit" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールは PHPUnit GC レポからインストールするユーザーを容易にします。PHP 単体テスト フレームワークは、単体テスト フレームワーク開発者のバグを発見し、順番に PHP ソフトウェアの開発に関連付けられているコストを削減することが可能です。PHP 単体テスト フレームワークは、XML、XHTML、または ASCII でレポートを生成します。このモジュールにより PHP ユニットをインストールするのにはどのように見てみましょう。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ヘルプ コマンド同様目的に関してユーザーを導くように PHP ユニット モジュールに含まれているオプションについて。また、PHP ユニットをインストールするための構文について説明します。PHP 単位モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPUnit <span class="nb">help</span>
+</pre></div>
+</div>
+<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、PHP の単位の下のヘルプ コマンドについて視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPUnit <span class="nb">help</span>
+******************************
+
+ This <span class="nb">command </span>allows you to install PHPUnit from a GC Repo.
+
+ PHPUnit
+
+       - install
+       Installs the latest GC Repo version of PHPUnit
+       example: ptconfigure phpunit install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>PHP ユニット、ユーザーのコンピューターにインストールするために使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PHPUnit install
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、次の操作が発生します表形式で表示されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="12%" />
+<col width="69%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install PHP Unit? (Y/N)</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、インストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install PHP Unit? (Y/N)</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、インストールプロセスを終了したい場合は|</td>
+</tr>
+</tbody>
+</table>
+<p>ユーザー インストール プロセスの進行を表形式で示すように、次の操作が発生します。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="18%" />
+<col width="15%" />
+<col width="48%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">パス</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Program data directory</td>
+<td>“/opt/phpunit (対応
+するモジュール)”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラムのデータディレクトリを使用
+してインストールを続行する場合、それらはYESと入力をするこ
+とができます</td>
+</tr>
+<tr class="row-odd"><td>Program data directory</td>
+<td>User specific</td>
+<td>No(エンドスラ
+ッシュ)</td>
+<td>ユーザーが自分自身のプログラムデータディレクトリを続行し
+たい場合は、Nとして、手入力は、自分の場所を指定することが
+できます</td>
+</tr>
+<tr class="row-even"><td>Program executor
+directory (デフォルト)</td>
+<td>“/usr/bin”</td>
+<td>Yes</td>
+<td>ユーザーがデフォルトのプログラム実行ディレクトリを使用
+してインストールを続行する場合、それらはYESと
+入力をすることができます</td>
+</tr>
+<tr class="row-odd"><td>Program executor
+directory</td>
+<td>User specific</td>
+<td>No(エンドスラ
+ッシュ)</td>
+<td>ユーザーが独自のプログラム実行ディレクトリを続行したい場
+合は、入力Nとして、そして手に、彼らは場所を所有指定
+することができます。|</td>
+</tr>
+</tbody>
+</table>
+<p>最後に、PHP ユニットのインストールを完了します。次のスクリーン ショットは、インストールのプロセスについて視覚的に示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpunit install
+Install PHP Unit ? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*          PHP Unit !         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/phpunit&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
+
+git clone -b 3.5 <span class="s1">&#39;https://github.com/sebastianbergmann/phpunit.git&#39;</span>  /tmp/phpunit/phpunitCloning into <span class="s1">&#39;/tmp/phpunit/phpunit&#39;</span>...
+
+remote: Counting objects: 50529, <span class="k">done</span>.
+Receiving objects:  71% <span class="o">(</span>35876/50529<span class="o">)</span>, 12.02 MiB <span class="p">|</span> 41.00 KiB/s
+Receiving objects:  95% <span class="o">(</span>48003/50529<span class="o">)</span>, 16.82 MiB <span class="p">|</span> 38.00 KiB/s
+Receiving objects:  95% <span class="o">(</span>48254/50529<span class="o">)</span>, 16.86 MiB <span class="p">|</span> 40.00 KiB/s
+Receiving objects:  96% <span class="o">(</span>48508/50529<span class="o">)</span>, 16.95 MiB <span class="p">|</span> 43.00 KiB/s
+
+
+
+remote: Total <span class="m">50529</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>50529/50529<span class="o">)</span>, 17.91 MiB <span class="p">|</span> 36.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>26834/26834<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/dbunit.git&#39;</span>  /tmp/phpunit/dbunitCloning into <span class="s1">&#39;/tmp/phpunit/dbunit&#39;</span>...
+remote: Counting objects: 4596, <span class="k">done</span>.
+remote: Total <span class="m">4596</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>4596/4596<span class="o">)</span>, 1.04 MiB <span class="p">|</span> 31.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>3183/3183<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.2 <span class="s1">&#39;https://github.com/sebastianbergmann/php-file-iterator.git&#39;</span>  /tmp/phpunit/php-file-iteratorCloning into <span class="s1">&#39;/tmp/phpunit/php-file-iterator&#39;</span>...
+remote: Counting objects: 453, <span class="k">done</span>.
+remote: Total <span class="m">453</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>453/453<span class="o">)</span>, 60.66 KiB <span class="p">|</span> 16.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>188/188<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/php-code-coverage.git&#39;</span>  /tmp/phpunit/php-code-coverageCloning into <span class="s1">&#39;/tmp/phpunit/php-code-coverage&#39;</span>...
+remote: Counting objects: 7650, <span class="k">done</span>.
+remote: Total <span class="m">7650</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>7650/7650<span class="o">)</span>, 2.77 MiB <span class="p">|</span> 17.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>3671/3671<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/php-token-stream.git&#39;</span>  /tmp/phpunit/php-token-streamCloning into <span class="s1">&#39;/tmp/phpunit/php-token-stream&#39;</span>...
+remote: Counting objects: 1234, <span class="k">done</span>.
+remote: Total <span class="m">1234</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>1234/1234<span class="o">)</span>, 201.76 KiB <span class="p">|</span> 41.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>565/565<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/phpunit-mock-objects.git&#39;</span>  /tmp/phpunit/phpunit-mock-objectsCloning into <span class="s1">&#39;/tmp/phpunit/phpunit-mock-objects&#39;</span>...
+remote: Counting objects: 4703, <span class="k">done</span>.
+remote: Total <span class="m">4703</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>4703/4703<span class="o">)</span>, 837.24 KiB <span class="p">|</span> 104.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>2910/2910<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone -b 1.0 <span class="s1">&#39;https://github.com/sebastianbergmann/phpunit-selenium.git&#39;</span>  /tmp/phpunit/phpunit-seleniumCloning into <span class="s1">&#39;/tmp/phpunit/phpunit-selenium&#39;</span>...
+remote: Counting objects: 8115, <span class="k">done</span>.
+remote: Total <span class="m">8115</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>8115/8115<span class="o">)</span>, 2.07 MiB <span class="p">|</span> 28.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>4762/4762<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone <span class="s1">&#39;https://github.com/phpengine/ptconfigure-phpunit-php-timer&#39;</span>  /tmp/phpunit/php-timerCloning into <span class="s1">&#39;/tmp/phpunit/php-timer&#39;</span>...
+remote: Counting objects: 253, <span class="k">done</span>.
+remote: Total <span class="m">253</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>253/253<span class="o">)</span>, 31.55 KiB <span class="p">|</span> 12.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>126/126<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+git clone <span class="s1">&#39;https://github.com/sebastianbergmann/php-text-template.git&#39;</span>  /tmp/phpunit/php-text-templateCloning into <span class="s1">&#39;/tmp/phpunit/php-text-template&#39;</span>...
+remote: Counting objects: 209, <span class="k">done</span>.
+remote: Total <span class="m">209</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Receiving objects: 100% <span class="o">(</span>209/209<span class="o">)</span>, 33.69 KiB <span class="p">|</span> 16.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>92/92<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Program Data folder populated
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPUnit35: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>このモジュール レポ バージョンから PHP ユニットをインストールするユーザーを容易にします。</li>
+<li>ユーザーは、プログラムのデータ ディレクトリと遺言執行者のための独自のパスを選択できます。</li>
+<li>ヘルプとインストールの宣言で使用されるパラメーターは大文字と小文字を区別しながら他の人に比べての利点を追加する必要があります。</li>
+<li>それは裕福な両方セント OS とも ubuntu のように。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jphpunit.rst">
+          PHP Unit
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Process &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="PTConfigure" href="jptconfigure.html" />
+    <link rel="prev" title="PostgresServer" href="jpostgressserver.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Process</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">定義し、プロセスを使用する方法</a></li>
+<li><a class="reference internal" href="#pid">PID を使用してプロセスを強制終了</a></li>
+<li><a class="reference internal" href="#id4">プロセスは行って/殺されたことの確認方法</a></li>
+<li><a class="reference internal" href="#id5">2 つ以上の Pid を殺すことができる方法</a></li>
+<li><a class="reference internal" href="#id6">すべてのコマンドを殺すためにこんにちはとを言ってください。</a></li>
+<li><a class="reference internal" href="#id7">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jpostgressserver.html"
+         title="Previous Chapter: PostgresServer">&laquo; PostgresServer</a></li>
+  <li><a href="jptconfigure.html"
+         title="Next Chapter: PTConfigure">PTConfigure &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jprocess.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="process">
+<h1>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュール処理プロセスの必要な関数で、またプロセスを殺すために、ユーザーを支援します。ユーザーの要件に基づいて特定の処理を指定できます。ユーザー、プロセス、ファイルまたはディレクトリからローカルまたはリモート コンピューターの名前を指定できます。私たちを参照してください、使用およびそれにかかわる方法論。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドを処理し、自分のニーズに従ってプロセスを操作する方法についてユーザーを提供しています。それはまたプロセスの代替パラメーターを一覧表示されます。それは彼らのニーズに基づいてプロセスを強制終了を指定する方法についても、プロセスを殺すの構文について説明します。プロセス モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">help</span>
+</pre></div>
+</div>
+<p>次のスクリーン ショット、以下のように、プロセスを殺す方法とプロセスの強制終了を定義する方法を示しています。</p>
+</div>
+<div class="section" id="id3">
+<h2>定義し、プロセスを使用する方法<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>プロセスの終了、次の構文を使用することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span>
+</pre></div>
+</div>
+<p>または</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-psax <span class="c"># default</span>
+</pre></div>
+</div>
+<p>上記に示すように構文は結果の文字列を探します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-pkill <span class="c">#</span>
+</pre></div>
+</div>
+<p>上記のように構文が指定または殺されるためにである文字列を検索する使用されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes
+                --guess
+                <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;1234 #</span>
+</pre></div>
+</div>
+<p>コマンドが上記のように特定の id によってプロセスを殺します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes
+        --level <span class="c">#</span>
+</pre></div>
+</div>
+<p>上記のようにコマンドは、指定したレベルに従ってプロセスを殺すために使用されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes --guess --name<span class="o">=</span><span class="s2">&quot;skype&quot;</span>
+</pre></div>
+</div>
+<p>上記のようにコマンドは、その名前を指定することによってプロセスを殺すために使用されます。次のスクリーン ショットは、プロセスを殺すの作業を示しています。</p>
+</div>
+<div class="section" id="pid">
+<h2>PID を使用してプロセスを強制終了<a class="headerlink" href="#pid" title="Permalink to this headline">¶</a></h2>
+<p>場合は PID # 3486 lighttpd プロセスに割り当てられます。Lighttpd サーバー殺すために、次のように、PID を渡す必要があります。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># kill 3486</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo <span class="nb">kill </span>3486
+</pre></div>
+</div>
+<p>3486 の PID を持つプロセスは終了します。</p>
+</div>
+<div class="section" id="id4">
+<h2>プロセスは行って/殺されたことの確認方法<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Ps またはランレベル スクリプト コマンドを使用します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ps aux <span class="p">|</span> grep lighttpd
+<span class="nv">$ </span>pidof lighttpd
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>2 つ以上の Pid を殺すことができる方法<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>構文は次のように 2 つを殺すためにまたは必要に応じてより多くの Pid は 1 つのコマンドで使用できます。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">kill  </span>pid1 pid2 pid3
+<span class="nb">kill</span> -15  pid1 pid2 pid3
+<span class="nb">kill</span> -9  pid1 pid2 pid3
+<span class="nb">kill</span>  -9 <span class="m">3546</span> <span class="m">5557</span> 4242
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>すべてのコマンドを殺すためにこんにちはとを言ってください。<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>これは Linux のコマンドだけです。名前によってプロセスを殺す。ランレベル スクリプト プロセスを使用して Pid を検索する必要はありませんまたは &#8216; ps aux grep プロセス コマンド。Killall コマンドは Unix オペレーティング システムで使用しないでください。これは Linux の特定のコマンドです。</p>
+<p>構文です。</p>
+<div class="highlight-bash"><div class="highlight"><pre>killall Process-Name-Here
+</pre></div>
+</div>
+<p>Lighttpd サーバーを殺すために： のように入力します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># killall -15 lighttpd</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># killall -9 lighttpd</span>
+</pre></div>
+</div>
+<p>Firefox web ブラウザーのプロセスを殺すために： のように入力します。</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="c"># killall -9 firefox-bin</span>
+</pre></div>
+</div>
+<p>先ほど申し上げたとおり、殺すすべてのコマンド UNIX ライクなシステムは他の何か。それはすべてのプロセスと単に特定のプロセスを殺します。UNIX システム上のすべてを殺すを使用しないでください。</p>
+</div>
+<div class="section" id="id7">
+<h2>利点<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ユーザーの要件に従って異なるパラメーターを使用してプロセスを殺すことができます。たとえば: を殺すために指定することができますプロセスのレベルの id を使用しています。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jprocess.rst">
+          Process
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

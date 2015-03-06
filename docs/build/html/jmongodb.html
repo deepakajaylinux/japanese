@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MongoDB &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="MysqlAdmins" href="jmysqladmins.html" />
+    <link rel="prev" title="ModuleManager" href="jmodulemanager.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">MongoDB</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jmodulemanager.html"
+         title="Previous Chapter: ModuleManager">&laquo; ModuleManager</a></li>
+  <li><a href="jmysqladmins.html"
+         title="Next Chapter: MysqlAdmins">MysqlAdmins &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jmongodb.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="mongodb">
+<h1>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Mongo DB はドキュメント指向データベースです。Mongo DB eschews 動的スキーマによるドキュメントのような php を支持して伝統的なテーブル ベースのリレーショナル データベース構造に簡単かつ迅速にアプリケーションの特定の種類データの統合を作るします。Mongo DB は Ubuntu とセント OS との作業に最適です。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは目標と Mongo データベース モジュールの下に利用可能なコマンドについて機能することができます。また、サーバーをインストールするコマンドについて説明します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure MongoDB <span class="nb">help</span>
+</pre></div>
+</div>
+<p>インストールの前にこのヘルプ コマンドは、その機能を説明を読めば</p>
+<div class="highlight-bash"><div class="highlight"><pre>  kevell@corp:/# ptconfigure MongoDB <span class="nb">help</span>
+  ******************************
+
+
+ This <span class="nb">command </span>allows you to install the MongoDB Server. Currently only
+ MongoDB Workbench, the Database management GUI provided by Oracle <span class="k">for</span>
+ MongoDB.
+
+ MongoDB, mongo-db-server, mongodb-server, mongodbserver, mongodb, mongo-db
+
+       - install
+       Install MongoDB Server
+       example: ptconfigure mongodb install
+
+ Notes, during mongodb install a root password will be set. First, it<span class="s1">&#39;ll look</span>
+<span class="s1"> for the parameter --mongodb-root-pass, if this is not set, it&#39;</span>ll look in the
+ ptconfigure config <span class="k">for</span> a mongodb-default-root-pass setting, and failing both of
+ those it will just <span class="nb">set </span>the password <span class="k">for</span> root to ptconfigure.
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Mongo DB .deb パッケージから Ubuntu Linux システムにインストールするには、このモジュールを使用してください。Ubuntu モンゴ DB パッケージが含まれている、公式モンゴ DB パッケージは一般に最新の状態です。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure mongodb-server install
+</pre></div>
+</div>
+<p>Install mongo DB server?(Y/N)</p>
+<p>場合は、ユーザーが与える it はありません終了します。</p>
+<p>ユーザー入力を与えるは、インストールは自動的に Yes とルート内のすべての depencies お尻既定を渡すし、も更新されたバージョンをインストールします。次のスクリーン ショットはそれを説明します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure mongodb-server install
+
+Install MongoDB Server? (Y/N)
+y
+*******************************
+*        Pharaoh Tools        *
+*         MongoDB Server!        *
+*******************************
+[Pharaoh Logging] Package mongodb-client from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libboost-filesystem1.54.0 libboost-program-options1.54.0
+ libboost-thread1.54.0 libgoogle-perftools4 libpcrecpp0 libsnappy1
+ libtcmalloc-minimal4 libunwind8 libv8-3.14.5 mongodb-clients
+The following NEW packages will be installed:
+ libboost-filesystem1.54.0 libboost-program-options1.54.0
+ libboost-thread1.54.0 libgoogle-perftools4 libpcrecpp0 libsnappy1
+ libtcmalloc-minimal4 libunwind8 libv8-3.14.5 mongodb-clients mongodb-server
+0 upgraded, 11 newly installed, 0 to remove and 6 not upgraded.
+Need to get 14.6 MB of archives.
+After this operation, 114 MB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-filesystem1.54.0 amd64 1.54.0-4ubuntu3.1 [34.2 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-program-options1.54.0 amd64 1.54.0-4ubuntu3.1 [115 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libboost-thread1.54.0 amd64 1.54.0-4ubuntu3.1 [26.5 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/main libpcrecpp0 amd64 1:8.31-2ubuntu2 [14.5 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty/main libunwind8 amd64 1.1-2.2ubuntu3 [48.3 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu/ trusty/main libtcmalloc-minimal4 amd64 2.1-2ubuntu1 [104 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgoogle-perftools4 amd64 2.1-2ubuntu1 [184 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libv8-3.14.5 amd64 3.14.5.8-5ubuntu2 [1,189 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu/ trusty/main libsnappy1 amd64 1.1.0-1ubuntu1 [11.2 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu/ trusty/universe mongodb-clients amd64 1:2.4.9-1ubuntu2 [9,595 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu/ trusty/universe mongodb-server amd64 1:2.4.9-1ubuntu2 [3,312 kB]
+Fetched 14.6 MB in 39s (370 kB/s)
+Selecting previously unselected package libboost-filesystem1.54.0:amd64.
+(Reading database ... 202899 files and directories currently installed.)
+
+Preparing to unpack .../libboost-filesystem1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-filesystem1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libboost-program-options1.54.0:amd64.
+Preparing to unpack .../libboost-program-options1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-program-options1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libboost-thread1.54.0:amd64.
+Preparing to unpack .../libboost-thread1.54.0_1.54.0-4ubuntu3.1_amd64.deb ...
+Unpacking libboost-thread1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Selecting previously unselected package libpcrecpp0:amd64.
+Preparing to unpack .../libpcrecpp0_1%3a8.31-2ubuntu2_amd64.deb ...
+Unpacking libpcrecpp0:amd64 (1:8.31-2ubuntu2) ...
+Selecting previously unselected package libunwind8.
+Preparing to unpack .../libunwind8_1.1-2.2ubuntu3_amd64.deb ...
+Unpacking libunwind8 (1.1-2.2ubuntu3) ...
+Selecting previously unselected package libtcmalloc-minimal4.
+Preparing to unpack .../libtcmalloc-minimal4_2.1-2ubuntu1_amd64.deb ...
+Unpacking libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+Selecting previously unselected package libgoogle-perftools4.
+Preparing to unpack .../libgoogle-perftools4_2.1-2ubuntu1_amd64.deb ...
+Unpacking libgoogle-perftools4 (2.1-2ubuntu1) ...
+Selecting previously unselected package libv8-3.14.5.
+Preparing to unpack .../libv8-3.14.5_3.14.5.8-5ubuntu2_amd64.deb ...
+Unpacking libv8-3.14.5 (3.14.5.8-5ubuntu2) ...
+Selecting previously unselected package libsnappy1.
+Preparing to unpack .../libsnappy1_1.1.0-1ubuntu1_amd64.deb ...
+Unpacking libsnappy1 (1.1.0-1ubuntu1) ...
+Selecting previously unselected package mongodb-clients.
+Preparing to unpack .../mongodb-clients_1%3a2.4.9-1ubuntu2_amd64.deb ...
+Unpacking mongodb-clients (1:2.4.9-1ubuntu2) ...
+Selecting previously unselected package mongodb-server.
+Preparing to unpack .../mongodb-server_1%3a2.4.9-1ubuntu2_amd64.deb ...
+Unpacking mongodb-server (1:2.4.9-1ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up libboost-filesystem1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libboost-program-options1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libboost-thread1.54.0:amd64 (1.54.0-4ubuntu3.1) ...
+Setting up libpcrecpp0:amd64 (1:8.31-2ubuntu2) ...
+Setting up libunwind8 (1.1-2.2ubuntu3) ...
+Setting up libtcmalloc-minimal4 (2.1-2ubuntu1) ...
+Setting up libgoogle-perftools4 (2.1-2ubuntu1) ...
+Setting up libv8-3.14.5 (3.14.5.8-5ubuntu2) ...
+Setting up libsnappy1 (1.1.0-1ubuntu1) ...
+Setting up mongodb-clients (1:2.4.9-1ubuntu2) ...
+Setting up mongodb-server (1:2.4.9-1ubuntu2) ...
+Adding system user `mongodb&#39; (UID 120) ...
+Adding new user `mongodb&#39; (UID 120) with group `nogroup&#39; ...
+Not creating home directory `/home/mongodb&#39;.
+Adding group `mongodb&#39; (GID 128) ...
+Done.
+Adding user `mongodb&#39; to group `mongodb&#39; ...
+Adding user mongodb to group mongodb
+Done.
+mongodb start/running, process 17270
+Processing triggers for libc-bin (2.19-0ubuntu6.4) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+[Pharaoh Logging] Adding Package mongodb-server from the Packager Apt executed correctly
+... All done!
+*******************************
+Thanks for installing , visit www.pharaohtools.com for more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+MongoDB: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordred docutils">
+<colgroup>
+<col width="19%" />
+<col width="40%" />
+<col width="12%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install MongoDB? (Y/N)</td>
+<td>の代わりに mongoDB, 以下の選択肢を使用すること
+もできる: MongoDB, mongo-db-server,mongo-db,
+mongodb-server, mongodb</td>
+<td>Yes</td>
+<td>それはptconfigureの下にMongoDBをイ
+ンストール</td>
+</tr>
+<tr class="row-odd"><td>Install MongoDB? (Y/N)</td>
+<td>の代わりに mongoDB, 以下の選択肢を使用すること
+もできる: MongoDB, mongo-db-server,mongo-db,
+mongodb-server, mongodb|</td>
+<td>No</td>
+<td>それは終了し</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>モンゴ DB はドキュメント指向データベースです。</li>
+<li>Mongo データベースは最新のバージョンを更新できます。</li>
+<li>インストール中にモンゴ DB すべて depencies、ライブラリ インストールもできます自動的にウェブから検索なし。</li>
+<li>MongoDB ドキュメントの最小限の数のビジネス件名を保存できます。</li>
+<li>速度の強化。</li>
+<li>複数のコンピューターでファイルを保存するためのロード バランシングとデータ レプリケーション機能大きな利点</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jmongodb.rst">
+          MongoDB
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

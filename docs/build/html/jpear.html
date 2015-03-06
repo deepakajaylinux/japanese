@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Pear &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="PECL" href="jpecl.html" />
+    <link rel="prev" title="Parallax" href="jparallax.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Pear</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">作成します。</a></li>
+<li><a class="reference internal" href="#id4">削除</a></li>
+<li><a class="reference internal" href="#id5">パスワードの設定</a></li>
+<li><a class="reference internal" href="#id6">存在します。</a></li>
+<li><a class="reference internal" href="#id7">グループ表示</a></li>
+<li><a class="reference internal" href="#id8">グループを追加します。</a></li>
+<li><a class="reference internal" href="#id9">グループから削除します。</a></li>
+<li><a class="reference internal" href="#id10">代替パラメーター</a></li>
+<li><a class="reference internal" href="#id11">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jparallax.html"
+         title="Previous Chapter: Parallax">&laquo; Parallax</a></li>
+  <li><a href="jpecl.html"
+         title="Next Chapter: PECL">PECL &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jpear.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="pear">
+<h1>Pear<a class="headerlink" href="#pear" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>梨は、略して「PHP 拡張子とアプリケーション リポジトリ」と、フルーツのようなちょうど発音されます。PEAR の目的は提供します。</p>
+<ul class="simple">
+<li>PHP のユーザ用のオープン ソース コードの構造化されたライブラリ</li>
+<li>コード配布およびパッケージ管理システム</li>
+<li>ここで指定した PHP で書かれたコードの標準スタイル</li>
+<li>PHP 拡張コミュニティ ライブラリ (PECL)</li>
+</ul>
+<p>PEAR のミッションは、再利用可能なコンポーネントを提供する、PHP の技術革新をリード、PHP 開発のためのベスト プラクティスを提供する、開発者を教育します。</p>
+<p>PEAR のコードは、「パッケージ」に分割されます。各パッケージは、開発チーム、バージョン番号、リリース サイクル、マニュアル、(依存関係を含む） その他のパッケージに定義された関係を持つ別のプロジェクトです。パッケージ内に、記述ファイルを gzip 圧縮された tar ファイルとして配布され、PEAR インストーラーを用いてローカル システムにインストールされています。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、PEAR モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear <span class="nb">help</span>
+</pre></div>
+</div>
+<p>上記のコマンドの絵の表現は以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to modify create or modify pears
+
+ Pear, pear
+
+       - create
+       Create a new system pear, overwriting <span class="k">if</span> it exists
+       example: ptconfigure pear create --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - remove
+       Remove a system pear
+       example: ptconfigure pear remove --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - <span class="nb">set</span>-password
+       Set the password of a system pear
+       example: ptconfigure pear <span class="nb">set</span>-password --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+
+       - exists
+       Check the existence of a pear
+       example: ptconfigure pear exists --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - show-groups
+       Show groups to which a pear belongs
+       example: ptconfigure pear show-groups --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - add-to-group
+       Add pear to a group
+       example: ptconfigure pear add-to-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+       - remove-from-group
+       Remove pear from a group
+       example: ptconfigure pear remove-from-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>作成します。<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーは新しいシステム ナシまたは既存のものを上書きする必要があります作成する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear create --pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>削除<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>ユーザー システム梨を削除する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove --pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>パスワードの設定<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>ユーザー システム pear のパスワードを設定する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear setpassword --pearname<span class="o">=</span>”somename”-- new-password<span class="o">=</span>”somepassword”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>存在します。<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーは、pear の存在を知る必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear exists --pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>グループ表示<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーは、pear が属するグループを知る必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear show-groups --pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>グループを追加します。<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーはナシ、特定のグループに割り当てる必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear add-to-group --pearname<span class="o">=</span>”somename” -- <span class="nv">groupname</span><span class="o">=</span>”somegroupname”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>グループから削除します。<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<p>Pear をグループから削除する必要があるとき、特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove-from-group --pearname<span class="o">=</span>”name” --groupname<span class="o">=</span>”groupname”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>代替パラメーター<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<p>2 つの代替パラメーターをコマンドラインで使用することができますがあります。</p>
+<p>Pear, pear</p>
+<div class="highlight-bash"><div class="highlight"><pre>Eg: ptconfigure pear create --pearname<span class="o">=</span>”somename”/ ptconfigure Pear create --pearname<span class="o">=</span>”somename”
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>利点<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<p>Pear.php.net は pear.php.net から利用可能なパッケージに、人にやさしい (HTML) とマシン向け (現在残り) インターフェイスを提供します。すべての通信に HTTP プロトコルで発生します。Pear.php.net サイト提供するその他の機能は次のとおりです。</p>
+<ul class="simple">
+<li>ユーザ アカウント管理 (SVN サーバーの独立した)</li>
+<li>パッケージの管理</li>
+<li>管理をリリースします。</li>
+<li>Ubuntu セントの OS で裕福な</li>
+<li>非大文字小文字の区別</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jpear.rst">
+          Pear
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

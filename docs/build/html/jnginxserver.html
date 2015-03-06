@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NginxServer &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Node-JS" href="jnodejs.html" />
+    <link rel="prev" title="NetworkTools" href="jnetworktools.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">NginxServer</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jnetworktools.html"
+         title="Previous Chapter: NetworkTools">&laquo; NetworkTools</a></li>
+  <li><a href="jnodejs.html"
+         title="Next Chapter: Node-JS">Node-JS &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jnginxserver.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="nginxserver">
+<h1>NginxServer<a class="headerlink" href="#nginxserver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>「エンジン X」発音される、Nginx は、高パフォーマンスの Web サーバー。Nginx Web サーバーは軽量化とは別のために構成できる汎用性の高いサーバー タスクは、多くの現代の web サイトの需要。Ngnix サーバーでアプリケーション設定を構成するユーザーにファシリテーターとして機能します。アプリケーションの設定のほとんどの例では、mysql 管理者ユーザー、ホスト、パスが含まれません。Nginx は多くのウェブ マスターのための選択の新しい Web サーバーとして見出しを作っています。その人気の一番の理由は、その速度です。Nginx は、Apache 以外のテスト環境でより速くそのアーキテクチャはイベント駆動型の Apache のプロセス駆動型ですのでです。Ptconfigure モジュールを通してこの Nginx のサーバーをインストールするための方法として機能します。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ヘルプ コマンド同様目的に関してユーザーを導くように Ngnix サーバー モジュールに含まれているオプションについて。ヘルプ コマンド Ngnix サーバーの代替パラメーターが一覧表示されます。また、Ngnix サーバーをインストールするための構文について説明します。ヘルプ コマンド Ngnix サーバーを以下のとおりです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure nginx-server <span class="nb">help</span>
+</pre></div>
+</div>
+<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、Nginx のサーバーの下で help コマンドについて視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure NginxServer <span class="nb">help</span>
+******************************
+
+
+This <span class="nb">command </span>is part of Core and provides you  with a method by which you can configure Application Settings.
+You can configure default application settings, ie: mysql admin user, host, pass
+
+NginxServer, nginx-server, nginxserver
+
+- install
+Installs Nginx HTTP Server
+example: ptconfigure nginx-server install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Nginx のサーバーをインストールするように、次のコマンドを使用して簡単です：</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure nginx-server install
+</pre></div>
+</div>
+<p>次の操作上のコマンドを入力した後で示すように、表形式に発生します。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="16%" />
+<col width="38%" />
+<col width="9%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install NginxServer?
+(Y/N)</td>
+<td>の代わりに Nginx Server, 以下の選択肢を使用す
+ることもできる: NginxServer, nginx-server,
+nginxserver.</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、
+インストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install NginxServer?
+(Y/N)</td>
+<td>の代わりに Nginx Server, 以下の選択肢を使用す
+ることもできる: NginxServer, nginx-server,
+nginxserver.|</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、
+インストールプロセスを終了したい場合は</td>
+</tr>
+</tbody>
+</table>
+<p>インストール プロセスを続行すると、Nginx の HTTP サーバーがインストールされます。Nginx のパッケージはすでにに存在する場合、ユーザーのコンピューターに、Nginx は既にそのマシンに存在するユーザーを指示するメッセージが表示されます。最終的に明確な結果とステータスのレポートが生成されます。次のスクリーン ショットは絵上記のプロセスについて説明します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure nginx-server install
+
+Install Nginx Server? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Nginx Server!       *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+nginx-common nginx-core
+Suggested packages:
+fcgiwrap nginx-doc
+The following NEW packages will be installed:
+nginx nginx-common nginx-core
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">278</span> not upgraded.
+Need to get <span class="m">347</span> kB of archives.
+After this operation, 1,295 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-common all 1.4.6-1ubuntu3.1 <span class="o">[</span>17.9 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-core amd64 1.4.6-1ubuntu3.1 <span class="o">[</span><span class="m">324</span> kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main nginx all 1.4.6-1ubuntu3.1 <span class="o">[</span>5,218 B<span class="o">]</span>
+Fetched <span class="m">347</span> kB in 3s <span class="o">(</span><span class="m">104</span> kB/s<span class="o">)</span>
+Selecting previously unselected package nginx-common.
+<span class="o">(</span>Reading database ... <span class="m">168194</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../nginx-common_1.4.6-1ubuntu3.1_all.deb ...
+Unpacking nginx-common <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../nginx-core_1.4.6-1ubuntu3.1_amd64.deb ...
+Unpacking nginx-core <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.4.6-1ubuntu3.1_all.deb ...
+Unpacking nginx <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+ureadahead will be reprofiled on next reboot
+Processing triggers <span class="k">for</span> ufw <span class="o">(</span>0.34~rc-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Setting up nginx-common <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> ufw <span class="o">(</span>0.34~rc-0ubuntu2<span class="o">)</span> ...
+Setting up nginx-core <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+Setting up nginx <span class="o">(</span>1.4.6-1ubuntu3.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package nginx from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+NginxServer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>この Nginx のサーバーを使用して、ユーザーのアプリケーション設定を構成できます。</li>
+<li>ヘルプおよびインストール操作で使用されるパラメーター大文字小文字が区別されません中に他の人に比べて利点であります。</li>
+<li>Nginx は、それぞれの新しい要求のための新しいプロセスを作成する必要はありませんので高速です。</li>
+<li>Nginx は静的な Web ページのために特に非常に小さなメモリを使用します。</li>
+<li>Nginx はシステムの範囲で使用できます。</li>
+<li>Nginx は、拡張性とパフォーマンスはハードウェアに依存しません。</li>
+<li>Nginx は簡単にインストールおよび構成します。</li>
+<li>、Apache のような Nginx をリードする Web サーバから期待するすべての機能があります。</li>
+<li>静的ファイル サービング。</li>
+<li>/SSL/TLS をサポートします。</li>
+<li>仮想ホスト。</li>
+<li>リバース プロキシ。</li>
+<li>負荷分散します。</li>
+<li>圧縮。</li>
+<li>アクセスを制御します。</li>
+<li>URL 書き換え。</li>
+<li>カスタムのログ記録。</li>
+<li>サーバー側が含まれています。</li>
+<li>WebDAV。</li>
+<li>ストリーミングの FLV.</li>
+<li>FastCGI。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jnginxserver.rst">
+          NginxServer
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

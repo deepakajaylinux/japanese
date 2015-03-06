@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PackageManager &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Parallax" href="jparallax.html" />
+    <link rel="prev" title="Node-JS" href="jnodejs.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PackageManager</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">代替パラメーター</a></li>
+<li><a class="reference internal" href="#pkg">Pkg インストール</a></li>
+<li><a class="reference internal" href="#id4">Pkg 確保</a></li>
+<li><a class="reference internal" href="#id5">Pkg 削除</a></li>
+<li><a class="reference internal" href="#id6">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jnodejs.html"
+         title="Previous Chapter: Node-JS">&laquo; Node-JS</a></li>
+  <li><a href="jparallax.html"
+         title="Next Chapter: Parallax">Parallax &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jpackagemanager.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="packagemanager">
+<h1>PackageManager<a class="headerlink" href="#packagemanager" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、パッケージ管理をラップするために使用します。それは 3 つのオプションを有しています。彼らは pkg pkg インストール-pkg 削除を確認します。これは任意のシステムにインストールするユーザーを許可します。パッケージ マネージャーの機能を管理します。それは、Ubuntu や centos 関連の作業に最適。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このヘルプ コマンドはインストール、確認、パッケージ管理を削除するユーザーをガイドします。これにより、インストール、確認、削除します。パッケージ マネージャーのヘルプ コマンドを以下に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure packagemanager <span class="nb">help</span>
+</pre></div>
+</div>
+<p>開始後の入力上記のコマンドをラップする機能します。それの教理のスクリーン ショットで機能します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure packagemanager <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to use a Package Management wrapper.
+
+ PackageManager, package-manager, packagemanager, package-mgr, pkgmgr
+
+       - pkg-install
+       Installs a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+       - pkg-ensure
+       Installs a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+       - pkg-remove
+       Removes a Package through a Package Manager
+       example: ptconfigure package-manager install --package-name<span class="o">=</span><span class="s2">&quot;mysql&quot;</span> --package-version<span class="o">=</span><span class="s2">&quot;5.0&quot;</span> --packager<span class="o">=</span><span class="s2">&quot;apt-get&quot;</span>
+
+ A package manager wrapper that will allow you to install packages on any system
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>代替パラメーター<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>宣言で定義することができます、代替パラメーターを次に示します。</p>
+<p>PackageManager, package-manager, packagemanager, pkgmgr, package-mgr.</p>
+</div>
+<div class="section" id="pkg">
+<h2>Pkg インストール<a class="headerlink" href="#pkg" title="Permalink to this headline">¶</a></h2>
+<p>インストールには、更新されたバージョンで、インストールを行うために必要な PackageManager のインストールが含まれます。それは ptconfigure の下で PackageManager モジュールをインストールするマニフェスト プロセスです。ちょうど、下記のコマンドを使用して PackageManager</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager Install
+</pre></div>
+</div>
+<p>それは質問攻めにコマンド入力活性化後。</p>
+<p>ユーザーが [はい] を入力するときに自動的にシステムからのチェックと PackageManager がインストールされます。ない場合、インストールを終了します。次のスクリーン ショットは、PackageManager とその機能を示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Pkg 確保<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Pkg は、システム サービスが実行されているか確認します。実行開始しない場合それ以外のしないでください。このコマンドによって、ユーザーは、システムが働くか、またはアイドル状態かどうかを識別できます。簡単なコマンドは扱い易いです。次のコマンドは、パッケージ マネージャーを介して確保するために使用されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager ensure
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>Pkg 削除<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>Pkg は、パッケージ マネージャーからパッケージを削除するコマンドを削除します。パッケージ マネージャーは、まずパッケージ マネージャーから削除したいパッケージを確認します。確認を求めます。[削除] オプションを使用しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure PackageManager remove
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>利点<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>非大文字小文字を区別します。</li>
+<li>Ubuntu や CentOS で裕福な。</li>
+<li>パッケージの削除が可能です。</li>
+<li>パッケージ マネージャーをラップします。</li>
+<li>コマンドは簡単に使用</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jpackagemanager.rst">
+          PackageManager
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
