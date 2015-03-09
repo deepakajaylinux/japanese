@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SVN &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Teamcity モジュール" href="jteamcity.html" />
+    <link rel="prev" title="Sudonopass" href="jsudonopass.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">SVN</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">国連のインストール</a></li>
+<li><a class="reference internal" href="#id5">確保するため</a></li>
+<li><a class="reference internal" href="#id6">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jsudonopass.html"
+         title="Previous Chapter: Sudonopass">&laquo; Sudonopass</a></li>
+  <li><a href="jteamcity.html"
+         title="Next Chapter: Teamcity モジュール">Teamcity モジュール &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jsvn.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="svn">
+<h1>SVN<a class="headerlink" href="#svn" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールは、Ubuntu で SVN の最新バージョンをインストールするユーザーを支援します。Apache Subversion (頻繁に短縮された SVN、コマンド svn の名の後) は、Apache ライセンスの下でフリー ソフトウェアとして配布ソフトウェア バージョンとリビジョン コントロール システムです。[1] 開発者はソース コード、web ページ、およびドキュメントなどのファイルの現在と過去のバージョンを維持するために Subversion を使用します。その目標は、広く使われている並行版システム (CVS) に大抵互換性がある後継者であります。このモジュールは、インストール、アンインストール、ubuntu で subversion を確実にどのように役立つかを見てみましょう。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドと同様、目的に関するユーザー ガイドとして SVN で含まれているオプションについて。それは SVN の代替パラメーターが一覧表示されます。インストールするための構文についても説明します、アンインストール、SVN を確保します。SVN モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure svn <span class="nb">help</span>
+</pre></div>
+</div>
+<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、SVN の下で help コマンドについて視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure svn <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install the latest available SVN in the Ubuntu
+ repositories.
+
+ SVN, svn
+
+       - install
+       Installs the latest available <span class="o">(</span>In your package manager<span class="o">)</span> version of SVN
+       example: ptconfigure svn install
+
+       - ensure
+       Ensures SVN is installed
+       example: ptconfigure svn ensure
+
+       - uninstall
+       Installs the latest version of SVN
+       example: ptconfigure svn uninstall
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>SVN の ubuntu をインストールするために使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure svn install
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、次の操作が発生します表形式で表示されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="31%" />
+<col width="10%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install SVN? (Y/N)</td>
+<td>代わりにSVNの、我々はまた、svn
+を使用することができます</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、
+インストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install SVN? (Y/N)</td>
+<td>代わりにSVNの、我々はまた、svn
+を使用することができます</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、
+インストールプロセスを終了したい場合は|</td>
+</tr>
+</tbody>
+</table>
+<p>インストール プロセスを続行すると、インストールの実行中に、次のプロセスが発生します。</p>
+<ul class="simple">
+<li>読み取りパッケージのリスト。</li>
+<li>依存関係ツリーを構築します。</li>
+<li>読み取り状態情報。</li>
+<li>インストールされた余分なパッケージを一覧表示します。</li>
+<li>インストールされている新しいパッケージを一覧表示します。</li>
+<li>アップグレード ファイルの数、新しくインストールされた、削除された、ないアップグレード。</li>
+<li>最後に、SVN のインストールを完了を取得します。次のスクリーン ショットは、ubuntu での SVN のインストールのプロセスについて示しています。</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure svn install
+Install SVN? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         !Subversion!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ libserf-1-1 libsvn1
+Suggested packages:
+ subversion-tools db5.3-util
+The following NEW packages will be installed:
+ libserf-1-1 libsvn1 subversion
+<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">8</span> not upgraded.
+Need to get 1,240 kB of archives.
+After this operation, 4,701 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libserf-1-1 amd64 1.3.3-1ubuntu0.1 <span class="o">[</span>42.2 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libsvn1 amd64 1.8.8-1ubuntu3.1 <span class="o">[</span><span class="m">917</span> kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main subversion amd64 1.8.8-1ubuntu3.1 <span class="o">[</span><span class="m">280</span> kB<span class="o">]</span>
+Fetched 1,240 kB in 43s <span class="o">(</span>28.3 kB/s<span class="o">)</span>
+Selecting previously unselected package libserf-1-1:amd64.
+<span class="o">(</span>Reading database ... <span class="m">211229</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libserf-1-1_1.3.3-1ubuntu0.1_amd64.deb ...
+Unpacking libserf-1-1:amd64 <span class="o">(</span>1.3.3-1ubuntu0.1<span class="o">)</span> ...
+Selecting previously unselected package libsvn1:amd64.
+Preparing to unpack .../libsvn1_1.8.8-1ubuntu3.1_amd64.deb ...
+Unpacking libsvn1:amd64 <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Selecting previously unselected package subversion.
+Preparing to unpack .../subversion_1.8.8-1ubuntu3.1_amd64.deb ...
+Unpacking subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up libserf-1-1:amd64 <span class="o">(</span>1.3.3-1ubuntu0.1<span class="o">)</span> ...
+Setting up libsvn1:amd64 <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Setting up subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.5<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package subversion from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+SVN: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>国連のインストール<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>国連、SVN、ubuntu をインストールするために使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure svn uninstall
+</pre></div>
+</div>
+<p>上記のコマンドを入力した後、次の操作が発生します表形式で表示されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="17%" />
+<col width="27%" />
+<col width="9%" />
+<col width="47%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Uninstall SVN? (Y/N)</td>
+<td>代わりにSVNの、我々はまた、svn
+を使用することができます</td>
+<td>Y(Yes)</td>
+<td>ユーザーの願いはアンインストールプロセスを続行する場合、
+それらはYと入力をすることができます</td>
+</tr>
+<tr class="row-odd"><td>Uninstall SVN? (Y/N)</td>
+<td>代わりにSVNの、我々はまた、svn
+を使用することができます</td>
+<td>N(No)</td>
+<td>ユーザーの願いはアンインストールプロセスを終了するには場合、
+それらはNとして入力をすることができます|</td>
+</tr>
+</tbody>
+</table>
+<p>国連のインストール プロセスを続行すると、国連のインストールの実行中に、次のプロセスが発生します。</p>
+<ul class="simple">
+<li>読み取りパッケージのリスト。</li>
+<li>依存関係ツリーを構築します。</li>
+<li>読み取り状態情報。</li>
+<li>自動的にインストールされているパッケージを一覧表示します。</li>
+<li>削除されるパッケージを一覧表示します。</li>
+<li>アップグレード ファイルの数、新しくインストールされた、削除された、ないアップグレード。</li>
+</ul>
+<p>最後に、SVN の国連のインストールを完了を取得します。次のスクリーン ショットは、国連の ubuntu での SVN のインストールのプロセスについて示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure svn uninstall
+Uninstall SVN? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*        Pharaoh Tools        *
+*         !Subversion!        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removing Package subversion
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+ libserf-1-1 libsvn1
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+The following packages will be REMOVED:
+ subversion
+<span class="m">0</span> upgraded, <span class="m">0</span> newly installed, <span class="m">1</span> to remove and <span class="m">8</span> not upgraded.
+After this operation, 1,425 kB disk space will be freed.
+<span class="o">(</span>Reading database ... <span class="m">211322</span> files and directories currently installed.<span class="o">)</span>
+Removing subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removed Package subversion from the Packager Apt
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+SVN: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>確保するため<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>SVN を確保するために使用するコマンドを次に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure svn ensure
+</pre></div>
+</div>
+<p>確認プロセスは、次の関数を実行します。</p>
+<ul class="simple">
+<li>それは、モジュールがインストールされているかどうか、およびバージョンを確認していないかどうかを確認します。</li>
+<li>モジュールがすでにインストールされている場合は、既に存在していたように報告されます。</li>
+<li>モジュールがない場合、ユーザーのマシンで利用できる、インストールを続行します。</li>
+</ul>
+<p>次のスクリーン ショットを確認するプロセスを示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure svn ensure
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+sh: 1: svn: not found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module SVN reports itself as Not Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Installing as not installed
+*******************************
+*        Pharaoh Tools        *
+*         !Subversion!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ subversion-tools db5.3-util
+The following NEW packages will be installed:
+ subversion
+<span class="m">0</span> upgraded, <span class="m">1</span> newly installed, <span class="m">0</span> to remove and <span class="m">8</span> not upgraded.
+Need to get <span class="m">0</span> B/280 kB of archives.
+After this operation, 1,425 kB of additional disk space will be used.
+Selecting previously unselected package subversion.
+<span class="o">(</span>Reading database ... <span class="m">211282</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../subversion_1.8.8-1ubuntu3.1_amd64.deb ...
+Unpacking subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up subversion <span class="o">(</span>1.8.8-1ubuntu3.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package subversion from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>利点<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ヘルプとインストールでは、宣言で使用されるパラメーター、アンインストール中の利点を追加する必要がある大文字と小文字が区別されません確認します
+他の人をに比べてください。</li>
+<li>ユーザーは、インストールを実行する前に空室状況について確認できます。</li>
+<li>それは、パッケージを上書きしません、それゆえそれはより少なく時間のかかる。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jsvn.rst">
+          SVN
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

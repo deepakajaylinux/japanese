@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Templating &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Ubuntu Compiler" href="jubuntucompiler.html" />
+    <link rel="prev" title="Teamcity モジュール" href="jteamcity.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Templating</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">コマンドヘルプ</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jteamcity.html"
+         title="Previous Chapter: Teamcity モジュール">&laquo; Teamcity モジュール</a></li>
+  <li><a href="jubuntucompiler.html"
+         title="Next Chapter: Ubuntu Compiler">Ubuntu Compiler &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jtemplating.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="templating">
+<h1>Templating<a class="headerlink" href="#templating" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ptconfigureファイルのコンテキストで使用される用語のテンプレートフォーマットは、特定のアプリケーションのために特別に意図された固有の非実行可能ファイル形式を規定する多くのソフトウェア·アプリケーションの一般的な特徴を指す。</p>
+<p>テンプレートの形式は、そのファイルのファイルタイプは、他のファイルを作成するから、非常に高い出発点として意図されていることを示すものである。</p>
+<p>これらの種類のファイルは通常、新しい値でテンプレートファイルをインストールされている。それは。UbuntuとCentOSので動作するようにスーツ</p>
+</div>
+<div class="section" id="id2">
+<h2>コマンドヘルプ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>helpコマンドは、目的に関して、ユーザーをリードし、同様に約テンプレートモジュールに含まれているオプション。helpコマンドは、Ptconfigureモジュール下のテンプレートの代わりのパラメータをリストに表示します。また、USERAの€の™sのマシンを検出するための構文について説明します。</p>
+<p>テンプレートのヘルプコマンドを以下に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure templating <span class="nb">help</span>
+</pre></div>
+</div>
+<p>次のスクリーンショットは、テンプレートについて説明しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure templating <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install a templated file with new values.
+
+ Templating, templating, template
+
+       - install
+       Installs a template
+       example: ptconfigure template install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ptconfigureの文脈では、テンプレート複数の実行中の仮想マシンのためのツールとして保存その後、ゲストオペレーティングシステムとして単一の仮想マシン·イメージを作成することをいう。技術は仮想化とクラウドコンピューティング管理の両方をインストールするために使用され、大規模なサーバー·ウェアハウスで一般的ですされている。</p>
+<p>次のコマンドは、テンプレートをインストールするようユーザーに役立ちます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure templating install
+</pre></div>
+</div>
+<p>次のスクリーンショットは、ユーザーをガイドインストールしてください。</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="20%" />
+<col width="38%" />
+<col width="11%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">別のパラメータ</th>
+<th class="head">構文</th>
+<th class="head">注釈</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install templating
+functionality (Y/N)</td>
+<td>代わりに使用したの templatingユーザーは使用す
+ることができますTemplating, templating,
+template</td>
+<td>Y(Yes)</td>
+<td>テンプレートはptconfigure
+の下にインストールすることができます。</td>
+</tr>
+<tr class="row-odd"><td>Install templating
+functionality (Y/N)</td>
+<td>代わりに使用したの templatingユーザーは使用す
+ることができますTemplating, templating,
+template|</td>
+<td>N(No)</td>
+<td>それは、画面を終了することができます。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>メリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>テンプレート処理が異なる目的のためにさまざまなコンテキストで使用されています。</li>
+<li>特定の目的は、使用中のソフトウェアアプリケーションまたはテンプレートの際に通常偶発的です</li>
+<li>非敏感</li>
+<li>スーツはUbuntuとCentOSので動作するように。</li>
+<li>新しい値で更新バージョンが可能です。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jtemplating.rst">
+          Templating
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

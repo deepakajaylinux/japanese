@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>SFTP &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="SshEncrypt" href="jsshencrypt.html" />
+    <link rel="prev" title="Service" href="jservice.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">SFTP</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jservice.html"
+         title="Previous Chapter: Service">&laquo; Service</a></li>
+  <li><a href="jsshencrypt.html"
+         title="Next Chapter: SshEncrypt">SshEncrypt &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jsftp.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="sftp">
+<h1>SFTP<a class="headerlink" href="#sftp" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールは、別に 1 つのシステムからファイルを転送するのに支援します。アップロードしたり、システムにファイルをダウンロードできます。自動化が可能です。Put し、get オプションでは、このモジュールで利用できます。それはあなたの環境の構成を指定します。それはユーザーフレンドリー Ubuntu とセント OS。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドは、指定されたコマンドに関する情報を見つけるために使用します。SFTP の機能への変更についてこのヘルプ コマンドを使用できます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure sftp <span class="nb">help</span>
+</pre></div>
+</div>
+<p>次のスクリーン ショットは、あなたをご案内いたします。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>handles SFTP Transfer Functions.
+
+ SFTP, sftp
+
+       - put
+       Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from <span class="nb">local </span>to remote
+       example: ptconfigure sftp put
+       example: ptconfigure sftp put --yes --environment-name<span class="o">=</span>staging --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
+       example: ptconfigure sftp put --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span> <span class="c"># will ask for server details</span>
+
+       - get
+       Will ask you <span class="k">for</span> details <span class="k">for</span> servers, <span class="k">then</span> copy a file or directory from remote to <span class="nb">local</span>
+<span class="nb">       </span>example: ptconfigure sftp get
+       example: ptconfigure sftp get --yes --environment-name<span class="o">=</span>staging --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span>
+       example: ptconfigure sftp get --yes --source<span class="o">=</span><span class="s2">&quot;/tmp/file&quot;</span> --target<span class="o">=</span><span class="s2">&quot;/home/user/file&quot;</span> <span class="c"># will ask for server details</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>会社として、そして個人として、SFTP は各パートナーの技術課題、そのエンジニア リングの要件を満たすこと、彼らのビジネス目標を満たすに専用されています。それはモジュールをインストールする SFTP ptconfigure の下でちょうど、下記のコマンドを使用して明白なプロセス</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure SFTP put
+</pre></div>
+</div>
+<p>コマンドし、システムは、問題を提起する与えた後</p>
+<p>Install SFTP server group? Y/N</p>
+<p>その後 Y として入力した場合</p>
+<p>SSh timeout section?</p>
+<p>ユーザーが値を入力するには</p>
+<p>Please enter remote ssh port</p>
+<p>既定値は 22 です。ユーザーが任意の値を入力できます。</p>
+<p>Enter server host IP?</p>
+<p>ユーザーがユーザー名、パスワード、およびキーのパスを入力します。</p>
+<p>Add another server?</p>
+<p>ユーザー入力 Y として彼がある新しいサーバー名を入力する場合</p>
+<p>それからすべては接続されます。</p>
+<p>N 以前として入力した場合はサーバー名がアクセスできます。</p>
+<p>次のスクリーン ショットは、あなたをご案内いたします。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp put
+
+SFTP on Server group? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Please Enter SSH Timeout in seconds
+90
+Please Enter remote SSH Port
+22
+Use Environments Configured in Project? <span class="o">(</span>Y/N<span class="o">)</span>
+N
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
+Enter <span class="nb">local source </span>file path
+/root/vv
+Enter remote target file path
+/root/gg/vv
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Opening SFTP Connections...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> All SFTP Puts Completed
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="13%" />
+<col width="31%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">代替パラメータ</th>
+<th class="head">注釈</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>put</td>
+<td>2代替パラメータがあります。-
+SFTP, sftp</td>
+<td>対象とするソース - ファイルを転送することができます</td>
+</tr>
+<tr class="row-odd"><td>get</td>
+<td>2代替パラメータがあります。-
+SFTP, sftp</td>
+<td>ソースへのパス - ファイルがリモートシステムからダウンロード
+することができます|</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>遠隔地からマルチ サーバー。</li>
+<li>指定したファイルは使用可能なエラー メッセージが来る。</li>
+<li>Accessability は許可せずに困難です。</li>
+<li>自動的に上書きする場合に既にファイルの場合は存在します。</li>
+<li>非大文字小文字を区別します。</li>
+<li>秘密保持とセキュリティが可能です。</li>
+</ul>
+<p>ほとんどの技術技術の課題と彼らの成功を有効にする顧客の解決は SFTP の使命と情熱です。</p>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jsftp.rst">
+          SFTP
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

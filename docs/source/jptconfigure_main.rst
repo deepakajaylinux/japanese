@@ -82,9 +82,29 @@ ptconfigureモジュールと遊ぶ
    jprocess
    jptconfigure
    jptdeploy
+   jpttest
    jpython
    jra
    jrubybdd
    jrubyrvm
    jrubysystem
    jruncommand
+   jseleniumserver
+   jservice
+   jsftp
+   jsshencrypt
+   jsshharden
+   jsshkeygen
+   jsshkeyinstall
+   jstandardtools
+   jsudonopass
+   jsvn
+   jteamcity   
+   jtemplating
+   jubuntucompiler
+   jvirtualbox
+   jvnc
+   jvncpassword
+   jwireframesketcher
+   jxvfb
+   

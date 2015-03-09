@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Selenium Server &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Service" href="jservice.html" />
+    <link rel="prev" title="RunCommand" href="jruncommand.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Selenium Server</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jruncommand.html"
+         title="Previous Chapter: RunCommand">&laquo; RunCommand</a></li>
+  <li><a href="jservice.html"
+         title="Next Chapter: Service">Service &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jseleniumserver.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="selenium-server">
+<h1>Selenium Server<a class="headerlink" href="#selenium-server" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>セレンは、ポータブル ソフトウェア フレームワーク web アプリケーションのテストです。セレンはテスト スクリプト言語 (セレン IDE） を習得することがなくテストを作成するための録音/再生ツールを提供します。また人気のあるプログラミング言語、Java、c#、Groovy、Perl、PHP、Python、Ruby などの数のテスト ドメイン固有言語 (Selenese) [1] テストを記述するを提供します。テストは、最新の web ブラウザーに対して実行できます。セレンの Windows、Linux、および Macintosh プラットフォームで展開します。</p>
+<p>私たちを見てみましょうどのようにこのモジュール促進セレン サーバーをインストールするユーザーについて。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドと同様、目的に関するユーザー ガイドとしてセレン サーバー モジュールに含まれているオプションについて。セレン サーバー モジュールの代替パラメーターを示します。また、それをインストールするための構文について説明します。セレン サーバー モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure seleniumserver <span class="nb">help</span>
+</pre></div>
+</div>
+<p>ヘルプ コマンドを宣言する構文は大文字小文字を区別する加えられた利点であります。次のスクリーン ショットは、セレン サーバー モジュールの下に、help コマンドについて視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure SeleniumServer help
+******************************
+
+
+ This command allows you to install Selenium Server.
+
+ SeleniumServer, selenium-server, selenium, selenium-srv, seleniumserver
+
+       - install
+       Installs Selenium Server. Note, you&#39;ll also need Java installed
+       as it is a prerequisite for Selenium
+       example: ptconfigure selenium install
+       example: ptconfigure selenium install --with-chrome-driver # will set the executor command to use default chrome driver
+
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>セレン サーバーをインストールするために使用されるコマンドは下記に示されているコマンドを入力するだけです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure seleniumserver install
+</pre></div>
+</div>
+<p>上記のコマンドのスクリーン ショットは以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure selenium install
+
+Install Selenium Server? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Selenium Srv        *
+*******************************
+Enter Selenium Version
+<span class="o">(</span>0<span class="o">)</span> 2.39
+<span class="o">(</span>1<span class="o">)</span> 2.40
+<span class="o">(</span>2<span class="o">)</span> 2.41
+<span class="o">(</span>3<span class="o">)</span> 2.42
+<span class="o">(</span>4<span class="o">)</span> 2.43
+<span class="o">(</span>5<span class="o">)</span> 2.44
+5
+PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/SeleniumServer/Model/SeleniumServerAllLinux.php on line 50
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Command <span class="s1">&#39;git&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Command <span class="s1">&#39;gitk&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Command <span class="s1">&#39;git-cola&#39;</span> found
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/ptconfigure-temp-script-96670533394.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-96670533394.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-96670533394.sh Permissions
+Executing /tmp/ptconfigure-temp-script-96670533394.sh
+--2015-02-12 15:31:34--  http://selenium-release.storage.googleapis.com//selenium-server-standalone-.0.jar
+Resolving selenium-release.storage.googleapis.com <span class="o">(</span>selenium-release.storage.googleapis.com<span class="o">)</span>... 74.125.236.43, 74.125.236.42, 74.125.236.44, ...
+Connecting to selenium-release.storage.googleapis.com <span class="o">(</span>selenium-release.storage.googleapis.com<span class="o">)</span><span class="p">|</span>74.125.236.43<span class="p">|</span>:80... connected.
+HTTP request sent, awaiting response... <span class="m">404</span> Not Found
+2015-02-12 15:31:35 ERROR 404: Not Found.
+
+mv: cannot stat ‘/tmp/selenium/*’: No such file or directory
+mv: cannot stat ‘selenium-server-standalone-.0.jar’: No such file or directory
+Temp File /tmp/ptconfigure-temp-script-96670533394.sh Removed
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+SeleniumServer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>上記のコマンドを入力した後、次の操作が発生します表形式で表示されます。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="13%" />
+<col width="39%" />
+<col width="11%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Selenium
+Server? (Y/N)</td>
+<td>の代わりに seleniumserver, 我々は使用することがで
+きますSeleniumServer, Selenium, selenium-srv ,
+selenium-server.</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、
+インストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install Selenium
+Server? (Y/N)</td>
+<td>の代わりに seleniumserver, 我々は使用することがで
+きますSeleniumServer, Selenium, selenium-srv ,
+selenium-server.|</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、
+インストールプロセスを終了したい場合は</td>
+</tr>
+</tbody>
+</table>
+<p>次のスクリーン ショットは、インストールのプロセスについての絵の表現を与えることができます。</p>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ヘルプとインストールで使用されるパラメーター大文字小文字が区別されません中に他の人に比べて、追加の利点は。</li>
+<li>それは両方の Ubuntu と同様、裕福なセントの OS として。</li>
+<li>C#、java、python、php、perl、ruby と同様実行などお好みのプログラミング言語で自動テストを開発することができます。
+クロム、Firefox や IE などブラウザーの別の組合せにそれらのテスト</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jseleniumserver.rst">
+          Selenium Server
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

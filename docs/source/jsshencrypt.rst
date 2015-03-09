@@ -1,0 +1,108 @@
+===========
+SshEncrypt
+===========
+
+あらすじ
+----------------
+
+Sshencrypt は、暗号化された秘密キーをインストールするユーザーを支援します。それはメッセージをエンコード プロセスまたは許可された当事者だけそのような方法で情報がそれを読むことができます。Sshencrypt はそれ自身のない傍受防止措置をインターセプターにメッセージ コンテンツを拒否します。暗号化方式、メッセージまたはプレーン テキストと呼ばれる情報は、暗号化アルゴリズムを使用して暗号化されて、場合にのみ読み取ることができます生成 ciphertxt 復号化します。Ubuntu や CentOS を慰めます。
+
+ヘルプ コマンド
+-----------------------
+
+ヘルプ コマンド ptconfigure でキーを処理するためにユーザーをガイドします。このヘルプ コマンドは sshencrypt をインストールするユーザーをガイドします。これも、キーの暗号化を解除します。暗号化は、""残りの部分でデータを保護するために使用できるコンピューターとストレージ ・ デバイス上のファイルなどです。近年ノート パソコンまたはバックアップ ドライブの紛失や盗難を通じて公開されているお客様の個人記録などの機密データの多数の報告があった。Sshencrypt のヘルプ コマンドを以下に示します。
+
+.. code-block:: bash
+
+		ptconfigure  sshencrypt help
+
+
+
+開始後の入力上記のコマンドでは、暗号化された秘密鍵をインストールする機能します。それの教理のスクリーン ショットで機能します。
+次のスクリーン ショットを示しています sshencrypted について
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure SshEncrypt help
+
+ ******************************
+
+
+    This command allows you to install an encrypted private SSH key or to encrypt one.
+
+    SshEncrypt, ssh-encrypt, sshencrypt
+
+        - encrypt
+        Installs an encrypted SSH Key.
+        example: ptconfigure ssh-encrypt install
+
+        - unencrypt
+        Installs an encrypted SSH Key.
+        example: ptconfigure ssh-encrypt install
+
+ ------------------------------
+ End Help
+ ******************************
+
+代替パラメーター
+-----------------------------------
+
+Sshencrypt で利用可能な多くの選択肢があります。各代替案にはこのモジュールに追加の優位を示しています。彼らは、
+SshEncrypt, ssh-encrypt, sshencrypt.
+
+
+暗号化
+-------------
+
+暗号化されたからのインストールに使用します。原則的に、キーを所有せず、メッセージを解読することが可能だが、適切に設計された暗号化方式では、大規模な計算資源とスキルが必要です。下記のコマンドを考えるだけで暗号化します。
+      
+
+.. code-block:: bash
+
+		ptconfigure  ssh-encrypt install
+
+上記のコマンドの絵の表現は以下します。
+
+.. code-block:: bash
+
+        - encrypt
+        Installs an encrypted SSH Key.
+        example: ptconfigure ssh-encrypt install
+
+
+それは質問攻めにコマンド入力活性化後。
+
+ときユーザー入力はいに自動的にインストールするときに、システムからのチェックで暗号化されます。ない場合、インストールを終了します。
+
+
+復号化します。
+----------------
+
+
+それが ssh 暗号化されていないのインストールに使用されるキー。正規の受信者を受信者にすることはできません不正なインターセプター創始者によって付属のキーで簡単にメッセージを解読できます。コマンドを以下に与えられただけで復号化します。
+
+
+.. code-block:: bash
+
+		ptconfigure  ssh-encrypt install
+
+上記のコマンドの絵の表現は以下します。
+
+
+.. code-block:: bash
+
+        - unencrypt
+        Installs an encrypted SSH Key.
+        example: ptconfigure ssh-encrypt install
+
+
+利点
+----------------
+
+* 秘密を維持することができます。
+* Ubuntu や CentOS で裕福な。
+* 非大文字小文字を区別します。
+* 受信側のパーティにメッセージを読み取るをできるように、暗号化キーにアクセスできます。
+
+

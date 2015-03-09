@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Wireframe sketcher &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="ptconfigureモジュールと遊ぶ" href="jptconfigure_main.html" />
+    <link rel="next" title="Xvfb" href="jxvfb.html" />
+    <link rel="prev" title="VNCPasswd" href="jvncpassword.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Wireframe sketcher</a><ul>
+<li><a class="reference internal" href="#id1">あらすじ</a></li>
+<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">利点</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jvncpassword.html"
+         title="Previous Chapter: VNCPasswd">&laquo; VNCPasswd</a></li>
+  <li><a href="jxvfb.html"
+         title="Next Chapter: Xvfb">Xvfb &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jwireframesketcher.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="wireframe-sketcher">
+<h1>Wireframe sketcher<a class="headerlink" href="#wireframe-sketcher" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Wireframing は、任意の画面のデザイン プロセスで重要なステップです。主に、容易にあなたのユーザー情報を処理する方法に応じてレイアウトを計画するため、設計の情報の階層を定義することができます。</p>
+<p>デザイナーのレイアウトと色、書体の選択またはさらにコピー気を取らされることがなくインターフェイスの相互作用を計画することができますので、Wireframing は重要です。ユーザーは、黒と白のワイヤ フレームに行く場所を把握できない場合、問題ではない最終的に使用する色はどのような私のクライアントに説明したいです。ボタンは、光沢のあるまたは鮮やかな色ではない場合でも明らかな必要があります。</p>
+</div>
+<div class="section" id="id2">
+<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、Wireframing のためのワイヤ フレーム スケッチャーをインストールすることができます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>               ptconfigure wireframe-sketcher <span class="nb">help</span>
+
+
+Kevell@Corp:/# ptconfigure WireframeSketcher <span class="nb">help</span>
+
+******************************
+
+ This <span class="nb">command </span>allows you to install Wireframe Sketcher, <span class="k">for</span> Wireframing
+
+ WireframeSketcher, wireframe-sketcher, wireframesketcher
+
+       - install
+       Installs the latest version of Developer Tools
+       example: ptconfigure wireframe-sketcher install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>とき、ユーザーはマシンでワイヤ フレーム スケッチャーをインストールする必要があります。以下に、コマンドと、インストール プロセスのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>               ptconfigure wireframe-sketcher install
+
+
+kevell@corp:/: ptconfigure wireframe-sketcher install
+PHP Warning:  PHP Startup: Unable to load dynamic library <span class="s1">&#39;/usr/lib/php5/20121212/mcrypt.so&#39;</span> - /usr/lib/php5/20121212/mcrypt.so: cannot open
+shared object file: No such file or directory in Unknown on line 0
+Install Wireframe Sketcher? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Wireframe Sketcher        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Java reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/ptconfigure-temp-script-6527022738.sh
+chmod <span class="m">755</span> /tmp/ptconfigure-temp-script-6527022738.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-6527022738.sh Permissions
+Executing /tmp/ptconfigure-temp-script-6527022738.sh
+Cloning into <span class="s1">&#39;wireframe-sketcher&#39;</span>...
+remote: Counting objects: 6, <span class="k">done</span>.
+remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+dpkg: dependency problems prevent configuration of wireframesketcherstudio:
+wireframesketcherstudio depends on default-jre <span class="p">|</span> java5-runtime <span class="p">|</span> java6-runtime<span class="p">;</span> however:
+ Package default-jre is not installed.
+ Package java5-runtime is not installed.
+ Package java6-runtime is not installed.
+wireframesketcherstudio depends on libwebkitgtk-1.0-0 <span class="p">|</span> libwebkit-1.0-2<span class="p">;</span> however:
+ Package libwebkitgtk-1.0-0 is not installed.
+ Package libwebkit-1.0-2 is not installed.
+
+dpkg: error processing package wireframesketcherstudio <span class="o">(</span>--install<span class="o">)</span>:
+dependency problems - leaving unconfigured
+Errors were encountered <span class="k">while</span> processing:
+wireframesketcherstudio
+Selecting previously unselected package wireframesketcherstudio.
+<span class="o">(</span>Reading database ... <span class="m">211803</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../WireframeSketcher-4.3.1_amd64.deb ...
+Unpacking wireframesketcherstudio <span class="o">(</span>4.3.1-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> hicolor-icon-theme <span class="o">(</span>0.13-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Correcting dependencies... Done
+The following packages were automatically installed and are no longer required:
+ libaio1 libframework2-zend-server libicu36 libmcrypt4 liboci-us-locales-zend
+ libsqlite0 libssl0.9.8 lighttpd-zend-server php-5.3-bcmath-zend-server
+ php-5.3-bz2-zend-server php-5.3-calendar-zend-server
+ php-5.3-ctype-zend-server php-5.3-curl-zend-server php-5.3-exif-zend-server
+ php-5.3-fcgi-zend-server php-5.3-fileinfo-zend-server
+ php-5.3-ftp-zend-server php-5.3-gettext-zend-server php-5.3-imap-zend-server
+ php-5.3-intl-zend-server php-5.3-ldap-zend-server php-5.3-loader-zend-server
+ php-5.3-mbstring-zend-server php-5.3-mcrypt-zend-server
+ php-5.3-oci8-zend-server php-5.3-pdo-mysql-zend-server
+ php-5.3-pdo-pgsql-zend-server php-5.3-pgsql-zend-server
+ php-5.3-phar-zend-server php-5.3-posix-zend-server php-5.3-soap-zend-server
+ php-5.3-sockets-zend-server php-5.3-sqlite-zend-server
+ php-5.3-tidy-zend-server php-5.3-tokenizer-zend-server
+ php-5.3-xsl-zend-server php-5.3-zip-zend-server sqlite sqlite3
+ ttf-dejavu-core zend-server-doc
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+The following extra packages will be installed:
+ default-jre fonts-dejavu-extra libatk-wrapper-java libatk-wrapper-java-jni
+ libbonobo2-0 libbonobo2-common libgconf2-4 libgif4 libgnome2-0 libgnome2-bin
+ libgnome2-common libgnomevfs2-0 libgnomevfs2-common libidl-common libidl0
+ libjavascriptcoregtk-1.0-0 liborbit-2-0 liborbit2 libwebkitgtk-1.0-0
+ libwebkitgtk-1.0-common openjdk-7-jre
+Suggested packages:
+ libbonobo2-bin desktop-base libgnomevfs2-bin libgnomevfs2-extra
+ gnome-mime-data icedtea-7-plugin
+The following NEW packages will be installed:
+ default-jre fonts-dejavu-extra libatk-wrapper-java libatk-wrapper-java-jni
+ libbonobo2-0 libbonobo2-common libgconf2-4 libgif4 libgnome2-0 libgnome2-bin
+ libgnome2-common libgnomevfs2-0 libgnomevfs2-common libidl-common libidl0
+ libjavascriptcoregtk-1.0-0 liborbit-2-0 liborbit2 libwebkitgtk-1.0-0
+ libwebkitgtk-1.0-common openjdk-7-jre
+<span class="m">0</span> upgraded, <span class="m">21</span> newly installed, <span class="m">0</span> to remove and <span class="m">11</span> not upgraded.
+<span class="m">1</span> not fully installed or removed.
+Need to get 11.9 MB of archives.
+After this operation, 53.1 MB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgif4 amd64 4.1.6-11 <span class="o">[</span>28.6 kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main libatk-wrapper-java all 0.30.4-4 <span class="o">[</span>30.2 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/main libatk-wrapper-java-jni amd64 0.30.4-4 <span class="o">[</span>25.2 kB<span class="o">]</span>
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main openjdk-7-jre amd64 7u71-2.5.3-0ubuntu0.14.04.1 <span class="o">[</span><span class="m">171</span> kB<span class="o">]</span>
+Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty/main default-jre amd64 2:1.7-51 <span class="o">[</span><span class="m">940</span> B<span class="o">]</span>
+Get:6 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libjavascriptcoregtk-1.0-0 amd64 2.4.7-1~ubuntu1 <span class="o">[</span>1,820 kB<span class="o">]</span>
+Get:7 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libwebkitgtk-1.0-common all 2.4.7-1~ubuntu1 <span class="o">[</span><span class="m">107</span> kB<span class="o">]</span>
+Get:8 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libwebkitgtk-1.0-0 amd64 2.4.7-1~ubuntu1 <span class="o">[</span>7,229 kB<span class="o">]</span>
+Get:9 http://in.archive.ubuntu.com/ubuntu/ trusty/main libbonobo2-common all 2.32.1-0ubuntu5 <span class="o">[</span>34.2 kB<span class="o">]</span>
+Get:10 http://in.archive.ubuntu.com/ubuntu/ trusty/main libidl-common all 0.8.14-0.2ubuntu4 <span class="o">[</span>8,196 B<span class="o">]</span>
+Get:11 http://in.archive.ubuntu.com/ubuntu/ trusty/main libidl0 amd64 0.8.14-0.2ubuntu4 <span class="o">[</span>65.9 kB<span class="o">]</span>
+Get:12 http://in.archive.ubuntu.com/ubuntu/ trusty/main liborbit-2-0 amd64 1:2.14.19-0.3 <span class="o">[</span><span class="m">138</span> kB<span class="o">]</span>
+Get:13 http://in.archive.ubuntu.com/ubuntu/ trusty/main liborbit2 amd64 1:2.14.19-0.3 <span class="o">[</span>14.7 kB<span class="o">]</span>
+Get:14 http://in.archive.ubuntu.com/ubuntu/ trusty/main libbonobo2-0 amd64 2.32.1-0ubuntu5 <span class="o">[</span><span class="m">214</span> kB<span class="o">]</span>
+Get:15 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgnomevfs2-common amd64 1:2.24.4-1ubuntu6 <span class="o">[</span>22.8 kB<span class="o">]</span>
+Get:16 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgnomevfs2-0 amd64 1:2.24.4-1ubuntu6 <span class="o">[</span><span class="m">210</span> kB<span class="o">]</span>
+Get:17 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgnome2-common all 2.32.1-4ubuntu1 <span class="o">[</span>33.3 kB<span class="o">]</span>
+Get:18 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgnome2-bin amd64 2.32.1-4ubuntu1 <span class="o">[</span>15.0 kB<span class="o">]</span>
+Get:19 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgnome2-0 amd64 2.32.1-4ubuntu1 <span class="o">[</span>43.2 kB<span class="o">]</span>
+Get:20 http://in.archive.ubuntu.com/ubuntu/ trusty/main fonts-dejavu-extra all 2.34-1ubuntu1 <span class="o">[</span>1,736 kB<span class="o">]</span>
+Get:21 http://in.archive.ubuntu.com/ubuntu/ trusty/main libgconf2-4 amd64 3.2.6-0ubuntu2 <span class="o">[</span>2,042 B<span class="o">]</span>
+Fetched 11.9 MB in 6min 51s <span class="o">(</span>29.1 kB/s<span class="o">)</span>
+Selecting previously unselected package libgif4:amd64.
+<span class="o">(</span>Reading database ... <span class="m">212686</span> files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libgif4_4.1.6-11_amd64.deb ...
+Unpacking libgif4:amd64 <span class="o">(</span>4.1.6-11<span class="o">)</span> ...
+Selecting previously unselected package libatk-wrapper-java.
+Preparing to unpack .../libatk-wrapper-java_0.30.4-4_all.deb ...
+Unpacking libatk-wrapper-java <span class="o">(</span>0.30.4-4<span class="o">)</span> ...
+Selecting previously unselected package libatk-wrapper-java-jni:amd64.
+Preparing to unpack .../libatk-wrapper-java-jni_0.30.4-4_amd64.deb ...
+Unpacking libatk-wrapper-java-jni:amd64 <span class="o">(</span>0.30.4-4<span class="o">)</span> ...
+Selecting previously unselected package openjdk-7-jre:amd64.
+Preparing to unpack .../openjdk-7-jre_7u71-2.5.3-0ubuntu0.14.04.1_amd64.deb ...
+Unpacking openjdk-7-jre:amd64 <span class="o">(</span>7u71-2.5.3-0ubuntu0.14.04.1<span class="o">)</span> ...
+Selecting previously unselected package default-jre.
+Preparing to unpack .../default-jre_2%3a1.7-51_amd64.deb ...
+Unpacking default-jre <span class="o">(</span>2:1.7-51<span class="o">)</span> ...
+Selecting previously unselected package libjavascriptcoregtk-1.0-0:amd64.
+Preparing to unpack .../libjavascriptcoregtk-1.0-0_2.4.7-1~ubuntu1_amd64.deb ...
+Unpacking libjavascriptcoregtk-1.0-0:amd64 <span class="o">(</span>2.4.7-1~ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libwebkitgtk-1.0-common.
+Preparing to unpack .../libwebkitgtk-1.0-common_2.4.7-1~ubuntu1_all.deb ...
+Unpacking libwebkitgtk-1.0-common <span class="o">(</span>2.4.7-1~ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libwebkitgtk-1.0-0:amd64.
+Preparing to unpack .../libwebkitgtk-1.0-0_2.4.7-1~ubuntu1_amd64.deb ...
+Unpacking libwebkitgtk-1.0-0:amd64 <span class="o">(</span>2.4.7-1~ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libbonobo2-common.
+Preparing to unpack .../libbonobo2-common_2.32.1-0ubuntu5_all.deb ...
+Unpacking libbonobo2-common <span class="o">(</span>2.32.1-0ubuntu5<span class="o">)</span> ...
+Selecting previously unselected package libidl-common.
+Preparing to unpack .../libidl-common_0.8.14-0.2ubuntu4_all.deb ...
+Unpacking libidl-common <span class="o">(</span>0.8.14-0.2ubuntu4<span class="o">)</span> ...
+Selecting previously unselected package libidl0:amd64.
+Preparing to unpack .../libidl0_0.8.14-0.2ubuntu4_amd64.deb ...
+Unpacking libidl0:amd64 <span class="o">(</span>0.8.14-0.2ubuntu4<span class="o">)</span> ...
+Selecting previously unselected package liborbit-2-0:amd64.
+Preparing to unpack .../liborbit-2-0_1%3a2.14.19-0.3_amd64.deb ...
+Unpacking liborbit-2-0:amd64 <span class="o">(</span>1:2.14.19-0.3<span class="o">)</span> ...
+Selecting previously unselected package liborbit2:amd64.
+Preparing to unpack .../liborbit2_1%3a2.14.19-0.3_amd64.deb ...
+Unpacking liborbit2:amd64 <span class="o">(</span>1:2.14.19-0.3<span class="o">)</span> ...
+Selecting previously unselected package libbonobo2-0:amd64.
+Preparing to unpack .../libbonobo2-0_2.32.1-0ubuntu5_amd64.deb ...
+Unpacking libbonobo2-0:amd64 <span class="o">(</span>2.32.1-0ubuntu5<span class="o">)</span> ...
+Selecting previously unselected package libgnomevfs2-common.
+Preparing to unpack .../libgnomevfs2-common_1%3a2.24.4-1ubuntu6_amd64.deb ...
+Unpacking libgnomevfs2-common <span class="o">(</span>1:2.24.4-1ubuntu6<span class="o">)</span> ...
+Selecting previously unselected package libgnomevfs2-0:amd64.
+Preparing to unpack .../libgnomevfs2-0_1%3a2.24.4-1ubuntu6_amd64.deb ...
+Unpacking libgnomevfs2-0:amd64 <span class="o">(</span>1:2.24.4-1ubuntu6<span class="o">)</span> ...
+Selecting previously unselected package libgnome2-common.
+Preparing to unpack .../libgnome2-common_2.32.1-4ubuntu1_all.deb ...
+Unpacking libgnome2-common <span class="o">(</span>2.32.1-4ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libgnome2-bin.
+Preparing to unpack .../libgnome2-bin_2.32.1-4ubuntu1_amd64.deb ...
+Unpacking libgnome2-bin <span class="o">(</span>2.32.1-4ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libgnome2-0:amd64.
+Preparing to unpack .../libgnome2-0_2.32.1-4ubuntu1_amd64.deb ...
+Unpacking libgnome2-0:amd64 <span class="o">(</span>2.32.1-4ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package fonts-dejavu-extra.
+Preparing to unpack .../fonts-dejavu-extra_2.34-1ubuntu1_all.deb ...
+Unpacking fonts-dejavu-extra <span class="o">(</span>2.34-1ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libgconf2-4:amd64.
+Preparing to unpack .../libgconf2-4_3.2.6-0ubuntu2_amd64.deb ...
+Unpacking libgconf2-4:amd64 <span class="o">(</span>3.2.6-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers <span class="k">for</span> hicolor-icon-theme <span class="o">(</span>0.13-1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> gconf2 <span class="o">(</span>3.2.6-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> fontconfig <span class="o">(</span>2.11.0-0ubuntu4.1<span class="o">)</span> ...
+Setting up libgif4:amd64 <span class="o">(</span>4.1.6-11<span class="o">)</span> ...
+Setting up libjavascriptcoregtk-1.0-0:amd64 <span class="o">(</span>2.4.7-1~ubuntu1<span class="o">)</span> ...
+Setting up libwebkitgtk-1.0-common <span class="o">(</span>2.4.7-1~ubuntu1<span class="o">)</span> ...
+Setting up libwebkitgtk-1.0-0:amd64 <span class="o">(</span>2.4.7-1~ubuntu1<span class="o">)</span> ...
+Setting up libbonobo2-common <span class="o">(</span>2.32.1-0ubuntu5<span class="o">)</span> ...
+Setting up libidl-common <span class="o">(</span>0.8.14-0.2ubuntu4<span class="o">)</span> ...
+Setting up libidl0:amd64 <span class="o">(</span>0.8.14-0.2ubuntu4<span class="o">)</span> ...
+Setting up liborbit-2-0:amd64 <span class="o">(</span>1:2.14.19-0.3<span class="o">)</span> ...
+Setting up liborbit2:amd64 <span class="o">(</span>1:2.14.19-0.3<span class="o">)</span> ...
+Setting up libbonobo2-0:amd64 <span class="o">(</span>2.32.1-0ubuntu5<span class="o">)</span> ...
+Setting up libgnomevfs2-common <span class="o">(</span>1:2.24.4-1ubuntu6<span class="o">)</span> ...
+Setting up libgnomevfs2-0:amd64 <span class="o">(</span>1:2.24.4-1ubuntu6<span class="o">)</span> ...
+Setting up libgnome2-common <span class="o">(</span>2.32.1-4ubuntu1<span class="o">)</span> ...
+Setting up fonts-dejavu-extra <span class="o">(</span>2.34-1ubuntu1<span class="o">)</span> ...
+Setting up libgconf2-4:amd64 <span class="o">(</span>3.2.6-0ubuntu2<span class="o">)</span> ...
+Setting up default-jre <span class="o">(</span>2:1.7-51<span class="o">)</span> ...
+Setting up wireframesketcherstudio <span class="o">(</span>4.3.1-1<span class="o">)</span> ...
+Setting up libatk-wrapper-java <span class="o">(</span>0.30.4-4<span class="o">)</span> ...
+Setting up libatk-wrapper-java-jni:amd64 <span class="o">(</span>0.30.4-4<span class="o">)</span> ...
+Setting up openjdk-7-jre:amd64 <span class="o">(</span>7u71-2.5.3-0ubuntu0.14.04.1<span class="o">)</span> ...
+update-alternatives: using /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/policytool to provide /usr/bin/policytool <span class="o">(</span>policytool<span class="o">)</span> in auto mode
+Setting up libgnome2-bin <span class="o">(</span>2.32.1-4ubuntu1<span class="o">)</span> ...
+Setting up libgnome2-0:amd64 <span class="o">(</span>2.32.1-4ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6.4<span class="o">)</span> ...
+Temp File /tmp/ptconfigure-temp-script-6527022738.sh Removed
+Program Executor Deleted <span class="k">if</span> existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+WireframeSketcher: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="24%" />
+<col width="38%" />
+<col width="10%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメーター</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ptconfigure WireframeSketcher
+Install</td>
+<td>2代替パラメータのいずれかがコマンド -
+で使用することができますWireframeSketcher,
+wireframe-sketcher, wireframesketcher
+eg: ptconfigure wireframe-sketcher Install</td>
+<td>Y</td>
+<td>ユーザがオプションを提供すると、
+システムはインストールプロセスを
+開始します</td>
+</tr>
+<tr class="row-odd"><td>ptconfigure WireframeSketcher
+Install</td>
+<td>2代替パラメータのいずれかがコマンド -
+で使用することができますWireframeSketcher,
+wireframe-sketcher, wireframesketcher
+eg: ptconfigure wireframe-sketcher Install|</td>
+<td>N</td>
+<td>ユーザがオプションを提供すると、
+システムはインストールプロセス
+を停止します</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>利点<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>利用可能な機能の範囲</li>
+<li>情報や機能の相対的な優先順位</li>
+<li>特定の種類の情報を表示するための規則</li>
+<li>ディスプレイ上のさまざまなシナリオの効果</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jwireframesketcher.rst">
+          Wireframe sketcher
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
