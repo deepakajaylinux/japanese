@@ -51,6 +51,7 @@ ptconfigureモジュールと遊ぶ
    jlighttpdserver
    jlogging
    jmediatools
+   jmeter
    jmkdir
    jmodulemanager
    jmongodb

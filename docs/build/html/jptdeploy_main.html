@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PTDeploy &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PTDeploy</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">なぜ、このptdeployを構築する</a></li>
+<li><a class="reference internal" href="#id3">インストール</a></li>
+<li><a class="reference internal" href="#ptconfigureptdeploy">ptconfigure経由でptdeployのインストール</a></li>
+<li><a class="reference internal" href="#id4">ptconfigureに依存せずにptdeployのインストール</a></li>
+<li><a class="reference internal" href="#id5">高度な機能</a></li>
+<li><a class="reference internal" href="#ptdeploydapperfy">ptdeployがdapperfy使用してプロジェクトを推進してどのような方法</a></li>
+<li><a class="reference internal" href="#capifydapperfy">Capify対Dapperfy</a></li>
+<li><a class="reference internal" href="#id6">どのように使用し、可能なモジュール</a></li>
+<li><a class="reference internal" href="#available-commands">Available Commands:</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jptdeploy_main.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="ptdeploy">
+<h1>PTDeploy<a class="headerlink" href="#ptdeploy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ptdeployは、PHPのコードによる自動展開、ビルドおよびリリースの機能、Webアプリケーションのバージョン管理やインフラを持つユーザーのアプリケーションを包み込む。</p>
+<p>これは、ユーザーが容易になり、自動化された配置テンプレートを提供し、あなたのプロジェクトのために完全に連続ビルドをインストールします。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>あなたが特定のモジュールの目的を知りたい場合は、次のように単にコマンドを入力します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy ModuleName <span class="nb">help</span>
+</pre></div>
+</div>
+<p>このコマンドは、その特定のモジュールの使用法とは、ユーザーが実行できるアクションで使用可能なオプションを提供します。下のスクリーンショットは、helpコマンドを使用してptdeploy下のモジュールApacheのコントロールの使用方法を説明しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy ApacheControl <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Apache Server Control Functions.
+
+ ApacheControl, apachecontrol, apachectl
+
+         - start
+         Start the Apache server
+         example: ptdeploy apachecontrol start
+         example: ptdeploy apachecontrol start --yes --guess
+         example: ptdeploy apachecontrol start --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - stop
+         Stop the Apache server
+         example: ptdeploy apachecontrol stop
+         example: ptdeploy apachecontrol stop --yes --guess
+         example: ptdeploy apachecontrol stop --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - restart
+         Restart the Apache server
+         example: ptdeploy apachecontrol restart
+         example: ptdeploy apachecontrol restart --yes --guess
+         example: ptdeploy apachecontrol restart --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+         - reload
+         Reloads the Apache server configuration without restarting
+         example: ptdeploy apachecontrol reload
+         example: ptdeploy apachecontrol reload --yes --guess
+         example: ptdeploy apachecontrol reload --yes --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+<p>helpコマンドも宣言で使用できる代替パラメータを示します。</p>
+</div>
+<div class="section" id="id2">
+<h2>なぜ、このptdeployを構築する<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>十分に展開するために構築するために、多くのファイルをFTPまたは他の広告アドホック溶液からコピーするために必要とされる。また、エンタープライズ自動化ツールの多くが欠落していた。ファラオのツールの下でこれらの不足のptdeployを克服するために構築した。
+PHPは、ルビーはカピストラーノのギャップをfiils同じようptdeployを持っています。</p>
+<p>このツールは、プロビジョニングアプリケーションのためであり、あなたの箱に構築します。ユーザーは、1つまたは2つのPHPファイルや、迅速にセットアップクラウドフレンドリー配備パターンで自分のシステムにさえ、単純または複雑なアプリケーションの配備パターンを設定することができます。</p>
+<p>ptdeployはモジュールです。オブジェクト指向と拡張可能。したがって、ユーザーは彼らの要件に基づいて、新しいモジュールを作成して追加することができます余分なモジュールを必要とする場合。</p>
+<p>このptdeployは、ユーザーの展開のすべてのステップが単一のファイルにカバーされますラッパーとして機能します。これは、アプリケーションのインスタンスを起動するために1つのコマンドを使用できます。</p>
+</div>
+<div class="section" id="id3">
+<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ptdeployのインストールは、可用性と、ユーザーの要件に応じて2つの方法で行うことができます。彼らptdeployをインストールする2つの方法があります。</p>
+<ul class="simple">
+<li>ptconfigure経由でptdeployのインストール</li>
+<li>ptconfigureに依存せずにptdeployをインストールする。</li>
+</ul>
+</div>
+<div class="section" id="ptconfigureptdeploy">
+<h2>ptconfigure経由でptdeployのインストール<a class="headerlink" href="#ptconfigureptdeploy" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーは自分のマシンでptconfigureを持っている場合、それは、次のコマンドを使用してptdeployをインストールするための簡単​​な方法は、次のとおりです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptconfigure ptdeploy install --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>ptconfigureに依存せずにptdeployのインストール<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーは応じて、彼らは、次のコマンドを使用することができptconfigureを使用せずにptdeployをインストールしたい場合：</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5 git
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install-silent
+</pre></div>
+</div>
+<p>or</p>
+<p>以下のコマンドは、インストール時に場所を指定したいユーザーのための予測可能である。</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://git.pharaoh-tools.com/phpengine/ptdeploy <span class="o">&amp;&amp;</span> sudo php ptdeploy/install
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>高度な機能<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>ホストファイルの編集、仮想ホスト·ファイル、設定ファイル、データベースの更新とそれ以上はこのすべてを使用して自動化することができます。</p>
+<p>リモート·サーバー管理の機能を使用することにより、ユーザーは任意のサイズのインフラストラクチャ全体の展開を自動化することができます。</p>
+</div>
+<div class="section" id="ptdeploydapperfy">
+<h2>ptdeployがdapperfy使用してプロジェクトを推進してどのような方法<a class="headerlink" href="#ptdeploydapperfy" title="Permalink to this headline">¶</a></h2>
+<p>ワードdapperfyは、プロジェクトのためのいくつかのオートパイロットを作成ptdeployコマンドです。</p>
+<p>dapperfyを使用することは非常に迅速であり、そしておそらく最高の出発点です。</p>
+</div>
+<div class="section" id="capifydapperfy">
+<h2>Capify対Dapperfy<a class="headerlink" href="#capifydapperfy" title="Permalink to this headline">¶</a></h2>
+<p>dapperfyとcapifyを比較すると、それは、PHPで書かれているようdapperfyが最良であると言うことは明らかである。</p>
+<p>強力なポイントは、dapperfy ptdeployコマンドはユーザーがプロジェクトのためのオートパイロットの標準セットを提供することである。どこcapifyはRubyプロジェクトと同様の機能を提供します。</p>
+</div>
+<div class="section" id="id6">
+<h2>どのように使用し、可能なモジュール<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>単に入力し、第一、ptdeployツールを使用する方法を、私たちは見てみましょう</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy
+</pre></div>
+</div>
+<p>このコマンドはptdeployの下で利用可能なモジュールのすべての名前が一覧表示されます。</p>
+</div>
+<div class="section" id="available-commands">
+<h2>Available Commands:<a class="headerlink" href="#available-commands" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ApacheControl - Apacheサーバコントロール</li>
+<li>ApacheVHostEditor - Apacheバーチャルホスト機能</li>
+<li>AppSettings - PTDeployアプリケーションの設定</li>
+<li>Autopilot - PTConfigureオートパイロット - ユーザー定義のインストール</li>
+<li>Builderfy - PTDeploy Builderfyer - あなたのプロジェクトのためにいくつかの標準オートパイロットを作成します。</li>
+<li>CukeConf - キュウリの設定</li>
+<li>DBConfigure - データベース接続の設定機能</li>
+<li>DBInstall - データベースのインストール管理機能</li>
+<li>Dapperfy - PTDeploy Dapperfyer - あなたのプロジェクトのために自動化されたアプリケーションの展開オートパイロット</li>
+<li>Drupal - Drupalの - Drupalのための統合とテンプレート</li>
+<li>EnvironmentConfig - 環境設定 - プロジェクトのために環境を構成</li>
+<li>GitClone - GitCloneソース対照クローン機能</li>
+<li>HostEditor - ファイル管理機能をホストする</li>
+<li>Invoke - SSH呼び出し機能</li>
+<li>Joomla - Joomlaの - Joomlaのための統合とテンプレート</li>
+<li>LighttpdControl - Lighttpdのサーバーコントロール</li>
+<li>Logging -ログ - ログ記録への出力のエラー</li>
+<li>NginxControl - nginxのサーバーコントロール</li>
+<li>NginxSBEditor - nginxのサーバーのブロック機能</li>
+<li>ParallelSshChild - コマンドの実行関数</li>
+<li>Project - PTDeployプロジェクト管理機能</li>
+<li>RunCommand - コマンドを実行する</li>
+<li>SFTP - SFTP機能</li>
+<li>SVN - SVNソースコントロールプロジェクトチェックアウト/ダウンロード機能</li>
+<li>SystemDetection - システムの検出は - 実行中のオペレーティングシステムを検出</li>
+<li>Templating - テンプレート化</li>
+<li>Version - バージョン管理機能</li>
+<li>Wordpress - Wordpressの - Wordpressのための統合とテンプレート</li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<p>ここでは、スクリーンショットはptconfigure下で利用可能すべてのモジュールの表示を示している。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Available Commands:
+---------------------------------------
+
+ApacheControl - Apache Server Control
+ApacheVHostEditor - Apache Virtual Host Functions
+AppSettings - PTDeploy Application Settings
+Autopilot - PTConfigure Autopilot - User Defined Installations
+Builderfy - PTDeploy Builderfyer - Create some standard autopilots <span class="k">for</span> your project
+CukeConf - Cucumber Configuration
+DBConfigure - Database Connection Configuration Functions
+DBInstall - Database Installation Management Functions
+Dapperfy - PTDeploy Dapperfyer - Automated Application Deployment autopilots <span class="k">for</span> your project
+Drupal - Drupal - Integration and Templates <span class="k">for</span> Drupal
+EnvironmentConfig - Environment Configuration - Configure Environments <span class="k">for</span> a project
+GitClone - GitClone Source Control Clone Functions
+HostEditor - Host File Management Functions
+Invoke - SSH Invocation Functions
+Joomla - Joomla - Integration and Templates <span class="k">for</span> Joomla
+LighttpdControl - Lighttpd Server Control
+Logging - Logging - Output errors to the logging
+NginxControl - Nginx Server Control
+NginxSBEditor - Nginx Server Block Functions
+ParallelSshChild - Command Execution Functions
+Project - PTDeploy Project Management Functions
+RunCommand - Execute a Command
+SFTP - SFTP Functionality
+SVN - SVN Source Control Project Checkout/Download Functions
+SystemDetection - System Detection - Detect the Running Operating System
+Templating - Templating
+Version - Versioning Functions
+Wordpress - Wordpress - Integration and Templates <span class="k">for</span> Wordpress
+
+******************************
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jptdeploy_main.rst">
+          PTDeploy
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
