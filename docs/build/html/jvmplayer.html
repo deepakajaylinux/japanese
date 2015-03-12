@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ptbuild &mdash; KEVELL 0.1 documentation</title>
+    <title>Vmplayer &mdash; KEVELL 0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -31,6 +31,9 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="VMwareWorkstation" href="jvmwareworkstation.html" />
+    <link rel="prev" title="Virtual box" href="jvirtualbox.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -76,8 +79,9 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
-<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">ptconfigureモジュールと遊ぶ</a></li>
 </ul>
 </ul>
 </li>
@@ -85,13 +89,12 @@
                 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Ptbuild</a><ul>
-<li><a class="reference internal" href="#id1">あらすじ</a></li>
-<li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
-<li><a class="reference internal" href="#id3">インストール</a></li>
-<li><a class="reference internal" href="#id4">アンインストール</a></li>
-<li><a class="reference internal" href="#id5">確保するため</a></li>
-<li><a class="reference internal" href="#id6">利点</a></li>
+<li><a class="reference internal" href="#">Vmplayer</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">オプション</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
 </ul>
 </li>
 </ul>
@@ -102,6 +105,10 @@
             
               
                 
+  <li><a href="jvirtualbox.html"
+         title="Previous Chapter: Virtual box">&laquo; Virtual box</a></li>
+  <li><a href="jvmwareworkstation.html"
+         title="Next Chapter: VMwareWorkstation">VMwareWorkstatio... &raquo;</a></li>
               
             
             
@@ -109,7 +116,7 @@
             
 <!--              <li>
 <div id="sourcelink">
-  <a href="_sources/jptbuild_configure.txt"
+  <a href="_sources/jvmplayer.txt"
      rel="nofollow">Source</a>
 </div></li>-->
             
@@ -136,8 +143,9 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">ptconfigureモジュールと遊ぶ</a></li>
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">ptconfigureモジュールと遊ぶ</a></li>
 </ul>
 </ul>
 
@@ -146,147 +154,68 @@
     <div class="col-md-9">
       
   
-  <div class="section" id="ptbuild">
-<h1>Ptbuild<a class="headerlink" href="#ptbuild" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="vmplayer">
+<h1>Vmplayer<a class="headerlink" href="#vmplayer" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>あらすじ<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>このツールをインストールおよび更新 ptbuild ファラオ ツールで ptconfigure の下でユーザーに役立ちます。ビルドの自動化は、しばしば生産のような環境への展開を含む統合の自動化を含める必要があります。多くの場合、ビルド スクリプト、バイナリのコンパイルだけでなくもマニュアル、ウェブサイトのページ、Red Hat などの統計情報と配布メディアを生成します。Ubuntu やセント OS で快適します。</p>
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>VMPlayerは、既存の仮想アプライアンスを実行し、（機能的であるように、インストールするオペレーティングシステムが必要です）独自の仮想マシンを作成することができます。これは、VMware Workstationの、より多くの機能ではなく、無償で同様のプログラムと同じ仮想化コアを使用しています。 VMware Playerはptconfigureで利用可能です。これは、UbuntuとCentOSので適しています。</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>このヘルプコマンドは、仮想マシンのプレイヤーを作成するためのユーザーをガイドします。 ptconfigureに特化した。また、仮想マシンの機能を提供します
+プレイヤー。Vmplayerためのhelpコマンドを以下に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure vmplayer help.
+</pre></div>
+</div>
+<p>後に上記のコマンドを入力すると、プレーヤ設定を作成する機能を開始する。これは、スクリーンショットでvmplayerの機能を教理。</p>
 </div>
 <div class="section" id="id2">
-<h2>ヘルプ コマンド<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>ヘルプ コマンド同様目的に関してユーザーを導くように Ptbuild モジュールに含まれているオプションについて。Help コマンドは、ptconfigure モジュールの下に Ptbuild の代替パラメーターを一覧表示されます。また、ユーザーの更新をインストールするための構文について説明します。Ptbuild のヘルプ コマンドを以下に示します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Ptbuild <span class="nb">help</span>
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>vmplayerのインストールが更新されたバージョンでインストールを行うために必要。それは、単に以下のコマンドを使用して、ptconfigure下vmplayerモジュールをインストールするためのマニフェストプロセスであり、</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure vmplayer Install
 </pre></div>
 </div>
-<p>次のスクリーン ショットは Ptbuild の完全な努力を示しています。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Ptbuild <span class="nb">help</span>
-
-******************************
-
-
- This <span class="nb">command </span>allows you to install or update Ptbuild.
-
- Ptbuild, ptbuild
-
-       - install
-       Installs the latest version of ptbuild
-       example: ptconfigure ptbuild install
-
-       - ensure
-       Ensures ptbuild is installed
-       example: ptconfigure ptbuild ensure
-
-       - uninstall
-       Uninstalls the latest version of ptbuild
-       example: ptconfigure ptbuild uninstall
-------------------------------
-End Help
-******************************
-</pre></div>
-</div>
+<p>コマンドを活性化した後、入力をcatechizeます。</p>
+<p>はい自動的にシステムからのチェックでvmplayerをインストールするようにすると、ユーザー入力。インストールを終了しない場合。以下のスクリーンショットは、vmplayerとその機能を発揮。</p>
 </div>
 <div class="section" id="id3">
-<h2>インストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>これは ptconfigure の下に座っているとユーザー コードベースのクリーン コピーを引っ張るし、はフルタイム、スクラッチからビルドすべてのツールです。このコマンドは、Ptbuild の最新バージョンをインストールする使用されます。インストールに使用するコマンドは次のとおりです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Ptbuild install
-</pre></div>
-</div>
-<p>入力後、システム コマンドを求めることができます。</p>
-<p>install Ptbuild?(Y/N)</p>
-<p>ユーザーは Y を与える Ptbuild がインストールされます。次のスクリーン ショットは、それを示しています。</p>
-<div class="highlight-bash"><div class="highlight"><pre>
-</pre></div>
-</div>
+<h2>オプション<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="table-bordered docutils">
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="18%" />
-<col width="41%" />
+<col width="19%" />
+<col width="30%" />
+<col width="12%" />
+<col width="39%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">パラメータ</th>
-<th class="head">ディレクトリ(デフォルト)</th>
+<th class="head">代替パラメータ</th>
 <th class="head">オプション</th>
-<th class="head">注釈</th>
+<th class="head">コメント</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>Program Data directory
-(デフォルト)</td>
-<td>Yes</td>
-<td>“/opt/Ptbuild”</td>
-<td>それは Ptbuild下ptconfigureをインストールし</td>
+<tr class="row-even"><td>Install vmplayer?(Y/N)</td>
+<td>vmplayer, VMPlayer, VM-player</td>
+<td>Y</td>
+<td>それはファラオのツールでptconfigure下に
+vmplayerインストールされます</td>
 </tr>
-<tr class="row-odd"><td>Program Data directory</td>
-<td>No</td>
-<td>End slash</td>
-<td>パスを指定するには、ユーザーが持って</td>
-</tr>
-<tr class="row-even"><td>Program Executor directory
-(デフォルト)</td>
-<td>Yes</td>
-<td>“/usr/bin”</td>
-<td>それは、エグゼキュータディレクトリがインストー
-ルされます</td>
-</tr>
-<tr class="row-odd"><td>Program Executor directory</td>
-<td>No</td>
-<td>No trailing slash</td>
-<td>ユーザーは、ディレクトリ名などの入力を提供します|</td>
+<tr class="row-odd"><td>Install vmplayer?(Y/N)</td>
+<td>vmplayer, VMPlayer, VM-player</td>
+<td>N</td>
+<td>システム出口インストール|</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="id4">
-<h2>アンインストール<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>このコマンドは、Ptbuild の最新バージョンをアンインストールする使用されます。アンインストールのために使用するコマンドは次のとおりです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Ptbuild Uninstall
-</pre></div>
-</div>
-<p>入力後、システム コマンドを求めることができます。</p>
-<p>Uninstall Ptbuild?(Y/N)</p>
-<p>ユーザーは Y を与える Ptbuild がアンインストールされます。次のスクリーン ショットは、それを示しています。</p>
-<div class="highlight-bash"><div class="highlight"><pre>
-</pre></div>
-</div>
-<p class="table-bordered">パラメータ
-ディレクトリ(デフォルト)
-オプション
-注釈
-Data directory (デフォルト)
-Yes
-“/opt/Ptbuild”
-それはptconfigure下にPtbuildをアンインストールれます
-Data directory
-No
-End slash
-パスを指定するには、ユーザーが持って
-Executor directory(デフォルト)
-Yes
-“/usr/bin”
-それは、エグゼディレクトリをアンインストールします
-Executor directory
-No
-No trailing slash
-ユーザーは、ディレクトリ名などの入力を提供します。</p>
-</div>
-<div class="section" id="id5">
-<h2>確保するため<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>かどうか、ユーザーのシステムにインストールされている Ptbuild をチェックするためのプロセスを確認します。次のコマンドはユーザーが確認できることができます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Ptbuild ensure
-</pre></div>
-</div>
-<p>次のスクリーン ショットは、その機能を示しています。</p>
-</div>
-<div class="section" id="id6">
-<h2>利点<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>インストール Ptbuilds を可能な限り使用されます。</li>
-<li>Ubuntu や centos を扱うに適しています。</li>
-<li>非大文字小文字を区別します。</li>
-<li>更新されたバージョンにオートメーション。</li>
-<li>信頼性、可用性、保守性と他の接続。</li>
+<li>既存の仮想appliencesを実行して、仮想マシンを作成する</li>
+<li>大文字小文字を区別</li>
+<li>UbuntuとセントOSに適し</li>
+<li>専門家のすべての種類のために使用される</li>
 </ul>
 </div>
 </div>
@@ -347,8 +276,8 @@ No trailing slash
 
         <li>
           Go to
-        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jptbuild_configure.rst">
-          Ptbuild
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jvmplayer.rst">
+          Vmplayer
         </a> on GitHub.
       </li>
 

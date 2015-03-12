@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Memcached &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="Minify" href="jminify.html" />
+    <link rel="prev" title="Media Tools" href="jmediatools.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Memcached</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">memcachedのの機能</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jmediatools.html"
+         title="Previous Chapter: Media Tools">&laquo; Media Tools</a></li>
+  <li><a href="jminify.html"
+         title="Next Chapter: Minify">Minify &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jmemcached.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">ptconfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="memcached">
+<h1>Memcached<a class="headerlink" href="#memcached" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールの主要な側面は、最新バージョンでmemcacheのをインストールし、更新することです。
+Memcachedのは、汎用の分散メモリキャッシュシステムです。それは頻繁に読み取らなければならない（例えば、データベースまたはAPIなどの）外部データソースの回数を減らすためにRAM内のデータおよびオブジェクトをキャッシュすることにより、動的なデータベース駆動型のWebサイトを高速化するために使用される。</p>
+<p>私たちは今後のトピックでは、このモジュールのインストールと使用のプロセスについて見てみましょう。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>helpコマンドは、とだけでなく、Memcachedのモジュールに含まれているオプションについての目的について、ユーザーをガイドします。それは、Memcachedのモジュールの別のパラメータを示しています。また、Memcachedのモジュールをインストールするための構文について説明します。 Memcachedのモジュールのhelpコマンドは以下の通りである。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Memcached <span class="nb">help</span>
+</pre></div>
+</div>
+<p>helpコマンドを宣言するための構文は、追加的な利点である大文字と小文字を区別しませんです。次のスクリーンショットは、Memcachedの下に、helpコマンドについてあなたを視覚化。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Memcached <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to update Memcached.
+
+ Memcached, memcached
+
+       - install
+       Installs the latest version of memcache
+       example: ptconfigure memcached install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーがマシンにMemcachedのをインストールするために使用するコマンドを以下に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure memcached install
+</pre></div>
+</div>
+<p>表形式で示すように、上記のコマンドを入力した後、次の処理が発生します。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="23%" />
+<col width="27%" />
+<col width="11%" />
+<col width="39%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメータ</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Memcached? (Y/N)</td>
+<td>memcached, Memcached</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、
+インストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install Memcached? (Y/N)</td>
+<td>memcached, Memcached</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、
+インストールプロセスを終了したい場合は|</td>
+</tr>
+</tbody>
+</table>
+<p>次のスクリーンショットは、あなたのインストールのプロセスに関する絵画的表現を与えることができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>memcachedのの機能<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>memcachedのを使用している間、プロセスは読み、memcachedのに含まれている以下の機能を実装することができ、</p>
+<ul class="simple">
+<li>Memcache::add&nbsp;&#8211;サーバーにアイテムを追加</li>
+<li>Memcache::addServer&nbsp;&#8211;接続プールにmemcachedサーバを追加します。</li>
+<li>Memcache::close&nbsp;&#8211;memcachedサーバとの接続を閉じる</li>
+<li>Memcache::connect&nbsp;&#8211;memcachedサーバへの接続をオープンする</li>
+<li>Memcache::decrement&nbsp;&#8211;デクリメント項目の値</li>
+<li>Memcache::delete&nbsp;&#8211;サーバーから項目を削除する</li>
+<li>Memcache::flush&nbsp;&#8211;サーバーのすべての既存項目をフラッシュします</li>
+<li>Memcache::get&nbsp;&#8211;サーバーからアイテムを取得する</li>
+<li>Memcache::getExtendedStats&nbsp;&#8211;プール内のすべてのサーバの統計情報を取得する</li>
+<li>Memcache::getServerStatus&nbsp;&#8211;サーバーの状態を返します。</li>
+<li>Memcache::getStats&nbsp;&#8211;サーバーの統計情報を取得する</li>
+<li>Memcache::getVersion&nbsp;&#8211;サーバーのバージョンを返す</li>
+<li>Memcache::increment&nbsp;&#8211;インクリメント項目の値</li>
+<li>Memcache::pconnect&nbsp;&#8211;オープンmemcachedサーバの持続的な接続</li>
+<li>Memcache::replace&nbsp;&#8211;既存の項目の値を置き換え</li>
+<li>Memcache::set&nbsp;&#8211;データをサーバに格納する</li>
+<li>Memcache::setCompressThreshold&nbsp;&#8211;大きな値の自動圧縮を有効にする</li>
+<li>Memcache::setServerParams&nbsp;&#8211;実行時にサーバのパラメータとステータスを変更します</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ヘルプとインストールで使用されるパラメータは、他の人に比べながら、追加的な利点である大文字と小文字を区別しません。</li>
+<li>これは、Ubuntuと同様にセントOSの両方に裕福なです。</li>
+<li>この意志モジュールが更新されたバージョンでのmemcachedをインストールします。</li>
+<li>モジュールがすでにユーザマシン内に存在されている場合は、それがすでに存在しているようにメッセージが表示されます。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jmemcached.rst">
+          Memcached
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
