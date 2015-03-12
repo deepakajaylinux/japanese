@@ -585,12 +585,13 @@ ptconfigureモジュールと遊ぶ
    jjenkins
    jjenkinsplugins
    jjenkinssudonopass
+   jjetty
+   jjmeter
    jjrush
    jlighttpdserver
    jlogging
    jmediatools
    jmemcached
-   jmeter
    jminify
    jmkdir
    jmodulemanager
