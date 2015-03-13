@@ -537,7 +537,7 @@ Helpコマンド
 
 
 
-ptconfigureモジュールと遊ぶ         
+PTConfigureモジュールと遊ぶ         
 =============================
 
 .. toctree::
