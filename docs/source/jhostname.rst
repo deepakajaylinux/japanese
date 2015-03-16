@@ -57,6 +57,25 @@ Host name、管理能力で普通使用される、コンピューター ブラ�
 
 上記のコマンドから、新しいHost nameを入力できます。
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure hostname change –hostname=”kevellcorp”
+ Enter Hostname:
+ kevellcorp
+ ******************************
+
+
+ Hostname Modifications:
+ --------------------------------------------
+
+ Hostname: Success
+
+ ------------------------------
+ Hostname Mods Finished
+ ******************************
+
+
+
 ショー
 -------------------
 

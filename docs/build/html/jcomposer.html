@@ -81,7 +81,7 @@
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">ptconfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
 </ul>
 </ul>
 </li>
@@ -144,7 +144,7 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">ptconfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
 </ul>
 </ul>
 
@@ -228,8 +228,8 @@ Composer , composer|</td>
 <p>インストール コマンドのスクリーン ショットは以下します。</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/<span class="nv">$ </span>ptconfigure composer install
 Install Composer - Update to latest version ? <span class="o">(</span>Y/N<span class="o">)</span>
-y
-*******************************
+Y
+******************************
 *        Pharaoh Tools        *
 *          Composer!         *
 *******************************
@@ -238,23 +238,14 @@ What is the program data directory? Found <span class="s2">&quot;/opt/composer&q
 What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for</span> yes, No Trailing Slash<span class="o">)</span>
 
 git clone <span class="s1">&#39;https://github.com/phpengine/composer-phar.git&#39;</span>  /tmp/composer/composerCloning into <span class="s1">&#39;/tmp/composer/composer&#39;</span>...
+
 remote: Counting objects: 6, <span class="k">done</span>.
-remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>
+remote: Total <span class="m">6</span> <span class="o">(</span>delta 0<span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 6
 Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
 Checking connectivity... <span class="k">done</span>.
-PHP Warning:  mkdir<span class="o">()</span>: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 192
-cp: cannot create directory ‘/opt/composer’: Permission denied
+Program Data Folder /opt/composer Deleted <span class="k">if</span> existed
 Program Data folder populated
 Program Executor Deleted <span class="k">if</span> existed
-PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
-PHP Warning:  scandir<span class="o">(</span>/opt/composer<span class="o">)</span>: failed to open dir: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  scandir<span class="o">()</span>: <span class="o">(</span>errno 2<span class="o">)</span>: No such file or directory in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 172
-PHP Warning:  Invalid argument supplied <span class="k">for</span> foreach<span class="o">()</span> in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 174
-PHP Warning:  file_put_contents<span class="o">(</span>/usr/bin/composer<span class="o">)</span>: failed to open stream: Permission denied in /opt/ptconfigure/ptconfigure/src/Modules/ptconfigureRequired/Model/BasePHPApp.php on line 214
-chmod: cannot access ‘/opt/composer’: No such file or directory
-chmod: cannot access ‘/usr/bin/composer’: No such file or directory
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
@@ -265,6 +256,7 @@ Single App Installer:
 --------------------------------------------
 Composer: Success
 ------------------------------
+
 Installer Finished
 ******************************
 </pre></div>

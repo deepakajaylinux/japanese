@@ -81,7 +81,7 @@
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">ptconfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
 </ul>
 </ul>
 </li>
@@ -148,7 +148,7 @@
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">ptconfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
 </ul>
 </ul>
 
@@ -170,6 +170,29 @@
 </pre></div>
 </div>
 <p>次のスクリーン ショット、以下のように、プロセスを殺す方法とプロセスの強制終了を定義する方法を示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure process <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>handles process functions, <span class="nb">kill </span>a process <span class="k">for</span> now
+
+ Process, process
+
+       - <span class="nb">kill</span>
+<span class="nb">       </span>Will ask you <span class="k">for</span> process name, aa file or directory from <span class="nb">local </span>to remote
+       example: ptconfigure process <span class="nb">kill</span>
+<span class="nb">       </span>example: ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-psax <span class="c"># default, will look for string in result of</span>
+       example: ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-pkill <span class="c"># will allow pkill to find  by string to kill</span>
+       example: ptconfigure process <span class="nb">kill</span> --yes
+                                       --guess
+                                       --id<span class="o">=</span><span class="s2">&quot;1234 # will kill a process by id</span>
+<span class="s2">                                       --level # will guess a 9</span>
+
+<span class="s2">------------------------------</span>
+<span class="s2">End Help</span>
+<span class="s2">******************************</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id3">
 <h2>定義し、プロセスを使用する方法<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>

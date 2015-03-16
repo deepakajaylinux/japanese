@@ -18,6 +18,32 @@ Help コマンドを処理し、自分のニーズに従ってプロセスを操
 
 次のスクリーン ショット、以下のように、プロセスを殺す方法とプロセスの強制終了を定義する方法を示しています。
 
+
+.. code-block:: bash 
+
+ kevell@corp:/# ptconfigure process help
+ ******************************
+
+
+  This command handles process functions, kill a process for now
+
+  Process, process
+
+        - kill
+        Will ask you for process name, aa file or directory from local to remote
+        example: ptconfigure process kill
+        example: ptconfigure process kill --yes --name="selenium" --use-psax # default, will look for string in result of
+        example: ptconfigure process kill --yes --name="selenium" --use-pkill # will allow pkill to find  by string to kill
+        example: ptconfigure process kill --yes
+                                        --guess
+                                        --id="1234 # will kill a process by id
+                                        --level # will guess a 9
+
+ ------------------------------
+ End Help
+ ******************************
+
+
 定義し、プロセスを使用する方法
 -------------------------------------
 
