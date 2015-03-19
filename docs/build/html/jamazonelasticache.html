@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Amazon ElastiCache &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="ApacheConf" href="japacheconf.html" />
+    <link rel="prev" title="Amazon DynamoDB" href="jamazondynamodb.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Amazon ElastiCache</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#create">CREATE-キャッシュクラスタ</a></li>
+<li><a class="reference internal" href="#id2">CREATE-ヘルスチェック</a></li>
+<li><a class="reference internal" href="#id3">再起動キャッシュ·クラスタ</a></li>
+<li><a class="reference internal" href="#id4">削除キャッシュ·クラスタ</a></li>
+<li><a class="reference internal" href="#id5">削除·複製グループ</a></li>
+<li><a class="reference internal" href="#id6">リスト</a></li>
+<li><a class="reference internal" href="#id7">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id8">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jamazondynamodb.html"
+         title="Previous Chapter: Amazon DynamoDB">&laquo; Amazon DynamoDB</a></li>
+  <li><a href="japacheconf.html"
+         title="Next Chapter: ApacheConf">ApacheConf &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jamazonelasticache.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="amazon-elasticache">
+<h1>Amazon ElastiCache<a class="headerlink" href="#amazon-elasticache" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ElastiCacheは、それが簡単に展開、運用、およびクラウドにおけるメモリ内キャッシュを拡張することができますWebサービスです。サービスは、高速で管理され、インメモリキャッシュから情報を取得できるようにするのではなく、低速のディスクベースのデータベースに完全に依存することにより、Webアプリケーションのパフォーマンスを向上させます。 ElastiCacheは、2つのオープンソースのインメモリ·キャッシングエンジンをサポートしています。
+Memcachedの - 広く採用されているメモリオブジェクトキャッシュシステム。 ElastiCacheはmemcachedのに準拠したプロトコルで、既存のMemcached環境と今日を使用するので、人気のあるツールは、サービスとシームレスに動作します。</p>
+<p>€âRedisの「そのようなソートされたセットやリストなどのデータ構造をサポートしています人気の高いオープンソースのインメモリキーと値のストア。 ElastiCacheは、クロスAZの冗長性を達成するために使用することができるマスタ/スレーブのレプリケーションとマルチAZをサポートしています。</p>
+<p>アマゾンElastiCacheは、自動的に検出し、置き換え失敗したノードを、自己管理インフラストラクチャに関連するオーバーヘッドを削減し、オーバーロードされたデータベースのリスクを軽減弾性システム、遅いウェブサイトやアプリケーションのロード時間を提供します。アマゾンCloudWatchのとの統合を通じて、アマゾンElastiCacheは、あなたのMemcachedのか、Redisのノードに関連する主要なパフォーマンスメトリックに強化された可視性を提供します。</p>
+<p>アマゾンElastiCacheはを使用して、AWS管理コンソールを使用して、数分であなたのインフラストラクチャにインメモリキャッシュ層を追加することができます。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、アマゾンElastiCacheはの使用状況を判断するのに役立ちます。ユーザーは、このモジュールを実行する別の方法/形式について知って来る。このコマンドは、このコマンドの目的を知ることが、エンドユーザーをガイドします。与えられた以下のコマンドと同じのスクリーンショットである。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure AWSElastiCache <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling AWS ElastiCache.
+
+   AWSElastiCache, awselasticache, aws-elasticache
+
+       - create-cache-cluster
+       Lets you add cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSElastiCache create-cache-cluster
+                   --yes
+                   --guess
+       - create-health-check
+       Lets you add Health Check to AWS Route53
+       example: ptconfigure AWSRoute53 create-health-check
+                   --yes
+                   --guess
+
+         - reboot-cache-cluster
+       Lets you reboot cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSRoute53 delete-hosted-zone
+                   --yes
+                   --guess
+
+        - delete-cache-cluster
+       Lets you delete cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSElastiCache delete-cache-cluster
+                   --yes
+                   --guess
+
+        - delete-replication-group
+       Lets you delete replication group to AWS ElastiCache
+       example: ptconfigure AWSElastiCache delete-replication-group
+                   --yes
+                   --guess
+
+       - list
+       Will display data about your AWS ElastiCache
+       example: ptconfigure AWSElastiCache list
+                   --yes
+                   --guess
+
+       Note: region must be one of the following...
+       us-east-1, ap-northeast-1, sa-east-1, ap-southeast-1, ap-southeast-2, us-west-2, us-gov-west-1, us-west-1, cn-north-1, eu-west-1
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="create">
+<h2>CREATE-キャッシュクラスタ<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、AWS ElastiCacheは、キャッシュクラスタを追加することができます。以下のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSElastiCache create-cache-cluster â€“yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>CREATE-ヘルスチェック<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、AWS Route53にヘルスチェックを追加することができます。以下のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 create-health-check â€“yes â€“guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>再起動キャッシュ·クラスタ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、AWS ElastiCacheは、キャッシュクラスタを再起動するのに役立ちます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRoute53 delete-hosted-zone --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>削除キャッシュ·クラスタ<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、AWS ElastiCacheは、キャッシュクラスタを削除するのに役立ちます。以下のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSElastiCache delete-cache-cluster --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>削除·複製グループ<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、AWS ElastiCacheは、レプリケーショングループを削除するのに役立ちます。以下のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSElastiCache delete-replication-group --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>リスト<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、あなたのAWS ElastiCacheは約表示データを表示することができます。以下のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSElastiCache list --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>代替パラメータ<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>コマンドラインで使用することができる3つの代替のパラメータがある。</p>
+<p>AWSElastiCache, awselasticache, aws-elasticache</p>
+</div>
+<div class="section" id="id8">
+<h2>メリット<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<p>デプロイメントするためのシンプル：アマゾンElastiCacheは、それは非常に簡単にMemcachedのか、Redisの対応のキャッシュ環境を展開することができます。 AWS管理コンソールを使用するか、単純なAPIは、インフラストラクチャのプロビジョニングを心配する、またはインストールするとキャッシュソフトウェアを維持することなく、数分で量産対応のクラウドキャッシュ·クラスタの機能にアクセスするために呼び出します。</p>
+<p>管理：アマゾンElastiCacheは、パッチ管理、障害検出し、より価値の高いアプリケーション開発を追求することができrecovery&#8211;として&#8211;such時間のかかる管理タスクを自動化します。</p>
+<p>互換性：アマゾンElastiCacheは使用すると、Memcachedのか、Redisのインメモリ·キャッシング環境へのネイティブアクセスを得る。これは、あなたの既存のツールやアプリケーションとの互換性を容易にします。</p>
+<p>弾性：シンプルなAPI呼び出しまたはAWS Management Consoleの数回クリックすると、あなたのアプリケーションの負荷を満たすためにあなたのクラウド·キャッシュ·クラスタにキャッシュノードを追加または削除することができます。 Memcachedのための自動検出は、ノードがアマゾンElastiCacheはクラスタに追加または削除されるElastiCacheはクライアントでキャッシュノードの自動検出を可能にします。</p>
+<p>信頼性の高い：アマゾンElastiCacheは、自動障害検出とリカバリなどの重要な生産の展開のための信頼性を高める複数の機能を備えています。アマゾンElastiCacheは、他のAmazon Webサービスによって使用されるのと同じ信頼性の高いインフラストラクチャ上で実行されます。</p>
+<p>統合：アマゾンElastiCacheはアマゾンのリレーショナル·データベース·サービス（Amazon RDSは）、アマゾンDynamoDBは、アマゾン弾性計算クラウド（Amazon EC2で）、アマゾンCloudWatchの、とAmazonシンプル通知サービス（アマゾンSNS）など、他のAmazon Webサービス、とのシームレスな使用のために設計されています。</p>
+<p>セキュア：アマゾンElastiCacheは、あなたのキャッシュ·クラスタを確保するために多くのメカニズムを提供します。</p>
+<p>アマゾンElastiCacheは、あなたのキャッシュへのネットワークアクセスを制御するファイアウォールの設定を構成できるようにWebサービス·インターフェースを提供しています クラスタ。</p>
+<p>アマゾンElastiCacheはあなたがAmazonで仮想プライベートクラウド（アマゾンVPC）であなたのキャッシュ·クラスタを実行することができます。アマゾンVPCは、IPを指定することで、あなたのキャッシュ·クラスタを隔離することができます、あなたのキャッシュノードに使用する、とAmazon VPC内部の既存のアプリケーションに接続したいの範囲である。 VPCでアマゾンElastiCacheは詳細については、アマゾンElastiCacheはユーザガイドを参照してください。</p>
+<p>費用対効果：アマゾンElastiCacheははあなたにセットアップし、マルチノードキャッシュ·クラスタを管理するための管理コストを節約できます。あなたは、あなたが実際に消費するリソースを払って、スケールアップし、アプリケーションの使用パターンの変化に応じて最適なパフォーマンスを実現するために、あなたのキャッシュ·クラスタ内のキャッシュノードの数を縮小することができます。オンデマンドの価格設定では、無長期的なコミットメントを時間単位でメモリ/計算処理能力のために支払うことができます。これはアマゾンElastiCacheはの使用は非常に効果的なコストと計画、購買のコストと複雑さからあなたを解放して、ハードウェアを維持することができます。</p>
+<p>マルチAZ：アマゾンElastiCacheははRedisのエンジンとマルチAZ機能のレプリケーション機能を提供します。あなたは、単一のキャッシュノードの容量制限を超えて利用可能性、およびスケールを得るために、複数のAWS利用可能ゾーンを利用することができます。プライマリノード損失の場合には、ElastiCacheは、自動的に手動の介入を必要とせずに、より高い可用性を提供するために、読み取りレプリカに失敗し、フェールオーバーを検出します。</p>
+<p>バックアップと復元：RedisのためのアマゾンElastiCacheは、あなたのクラスターのスナップショットを作成して、データを保護するのに役立ちます。コンソールまたはシンプルなAPI呼び出しに数回のクリックを経由して、自動スナップショットを設定するだけでなく、あなたが選択するたびにバックアップを開始することができます。スナップショットは、その後Redisのクラスタのための新しいElastiCacheはをシードするために使用することができます。</p>
+<p>キーユースケース：アマゾンElastiCacheはが大幅に（そのようなソーシャルネットワーキング、ゲーム、メディア共有とQ＆Aポータルなど）は、多くの読み取り重いアプリケーションワークロードまたは（例えば、リコメンデーション·エンジンなど）を計算集約型のワークロードの待ち時間とスループットを改善するために使用することができます。キャッシングは、低遅延アクセスのためにメモリ内のデータの重要な部分を格納することで、アプリケーションのパフォーマンスが向上します。キャッシュされた情報は、I / O集中型データベースクエリの結果や計算集約計算の結果を含むことができる。データ構造·サーバを必要とするアプリケーションは、Redisのエンジンは最も有用でしょう。</p>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jamazonelasticache.rst">
+          Amazon ElastiCache
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

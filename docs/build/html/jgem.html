@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gem &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="Generator" href="jgenerator.html" />
+    <link rel="prev" title="Firewall" href="jfirewall.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Gem</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">宝石の異なる特徴</a></li>
+<li><a class="reference internal" href="#id3">作る</a></li>
+<li><a class="reference internal" href="#remove">REMOVE</a></li>
+<li><a class="reference internal" href="#set-password">SET PASSWORD</a></li>
+<li><a class="reference internal" href="#exists">EXISTS</a></li>
+<li><a class="reference internal" href="#show">SHOWのグループ</a></li>
+<li><a class="reference internal" href="#add-to-group">Add_TO_GROUP</a></li>
+<li><a class="reference internal" href="#remove-from-group">REMOVE_FROM_GROUP</a></li>
+<li><a class="reference internal" href="#id4">別のパラメータ</a></li>
+<li><a class="reference internal" href="#id5">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jfirewall.html"
+         title="Previous Chapter: Firewall">&laquo; Firewall</a></li>
+  <li><a href="jgenerator.html"
+         title="Next Chapter: Generator">Generator &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jgem.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="gem">
+<h1>Gem<a class="headerlink" href="#gem" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールは、GEMを操作するためのユーザーのすべてのニーズを包み込む。これは、さまざまな機能をカバーし、手で実行される様々な機能を促進する。
+RubyGemsのは、Rubyのプログラムとライブラリを配布するための標準フォーマットを提供するRubyプログラミング言語用のパッケージマネージャで、簡単に宝石のインストールを管理するように設計されたツール、およびサーバー用の（自己完結型の形式で「宝石」と呼ばれる）それらを配布。
+私たちはさまざまな機能とどのように今後のトピックからこのモジュールを使用するを見てみましょう。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>helpコマンドは、目的やさまざまな機能、およびそれらの様々な機能を実装するための構文についてユーザーに指示します。また、アウト宣言で使用できる代替パラメータを示します。このモジュールの下にヘルプオプションを適用するための構文形式は、以下に示す</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem <span class="nb">help</span>
+</pre></div>
+</div>
+<p>次のスクリーンショットは、このモジュールの下にヘルプオプションの出力と作業を視覚化する。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gem <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to modify create or modify gems
+
+ Gem, gem
+
+       - create
+       Create a new system gem, overwriting <span class="k">if </span>it exists
+       example: ptconfigure gem create --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - remove
+       Remove a system gem
+       example: ptconfigure gem remove --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - <span class="nb">set</span>-password
+       Set the password of a system gem
+       example: ptconfigure gem <span class="nb">set</span>-password --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span>                                                                                        <span class="s2">&quot;somepassword&quot;</span>
+
+       - exists
+       Check the existence of a gem
+       example: ptconfigure gem exists --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - show-groups
+       Show groups to which a gem belongs
+       example: ptconfigure gem show-groups --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - add-to-group
+       Add gem to a group
+       example: ptconfigure gem add-to-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;so                                                                                        megroupname&quot;</span>
+
+       - remove-from-group
+       Remove gem from a group
+       example: ptconfigure gem remove-from-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupnam                                                                                        <span class="nv">e</span><span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>宝石の異なる特徴<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>上記のhelpコマンドから示されているように、宝石の様々な特徴は以下のように記載されている、</p>
+<ul class="simple">
+<li>Create</li>
+<li>Remove</li>
+<li>Set Password</li>
+<li>Exists</li>
+<li>Show_groups</li>
+<li>Add_to_group</li>
+<li>Remove_from_group</li>
+</ul>
+<p>私たちはこれらの機能について詳細に見てみましょう。</p>
+</div>
+<div class="section" id="id3">
+<h2>作る<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>この関数は、新しいシステムの宝石を作成することを目的、とだけでなく、既存の例で上書きされます。このモジュールを使用して、宝石のこの機能は、次の構文によって達成することができる</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem create --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>gemnameの代わりに、ユーザーが作成される宝石の名前を指定することができます。上記の指定されたコマンドを入力した後、新たな宝石は、指定した名前で作成されます。</p>
+</div>
+<div class="section" id="remove">
+<h2>REMOVE<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
+<p>この関数は、既存の宝石を削除することを目指しています。このモジュールを使用して、宝石のこの機能は、次の構文によって達成することができる</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem remove --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>gemnameの代わりに、ユーザーが削除する宝石の名前を指定することができます。上記の指定されたコマンドを入力した後、指定された宝石が削除されます。</p>
+</div>
+<div class="section" id="set-password">
+<h2>SET PASSWORD<a class="headerlink" href="#set-password" title="Permalink to this headline">¶</a></h2>
+<p>この機能は、要件に応じて、システムの宝石に新しいパスワードを設定することが容易になります。これは、下記のようにコマンドを適用することによって行うことができる</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem <span class="nb">set</span>-password --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+</pre></div>
+</div>
+<p>この機能を実現するために、ユーザは、2つのフィールドを指定する必要があり、</p>
+<ul class="simple">
+<li>Gem name</li>
+<li>New password</li>
+</ul>
+<p>上記のコマンドの形式で2つのフィールドが指定した後、指定された宝石の新しいパスワードが作成されます。</p>
+</div>
+<div class="section" id="exists">
+<h2>EXISTS<a class="headerlink" href="#exists" title="Permalink to this headline">¶</a></h2>
+<p>この関数は、宝石の存在を確認することを目的としている。これは、以下のコマンドを使用して、簡単に行うことができる</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem exists --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>上記のようにコマンドを適用した後、前述の宝石の存在が結果と確保することとしております。</p>
+</div>
+<div class="section" id="show">
+<h2>SHOWのグループ<a class="headerlink" href="#show" title="Permalink to this headline">¶</a></h2>
+<p>この機能により、ユーザーはへのグループについて知って支援する宝石が所属ん。これは、単純に以下のコマンドを使用することによって達成することができる</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem show-groups --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<p>ユーザーは、そのグループの詳細を知るために、gemnameの分野で宝石の名前を指定する必要があります。</p>
+</div>
+<div class="section" id="add-to-group">
+<h2>Add_TO_GROUP<a class="headerlink" href="#add-to-group" title="Permalink to this headline">¶</a></h2>
+<p>この関数の主な目的は、下記のように単純にコマンドを適用することにより、必要なグループに必要な宝石を追加することです、</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem add-to-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+<p>この機能を実現するために、ユーザは、上記のコマンドの形式で自分のニーズに従って以下の二つのフィールドを指定する必要があり、</p>
+<ul class="simple">
+<li>Gemname</li>
+<li>group name</li>
+</ul>
+</div>
+<div class="section" id="remove-from-group">
+<h2>REMOVE_FROM_GROUP<a class="headerlink" href="#remove-from-group" title="Permalink to this headline">¶</a></h2>
+<p>この機能の主な目的は、下記のように単純にコマンドを適用することによってグループから宝石を除去することで、</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem remove-from-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+<p>この機能を実現するために、ユーザは、上記のコマンドの形式で自分のニーズに従って以下の二つのフィールドを指定する必要があり、</p>
+<ul class="simple">
+<li>Gemname</li>
+<li>group name</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>別のパラメータ<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>宣言で使用することができるいずれかがこのモジュールの別のパラメータであり、</p>
+<ul class="simple">
+<li>Gem</li>
+<li>gem</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>メリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ヘルプと宝石の他のさまざまな機能を宣言に使用されるパラメータは、大文字と小文字は区別されません。</li>
+<li>これは、裕福な両方セントOSのと同様にUbuntuののようである。</li>
+<li>ユーザーが作成し、同様に彼らのニーズに従って宝石を変更することができ、このモジュールを使用する。</li>
+<li>宝石の存在は、このモジュールの下に確保することができる。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jgem.rst">
+          Gem
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

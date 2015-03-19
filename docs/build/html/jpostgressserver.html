@@ -182,8 +182,8 @@ example: ptconfigure postgres-server install
 
 Notes, during postgres install a root password will be set. First, it<span class="s1">&#39;ll look</span>
 <span class="s1">for the parameter --postgres-root-pass, if this is not set, it&#39;</span>ll look in the
-ptconfigure config <span class="k">for</span> a postgres-default-root-pass setting, and failing both of
-those it will just <span class="nb">set </span>the password <span class="k">for</span> root to ptconfigure.
+ptconfigure config <span class="k">for </span>a postgres-default-root-pass setting, and failing both of
+those it will just <span class="nb">set </span>the password <span class="k">for </span>root to ptconfigure.
 
 ------------------------------
 End Help
@@ -253,7 +253,7 @@ Creating config file /etc/logrotate.d/postgresql-common with new version
 Building PostgreSQL dictionaries from installed myspell/hunspell packages...
  en_us
 Removing obsolete dictionary files:
-* No PostgreSQL clusters exist<span class="p">;</span> see <span class="s2">&quot;man pg_createcluster&quot;</span>
+* No PostgreSQL clusters exist; see <span class="s2">&quot;man pg_createcluster&quot;</span>
 Reading package lists...
 Building dependency tree...
 Reading state information...
@@ -265,19 +265,19 @@ Suggested packages:
 The following NEW packages will be installed:
  libpq5 postgresql postgresql-9.3 postgresql-client-9.3
  postgresql-client-common postgresql-common
-<span class="m">0</span> upgraded, <span class="m">6</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
+0 upgraded, 6 newly installed, 0 to remove and 301 not upgraded.
 Need to get 3,666 kB of archives.
 After this operation, 15.4 MB of additional disk space will be used.
 Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libpq5 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span>80.6 kB<span class="o">]</span>
-Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-client-common all <span class="m">154</span> <span class="o">[</span>25.4 kB<span class="o">]</span>
-Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-client-9.3 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span><span class="m">782</span> kB<span class="o">]</span>
-Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-common all <span class="m">154</span> <span class="o">[</span><span class="m">103</span> kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-client-common all 154 <span class="o">[</span>25.4 kB<span class="o">]</span>
+Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-client-9.3 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span>782 kB<span class="o">]</span>
+Get:4 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-common all 154 <span class="o">[</span>103 kB<span class="o">]</span>
 Get:5 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-9.3 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span>2,670 kB<span class="o">]</span>
 Get:6 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql all 9.3+154 <span class="o">[</span>5,088 B<span class="o">]</span>
 Preconfiguring packages ...
 Fetched 3,666 kB in 8min 13s <span class="o">(</span>7,435 B/s<span class="o">)</span>
 Selecting previously unselected package libpq5.
-<span class="o">(</span>Reading database ... <span class="m">181615</span> files and directories currently installed.<span class="o">)</span>
+<span class="o">(</span>Reading database ... 181615 files and directories currently installed.<span class="o">)</span>
 Preparing to unpack .../libpq5_9.3.5-0ubuntu0.14.04.1_amd64.deb ...
 Unpacking libpq5 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
 Selecting previously unselected package postgresql-client-common.
@@ -296,15 +296,15 @@ Unpacking postgresql-9.3 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span cla
 Selecting previously unselected package postgresql.
 Preparing to unpack .../postgresql_9.3+154_all.deb ...
 Unpacking postgresql <span class="o">(</span>9.3+154<span class="o">)</span> ...
-Processing triggers <span class="k">for</span> man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
-Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
 ureadahead will be reprofiled on next reboot
 Setting up libpq5 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
 Setting up postgresql-client-common <span class="o">(</span>154<span class="o">)</span> ...
 Setting up postgresql-client-9.3 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
 update-alternatives: using /usr/share/postgresql/9.3/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz <span class="o">(</span>psql.1.gz<span class="o">)</span> in auto mode
 Setting up postgresql-common <span class="o">(</span>154<span class="o">)</span> ...
-Processing triggers <span class="k">for</span> ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>ureadahead <span class="o">(</span>0.100.0-16<span class="o">)</span> ...
 Setting up postgresql-9.3 <span class="o">(</span>9.3.5-0ubuntu0.14.04.1<span class="o">)</span> ...
 Creating new cluster 9.3/main ...
  config /etc/postgresql/9.3/main
@@ -315,7 +315,7 @@ update-alternatives: using /usr/share/postgresql/9.3/man/man1/postmaster.1.gz to
 * Starting PostgreSQL 9.3 database server
   ...done.
 Setting up postgresql <span class="o">(</span>9.3+154<span class="o">)</span> ...
-Processing triggers <span class="k">for</span> libc-bin <span class="o">(</span>2.19-0ubuntu6<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>libc-bin <span class="o">(</span>2.19-0ubuntu6<span class="o">)</span> ...
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package postgresql from the Packager Apt executed correctly
 E: Failed to fetch http://in.archive.ubuntu.com/ubuntu/pool/main/p/postgresql-common/postgresql-contrib_9.3+154_all.deb  Connection failed <span class="o">[</span>IP: 91.189.88.149 80<span class="o">]</span>
 
@@ -329,19 +329,19 @@ Suggested packages:
  uuid libdbd-pg-perl
 The following NEW packages will be installed:
  libossp-uuid16 postgresql-contrib postgresql-contrib-9.3
-<span class="m">0</span> upgraded, <span class="m">3</span> newly installed, <span class="m">0</span> to remove and <span class="m">301</span> not upgraded.
-Need to get <span class="m">435</span> kB of archives.
+0 upgraded, 3 newly installed, 0 to remove and 301 not upgraded.
+Need to get 435 kB of archives.
 After this operation, 2,038 kB of additional disk space will be used.
 Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main libossp-uuid16 amd64 1.6.2-1.3ubuntu1 <span class="o">[</span>29.6 kB<span class="o">]</span>
-Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-contrib-9.3 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span><span class="m">400</span> kB<span class="o">]</span>
+Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-contrib-9.3 amd64 9.3.5-0ubuntu0.14.04.1 <span class="o">[</span>400 kB<span class="o">]</span>
 Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-contrib all 9.3+154 <span class="o">[</span>5,106 B<span class="o">]</span>
 Err http://in.archive.ubuntu.com/ubuntu/ trusty/main postgresql-contrib all 9.3+154
  Connection failed <span class="o">[</span>IP: 91.189.88.149 80<span class="o">]</span>
-Fetched <span class="m">430</span> kB in 6min 25s <span class="o">(</span>1,114 B/s<span class="o">)</span>
+Fetched 430 kB in 6min 25s <span class="o">(</span>1,114 B/s<span class="o">)</span>
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package postgresql-contrib from the Packager Apt did not execute correctly
 ... All <span class="k">done</span>!
 *******************************
-Thanks <span class="k">for</span> installing , visit www.pharaohtools.com <span class="k">for</span> more
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
 ******************************
 
 
@@ -402,7 +402,7 @@ Installer Finished
     </p>
     <p>
         &copy; Copyright 2015, kevell.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

@@ -543,15 +543,23 @@ PTConfigureモジュールと遊ぶ
 .. toctree::
    :maxdepth: 6
     
+   
 
 
+   jamazoncloudfront
+   jamazoncloudwatch  
+   jamazondynamodb
+   jamazonelasticache
    japacheconf
    japachemodules
    japachereverseproxy
    japacheserver
    japachevhosteditor
    japtana
+   japt
    jautopilot
+   jawscloudformation
+   jawstats
    jbehat
    jcassandra
    jchgrp
@@ -560,9 +568,12 @@ PTConfigureモジュールと遊ぶ
    jchrome
    jchromedriver
    jcitadel
+   jcleofy
    jcomposer
    jcopy
    jdevelopertools
+   jdnsify
+   jencryption
    jenvironmentconfig
    jfile
    jfirefox
@@ -571,6 +582,9 @@ PTConfigureモジュールと遊ぶ
    jfirefox24
    jfirefox33
    jfirewall
+   jgem
+   jgenerator
+   jgimp
    jgitbucket
    jgitkeysafe
    jgitlab
@@ -635,6 +649,7 @@ PTConfigureモジュールと遊ぶ
    jptbuild
    jptdeploy
    jpttest
+   jptvirtualize
    jpython
    jra
    jredis
@@ -650,6 +665,7 @@ PTConfigureモジュールと遊ぶ
    jsshharden
    jsshkeygen
    jsshkeyinstall
+   jsshkeystore
    jstandardtools
    jsudonopass
    jsvn
@@ -658,6 +674,7 @@ PTConfigureモジュールと遊ぶ
    jtemplating
    jtomcat
    jubuntucompiler
+   jvarnish
    jvirtualbox
    jvmplayer
    jvmwareworkstation

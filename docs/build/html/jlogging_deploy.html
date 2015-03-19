@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Logging &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Logging</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#php">PHPのエラーログを定義する方法</a></li>
+<li><a class="reference internal" href="#id3">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jlogging_deploy.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="logging">
+<h1>Logging<a class="headerlink" href="#logging" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このロギングモジュールは、コンソールにメッセージを記録する目的で使用され、必要に応じてPHPのエラーログのために使用される。私たちはインストールすると、メッセージを宣言し、PHPのエラー·ログにログを使用する方法を見てみましょう。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>helpコマンドは、その使用方法や方法論についてのユーザーを導く簡単なユーザーマニュアルとして機能します。これは、ログを定義するための宣言、および構文の例で使用することができる別のパラメータを指定する。ヘルプオプションを宣言するために使用するコマンドは以下のとおりである：</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Logging <span class="nb">help</span>
+</pre></div>
+</div>
+<p>以下のスクリーンショットは、helpコマンドの操作方法の絵で示している。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Logging <span class="nb">help</span>
+******************************
+
+
+ Use this to log a message to the Console, and optionally the php error log.
+
+ Logging, logging
+
+       - log
+       Logs a message the console or
+       example: ptconfigure logging log --php-log --log-message<span class="o">=</span><span class="s2">&quot;Here is something logging to the console and error log&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ptdeployの下でログをインストールするために使用するコマンドは以下のとおりである：</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy logging log
+</pre></div>
+</div>
+<p>入力後、上記のコマンドは、インストールプロセスは、次の表の列に示されている。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="17%" />
+<col width="10%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメータ</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install Logging? (Y/N)</td>
+<td>Logging, logging</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、インストールプロセスを
+続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install Logging? (Y/N)</td>
+<td>Logging, logging</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、インストールプロセスを終
+了したい場合は|</td>
+</tr>
+</tbody>
+</table>
+<p>ユーザは、インストール処理を進めた場合、処理は尋ねることによって、ログメッセージを指定するようユーザに要求する</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="s2">&quot;Enter Log Message&quot;</span>
+
+<span class="s2">&quot;Good Morning&quot;</span>
+</pre></div>
+</div>
+<p>示されるように、ユーザ入力メッセージと、所与のログメッセージが画面に表示される。</p>
+<p>&#8220;Good Morning&#8221;</p>
+<p>最後に、インストールが完了されます。次のスクリーンショットは、絵でインストールのプロセスを示している。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptdeploy logging log
+Install Logging? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*   Golden Contact Computing  *
+*           Logging!          *
+*******************************
+Enter Log Message
+Good Morning
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Good Morning
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+
+
+No Data.
+
+------------------------------
+Installer Finished
+</pre></div>
+</div>
+</div>
+<div class="section" id="php">
+<h2>PHPのエラーログを定義する方法<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h2>
+<p>PHPのエラーログのログを宣言するための構文は次のようになります。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure logging log --php- log --log-message<span class="o">=</span><span class="s2">&quot;Here is something logging to the console and error log&quot;</span>
+</pre></div>
+</div>
+<p>の代わりに</p>
+<div class="highlight-bash"><div class="highlight"><pre>log-message<span class="o">=</span><span class="s2">&quot;Here is something logging to the console and error log&quot;</span>
+</pre></div>
+</div>
+<p>ユーザーは彼らの要求に応じて、ログメッセージの一部に任意のテキストを追加することができます。</p>
+</div>
+<div class="section" id="id3">
+<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ユーザーは、PHPのエラーログのために彼らの頻繁に使用されるログメッセージを追加することができます。</li>
+<li>ユーザが入力することができ、ログメッセージの表示を保証するログのインストール中。</li>
+<li>これは、セントのOSのように裕福な両方のUbuntuで、同様である。</li>
+<li>宣言で使用されるパラメータは、大文字と小文字を区別しません。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jlogging_deploy.rst">
+          Logging
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

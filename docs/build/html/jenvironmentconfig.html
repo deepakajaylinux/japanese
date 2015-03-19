@@ -33,7 +33,7 @@
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
     <link rel="next" title="File" href="jfile.html" />
-    <link rel="prev" title="DeveloperTools" href="jdevelopertools.html" />
+    <link rel="prev" title="Encryption" href="jencryption.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -107,8 +107,8 @@
             
               
                 
-  <li><a href="jdevelopertools.html"
-         title="Previous Chapter: DeveloperTools">&laquo; DeveloperTools</a></li>
+  <li><a href="jencryption.html"
+         title="Previous Chapter: Encryption">&laquo; Encryption</a></li>
   <li><a href="jfile.html"
          title="Next Chapter: File">File &raquo;</a></li>
               
@@ -174,7 +174,7 @@
 
 
  This <span class="nb">command </span>is part of a default Module and provides you with a method by which you can
- configure environments <span class="k">for</span> your project from the <span class="nb">command </span>line. Currently compliant with
+ configure environments <span class="k">for </span>your project from the <span class="nb">command </span>line. Currently compliant with
  both Dapperstrano and Ptconfigure.
 
 
@@ -189,7 +189,7 @@
        example: ptconfigure envconfig list-local --yes
 
        - configure, config
-       Configure bespoke environments <span class="k">for</span> your project to use
+       Configure bespoke environments <span class="k">for </span>your project to use
        example: ptconfigure envconfig config
        <span class="c"># below to create an empty environment to add instances to</span>
        example: ptconfigure envconfig config --yes
@@ -200,12 +200,12 @@
                    --tmp-dir<span class="o">=</span>/tmp/ <span class="c"># we&#39;re deprecating this soon</span>
 
        - configure-default, config-default
-       Configure default environments <span class="k">for</span> your project to use
+       Configure default environments <span class="k">for </span>your project to use
        example: ptconfigure envconfig config-default
        example: ptconfigure envconfig config-default --yes --environment-name<span class="o">=</span><span class="s2">&quot;local-80/local-8080&quot;</span>
 
        - delete, del
-       Configure the environments <span class="k">for</span> your project to use
+       Configure the environments <span class="k">for </span>your project to use
        example: ptconfigure envconfig delete
        example: ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;staging&quot;</span>
 
@@ -241,8 +241,8 @@ End Help
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig config
 Configure Environments Here? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
-Environment <span class="m">1</span>  :
-Default Settings <span class="k">for</span> Any App not setup <span class="k">for</span> environment  enter them now.
+Environment 1  :
+Default Settings <span class="k">for </span>Any App not setup <span class="k">for </span>environment  enter them now.
 Value <span class="k">for</span>: Name of this Environment
 kevells
 Value <span class="k">for</span>: Default Temp Dir <span class="o">(</span>should usually be /tmp/<span class="o">)</span>
@@ -343,7 +343,7 @@ In Environment Configuration
 <p>上記のコマンドを入力した後それを聞いてきます</p>
 <p>ステップ 1：Delete Environments Here?</p>
 <p>警告メッセージとして表示されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for</span> boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
+<div class="highlight-bash"><div class="highlight"><pre>WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for </span>boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
 </pre></div>
 </div>
 <p>ユーザーが Y または N を指定するには</p>
@@ -352,7 +352,7 @@ In Environment Configuration
 <p>最後に、スクリーン ショットに示すように、指定された環境が削除されます。</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure envconfig del --environment-name<span class="o">=</span><span class="s2">&quot;kevells&quot;</span>
 Delete Environments Here?
-WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for</span> boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
+WARNING: Deleting an environment from papyrus is final. You may be looking <span class="k">for </span>boxify box-destroy instead <span class="o">(</span>Y/N<span class="o">)</span>
 Y
 Environment kevells found. Are you sure you want to delete it? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
@@ -440,7 +440,7 @@ In Environment Configuration
     </p>
     <p>
         &copy; Copyright 2015, kevell.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

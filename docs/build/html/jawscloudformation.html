@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AWSCloudFormation &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="Awstats" href="jawstats.html" />
+    <link rel="prev" title="Autopilot" href="jautopilot.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">AWSCloudFormation</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jautopilot.html"
+         title="Previous Chapter: Autopilot">&laquo; Autopilot</a></li>
+  <li><a href="jawstats.html"
+         title="Next Chapter: Awstats">Awstats &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jawscloudformation.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="awscloudformation">
+<h1>AWSCloudFormation<a class="headerlink" href="#awscloudformation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>AWS CloudFormationは、開発者やシステムが作成および管理に関連するAWSリソース、プロビジョニングのコレクションをし、秩序ある予測可能な方法でそれらを更新する簡単な方法を管理者に提供。</p>
+<p>あなたは、あなたのアプリケーションを実行するために必要な、AWSCloudFormationâ€™sのサンプル·テンプレートを使用するか、AWSリソース、および関連する依存関係や実行時パラメータを記述するために独自のテンプレートを作成することができます。あなたDONA€™tはAWSサービスまたはそれらの依存関係の仕事をするの機微をプロビジョニングするための順序を把握する必要があります。 CloudFormationには、あなたのためにこれを処理します。 AWSリソースが展開された後は、実際にはあなたのAWSインフラストラクチャにお手元のソフトウェアで行うのと同じ方法でバージョン管理を適用し、制御され、予測可能な方法でそれらを変更し、更新することができます。</p>
+<p>あなたは、AWS Management Consoleの、AWSコマンドラインインターフェイス、またはAPIを使用して、テンプレートと（スタックと呼ばれる）資源の関連付けられたコレクションを展開し、更新することができます。 CloudFormationは追加料金なしで利用可能であり、あなたは、あなたのアプリケーションを実行するために必要なAWSリソースのために支払う。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、AWS CloudFormationはの使用状況を判断するのに役立ちます。ユーザーは、このモジュールを実行する別の方法/形式について知って来る。このコマンドは、このコマンドの目的を知ることが、エンドユーザーをガイドします。与えられた以下のコマンドと同じのスクリーンショットである。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure AWSCloudFormation help
+
+******************************
+
+
+ This command allows you to install a The AWS Cloud Formation Command
+ Line Tools. This tool is provided by
+
+ AWSCloudFormation, aws-cloud-formation, aws-cloudformation
+
+       - install
+       Installs AWSCloudFormation. Note, you&#39;ll also need Java installed
+       as it is a prerequisite for AWSCloudFormation.
+       example: ptconfigure aws-cloud-formation install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーがマシンにAWSCloudFormationモジュールをインストールする必要がある場合は、以下のコマンドは、インストールのプロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure aws-cloud-formation install
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure aws-cloud-formation install
+
+Install AWSCloudFormation? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         AWS CloudFn!        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-17956189939.sh
+chmod 755 /tmp/ptconfigure-temp-script-17956189939.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-17956189939.sh Permissions
+Executing /tmp/ptconfigure-temp-script-17956189939.sh
+Cloning into <span class="s1">&#39;aws-cloudformation&#39;</span>...
+remote: Counting objects: 64, <span class="k">done</span>.
+remote: Total 64 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 64
+Unpacking objects: 100% <span class="o">(</span>64/64<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+mv: cannot move â€˜/tmp/aws-cloudformation/binâ€™ to â€˜/opt/aws-cloudformation/binâ€™: Directory not empty
+mv: cannot move â€˜/tmp/aws-cloudformation/libâ€™ to â€˜/opt/aws-cloudformation/libâ€™: Directory not empty
+Temp File /tmp/ptconfigure-temp-script-17956189939.sh Removed
+PHP Notice:  Undefined index: object in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: method in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: params in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Warning:  call_user_func_array<span class="o">()</span> expects parameter 1 to be a valid callback, first array member is not a valid class name or object in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: object in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: method in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Notice:  Undefined index: params in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+PHP Warning:  call_user_func_array<span class="o">()</span> expects parameter 1 to be a valid callback, first array member is not a valid class name or object in /opt/ptconfigure/ptconfigure/src/Modules/PtconfigureRequired/Model/BaseLinuxApp.php on line 279
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+AWSCloudFormation: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>代替パラメータ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>コマンドラインで使用することができる3つの代替のパラメータがある。</p>
+<p>AWSCloudFormation, aws-cloud-formation, aws-cloudformation</p>
+</div>
+<div class="section" id="id4">
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>AWSリソースの広い範囲をサポート：AWS CloudFormationは、あなたのアプリケーションのニーズのために、可用性、信頼性、および拡張性のAWSインフラストラクチャを構築することができ、AWSリソースの広い範囲をサポートしています。 AWS CloudFormationは、現在、以下のAWSのリソースをサポートしています</p>
+<p>サービス：</p>
+<p>自動スケーリング</p>
+<p>アマゾンCloudFrontは</p>
+<p>AWS CloudWatchの</p>
+<p>アマゾンDynamoDBは</p>
+<p>Amazon EC2の</p>
+<p>アマゾンElastiCacheは</p>
+<p>AWS弾性豆の木</p>
+<p>AWS弾性ロードバランシング</p>
+<p>AWSアイデンティティおよびアクセス管理</p>
+<p>Amazon RDSは</p>
+<p>アマゾン赤方偏移</p>
+<p>アマゾンルート53</p>
+<p>Amazon S3の</p>
+<p>Amazon SimpleDBは</p>
+<p>アマゾンSNS</p>
+<p>アマゾンSQS</p>
+<p>アマゾンVPC</p>
+<p>使いやすい：CloudFormationははAWSリソースのコレクションを整理し、展開することが容易になり、実行時に渡すように依存関係や特殊なパラメータを記述することができます。あなたは多くのCloudFormationはサンプルテンプレートのいずれかを使用することができます - いずれか逐語的または出発点として。
+車輪の再発明する必要はありません：テンプレートが同じスタックの同一のコピーを作成する（または新しいスタックを開始するための基盤として使用すること）を繰り返し使用することができます。あなたは、キャプチャし、そのようなアマゾンEC2のAMIのほか、アマゾン弾性ブロックストア（EBS）とAmazon RDSのスナップショット名などの地域固有のインフラの変動を制御することができます。</p>
+<p>透明でオープン：テンプレートは、Amazon S3のようなプライベートまたはパブリックの場所に保存され、通常のソース制御メカニズムの下に置かれ、電子メールを介して交換することができるシンプルなJSON形式のテキストファイルです。 AWS CloudFormationは使用すると、AWSリソースがスタックを構成しているかを正確に表示するには」、ボンネットを開く」ことができます。あなたは完全な制御を保持し、スタックの一部として作成されたAWSリソースのいずれかを変更する機能を持っている。</p>
+<p>宣言型と柔軟性：あなたが欲しいインフラを作成するには、どのようなAWSリソース、構成値、およびテンプレートに必要な相互接続を列挙して、AWS CloudFormationははAWS Management Consoleの、使用して、一つのコマンドでいくつかの簡単なクリックで残りをやらせるAWSコマンドラインインターフェース、またはAPIを呼び出すことによって、単一の要求。あなたは™tの作成とそれらのサービスAPIを介して各AWSリソースを相互接続する方法の詳細をリコールする必要が€wonâ。 AWS CloudFormationにはあなたのためにこれを行います。あなたがAWS CloudFormationに付属している多くのサンプルテンプレートの1で始まる場合にも、ドナ€™tは最初からテンプレートを記述する必要があります。</p>
+<p>パラメータでカスタマイズ：あなたは、スタックが構築されたとき、実行時にテンプレートの側面をカスタマイズするためのパラメータを使用することができます。あなたはスタックを作成するときにたとえば、AWS CloudFormationはへRDSデータベースのサイズ、EC2のインスタンスタイプ、データベース、およびWebサーバのポート番号を渡すことができます。また、制御された方法で異なる場合があります複数のスタックを作成するためにパラメータ化されたテンプレートを使用することができます。たとえば、Amazon EC2インスタンスの種類、アマゾンCloudWatchのアラームしきい値、とAmazonはRDS読み取り専用レプリカあなたはヨーロッパよりも米国で多くの顧客のトラフィックを受信した場合の設定は、AWSの地域間で異なる場合があります。あなたは個別に調整するために、各地域での設定としきい値をテンプレートパラメータを使用し、まだアプリケーションが地域全体に一貫して展開されていることを確認することができます。
+統合準備：あなたはあなたの選択の開発および管理ツールで、AWS CloudFormationは統合することができます。</p>
+<p>AWS CloudFormationはアマゾンシンプル通知サービス（SNS）を通じてprogressイベントを発行しています。 SNSを使用すると、電子メールを介してスタックの作成と削除の進行状況を追跡することができますし、プログラム的に他のプロセスと統合する。</p>
+<p>追加料金なし：AWS CloudFormationは追加料金なしで利用できません。あなたは、AWS CloudFormationは、作成し、アプリケーションが使用するAWSリソースに対してのみ、通常の料金を請求されます。</p>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jawscloudformation.rst">
+          AWSCloudFormation
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

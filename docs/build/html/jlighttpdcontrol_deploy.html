@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>LighttpdControl &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">LighttpdControl</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id3">スタート</a></li>
+<li><a class="reference internal" href="#id4">停止</a></li>
+<li><a class="reference internal" href="#id5">再起動</a></li>
+<li><a class="reference internal" href="#id6">リロード</a></li>
+<li><a class="reference internal" href="#id7">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jlighttpdcontrol_deploy.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="lighttpdcontrol">
+<h1>LighttpdControl<a class="headerlink" href="#lighttpdcontrol" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Lighttpdのは、高性能環境に最適化された、高速で、セキュリティで保護さに準拠した、と非常に柔軟なWebサーバである。急速にptdeployの効率を再定義されているLighttpdの。それは、高性能環境用に設計され、最適化される。小さなメモリフットプリントを持つ他のWebサーバ、CPU負荷の効果的な管理、および高度な機能セットのlighttpdのに比べて、負荷の問題に悩まされているすべてのサーバーのための完璧なソリューションです。これはUbuntuとセントのOSで動作するのに適している。</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>ヘルプには、lighttpdのについての情報にアクセスするために使用されている。あなたはまた、helpコマンドを使用することができますptdeployのバージョンのいずれかのヘルプコマンドとクイックリファレンスのために。 helpコマンドは、内部コマンドであるとptdeployモジュールで利用可能です。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol <span class="nb">help</span>
+</pre></div>
+</div>
+<p>次のスクリーンショットは、ptdeployに隷属するユーザーを支援します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy LighttpdControl <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Lighttpd Server Control Functions.
+
+ LighttpdControl, lighttpdcontrol, lighttpdctl
+
+         - start
+         Start the Lighttpd server
+         example: ptdeploy lighttpdcontrol start
+         example: ptdeploy lighttpdcontrol start --yes
+
+         - stop
+         Stop the Lighttpd server
+         example: ptdeploy lighttpdcontrol stop
+         example: ptdeploy lighttpdcontrol stop --yes
+
+         - restart
+         Restart the Lighttpd server
+         example: ptdeploy lighttpdcontrol restart
+         example: ptdeploy lighttpdcontrol restart --yes
+
+         - reload
+         Reloads the Lighttpd server configuration without restarting
+         example: ptdeploy lighttpdcontrol reload
+         example: ptdeploy lighttpdcontrol reload --yes
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>代替パラメータ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>好ましくは、Lighttpdのは、ユーザーが次のオプションを行使することができます使用。</p>
+<p>LighttpdControl, lighttpdcontrol, lighttpdctl</p>
+</div>
+<div class="section" id="id3">
+<h2>スタート<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>lighttpdのサーバーを起動するために使用するオプションを起動します。 Lighttpdcontrolはptdeployモジュールオプションで実行されているインタラクティブなセッションです。サーバーが実行される方法に応じて、startコマンドは、Linuxのレジストリに、スクリプトに格納されることがあります。
+サーバーは、追加のオプションを取得するためにサーバーを制御するために戻って接続するためのオプションを指定して簡単なコマンドを使用して起動することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol start
+</pre></div>
+</div>
+<p>コマンドを入力した後、ユーザーがlighttpdのサーバーの機能を開始することができます。</p>
+</div>
+<div class="section" id="id4">
+<h2>停止<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>lighttpdのサービスを停止するために使用されるこの停止オプション。具体的にUbuntu Linuxのは、stopコマンドは、システム上で実行されているジョブを停止するlighttpdのを呼び出します。それは、コマンドサービス停止に相当します。以下停止コマンドの完全な記述である。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol stop
+</pre></div>
+</div>
+<p>上記のコマンドとして入力した後、サービスが機能を停止。</p>
+</div>
+<div class="section" id="id5">
+<h2>再起動<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>長期的な再起動がウォームリスタートlighttpdのサーバーの前に、すべてのプログラムを終了し、オペレーティング·システムを指します。再起動が時々エラーから回復するために必要であるか、または再初期ドライバやハードウェアデバイスへ。コンピュータ記憶プログラムは、通常、次の簡単なコマンドで再起動を実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol restart
+</pre></div>
+</div>
+<p>上記のコマンドとして入力した後、サービスはlighttpdのサービスを再起動します。</p>
+</div>
+<div class="section" id="id6">
+<h2>リロード<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>リロードは、物事が変化していることを意味します。 lighttpdのはオーバーホールとクリーンアップを受けている。それは、lighttpdのとサービスの再利用を容易にします。プロセスを強制終了することなく、それがlighttpdのをリロードすることができます。次のコマンドは、リロードするユーザーをアシス。コマンドとともに、ユーザが...はい、自動的にそれが機能することができ、任意の質問をせずにオプションを使用する場合。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol reload
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>メリット<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>柔軟な仮想ホスティング。</li>
+<li>すべてのモジュールタイプをサポートしています。</li>
+<li>軽量（1 MB未満）。</li>
+<li>大文字小文字を区別し。</li>
+<li>ユーザーは自分の願い通りに機能することができます。</li>
+<li>終了は可能です。</li>
+<li>自動化が可能です。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jlighttpdcontrol_deploy.rst">
+          LighttpdControl
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

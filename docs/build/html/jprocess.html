@@ -170,27 +170,27 @@
 </pre></div>
 </div>
 <p>次のスクリーン ショット、以下のように、プロセスを殺す方法とプロセスの強制終了を定義する方法を示しています。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure process <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure process help
 ******************************
 
 
- This <span class="nb">command </span>handles process functions, <span class="nb">kill </span>a process <span class="k">for</span> now
+ This command handles process functions, kill a process for now
 
  Process, process
 
-       - <span class="nb">kill</span>
-<span class="nb">       </span>Will ask you <span class="k">for</span> process name, aa file or directory from <span class="nb">local </span>to remote
-       example: ptconfigure process <span class="nb">kill</span>
-<span class="nb">       </span>example: ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-psax <span class="c"># default, will look for string in result of</span>
-       example: ptconfigure process <span class="nb">kill</span> --yes --name<span class="o">=</span><span class="s2">&quot;selenium&quot;</span> --use-pkill <span class="c"># will allow pkill to find  by string to kill</span>
-       example: ptconfigure process <span class="nb">kill</span> --yes
+       - kill
+       Will ask you for process name, aa file or directory from local to remote
+       example: ptconfigure process kill
+       example: ptconfigure process kill --yes --name=&quot;selenium&quot; --use-psax # default, will look for string in result of
+       example: ptconfigure process kill --yes --name=&quot;selenium&quot; --use-pkill # will allow pkill to find  by string to kill
+       example: ptconfigure process kill --yes
                                        --guess
-                                       --id<span class="o">=</span><span class="s2">&quot;1234 # will kill a process by id</span>
-<span class="s2">                                       --level # will guess a 9</span>
+                                       --id=&quot;1234 # will kill a process by id
+                                       --level # will guess a 9
 
-<span class="s2">------------------------------</span>
-<span class="s2">End Help</span>
-<span class="s2">******************************</span>
+------------------------------
+End Help
+******************************
 </pre></div>
 </div>
 </div>
@@ -209,9 +209,9 @@
 </pre></div>
 </div>
 <p>上記のように構文が指定または殺されるためにである文字列を検索する使用されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process <span class="nb">kill</span> --yes
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure process kill --yes
                 --guess
-                <span class="nv">id</span><span class="o">=</span><span class="s2">&quot;1234 #</span>
+                id=&quot;1234 #
 </pre></div>
 </div>
 <p>コマンドが上記のように特定の id によってプロセスを殺します。</p>
@@ -240,7 +240,7 @@
 <div class="section" id="id4">
 <h2>プロセスは行って/殺されたことの確認方法<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Ps またはランレベル スクリプト コマンドを使用します。</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ps aux <span class="p">|</span> grep lighttpd
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ps aux | grep lighttpd
 <span class="nv">$ </span>pidof lighttpd
 </pre></div>
 </div>
@@ -251,7 +251,7 @@
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">kill  </span>pid1 pid2 pid3
 <span class="nb">kill</span> -15  pid1 pid2 pid3
 <span class="nb">kill</span> -9  pid1 pid2 pid3
-<span class="nb">kill</span>  -9 <span class="m">3546</span> <span class="m">5557</span> 4242
+<span class="nb">kill</span>  -9 3546 5557 4242
 </pre></div>
 </div>
 </div>
@@ -319,7 +319,7 @@
     </p>
     <p>
         &copy; Copyright 2015, kevell.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

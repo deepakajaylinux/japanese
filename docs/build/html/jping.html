@@ -180,20 +180,20 @@ kevell@corp:/# ptconfigure ping <span class="nb">help</span>
        ping a target once
        example: ptconfigure ping once --yes --guess
            --target<span class="o">=</span>www.google.com <span class="c"># url/ip to ping test</span>
-           --interval<span class="o">=</span><span class="m">5</span> <span class="c"># no seconds to wait between requests, will guess 2</span>
+           --interval<span class="o">=</span>5 <span class="c"># no seconds to wait between requests, will guess 2</span>
 
        - ten
        ping a target ten <span class="nb">times</span>
 <span class="nb">       </span>example: ptconfigure ping ten --yes --guess
            --target<span class="o">=</span>www.google.com <span class="c"># url/ip to ping test</span>
-           --interval<span class="o">=</span><span class="m">5</span> <span class="c"># no seconds to wait between requests, will guess 2</span>
+           --interval<span class="o">=</span>5 <span class="c"># no seconds to wait between requests, will guess 2</span>
 
        - <span class="k">until</span>-responding
-       ping a target <span class="k">for</span> a <span class="nb">set </span>amount of <span class="nb">time </span><span class="k">until</span> it responds
+       ping a target <span class="k">for </span>a <span class="nb">set </span>amount of <span class="nb">time </span><span class="k">until </span>it responds
        example: ptconfigure ping once --yes --guess
            --target<span class="o">=</span>www.google.com <span class="c"># url/ip to ping test</span>
-           --interval<span class="o">=</span><span class="m">5</span> <span class="c"># no seconds to wait between requests, will guess 2</span>
-           --max-wait<span class="o">=</span><span class="m">100</span> <span class="c"># no seconds in total to keep trying, will guess 60</span>
+           --interval<span class="o">=</span>5 <span class="c"># no seconds to wait between requests, will guess 2</span>
+           --max-wait<span class="o">=</span>100 <span class="c"># no seconds in total to keep trying, will guess 60</span>
 
 ------------------------------
 End Help
@@ -250,7 +250,7 @@ google.com – interval=5 seconds – max-wait=100</td>
 <h2>一度オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ping once --yes --guess --target<span class="o">=</span>www.google.com
 
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">34</span> ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is 34 ms
 ******************************
 
 
@@ -269,11 +269,11 @@ Ping Mods Finished
 <h2>10 のオプション<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ping ten --yes --guess --target<span class="o">=</span>www.google.com
 
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">36</span> ms
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">34</span> ms
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">34</span> ms
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">34</span> ms
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">36</span> ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is 36 ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is 34 ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is 34 ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is 34 ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is 36 ms
 ******************************
 
 
@@ -290,9 +290,9 @@ Ping Mods Finished
 </div>
 <div class="section" id="id6">
 <h2>応答まで<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ping once -- yes --guess --target<span class="o">=</span>google.com -- <span class="nv">interval</span><span class="o">=</span><span class="m">5</span> -- max-wait<span class="o">=</span>100
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ping once -- yes --guess --target<span class="o">=</span>google.com -- <span class="nv">interval</span><span class="o">=</span>5 -- max-wait<span class="o">=</span>100
 
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is <span class="m">37</span> ms
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ping Latency is 37 ms
 ******************************
 
 
@@ -348,7 +348,7 @@ Ping Mods Finished
     </p>
     <p>
         &copy; Copyright 2015, kevell.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.3.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

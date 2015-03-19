@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Awstats &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="Behat" href="jbehat.html" />
+    <link rel="prev" title="AWSCloudFormation" href="jawscloudformation.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Awstats</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">日本語化を目指して修正の特長</a></li>
+<li><a class="reference internal" href="#id4">日本語化を目指して修正の必要条件</a></li>
+<li><a class="reference internal" href="#id5">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jawscloudformation.html"
+         title="Previous Chapter: AWSCloudFormation">&laquo; AWSCloudFormatio...</a></li>
+  <li><a href="jbehat.html"
+         title="Next Chapter: Behat">Behat &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jawstats.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="awstats">
+<h1>Awstats<a class="headerlink" href="#awstats" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールは、最新のバージョンで、AWStatsはの設置を促進する。 AWStatsは、そのようなウェブ、ストリーミングメディア、メール、FTPサーバなどのインターネットサービスからのデータを分析するのに適したツールを報告するオープンソースのWeb分析、である。 AWStatsのは、HTMLレポートを生成する、サーバーのログファイルを解析し、解析する。</p>
+<p>訪問者、ページ、ヒット、時間、検索エンジン、あなたのサイトを見つけるために使用されるキーワード、壊れたリンク、ロボットや多：AWStatsの（高度なWeb統計）を使用すると、すべてのWeb統計を含めて示している強力な、フル機能を備えたWebサーバのログファイルアナライザですもっと。</p>
+<p>私たちは、このAWStatsは、特徴や今後のトピックでAWStatsはの要件をインストールする方法の詳細を見てみましょう。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>helpコマンドは、とだけでなく、AWStatsのモジュールに含まれているオプションについての目的について、ユーザーをガイドします。それは、AWStatsのモジュールの別のパラメータを示しています。また、AWStatsのモジュールをインストールするための構文について説明します。 AWStatsのモジュールのhelpコマンドは、以下のように示されている。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWStats <span class="nb">help</span>
+</pre></div>
+</div>
+<p>helpコマンドを宣言するための構文は、追加的な利点である大文字と小文字を区別しませんです。次のスクリーンショットは、AWStatsの下に、helpコマンドについてあなたを視覚化。</p>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーがマシンにAWStatsのをインストールするために使用するコマンドを以下に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWStats install
+</pre></div>
+</div>
+<p>表形式で示すように、上記のコマンドを入力した後、次の処理が発生します。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="19%" />
+<col width="26%" />
+<col width="13%" />
+<col width="42%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメーター</th>
+<th class="head">代替パラメータ</th>
+<th class="head">オプション</th>
+<th class="head">コメント</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Install AWStats? (Y/N)</td>
+<td>AWStats, Awstats, awstats</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、Yと入力することができ、
+インストールプロセスを続行したい場合</td>
+</tr>
+<tr class="row-odd"><td>Install AWStats? (Y/N)</td>
+<td>AWStats, Awstats, awstats</td>
+<td>N(No)</td>
+<td>ユーザーは、Nと入力することができ、
+インストールプロセスを終了したい場合は|</td>
+</tr>
+</tbody>
+</table>
+<p>ユーザーがインストールを進行する場合は、以下の処理がインストール中に関与している：</p>
+<ul class="simple">
+<li>パッケージ一覧を読み込みます。</li>
+<li>依存関係ツリーを構築します。</li>
+<li>必要な追加パッケージをインストールします</li>
+<li>提案されたパッケージをインストールします。</li>
+<li>新しいパッケージをインストールします。</li>
+</ul>
+<p>以下のスクリーンショットに示すように、最後に、日本語化を目指して修正のインストールが正常に完了されます：</p>
+<div class="highlight-bash"><div class="highlight"><pre>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>日本語化を目指して修正の特長<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>完全なログ解析は、あなたに以下の情報を表示するようにAWStatsのが可能になります。</p>
+<ul class="simple">
+<li>訪問やユニーク訪問者数</li>
+<li>訪問期間と最後の訪問</li>
+<li>認証されたユーザー、そして最後に認証されたの訪問</li>
+<li>週とラッシュ時間の日数（ページ、ヒット、毎日、1時間KB）</li>
+<li>ホストのドメイン/国の訪問者（ページ、ヒット、KB）</li>
+<li>ホストリスト、最後の訪問や、未解決のIPアドレスリスト</li>
+<li>閲覧最多、入口と出口ページ</li>
+<li>ファイルタイプ（mod_gzipのかmod_deflateがための）*ウェブ圧縮統計</li>
+<li>使用ブラウザ（ページ、ヒット、各ブラウザ用KB）使用</li>
+<li>OS（ページ、ヒット、各OS用KB）</li>
+<li>ロボットの訪問</li>
+<li>ワーム攻撃</li>
+<li>ダウンロードと継続検出 あなたのサイトを見つけるために使用される*検索エンジン、キーフレーズとキーワード</li>
+<li>HTTPエラー（ページ最後のリファラにはない、など、）</li>
+<li>画面サイズレポート</li>
+<li>回数は、あなたのサイトは「お気に入りのブックマークに追加」されているサポートするブラウザの</li>
+<li>比：ジャワ、フラッシュ、RealG2リーダー、QuickTimeのリーダー、WMAリーダー、PDFリーダー負荷分散サーバー比について*クラスタレポート</li>
+<li>その他のパーソナライズされた報告書...</li>
+</ul>
+<p>それだけでなく、次の機能をサポートします。</p>
+<ul class="simple">
+<li>すべてのログ形式を分析することができます</li>
+<li>ダイナミックで（CGIとして、コマンドラインから、ブラウザから作品</li>
+</ul>
+<p>&nbsp;&nbsp;いくつかのチャートのフィルタ機能）
+* 統計の更新は、Webインターフェイスからオンデマンドで行うことができ、
+&nbsp;&nbsp;あなたのスケジューラからだけでなく、
+* 無制限のログファイルのサイズ、サポート分割ログファイル（負荷分散システム）</p>
+<blockquote>
+<div>でも、入口と出口のページのためのログファイルを「ほぼソート」*サポート</div></blockquote>
+<ul class="simple">
+<li>前または分析中にDNSルックアップを逆に、DNSキャッシュファイルをサポートしています
+IPロケーションまたはドメイン名から*カントリー検出</li>
+<li>WHOISリンク</li>
+<li>オプション/フィルタやプラグインの多くは、使用することができます
+サポートされている*マルチという名前のWebサイト（仮想サーバー）</li>
+<li>クロスサイトスクリプティング攻撃の保護</li>
+<li>いくつかの言語</li>
+<li>まれなPerlのライブラリの必要はありません</li>
+<li>動的CGI出力として報告する</li>
+<li>静的HTMLまたはXHTMLページを1でレポートまたはフレーム</li>
+<li>実験PDFエクスポート</li>
+<li>見て、色があなたのサイトのデザイン（CSS）を一致させることができます</li>
+<li>HTMLのヘルプとツールチップがページを報告した</li>
+<li>簡単（編集するだけで1コンフィギュレーション·ファイル）を使用する</li>
+<li>分析データベースはXML形式で保存することができる（XSLT処理用、...）</li>
+<li>Webminのモジュール</li>
+<li>ソースとフリー（GNU GPL）（Perlスクリプト）</li>
+<li>すべてのプラットフォーム上で利用可能</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>日本語化を目指して修正の必要条件<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>A
+WStatsのCGIスクリプトを使用するには、次の要件が必要になります。</p>
+<ul class="simple">
+<li>あなたのサーバーは、あなたが読むことができるログファイルにウェブアクセスをログインする必要があります。</li>
+<li>AWStatsはを実行するには、コマンドラインから、ご使用のオペレーティング·システムができなければなりません</li>
+</ul>
+<p>&nbsp;&nbsp;Perlスクリプト（.plのファイル）を実行する。
+* Perlモジュール「エンコード」に、利用可能でなければなりません。</p>
+<p>（リアルタイムの統計のための）CGIとしてAWStatsはを実行するには、Webサーバーは、そのようなスクリプトを実行することができなければならない。</p>
+<p>&nbsp;&nbsp;そうでない場合は、最後のPerlのバージョンをダウンロードすることによりこの問題を解決することができます。</p>
+<p>&nbsp;&nbsp;<a class="reference external" href="http://www.activestate.com/ActivePerl">http://www.activestate.com/ActivePerl</a>/（Windowsの場合）</p>
+<p>&nbsp;&nbsp;<a class="reference external" href="http://www.perl.com/pub/language/info/software">http://www.perl.com/pub/language/info/software</a>.html（すべてのOS）</p>
+</div>
+<div class="section" id="id5">
+<h2>メリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>追加された利点の一方である大文字と小文字を区別しませんヘルプとインストールとアンインストールの操作で使用されるパラメータ</li>
+</ul>
+<p>&nbsp;&nbsp;他の人に比べ。
+* これは、Ubuntuと同様にセントOSの両方に裕福なです。
+* この意志モジュールが更新されたバージョンで日本語化を目指して修正をインストールします。
+* モジュールがすでにユーザマシン内に存在されている場合は、それがすでに存在しているようにメッセージが表示されます。
+* AWStatsのは、Apacheの（NCSA組み合わせ/ XLF / ELFログ形式または共通ログ形式（CLF））を含むほとんどの主要なWebサーバログファイル形式をサポート   しています&nbsp;&nbsp;WebSTARの、IIS（W3Cログ形式）、および他の多くの一般的なWebサーバのログ形式。
+* 開発者は、SourceForge.netを通じてAWStatsのプロジェクトに貢献することができます。
+* Perlで書かれ、AWStatsは、ほぼすべてのオペレーティングシステム上に展開することができます
+* これは、ほとんどのLinuxディストリビューションで利用可能なパッケージを使用して、サーバー管理ツールです。
+* AWStatsは、ログファイルは、リモートからダウンロードすることができます状況でローカルな使用のために、そのようなMS Windowsのように、ワークステー  ションにインストールすることができます&nbsp;サーバー。</p>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jawstats.rst">
+          Awstats
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
