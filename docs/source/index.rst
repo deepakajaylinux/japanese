@@ -18,3 +18,4 @@ Commands
    :maxdepth: 2
    
  jptconfigure_main
+ jptdeploy_main
