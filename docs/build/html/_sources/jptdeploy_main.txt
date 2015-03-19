@@ -230,4 +230,20 @@ Available Commands:
 .. toctree::
    :maxdepth: 6
    
+   
+ japachecontrol_deploy
+ japachevhosteditor_deploy
+ jautopilot_deploy
+ jdapperfy_deploy
+ jdbconfigure_deploy
+ jdrupal_deploy
+ jgitclone_deploy
+ jhosteditor_deploy
+ jjoomla_deploy
+ jlighttpdcontrol_deploy
+ jlogging_deploy
+ jnginxcontrol_deploy 
+
+
+
 
