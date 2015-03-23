@@ -122,21 +122,47 @@ Apacheのサービス名の入力を取得した後、それはプロセスを�
 
 .. code-block:: bash
 
- kevell@corp:/# ptdeploy apachecontrol start
- Do you want to Start Apache? (Y/N)
- y
- What is the apache service name?
- (0) apache2
- (1) httpd
- 0
- Starting Apache...
- * Starting web server apache2
- *
- ******************************
+ kevell@corp:/# ptdeploy apachecontrol start 
+
+ Do you want to Start Apache? (Y/N) 
+ y 
+ What is the apache service name? 
+ (0) apache2 
+ (1) httpd 
+ 0 
+ Starting Apache... 
+  * Starting web server apache2 
+  * 
+ ****************************** 
+ 1Apache Controller Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy apachecontrol start --yes  --guess 
+
+ Starting Apache... 
+ * Starting web server apache2 
+ * 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy apachecontrol start --yes  --apache-command="apache2" 
+
+ Starting Apache... 
+ * Starting web server apache2 
+ * 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
 
 
- 1Apache Controller Finished
- ******************************
+
 
 ストップ機能
 ------------------
@@ -159,15 +185,49 @@ Ubuntuのためにapche2はデフォルト値です。
 
 .. code-block:: bash
 
- kevell@corp:/# ptdeploy apachecontrol stop --yes --guess
- Stopping Apache...
- * Stopping web server apache2
- *
- ******************************
+
+ kevell@corp:/# ptdeploy apachecontrol stop 
+
+ Do you want to Stop Apache? (Y/N) 
+ y 
+ What is the apache service name? 
+ (0) apache2 
+ (1) httpd 
+ 0 
+ Stopping Apache... 
+ * Stopping web server apache2 
+ * 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
 
 
- 1Apache Controller Finished
- ******************************
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy apachecontrol stop --yes  --guess 
+
+ Stopping Apache... 
+ * Stopping web server apache2 
+ * 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy apachecontrol stop --yes  --apache-command="apache2" 
+
+ Stopping Apache... 
+ * Stopping web server apache2 
+ * 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
+
 
 ファンクションを再起動する
 ---------------------------------------------
@@ -184,17 +244,50 @@ Ubuntuのためにapche2はデフォルト値です。
 
 .. code-block:: bash
 
- kevell@corp:/# ptdeploy apachecontrol restart --yes --apache-command="apache2"
- Restarting Apache...
- AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globa lly to suppress this message
- * Restarting web server apache2
-  
-  ....done.
- ******************************
+ kevell@corp:/# ptdeploy apachecontrol restart 
+
+ Do you want to Restart Apache? (Y/N) 
+ y 
+ What is the apache service name? 
+ (0) apache2 
+ (1) httpd 
+ 0 
+ Restarting Apache... 
+ * Restarting web server apache2 
+   ...done. 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
+
+.. code-block:: bash
 
 
- 1Apache Controller Finished
- ******************************
+ kevell@corp:/# ptdeployapachecontrol restart --yes  --guess 
+
+ Restarting Apache... 
+ * Restarting web server apache2 
+   ...done. 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeployapachecontrol restart --yes  --apache-command="apache2" 
+
+ Restarting Apache... 
+ * Restarting web server apache2 
+   ...done. 
+ ****************************** 
+
+
+ 1Apache Controller Finished 
+ ****************************** 
+
+
 
 機能のリロード
 ----------------------------
@@ -218,6 +311,55 @@ Ubuntuのためにapche2はデフォルト値です。
 	ptdeploy apachecontrol --yes --apache-command="apache2"
 
 リロード機能は、再起動せずにApacheサーバをリロード実行します。
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy apachecontrol reload 
+
+ Do you want to Reload Apache? (Y/N) 
+ y 
+ What is the apache service name? 
+ (0) apache2 
+ (1) httpd 
+ 0 
+ Reloading Apache Configuration... 
+ * Reloading web server apache2 
+ * 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy apachecontrol reload --yes  --guess 
+
+ Reloading Apache Configuration... 
+ * Reloading web server apache2 
+ * 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy apachecontrol reload --yes  --apache-command="apache2" 
+
+ Reloading Apache Configuration... 
+ * Reloading web server apache2 
+ * 
+ ****************************** 
+
+ 1Apache Controller Finished 
+ ****************************** 
+
+
+
 
 メリット
 -----------

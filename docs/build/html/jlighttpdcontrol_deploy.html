@@ -31,6 +31,9 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="jptdeploy_main.html" />
+    <link rel="next" title="Logging" href="jlogging_deploy.html" />
+    <link rel="prev" title="Joomla" href="jjoomla_deploy.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -76,9 +79,10 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+    ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 </li>
@@ -105,6 +109,10 @@
             
               
                 
+  <li><a href="jjoomla_deploy.html"
+         title="Previous Chapter: Joomla">&laquo; Joomla</a></li>
+  <li><a href="jlogging_deploy.html"
+         title="Next Chapter: Logging">Logging &raquo;</a></li>
               
             
             
@@ -120,6 +128,7 @@
    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -139,9 +148,10 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 
@@ -210,6 +220,30 @@ End Help
 </pre></div>
 </div>
 <p>コマンドを入力した後、ユーザーがlighttpdのサーバーの機能を開始することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol start
+
+Do you want to Start Lighttpd? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Starting Lighttpd...
+* Starting web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol start --yes
+
+Starting Lighttpd...
+* Starting web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id4">
 <h2>停止<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
@@ -218,6 +252,30 @@ End Help
 </pre></div>
 </div>
 <p>上記のコマンドとして入力した後、サービスが機能を停止。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol stop
+
+Do you want to Stop Lighttpd? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Stopping Lighttpd...
+* Stopping web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol stop --yes
+
+Stopping Lighttpd...
+* Stopping web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id5">
 <h2>再起動<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
@@ -226,11 +284,63 @@ End Help
 </pre></div>
 </div>
 <p>上記のコマンドとして入力した後、サービスはlighttpdのサービスを再起動します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol restart
+
+Do you want to Restart Lighttpd? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Restarting Lighttpd...
+* Stopping web server lighttpd
+  ...done.
+* Starting web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol restart --yes
+
+Restarting Lighttpd...
+* Stopping web server lighttpd
+  ...done.
+* Starting web server lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id6">
 <h2>リロード<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>リロードは、物事が変化していることを意味します。 lighttpdのはオーバーホールとクリーンアップを受けている。それは、lighttpdのとサービスの再利用を容易にします。プロセスを強制終了することなく、それがlighttpdのをリロードすることができます。次のコマンドは、リロードするユーザーをアシス。コマンドとともに、ユーザが...はい、自動的にそれが機能することができ、任意の質問をせずにオプションを使用する場合。</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploy lighttpdcontrol reload
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol reload
+
+Do you want to Reload Lighttpd? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Reloading Lighttpd...
+* Reloading web server configuration lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy lighttpdcontrol reload --yes
+
+Reloading Lighttpd...
+* Reloading web server configuration lighttpd
+  ...done.
+******************************
+
+1Lighttpd Controller Finished
+******************************
 </pre></div>
 </div>
 </div>

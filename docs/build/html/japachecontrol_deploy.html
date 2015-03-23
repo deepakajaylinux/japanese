@@ -31,6 +31,9 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="jptdeploy_main.html" />
+    <link rel="next" title="ApacheVHostEditor" href="japachevhosteditor_deploy.html" />
+    <link rel="prev" title="PTDeploy" href="jptdeploy_main.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -76,9 +79,10 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+    ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 </li>
@@ -105,6 +109,10 @@
             
               
                 
+  <li><a href="jptdeploy_main.html"
+         title="Previous Chapter: PTDeploy">&laquo; PTDeploy</a></li>
+  <li><a href="japachevhosteditor_deploy.html"
+         title="Next Chapter: ApacheVHostEditor">ApacheVHostEdito... &raquo;</a></li>
               
             
             
@@ -120,6 +128,7 @@
    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -139,9 +148,10 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 
@@ -246,6 +256,7 @@ End Help
 <p>Apacheのサービス名の入力を取得した後、それはプロセスを開始します。</p>
 <p>次のスクリーンショットは、絵画的に開始処理を示している。</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol start
+
 Do you want to Start Apache? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 What is the apache service name?
@@ -253,10 +264,30 @@ What is the apache service name?
 <span class="o">(</span>1<span class="o">)</span> httpd
 0
 Starting Apache...
+ * Starting web server apache2
+ *
+******************************
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol start --yes  --guess
+
+Starting Apache...
 * Starting web server apache2
 *
 ******************************
 
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol start --yes  --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+Starting Apache...
+* Starting web server apache2
+*
+******************************
 
 1Apache Controller Finished
 ******************************
@@ -274,12 +305,40 @@ Starting Apache...
 <p>Ubuntuのためにapche2はデフォルト値です。</p>
 <p>セントのOSのhttpdの場合はデフォルト値です。</p>
 <p>次のスクリーンショットは、絵画的に推測オプションの停止機能と目的についてあなたを示している。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol stop --yes --guess
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol stop
+
+Do you want to Stop Apache? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is the apache service name?
+<span class="o">(</span>0<span class="o">)</span> apache2
+<span class="o">(</span>1<span class="o">)</span> httpd
+0
 Stopping Apache...
 * Stopping web server apache2
 *
 ******************************
 
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol stop --yes  --guess
+
+Stopping Apache...
+* Stopping web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol stop --yes  --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+Stopping Apache...
+* Stopping web server apache2
+*
+******************************
 
 1Apache Controller Finished
 ******************************
@@ -294,12 +353,39 @@ Stopping Apache...
 </div>
 <p>（これはapcheサーバの制御機能を定義する構文の三種類である）</p>
 <p>ユーザーは、必要なApacheのコマンドの値を指定するには、構文のこの第三のタイプを使用することができます。以下に示すように、スクリーンショットは、構文および絵画的機能を再起動する方法のこの第三のタイプを示している。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol restart --yes --apache-command=&quot;apache2&quot;
-Restarting Apache...
-AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 127.0.1.1. Set the &#39;ServerName&#39; directive globa lly to suppress this message
-* Restarting web server apache2
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol restart
 
- ....done.
+Do you want to Restart Apache? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is the apache service name?
+<span class="o">(</span>0<span class="o">)</span> apache2
+<span class="o">(</span>1<span class="o">)</span> httpd
+0
+Restarting Apache...
+* Restarting web server apache2
+  ...done.
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeployapachecontrol restart --yes  --guess
+
+Restarting Apache...
+* Restarting web server apache2
+  ...done.
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeployapachecontrol restart --yes  --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+Restarting Apache...
+* Restarting web server apache2
+  ...done.
 ******************************
 
 
@@ -323,6 +409,45 @@ AH00558: apache2: Could not reliably determine the server&#39;s fully qualified 
 </pre></div>
 </div>
 <p>リロード機能は、再起動せずにApacheサーバをリロード実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol reload
+
+Do you want to Reload Apache? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is the apache service name?
+<span class="o">(</span>0<span class="o">)</span> apache2
+<span class="o">(</span>1<span class="o">)</span> httpd
+0
+Reloading Apache Configuration...
+* Reloading web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol reload --yes  --guess
+
+Reloading Apache Configuration...
+* Reloading web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy apachecontrol reload --yes  --apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span>
+
+Reloading Apache Configuration...
+* Reloading web server apache2
+*
+******************************
+
+1Apache Controller Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id7">
 <h2>メリット<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>

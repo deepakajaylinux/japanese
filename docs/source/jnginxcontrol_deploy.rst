@@ -57,6 +57,21 @@ helpコマンド
 
 あなたは 'Y'を入力続行したい場合は何が 'N'を入力した場合、実行する前に、システムは、続行するに確認をお願いします。
 
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol start 
+
+ Do you want to Start Nginx? (Y/N) 
+ y 
+ Starting Nginx... 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
+
+
+
+
 停止
 ----------------
 
@@ -67,6 +82,21 @@ helpコマンド
 	ptdeploy nginxcontrol stop	
 
 あなたは 'Y'を入力続行したい場合は何が 'N'を入力した場合、実行する前に、システムは、続行するに確認をお願いします。
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol stop 
+
+ Do you want to Stop Nginx? (Y/N) 
+ y 
+ Stopping Nginx... 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
+
+
+
 
 再起動
 ----------------
@@ -79,6 +109,23 @@ helpコマンド
 
 あなたは 'Y'を入力続行したい場合は何が 'N'を入力した場合、実行する前に、システムは、続行するに確認をお願いします。
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol restart 
+
+ Do you want to Restart Nginx? (Y/N) 
+ y 
+ Restarting Nginx... 
+ * Restarting nginx nginx 
+   ...fail! 
+ ****************************** 
+
+ 1Nginx Controller Finished 
+ ****************************** 
+
+
+
 リロード
 ----------------
 
@@ -89,6 +136,23 @@ helpコマンド
 	ptdeploy nginxcontrol reload
 
 あなたは 'Y'を入力続行したい場合は何が 'N'を入力した場合、実行する前に、システムは、続行するに確認をお願いします。
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy nginxcontrol reload
+
+ Do you want to Reload Nginx? (Y/N) 
+ y
+ Reloading Nginx...
+ * Reloading nginx configuration nginx
+   ...done.
+ ******************************
+
+ 1Nginx Controller Finished
+ ******************************
+
+
 
 代替パラメータ
 ------------------------

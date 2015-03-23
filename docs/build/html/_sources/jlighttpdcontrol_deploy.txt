@@ -71,6 +71,39 @@ lighttpdのサーバーを起動するために使用するオプションを起
 
 コマンドを入力した後、ユーザーがlighttpdのサーバーの機能を開始することができます。
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy lighttpdcontrol start 
+
+ Do you want to Start Lighttpd? (Y/N) 
+ y 
+ Starting Lighttpd... 
+ * Starting web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy lighttpdcontrol start --yes 
+
+ Starting Lighttpd... 
+ * Starting web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+
+
+
 停止
 -------
 
@@ -81,6 +114,37 @@ lighttpdのサービスを停止するために使用されるこの停止オプ
         ptdeploy lighttpdcontrol stop
 
 上記のコマンドとして入力した後、サービスが機能を停止。
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy lighttpdcontrol stop 
+
+ Do you want to Stop Lighttpd? (Y/N) 
+ y 
+ Stopping Lighttpd... 
+ * Stopping web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy lighttpdcontrol stop --yes 
+
+ Stopping Lighttpd... 
+ * Stopping web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
 
 再起動
 ------------
@@ -93,6 +157,39 @@ lighttpdのサービスを停止するために使用されるこの停止オプ
 
 上記のコマンドとして入力した後、サービスはlighttpdのサービスを再起動します。
 
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy lighttpdcontrol restart 
+
+ Do you want to Restart Lighttpd? (Y/N) 
+ y 
+ Restarting Lighttpd... 
+ * Stopping web server lighttpd 
+   ...done. 
+ * Starting web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy lighttpdcontrol restart --yes 
+
+ Restarting Lighttpd... 
+ * Stopping web server lighttpd 
+   ...done. 
+ * Starting web server lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
 リロード
 ------------
 
@@ -101,6 +198,36 @@ lighttpdのサービスを停止するために使用されるこの停止オプ
 .. code-block:: bash
    
         ptdeploy lighttpdcontrol reload
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy lighttpdcontrol reload 
+ 
+ Do you want to Reload Lighttpd? (Y/N) 
+ y 
+ Reloading Lighttpd... 
+ * Reloading web server configuration lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy lighttpdcontrol reload --yes 
+
+ Reloading Lighttpd... 
+ * Reloading web server configuration lighttpd 
+   ...done. 
+ ****************************** 
+
+ 1Lighttpd Controller Finished 
+ ****************************** 
+
+
 
 メリット
 --------------

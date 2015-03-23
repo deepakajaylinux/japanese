@@ -36,7 +36,7 @@ System Detection
 
         - detect
         Detects the Operating System
-        example: ptconfigure system-detection detect
+        example: ptdeploy system-detection detect
 
  ------------------------------
  End Help
@@ -44,7 +44,7 @@ System Detection
 
 
 検出
------------ 
+----------
 
 検出システムの設定を検出するために使用します。1 つのコマンドを使用して、ユーザーはシステム アプリケーションに関するすべての情報を得ることができます。
 システムの検出に使用するコマンドは以下の通りです。
@@ -52,7 +52,7 @@ System Detection
 
 .. code-block:: bash
 
-		ptconfigure systemdetection detect
+		ptdeploy systemdetection detect
 
 
 上記のコマンドをキーイングの後システムの検出プロセスを開始します。システムの検出中に対応するマシンに関する次の情報が報告されます。
@@ -72,7 +72,7 @@ System Detection
 
 .. code-block:: bash
 
- kevells@corp:/# ptconfigure system-detection detect
+ kevells@corp:/# ptdeploy system-detection detect
  ******************************
 
 

@@ -69,6 +69,30 @@ gitのクローンの下で機能をチェックアウトを使用するため�
 
 .. code-block:: bash
 
+
+ kevell@corp:/# ptdeploy gitclone co https://github.com/PharaohTools/ptvirtualize.git 
+
+ Perform a clone/download of files? (Y/N) 
+ y 
+ What's git repo to clone from? 
+ https://github.com/PharaohTools/ptvirtualize.git 
+ Cloning into 'ptvirtualize'... 
+ remote: Counting objects: 4673, done. 
+ remote: Total 4673 (delta 0), reused 0 (delta 0), pack-reused 4673 
+ Receiving objects: 100% (4673/4673), 2.20 MiB | 128.00 KiB/s, done. 
+ Resolving deltas: 100% (2971/2971), done. 
+ Checking connectivity... done. 
+ Also change permissions/owner? (Y/N) 
+ n 
+ ****************************** 
+
+
+ 1In GitClone View 
+ ****************************** 
+
+
+
+
 メリット
 -----------
 

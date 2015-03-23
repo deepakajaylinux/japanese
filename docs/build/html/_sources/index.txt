@@ -19,3 +19,14 @@ Commands
    
  jptconfigure_main
  jptdeploy_main
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+

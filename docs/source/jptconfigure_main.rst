@@ -550,6 +550,8 @@ PTConfigureモジュールと遊ぶ
    jamazoncloudwatch  
    jamazondynamodb
    jamazonelasticache
+   jamazonroute53
+   jamazons3
    japacheconf
    japachemodules
    japachereverseproxy
@@ -559,6 +561,7 @@ PTConfigureモジュールと遊ぶ
    japt
    jautopilot
    jawscloudformation
+   jawsrds
    jawstats
    jbehat
    jcassandra
@@ -652,6 +655,7 @@ PTConfigureモジュールと遊ぶ
    jptvirtualize
    jpython
    jra
+   jrackspace
    jredis
    jrubybdd
    jrubyrvm

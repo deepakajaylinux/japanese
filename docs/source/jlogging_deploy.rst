@@ -30,7 +30,7 @@ helpコマンドは、その使用方法や方法論についてのユーザー�
 
         - log
         Logs a message the console or
-        example: ptconfigure logging log --php-log --log-message="Here is something logging to the console and error log"
+        example: ptdeploy logging log --php-log --log-message="Here is something logging to the console and error log"
 
  ------------------------------
  End Help
@@ -118,6 +118,37 @@ PHPのエラーログのログを宣言するための構文は次のように�
  	log-message="Here is something logging to the console and error log"
 
 ユーザーは彼らの要求に応じて、ログメッセージの一部に任意のテキストを追加することができます。
+
+.. code-block:: bash
+
+ kevell@corp:/# ptdeploy logging log --php-log --log-message="Here is something logging to the console and error log" 
+
+ Install Logging? (Y/N) 
+ y 
+ ******************************* 
+ *   Golden Contact Computing  * 
+ *           Logging!          * 
+ ******************************* 
+ [Pharaoh Logging] Here is something logging to the console and error log 
+ [Pharaoh Logging] Here is something logging to the console and error log 
+
+ ... All done! 
+ ******************************* 
+ Thanks for installing , visit www.gcsoftshop.co.uk for more 
+ ****************************** 
+
+
+ Single App Installer: 
+ -------------------------------------------- 
+
+ No Data. 
+
+ ------------------------------ 
+ Installer Finished 
+ *********************** 
+
+
+
 
 メリット
 -----------

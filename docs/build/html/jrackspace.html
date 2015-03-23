@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Rackspace &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="Redis" href="jredis.html" />
+    <link rel="prev" title="Ra" href="jra.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Rackspace</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#box-add">Box-add</a></li>
+<li><a class="reference internal" href="#box-destroy">Box-destroy</a></li>
+<li><a class="reference internal" href="#box-destroy-all">Box-destroy-all</a></li>
+<li><a class="reference internal" href="#save-ssh-key">Save-ssh-key</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#list-containers">List-containers</a></li>
+<li><a class="reference internal" href="#list-objects">List-objects</a></li>
+<li><a class="reference internal" href="#id2">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id3">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jra.html"
+         title="Previous Chapter: Ra">&laquo; Ra</a></li>
+  <li><a href="jredis.html"
+         title="Next Chapter: Redis">Redis &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jrackspace.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="rackspace">
+<h1>Rackspace<a class="headerlink" href="#rackspace" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ラック スペース雲で成功するために高パフォーマンスで信頼性の高いインフラストラクチャを提供します。フル機能、最適化されたプラットフォームとワークロードを実行する専門家のチームがかかります。</p>
+<p>Rackspace は 2 つの主な基幹業務のクラウド サーバーと専用サーバー。ラック スペースを設計、構築、お客様の個々 のニーズに応じて両方の環境にわたってワークロードを動作ことができます。</p>
+<p>クラウド サーバー - 管理インフラストラクチャ サービス レベルは、クラウドでは、アーキテクチャのアドバイス、安全保障の支援を通じて Api と Sdk) コード開発支援など顧客をセットアップに必要なサービスのコア セットを提供します。管理操作のサポートのレベルはすべて管理インフラストラクチャ サービスに加えて、追加のプロアクティブ ・ サポートを提供します。</p>
+<p>プロアクティブなサービスは提供されるオン デマンド サポートの専用サーバ - 管理されたサービス レベルで構成されます。</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>This command helps to determine the usage of Rackspace. The user will come to know about the different way/format to execute this module. This command guides the end user to know the purpose of this command. Below given are the command and the screenshot of the same.</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Rackspace <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling Servers on Rackspace.
+
+   Rackspace, rackspace
+
+       - box-add
+       Lets you add boxes to Rackspace, and adds them to your papyrusfile
+       example: ptconfigure rackspace box-add
+                   --yes
+                   --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+                   --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - box-destroy
+       Will destroy box/es in an environment <span class="k">for </span>you, and remove them from the papyrus file
+       example: ptconfigure rackspace box-destroy --yes --guess --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span> --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - box-destroy-all
+       Will destroy all boxes in your Rackspace account - Careful - its irreversible
+       example: ptconfigure rackspace box-destroy-all --yes --guess
+
+       - save-ssh-key, sshkey, ssh-key
+       Will <span class="nb">let </span>you save a <span class="nb">local </span>ssh key to your Rackspace account, so you can ssh in to your nodes with it
+       securely and without a password
+       example: ptconfigure rackspace save-ssh-key
+                   --yes
+                   --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span>
+                   --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+
+       - list
+       Will display data about your Rackspace account
+       example: ptconfigure rackspace list
+       example: ptconfigure rackspace list --yes
+                   --guess <span class="c"># use project saved connection details if possible</span>
+                   --rackspace-list-data-type<span class="o">=</span>sizes <span class="c"># servers, sizes, images, domains, regions, ssh_keys</span>
+
+       - list-containers
+       Will display Container data about your Rackspace account
+       example: ptconfigure rackspace list-containers
+       example: ptconfigure rackspace list-containers --yes
+                   --guess <span class="c"># use project saved connection details if possible</span>
+
+       - list-objects
+       Will display object of Containers data about your Rackspace account
+       example: ptconfigure rackspace list-objects
+       example: ptconfigure rackspace list-objects --yes
+                   --guess <span class="c"># use project saved connection details if possible</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="box-add">
+<h2>Box-add<a class="headerlink" href="#box-add" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、ラック スペースにボックスを追加することができ、パピルス ファイルに追加します。特定のコマンドの下、プロセスが実行されます。
+.. code-block:: bash</p>
+<blockquote>
+<div>ptconfigure rackspace box-add &#8211;yes &#8211;rackspace-ssh-key-path=&#8221;/home/dave/.ssh/bastion.pub&#8221; &#8211;rackspace-ssh-key-name=&#8221;bastion&#8221;</div></blockquote>
+</div>
+<div class="section" id="box-destroy">
+<h2>Box-destroy<a class="headerlink" href="#box-destroy" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、ボックス/es で環境を破壊してパピルス ファイルからそれらを削除に役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace box-destroy --yes --guess --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span> --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="box-destroy-all">
+<h2>Box-destroy-all<a class="headerlink" href="#box-destroy-all" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、Rackspace アカウントにすべての箱を破壊するのに役立ちます。最も重要な部分はリバーシブルではないです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace box-destroy-all --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="save-ssh-key">
+<h2>Save-ssh-key<a class="headerlink" href="#save-ssh-key" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、ローカル ssh キー保存、Rackspace アカウントにすることができます ssh でそれをあなたのノードをしっかりとパスワードなしに役立ちます。-Ssh キーから、ssh キーはこの特定のコマンドを使用する 3 つの代替パラメーターがあります。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace save-ssh-key --yes --rackspace-ssh-key-path<span class="o">=</span><span class="s2">&quot;/home/dave/.ssh/bastion.pub&quot;</span> --rackspace-ssh-key-name<span class="o">=</span><span class="s2">&quot;bastion&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、Rackspace アカウントに関するデータに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list --yes --guess <span class="c"># use project saved connection details if possible --rackspace-list-data-type=sizes # servers, sizes, images, domains, regions, ssh_keys</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-containers">
+<h2>List-containers<a class="headerlink" href="#list-containers" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、コンテナー、Rackspace アカウントに関するデータを表示するのに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list-containers
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list-containers --yes --guess <span class="c"># use project saved connection details if possible</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-objects">
+<h2>List-objects<a class="headerlink" href="#list-objects" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、Rackspace アカウントについてコンテナー データ オブジェクトを表示するのに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list-objects
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure rackspace list-objects --yes --guess <span class="c"># use project saved connection details if possible</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>代替パラメータ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>2 つの代替パラメーターをコマンドラインで使用することができますがあります。</p>
+<p>Rackspace, rackspace</p>
+</div>
+<div class="section" id="id3">
+<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Rackspace はバックアップおよび MySQL のワークロードに特化したエンジニアによってサポートされているリレーショナル データベース用に設計された高性能、特化したインフラストラクチャ要求の厳しい顧客のための完全なソリューションを提供します。Rackspace は、アプリケーションの開発に焦点を当てるし、基盤となるインフラストラクチャについて心配しないでを希望お客様のため完全に管理されたサービスです。オン デマンド ・ バックアップとリストアに関するサービス提供しています統合監視、冗長ストレージ成長するスケーラビリティに基づいてアプリケーションのニーズとあなたのデータベースに対するフル コントロール。</p>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jrackspace.rst">
+          Rackspace
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

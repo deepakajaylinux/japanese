@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AWS RDS &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="Awstats" href="jawstats.html" />
+    <link rel="prev" title="AWSCloudFormation" href="jawscloudformation.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">AWS RDS</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#describe-instance">Describe-instance</a></li>
+<li><a class="reference internal" href="#delete-instance">Delete-instance</a></li>
+<li><a class="reference internal" href="#create-db-snapshot">Create-db-snapshot</a></li>
+<li><a class="reference internal" href="#delete-db-snapshot">Delete-db-snapshot</a></li>
+<li><a class="reference internal" href="#copy-db-snapshot">Copy-db-snapshot</a></li>
+<li><a class="reference internal" href="#create-instance">Create-instance</a></li>
+<li><a class="reference internal" href="#reboot-instance">Reboot-instance</a></li>
+<li><a class="reference internal" href="#create-instance-read-replica">Create-instance-read replica</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#id2">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id3">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jawscloudformation.html"
+         title="Previous Chapter: AWSCloudFormation">&laquo; AWSCloudFormatio...</a></li>
+  <li><a href="jawstats.html"
+         title="Next Chapter: Awstats">Awstats &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jawsrds.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="aws-rds">
+<h1>AWS RDS<a class="headerlink" href="#aws-rds" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>アマゾンのリレーショナル データベース サービス (Amazon RDS) は簡単に設定すると、web サービスの操作、およびリレーショナル データベース、クラウドのスケールします。アプリケーションやビジネスに焦点を当てるまであなたを解放する、時間のかかるデータベース管理タスクを管理しながらのコスト効率の高いサイズ変更可能な容量を提供します。</p>
+<p>Amazon RDS MySQL、Oracle、Microsoft SQL Server、PostgreSQL は、またはアマゾンのオーロラのリレーショナル データベース管理システムの機能へのオンライン アクセスを与えます。つまり、Amazon rds. とコード、アプリケーション、およびツールを既に使用している今日、既存のデータベースを使用することができます。Amazon RDS は自動的にパッチ データベース ソフトウェアとデータベースをバックアップする、バックアップを格納するユーザー定義の期間のため、ポイント ・ イン ・ タイム ・ リカバリを有効にします。コンピューティング リソースまたは 1 回の API 呼び出しを介してデータベース インスタンス （DB インスタンス) に関連付けられているストレージ容量を拡張することができるという柔軟性を恩恵を受ける。</p>
+<p>Amazon RDS MySQL、Oracle、SQL Server、PostgreSQL のエンジンを使用してデータベース インスタンスは一般目的 （SSD） ストレージ、プロビジョニング IOPS （SSD） ストレージ、または磁気記憶装置でプロビジョニングすることができます。アマゾン オーロラ エンジンを使用してデータベース インスタンスはセルフヒー リング データベース ワークロードに関して特化した SSD バックアップ仮想化ストレージ レイヤー、フォルト ・ トレラントな採用しています。</p>
+<p>さらに、Amazon RDS の可用性と運用環境のワークロードの信頼性を強化するために使用するレプリケーションなります。実行することができますマルチ AZ 展開オプションを使用するミッション ・ クリティカルなワークロードが故障した場合の同期的にレプリケートされたセカンダリ データベースをプライマリ データベースから内蔵自動フェールオーバーと高可用性を実現します。読み取りのレプリカを使用して、MySQL、PostgreSQL は、およびアマゾン オーロラ Amazon RDS もできます読み取り重いデータベース ワークロードの配置を 1 つのデータベースの容量を超えてスケール アウト。すべての Amazon Web サービスと同様、必要な先行投資がないと使用するリソースに対してのみ支払います。</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは Amazon rds. の使用状況を判断するのに役立ちますユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevel@corp:/# ptconfigure Amazon RDS <span class="nb">help</span>
+
+******************************
+
+
+   This is an extension provided <span class="k">for </span>Handling AWS ElastiCache.
+
+   Amazon RDS, Amazon RDS, aws-elasticache
+
+       - create-cache-cluster
+       Lets you add cache Cluster to AWS ElastiCache
+       example: ptconfigure Amazon RDS create-cache-cluster
+                   --yes
+                   --guess
+       - create-health-check
+       Lets you add Health Check to AWS Route53
+       example: ptconfigure AWSRoute53 create-health-check
+                   --yes
+                   --guess
+
+         - reboot-cache-cluster
+       Lets you reboot cache Cluster to AWS ElastiCache
+       example: ptconfigure AWSRoute53 delete-hosted-zone
+                   --yes
+                   --guess
+
+        - delete-cache-cluster
+       Lets you delete cache Cluster to AWS ElastiCache
+       example: ptconfigure Amazon RDS delete-cache-cluster
+                   --yes
+                   --guess
+
+        - delete-replication-group
+       Lets you delete replication group to AWS ElastiCache
+       example: ptconfigure Amazon RDS delete-replication-group
+                   --yes
+                   --guess
+
+       - list
+       Will display data about your AWS ElastiCache
+       example: ptconfigure Amazon RDS list
+                   --yes
+                   --guess
+
+       Note: region must be one of the following...
+       us-east-1, ap-northeast-1, sa-east-1, ap-southeast-1, ap-southeast-2, us-west-2, us-gov-west-1, us-west-1, cn-north-1, eu-west-1
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="describe-instance">
+<h2>Describe-instance<a class="headerlink" href="#describe-instance" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは AWS rds. のインスタンスを記述するのに役立ちます特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS describe-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-instance">
+<h2>Delete-instance<a class="headerlink" href="#delete-instance" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、インスタンスを削除するのに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS delete-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-db-snapshot">
+<h2>Create-db-snapshot<a class="headerlink" href="#create-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドにより再起動する db スナップショットを作成します。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-db-snapshot --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-db-snapshot">
+<h2>Delete-db-snapshot<a class="headerlink" href="#delete-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、データベース スナップショットを削除するのに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS delete-db-snapshot –yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-db-snapshot">
+<h2>Copy-db-snapshot<a class="headerlink" href="#copy-db-snapshot" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、db のスナップショットをコピーするのに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS copy-db-snapshot --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-instance">
+<h2>Create-instance<a class="headerlink" href="#create-instance" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、インスタンスを作成するのに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-instance --yes –guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="reboot-instance">
+<h2>Reboot-instance<a class="headerlink" href="#reboot-instance" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、インスタンスを再起動するのに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS reboot-instance --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-instance-read-replica">
+<h2>Create-instance-read replica<a class="headerlink" href="#create-instance-read-replica" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、db インスタンスのレプリカを読み取りを作成するのに役立ちます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS create-instance-readreplica --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドにより、AWS rds. に関するデータを表示できます。特定のコマンドの下、プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure AWSRDS list --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>代替パラメータ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>コマンドラインで使用できる 3 つの代替パラメーターがあります。</p>
+<p>AWSRDS, awsrds, aws-rds</p>
+</div>
+<div class="section" id="id3">
+<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>データベース、Web サービスを配置する単純な: Amazon RDS を簡単に展開するプロジェクトの概念から行きます。AWS 管理コンソールまたは単純な API 呼び出しを使用して、インフラストラクチャのプロビジョニングやデータベース ソフトウェアのインストールと保守について心配することがなく分生産準備のリレーショナル データベースの機能にアクセスします。</p>
+<p>管理: Amazon RDS 時間のかかるデータベース管理タスクを処理、バックアップ、パッチ管理、レプリケーションなど高い値アプリケーション開発またはデータベースの改良を追求することができます。</p>
+<p>互換性: Amazon RDS のネイティブ アクセスを取得するリレーショナル データベース管理システム。これは、既存のツールやアプリケーションとの互換性を促進します。さらに、Amazon RDS 制御できますオプション DB エンジン バージョン管理による DB インスタンスのエンジン バージョン力を支えた。
+高速で予測可能なパフォーマンス： データベース インスタンス Amazon RDS の MySQL を使用して Oracle、SQL Server、および Oracle エンジン プロビジョニングできる一般目的 （SSD） ストレージ、プロビジョニング IOPS （SSD） ストレージ、または磁気記憶装置と。
+Amazon RDS 一般目的 （SSD） ストレージ ・ プロビジョニングされた GB あたり 3 IOPS の一貫性のあるベースラインを提供最大 3,000 IOPS をバーストする能力を提供しています。</p>
+<p>Amazon RDS プロビジョニング IOPS （SSD） ストレージ I/O の集中的なトランザクション データベースのワークロードの高速で予測可能な一貫したパフォーマンスを提供するために設計された高パフォーマンスのストレージ オプションです。30,000 IOPS DB インスタンスごとに 1,000 IOPS からプロビジョニングできます。（最大） が実現 IOPS はエンジンの種類によって異なります。
+磁気記憶装置 (以前 Amazon RDS 標準ストレージとして知られている) データがそれほど頻繁にアクセスされる小さなデータベース ワークロードに適しています。</p>
+<p>アマゾン オーロラ エンジンを使用してデータベース インスタンスはセルフヒー リング データベース ワークロードに関して特化した SSD バックアップ仮想化ストレージ レイヤー、フォルト ・ トレラントな採用しています。</p>
+<p>クラウドのスケーラブルなデータベース: 計算をスケールすることができ、ストレージ ・ リソースをあなたのアプリケーションを満たすためにデータベースに使用できる Amazon RDS API または AWS 管理コンソールを使用して必要があります。プロビジョニングし、最大ストレージをスケールすることができます Amazon RDS と共に MySQL、Oracle、または PostgreSQL Amazon RDS プロビジョニング IOPS ストレージを使用する場合に最大 30,000 IOPS と 3 TB です。その最大実現 IOPS はエンジンの種類によって異なります注意してください。さらに、MySQL、PostgreSQL とアマゾン オーロラ データベース エンジンを関連付けることもできます 1 つ以上の読み取りレプリカ、データベース インスタンスの展開を読み取り重いワークロードを 1 つのデータベース インスタンスの容量を超えて拡張することができます。</p>
+<p>アマゾン オーロラ データベース エンジンは、ストレージを拡張することができます最大 64 TB です。データベース インスタンスの配置を最大 15 アマゾン オーロラ レプリカを関連付けることができます。アマゾン オーロラ レプリカ共有ソース インスタンスとして同じ基になるストレージのコスト削減とレプリカ ノードにデータをコピーする必要を回避します。</p>
+<p>信頼性： Amazon RDS は自動バックアップ、DB スナップショット、自動ホスト交換マルチ AZ 展開など重要な本番データベースの信頼性を向上させる複数の機能。Amazon RDS 他 Amazon の Web サービスで使用される同じ信頼性の高いインフラストラクチャで実行されます。</p>
+<p>アマゾン オーロラ エンジン Amazon RDS は 3 つの利用可能ゾーンのいずれかで作成した最大 15 のオーロラ レプリカの 1 つへのフェイル オーバーを自動化する RDS マルチ-アリゾナ州技術を使用します。</p>
+<p>その他 Amazon Web サービスで使用するために設計された： Amazon RDS は他の Amazon の Web サービスと緊密に統合されます。たとえば、Amazon EC2 で実行されるアプリケーションは Amazon RDS DB インスタンスに同じ地域で低レイテンシのデータベースへのアクセスを発生します。
+セキュアな： Amazon RDS あなた DB Instances.Amazon RDS をセキュリティ保護するメカニズムの数は、AWS キー管理サービス (KMS) を通しての管理キーを使用して MySQL 又は PostgreSQL データベースを暗号化することができます提供します。Amazon RDS 暗号化を実行して、データベース インスタンスは、レプリカ、およびスナップショットの読み取りその自動バックアップとして基になるストレージの残りの部分に格納されているデータは暗号化されます。</p>
+<p>Amazon RDS には SQL Server と Oracle の透過的なデータ暗号化をサポートします。Oracle での透過的なデータ暗号化を安全に生成、保存、および AWS クラウド内のシングル テナントのハードウェア セキュリティ モジュール (HSM) アプライアンスで暗号化キーを管理することができます AWS CloudHSM と統合されます。</p>
+<p>Amazon RDS には、データベースへのネットワーク アクセスを制御するファイアウォール設定を構成する web サービス インターフェイスが含まれています。
+Amazon RDS では、DB インスタンス アマゾン仮想プライベート クラウド (Amazon VPC) で実行することができます。Amazon VPC 業界標準暗号化 IPsec VPN を通じてインフラストラクチャ DB インスタンスに既存の接続を使用して、希望する ip アドレスの範囲を指定することによって分離することができます。VPC で Amazon RDS に関する詳細については、Amazon RDS のユーザーズ ガイドを参照してください。</p>
+<p>安価な: 非常に低料金を支払うし、あなたが実際に消費するリソースに対してのみです。また、オン ・ デマンドいいえ前払いまたは長期的なコミットメントと価格設定のオプションの恩恵やさらに低い時間別料金私たちの予約価格のオプションを介して。
+オンデマンド DB インスタンス – オン ・ デマンド DB インスタンス計算容量ない長期的なコミットメントと時間で支払うことができます。これは、コストと計画、購買、および維持するハードウェアの複雑さから解放し、はるかに小さい変動費によく大規模な固定費とは何です変換します。</p>
+<p>予約済み DB インスタンス-予約済み DB インスタンス オプションを選択できる各 DB インスタンスを留保し、その DB インスタンスの 1 時間ごとの使用料に大幅な割引を受け取るのため低い、1 回の支払いを行います。あなたの用途に応じての 3 つの予約済み DB インスタンス タイプ (ライト、媒体と重い利用) を選択し、オン ・ デマンド価格より 30% ～ 55% 割引のどこでも受信できます。</p>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jawsrds.rst">
+          AWS RDS
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

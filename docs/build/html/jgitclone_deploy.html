@@ -31,6 +31,9 @@
     <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="jptdeploy_main.html" />
+    <link rel="next" title="Host Editor" href="jhosteditor_deploy.html" />
+    <link rel="prev" title="Drupal" href="jdrupal_deploy.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -76,9 +79,10 @@
      class="dropdown-toggle"
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul>
+    ><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 </li>
@@ -101,6 +105,10 @@
             
               
                 
+  <li><a href="jdrupal_deploy.html"
+         title="Previous Chapter: Drupal">&laquo; Drupal</a></li>
+  <li><a href="jhosteditor_deploy.html"
+         title="Next Chapter: Host Editor">Host Editor &raquo;</a></li>
               
             
             
@@ -116,6 +124,7 @@
    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -135,9 +144,10 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 
@@ -220,7 +230,25 @@ Checkout</td>
 </tbody>
 </table>
 <p>次のスクリーンショット、チェックアウトの機能のプロセスと作業についての絵で描く。</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy gitclone co https://github.com/PharaohTools/ptvirtualize.git
+
+Perform a clone/download of files? (Y/N)
+y
+What&#39;s git repo to clone from?
+https://github.com/PharaohTools/ptvirtualize.git
+Cloning into &#39;ptvirtualize&#39;...
+remote: Counting objects: 4673, done.
+remote: Total 4673 (delta 0), reused 0 (delta 0), pack-reused 4673
+Receiving objects: 100% (4673/4673), 2.20 MiB | 128.00 KiB/s, done.
+Resolving deltas: 100% (2971/2971), done.
+Checking connectivity... done.
+Also change permissions/owner? (Y/N)
+n
+******************************
+
+
+1In GitClone View
+******************************
 </pre></div>
 </div>
 </div>

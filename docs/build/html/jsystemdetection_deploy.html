@@ -79,6 +79,7 @@
     ><ul>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 </li>
@@ -117,6 +118,7 @@
    <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
     <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
     <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
       </ul>
 
           
@@ -139,6 +141,7 @@
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
 </ul>
 </ul>
 
@@ -171,7 +174,7 @@
 
        - detect
        Detects the Operating System
-       example: ptconfigure system-detection detect
+       example: ptdeploy system-detection detect
 
 ------------------------------
 End Help
@@ -183,7 +186,7 @@ End Help
 <h2>検出<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>検出システムの設定を検出するために使用します。1 つのコマンドを使用して、ユーザーはシステム アプリケーションに関するすべての情報を得ることができます。
 システムの検出に使用するコマンドは以下の通りです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure systemdetection detect
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy systemdetection detect
 </pre></div>
 </div>
 <p>上記のコマンドをキーイングの後システムの検出プロセスを開始します。システムの検出中に対応するマシンに関する次の情報が報告されます。</p>
@@ -198,7 +201,7 @@ End Help
 <li>IP アドレス 1。</li>
 </ul>
 <p>最後に、検出後、上記について情報述べた機能を明確に報告されます。次のスクリーン ショットは、システムの検出プロセスについて示しています。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# ptconfigure system-detection detect
+<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# ptdeploy system-detection detect
 ******************************
 
 
