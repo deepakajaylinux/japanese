@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PTVirtualize &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="next" title="AutoSSH" href="jautossh_virtualize.html" />
+    <link rel="prev" title="Templating" href="jtemplating_test.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PTVirtualize</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#id2">必要条件</a></li>
+<li><a class="reference internal" href="#id3">バーチャルボックスをインストールするためのコード</a></li>
+<li><a class="reference internal" href="#id4">インストール</a></li>
+<li><a class="reference internal" href="#ptconfigure">ptconfigure経由のインストール</a></li>
+<li><a class="reference internal" href="#id5">一人でptvirtualizeのインストール</a></li>
+<li><a class="reference internal" href="#id6">使用量の方法論</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#id7">簡単な例</a></li>
+<li><a class="reference internal" href="#id8">ptvirtualizeモジュールと遊ぶ</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jtemplating_test.html"
+         title="Previous Chapter: Templating">&laquo; Templating</a></li>
+  <li><a href="jautossh_virtualize.html"
+         title="Next Chapter: AutoSSH">AutoSSH &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jptvirtualize_main.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="ptvirtualize">
+<h1>PTVirtualize<a class="headerlink" href="#ptvirtualize" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ptconfigureと比較しながら、 ptvirtualizeは、仮想マシンと開発環境管理のための機能を提供し、仮想マシンの管理ツールです。</p>
+<p>Devopsを使用することにより、仮想マシンの構成を管理しても、非常に複雑な開発環境に貢献異なるタイプのを容易にする。</p>
+<p>これは、標準化と仮想化環境へのセットアップを管理、自動化を容易にします。その機能は、構成管理、テストの自動管理、自動展開、ビルドとリリース管理、開発環境の管理が含まれており、それらの機能が実行されます。</p>
+<p>ptvirtualizeでは構成管理、システム自動化とインフラストラクチャは、PHPで囲まれている。実行するには、コンパイル·ステップが存在しないようにPHPスクリプトを編集すると、本当に簡単です。</p>
+<p>ptvirtualizeは、オブジェクト指向のデータ型だけでなく、データに適用することができる操作の種類だけでなく、豊かであること。したがって、手続き型プログラミング技術よりオブジェクト指向プログラミング技術を比較しながら、オブジェクト指向プログラミングは、新しいタイプのオブジェクトが追加されたときに変更する必要のないモジュールを作成するために、エンドユーザーを可能にする。</p>
+<p>余分なモジュールが必要な場合、ユーザは、フレームとそれらの要件に応じてモジュールを設計し、彼らは含めることができようにptvirtualizeは、拡張可能です。</p>
+<p>必要に応じて、テンプレートオプション外テンプレートの機能を使用して、追加することができる。 SSHオプションでは、SSHキーの値を設定できます。 SFTPは読みやすさを促進し、仮想ボックスを使用して、2つの異なるOS間での能力を記述します。</p>
+</div>
+<div class="section" id="id2">
+<h2>必要条件<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>あなたがptvirtualizeを使用したい場合は、 Virualボックスは仮想ボックスゲストの追加機能と一緒に、あなたのマシンにインストールされているかどうか確認してください</p>
+</div>
+<div class="section" id="id3">
+<h2>バーチャルボックスをインストールするためのコード<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptconfigure virtualbox install --yes --guess --with-guest-additions
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>インストール<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>お使いのマシンにptvirtualizeツールをインストールするには、次の2つの方法があります：</p>
+<p>1)Installation via ptconfigure</p>
+<p>2)Installing ptvirtualize alone</p>
+</div>
+<div class="section" id="ptconfigure">
+<h2>ptconfigure経由のインストール<a class="headerlink" href="#ptconfigure" title="Permalink to this headline">¶</a></h2>
+<p>あなたがあなたのマシンにptconfigureツールを持っている場合、それは以下のようなコードを使用してptvirtualizeをインストールするには簡単です、</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptconfigure ptvirtualize install --yes --guess
+</pre></div>
+</div>
+<p>インストール時に独自のディレクトリを選択しながら、ここでの単語の推測は無視することができます。</p>
+</div>
+<div class="section" id="id5">
+<h2>一人でptvirtualizeのインストール<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>あなたがptconfigureツールに依存することなく、あなたのマシンにptvirtualizeツールをインストールしたい場合は、コマンドを使用して簡単です、</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5 git
+</pre></div>
+</div>
+<p>このコマンドは、ご使用のマシンにPHP5とのgitをインストールします。それは、次のコマンドを使用した後、</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone http://github.com/PharaohTools/ptvirtualize &amp;&amp; sudo php ptvirtualize/install-silent
+</pre></div>
+</div>
+<p>インストール時に場所を選択したくない場合は、上記のようにコマンドを使用することができる。あなたがそうしたい場合は、次のコマンドを使用します:</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone http://github.com/PharaohTools/ptvirtualize &amp;&amp; sudo php ptvirtualize/install
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>使用量の方法論<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>ここでは、私たちはツールとその使用法の下でコマンドを使用する方法を見てみましょう。</p>
+<p>あなたは、単に次のコマンドを入力した場合、</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ptvirtualize</span>
+</pre></div>
+</div>
+<p>下のスクリーンショットに示すように、あなたは、このツールの下で利用可能なすべてのモジュールの表示を取得します。</p>
+<div class="highlight-python"><div class="highlight"><pre>kevell@Corp:/# ptvirtualize
+******************************
+Pharaoh Tools - Virtualize
+******************************
+
+
+Virtualize by Golden Contact Computing
+-------------------
+
+About:
+-----------------
+Virtualize is for controlling Virtual Machines in Development Environments.
+
+-------------------------------------------------------------
+
+Available Commands:
+---------------------------------------
+
+AutoSSH - AutoSSH - Use your Papyrus details to automatically SSH or SFTP into your Virtualize box
+Box - Box - Manage Base Boxes for Virtualize
+Destroy - Destroy - Stop a Virtualize Box
+Flirtify - Virtualize Flirtify - Generate a Phalgrantfile
+Halt - Halt - Stop a Virtualize Box
+Invoke - SSH Invocation Functions
+PharaohTools - Pharaoh Tools Provisioner Integration
+Provision - Provision - Stop a Virtualize Box
+Resume - Resume - Stop a Virtualize Box
+SFTP - SFTP Functionality
+Shell - Shell Provisioner Integration
+Status - Status - Stop a Virtualize Box
+SystemDetection - System Detection - Detect the Running Operating System
+Up - Up - Create and Start a Virtualize Box
+Virtualbox - Virtualbox Provider Integration
+
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>これは、 helpコマンドを使用するように簡単です、</p>
+<blockquote>
+<div>ptvirtualize ModuleName help</div></blockquote>
+<p>このコマンドは、特定のモジュールがどのように動作するのに役立ちますし、また、それが実行できるアクションが何であるかについて。
+下のスクリーンショットは、 helpコマンドは、モジュールAutoSSHを説明するために使用され、どのように説明しています。</p>
+<div class="highlight-python"><div class="highlight"><pre>kevell@Corp:/#ptvirtualize AutoSSH help
+
+******************************
+Pharaoh Tools - Virtualize
+******************************
+
+
+This command allows you to autoSSH a ptvirtualize box
+
+AutoSSH, auto-ssh, autossh, ssh, SSH
+
+    - cli
+    Open an SSH Cli to your ptvirtualize Box
+    example: ptvirtualize auto-ssh cli --yes --guess
+
+    - sftp-put
+    SFTP Put a file on to your ptvirtualize Box
+    example: ptvirtualize auto-ssh sftp-put --yes --guess --source=/path/to/source --target=/path/to/target
+
+    - sftp-get
+    SFTP Get a file from your ptvirtualize Box
+    example: ptvirtualize auto-ssh sftp-get --yes --guess --source=/path/to/source --target=/path/to/target
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>簡単な例<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>それではここでptvirtualizeに関する短い例について見てみましょう。</p>
+<p>ディレクトリを作成する、または単にあなたの新しいファラオプロジェクトます。mkdir / VAR / WWW /私のテストプロジェクト&amp;&amp; CDの/ var / www /の私のテスト·プロジェクトとして、現在のWebプロジェクトを使用</p>
+<p>あなたはそれがすでに、それは次のようにコマンドを使用して簡単ですがない場合は、あなたのマシンにVirtualBoxをインストールし、</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo ptconfigure virtualbox install --yes --guess --with-guest-additions
+</pre></div>
+</div>
+<p>次のコマンドを使用してデフォルトptconfigure構成管理オートパイロットファイルを追加:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo ptconfigure cleofy install-generic-autopilots --yes --guess --template-group=ptvirtualize
+</pre></div>
+</div>
+<p>flirtify ptvirtualize flirt now &#8211;template-group=default-php</p>
+<p>インストール、設定、現在は、仮想マシンのptvirtualizeを起動</p>
+</div>
+<div class="section" id="id8">
+<h2>ptvirtualizeモジュールと遊ぶ<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="jautossh_virtualize.html">AutoSSH</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jautossh_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jautossh_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jautossh_virtualize.html#id2">AutoSSHの機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jautossh_virtualize.html#cli">Cli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jautossh_virtualize.html#sftp-put">Sftp_put</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jautossh_virtualize.html#sftp-get">Sftp_get</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jautossh_virtualize.html#id3">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jautossh_virtualize.html#id4">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jbox_virtualize.html">Box</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#ptvirtualize">ptvirtualizeボックスの機能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#add">Add</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#remove">Remove</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#package">Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#list">List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbox_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jdestroy_virtualize.html">Destroy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jdestroy_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jdestroy_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jdestroy_virtualize.html#id2">どのように破壊するために</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jdestroy_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jflirtify_virtualize.html">Flirtify</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jflirtify_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jflirtify_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jflirtify_virtualize.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jflirtify_virtualize.html#default-cleo">Default-cleo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jflirtify_virtualize.html#custom-cleo-dapper">Custom-cleo-dapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jflirtify_virtualize.html#default-cleo-dapper">Default-cleo-dapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jflirtify_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jhalt_virtualize.html">Halt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jhalt_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jhalt_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jhalt_virtualize.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jhalt_virtualize.html#id3">名前で停止</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jhalt_virtualize.html#id4">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jinvoke_virtualize.html">Invoke</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jinvoke_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jinvoke_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jinvoke_virtualize.html#get">Get</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jinvoke_virtualize.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jinvoke_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jpharaohtools_virtualize.html">PharaohTools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#id2">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#ensure">Ensure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#ptdeploy">ptdeploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#pttest">pttest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#jrush">Jrush</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#id3">追加オプション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jpharaohtools_virtualize.html#id4">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jresume_virtualize.html">Resume</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jresume_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jresume_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jresume_virtualize.html#id2">どのように行動を再開するには</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jresume_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jsftp_virtualize.html">SFTP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jsftp_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsftp_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsftp_virtualize.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsftp_virtualize.html#put">Put</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsftp_virtualize.html#get">Get</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsftp_virtualize.html#id3">オプション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsftp_virtualize.html#id4">オプション</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jshell_virtualize.html">Shell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jshell_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jshell_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jshell_virtualize.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jshell_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jstatus_virtualize.html">Status</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jstatus_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jstatus_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jstatus_virtualize.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jstatus_virtualize.html#show">Show</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jstatus_virtualize.html#full">Full</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jstatus_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jsystemdetection_virtualize.html">SystemDetection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_virtualize.html#detect">Detect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_virtualize.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jup_virtualize.html">Up</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jup_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jup_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jup_virtualize.html#id2">アップ機能の働き</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jup_virtualize.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jvirtualbox_virtualize.html">Virtualbox</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jvirtualbox_virtualize.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jvirtualbox_virtualize.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jvirtualbox_virtualize.html#id2">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jvirtualbox_virtualize.html#id3">オプション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jvirtualbox_virtualize.html#id4">メリット</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jptvirtualize_main.rst">
+          PTVirtualize
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

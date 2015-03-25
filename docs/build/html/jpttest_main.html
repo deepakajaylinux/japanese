@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PTTest &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="next" title="Behat" href="jbehat_test.html" />
+    <link rel="prev" title="Wordpress" href="jwordpress_deploy.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PTTest</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#ptconfigurepttest">ptconfigure経由pttestインストール</a></li>
+<li><a class="reference internal" href="#id3">ptconfigureに依存せずにpttestのインストール</a></li>
+<li><a class="reference internal" href="#id4">使用して、可能なモジュールにする方法</a></li>
+<li><a class="reference internal" href="#id5">PTTestモジュールと遊ぶ</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jwordpress_deploy.html"
+         title="Previous Chapter: Wordpress">&laquo; Wordpress</a></li>
+  <li><a href="jbehat_test.html"
+         title="Next Chapter: Behat">Behat &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jpttest_main.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="pttest">
+<h1>PTTest<a class="headerlink" href="#pttest" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>pttestは、PHPを用いてテスト構成と実行の自動化管理を目指す。</p>
+<p>これは、テストスイートの構成および実行を処理するためのツールと技術の範囲でルールの共通セットを使用しています。</p>
+<p>これは、言語やテストツールの広い範囲でテストを実行するための共通APIを提供します。ユーザーは、ほとんど、あるいは必要に応じて余分な構成の複雑なテストスイートを実行することができます。これは、手動またはオペレーティングシステムを使用してユーザーテストに栄養を与えると手に環境安定性を確保します。</p>
+<p>これは、オブジェクト指向と拡張可能な、モジュラーである。ユーザーは、フレームと彼らの要求に応じて、独自のモジュールを追加することができ、必要に応じて余分なモジュールを感じているのであれば。</p>
+<p>それは、構成管理、テストの自動化管理、自動展開、ビルドとリリース管理、より、 PHPのコードで実装されているすべての、すべてを包み込むファラオツールスイートの一部です。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>あなたが特定のモジュールの目的を知りたい場合は、次のように単にコマンドを入力します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest ModuleName <span class="nb">help</span>
+</pre></div>
+</div>
+<p>このコマンドは、その特定のモジュールの使用法とは、ユーザーが実行できるアクションで使用可能なオプションを提供します。下のスクリーンショットは、 pttestの下でhelpコマンドを使用してbehatモジュールの使用方法を説明しています。</p>
+<p>helpコマンドも宣言で使用できる代替パラメータを示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest Behat <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to initialize a Behat <span class="nb">test </span>suite.
+
+ Behat, behat
+
+       - init, initialize
+       Initialises the Behat <span class="nb">test </span>suite of this project
+       example: pttest behat init
+       example: pttest behat initialize
+
+       - execute
+       Executes the Behat <span class="nb">test </span>suite of this project
+       example: pttest behat execute
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>pttestのインストールは、可用性と、ユーザーの要件に応じて2つの方法で行うことができます。 pttestをインストールする彼ら2つの方法があります。</p>
+<ul class="simple">
+<li>Installing pttest via ptconfigure</li>
+<li>Installing the pttest without depending on ptconfigure.</li>
+</ul>
+</div>
+<div class="section" id="ptconfigurepttest">
+<h2>ptconfigure経由pttestインストール<a class="headerlink" href="#ptconfigurepttest" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーは自分のマシンでptconfigureを持っている場合、それは、次のコマンドを使用してpttestをインストールするための簡単な方法は、次のとおりです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptconfigure pttest install --yes --guess
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>ptconfigureに依存せずにpttestのインストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーは応じて、彼らは、次のコマンドを使用することができptconfigureを使用せずにpttestをインストールしたい場合：</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo apt-get install php5 git
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://github.com/phpengine/pttest &amp;&amp; sudo php pttest/install-silent
+</pre></div>
+</div>
+<p>or</p>
+<p>希望のユーザーは、インストール時に場所を指定するために、以下のコマンドは、予測可能である</p>
+<div class="highlight-bash"><div class="highlight"><pre>git clone https://github.com/phpengine/pttest &amp;&amp; sudo php pttest/install
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>使用して、可能なモジュールにする方法<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>pttestツールを使用する方法を私たちは最初、単に入力し、見てみましょう</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest
+</pre></div>
+</div>
+<p>このコマンドはpttestの下で利用可能なモジュールのすべての名前が一覧表示されます。以下のスクリーンショットは、視覚的にあることを示している。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest
+******************************
+
+
+PTTest by Golden Contact Computing
+-------------------
+
+About:
+-----------------
+pttest is <span class="k">for </span>Test Automation. It can be used to generate starter <span class="nb">test </span>suites <span class="k">for </span>your applications,
+and automated <span class="nb">test </span>execution scripts within minutes.
+
+By providing an common API by which to execute tests in a wide range
+of languages and <span class="nb">test </span>tools, you can run complex <span class="nb">test </span>suites across a range of platforms with little to no
+extra configuration.
+
+-------------------------------------------------------------
+
+Available Commands:
+---------------------------------------
+
+Autopilot - ptconfigure Autopilot - User Defined Installations
+Behat - Behat - Initialize or Execute a Behat Test Suite
+Cucumber - Cucumber - Initialize or Execute a Cucumber Test Suite
+EnvironmentConfig - Environment Configuration - Configure Environments <span class="k">for </span>a project
+PHPUnit - PHPUnit - Initialize or Execute a PHPUnit Test Suite
+SystemDetection - System Detection - Detect the Running Operating System
+Templating - Templating
+Testify - Testifyer - Creates default tests <span class="k">for </span>your project
+
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>PTTestモジュールと遊ぶ<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="jbehat_test.html">Behat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jbehat_test.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbehat_test.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbehat_test.html#id2">Behatを初期化する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbehat_test.html#id3">どのようにBehatを実行するには</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jbehat_test.html#id4">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jcucumber_test.html">Cucumber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jcucumber_test.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jcucumber_test.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jcucumber_test.html#id2">キュウリを初期化する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jcucumber_test.html#id3">どのようにキュウリを実行するには</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jcucumber_test.html#id4">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jenvironmentconfig_test.html">EnvironmentConfig</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jenvironmentconfig_test.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jenvironmentconfig_test.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jenvironmentconfig_test.html#id2">どのように環境を構成するには</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jenvironmentconfig_test.html#id3">環境設定を削除する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jenvironmentconfig_test.html#id4">環境構成を一覧表示する方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jenvironmentconfig_test.html#id5">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jenvironmentconfig_test.html#id6">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jphpunit_test.html">PhpUnit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jphpunit_test.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jphpunit_test.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jphpunit_test.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jphpunit_test.html#id3">初期化する</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jphpunit_test.html#execute">Execute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jphpunit_test.html#id4">オプション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jphpunit_test.html#id5">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jsystemdetection_test.html">SystemDetection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_test.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_test.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_test.html#detect">Detect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_test.html#id2">代替パラメータ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jsystemdetection_test.html#id3">メリット</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jtemplating_test.html">Templating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jtemplating_test.html#id1">概要</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jtemplating_test.html#help">Helpコマンド</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jtemplating_test.html#id2">インストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jtemplating_test.html#id3">オプション</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jtemplating_test.html#id4">オプション</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jpttest_main.rst">
+          PTTest
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

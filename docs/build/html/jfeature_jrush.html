@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>JFeature &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="Jrush" href="jjrush_main.html" />
+    <link rel="next" title="JUser" href="juser_jrush.html" />
+    <link rel="prev" title="JConfiguration" href="jconfiguration_jrush.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">JFeature</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">代替パラメータ</a></li>
+<li><a class="reference internal" href="#folder-default">Folder-default</a></li>
+<li><a class="reference internal" href="#feature-install">Feature-install</a></li>
+<li><a class="reference internal" href="#feature-pull">Feature-Pull</a></li>
+<li><a class="reference internal" href="#feature-push">Feature-Push</a></li>
+<li><a class="reference internal" href="#group-install">Group-install</a></li>
+<li><a class="reference internal" href="#group-install-all">Group-install-all</a></li>
+<li><a class="reference internal" href="#group-push">Group-push</a></li>
+<li><a class="reference internal" href="#id3">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jconfiguration_jrush.html"
+         title="Previous Chapter: JConfiguration">&laquo; JConfiguration</a></li>
+  <li><a href="juser_jrush.html"
+         title="Next Chapter: JUser">JUser &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jfeature_jrush.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="jfeature">
+<h1>JFeature<a class="headerlink" href="#jfeature" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>JFeatures は、世界で最も人気のあるソフトウェア パッケージを作成、整理、管理、および web サイト、ブログ、イントラネットのコンテンツを公開するために使用の 1 つです。ユーザーを押して zip ファイルを別のファイルとすべての機能が追加されます。その拡張性の高いアーキテクチャのおかげでも web アプリケーションを構築する素晴らしい拠点です。それのために使用段階移行のコンポーネントを管理します。それ Ubuntu や CentOS と利便性。</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>Help コマンドと同様、目的に関するユーザー ガイドとして JFeatures モジュールに含まれているオプションについて。それは JFeatures モジュールの代替パラメーターが一覧表示されます。また、JFeatures モジュールをインストールするための構文について説明します。JFeatures モジュールのヘルプ コマンドが表示されます以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure JFeatures <span class="nb">help</span>
+</pre></div>
+</div>
+<p>Help コマンドを宣言する構文は、大文字と小文字、追加の利点があります。次のスクリーン ショットは JFeatures の下で help コマンドについてユーザーを視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# jrush JFeature <span class="nb">help</span>
+****************************************
+GC JRush - The Joomla Command Line Shell
+****************************************
+
+ This <span class="nb">command </span>manages the JFeature Component <span class="k">for </span>Stage Migration.
+
+ JFeature, jfeature
+
+       - folder-defaults
+         Reset the feature file storage folders being used to the default
+         example jrush jfeature folder-defaults --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - feature-install
+         Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component
+         example jrush jfeature feature-install --feature-file<span class="o">=</span><span class="s2">&quot;/var/www/website/XXX_XXX.zip&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - feature-pull
+         perform a pull on an installed feature so it is integrated into the site, db and file changes executed.
+         example jrush jfeature feature-pull --pull-unique-time<span class="o">=</span><span class="s2">&quot;XXX_XXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+         example jrush jfeature feature-pull --pull-id<span class="o">=</span><span class="s2">&quot;XX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - feature-push
+         perform a push on an installed feature so it is saved locally.
+         example jrush jfeature feature-push --profile-unique<span class="o">=</span><span class="s2">&quot;XXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span> --push-type<span class="o">=</span><span class="s2">&quot;local&quot;</span>
+
+       - group-install
+         Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component
+         example jrush jfeature group-install --group-file<span class="o">=</span><span class="s2">&quot;/var/www/website/XXXX.group&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - group-install-all
+         Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component. Will scan the configured metadata
+         Directory <span class="k">for </span>group files, and install or update all found groups.
+         example jrush jfeature group-install-all --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - group-push
+         perform a push of a group profile into a locally saved file.
+         example jrush jfeature group-push --group-unique<span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+       - group-pull
+         perform a pull on all installed features in the specified group so they are integrated into the site, db and
+         file changes executed.
+         example jrush jfeature group-pull --group-id<span class="o">=</span><span class="s2">&quot;XX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+         example jrush jfeature group-pull --group-name<span class="o">=</span><span class="s2">&quot;my group&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+         example jrush jfeature group-pull --group-unique<span class="o">=</span><span class="s2">&quot;XX1234&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+
+------------------------------
+End Help
+****************************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>代替パラメータ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>宣言で定義することができます、代替パラメーターを次に示します。</p>
+<p>JFeature, jfeature</p>
+</div>
+<div class="section" id="folder-default">
+<h2>Folder-default<a class="headerlink" href="#folder-default" title="Permalink to this headline">¶</a></h2>
+<p>このプロセスは、ファイルの格納フォルダーに対する既定の設定に使用されます。プリセットの設定またはフォルダーで選択されていない場合に使用する値。ユーザーとの対話が必要です。この目的を果たす最も一般的に選択したオプションを既定値に設定します。</p>
+<p>フォルダー既定プロセスのヘルプ コマンドが表示されます以下の通りです。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature folder-defaults
+</pre></div>
+</div>
+<p>次のスクリーンショットは、その機能を示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>folder-defaults
+Reset the feature file storage folders being used to the default
+example jrush jfeature folder-defaults --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feature-install">
+<h2>Feature-install<a class="headerlink" href="#feature-install" title="Permalink to this headline">¶</a></h2>
+<p>このプロセスは、データベースを移行するためのメタデータをインストールするために使用します。ここで機能ファイル名と構成ファイル名を要求します。ユーザーが 1 つずつすべて上記詳細を入力します。それ以外の場合、ユーザーは、すべて同じ単一の行として入力できます。次のコマンドは jfeature をインストールする使用されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature feature-install
+</pre></div>
+</div>
+<p>スクリーンショットは、その機能を示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>feature-install
+Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component
+example jrush jfeature feature-install --feature-file<span class="o">=</span><span class="s2">&quot;/var/www/website/XXX_XXX.zip&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feature-pull">
+<h2>Feature-Pull<a class="headerlink" href="#feature-pull" title="Permalink to this headline">¶</a></h2>
+<p>フィーチャープルがインストールされている機能で、プルを実行するために使用される。インテグレーションファイルに変更があってもよいによるexecuted.The次のコマンドは、構成ファイルをプルするために使用することができる</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature feature-pull
+</pre></div>
+</div>
+<p>上記の当該コマンドを入力した後の Ip アドレスと時間を頼みます。これに基づいてプルを実行することができます。次のスクリーン ショットでは、その機能について説明します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>feature-pull
+perform a pull on an installed feature so it is integrated into the site, db and file changes executed.
+example jrush jfeature feature-pull --pull-unique-time<span class="o">=</span><span class="s2">&quot;XXX_XXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+example jrush jfeature feature-pull --pull-id<span class="o">=</span><span class="s2">&quot;XX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feature-push">
+<h2>Feature-Push<a class="headerlink" href="#feature-push" title="Permalink to this headline">¶</a></h2>
+<p>機能のプッシュ機能がインストールにプッシュを実現するために使用します。プッシュが完了するとローカルに保存することができます。機能のプッシュに使用するコマンド。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature feature-push
+</pre></div>
+</div>
+<p>入力後、上記の当該コマンド要求ユニークなプロファイルと構成ファイルとプッシュ型します。ユーザーが 1 つまたはすべて同じ行に入力します。これは、スナップショットを次のように説明できます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>feature-push
+perform a push on an installed feature so it is saved locally.
+example jrush jfeature feature-push --profile-unique<span class="o">=</span><span class="s2">&quot;XXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span> --push-type<span class="o">=</span><span class="s2">&quot;local&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="group-install">
+<h2>Group-install<a class="headerlink" href="#group-install" title="Permalink to this headline">¶</a></h2>
+<p>このプロセスは、データベースを移行するためのメタデータをインストールするために使用します。ここで機能グループ ファイル名と構成ファイル名を要求します。ユーザーが 1 つずつすべて上記詳細を入力します。それ以外の場合、ユーザーは同じ行にすべてのものとして入力できます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature group-install
+</pre></div>
+</div>
+<p>スクリーンショットは、その機能を示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>group-install
+Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component
+example jrush jfeature group-install --group-file<span class="o">=</span><span class="s2">&quot;/var/www/website/XXXX.group&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="group-install-all">
+<h2>Group-install-all<a class="headerlink" href="#group-install-all" title="Permalink to this headline">¶</a></h2>
+<p>このプロセスはデータベース移行ファイルのメタデータをインストールに使用する設定。グループ構成機能のコンポーネントです。インストールと更新が可能です。次のコマンドは、グループのすべてのインストールに使用されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature group-install-all
+</pre></div>
+</div>
+<p>構成ファイルを確認上記当該コマンドを入力します。ユーザーは、構成ファイルの名前を入力できます。次のスクリーン ショット ガイド グループすべてをインストールするユーザー。</p>
+<div class="highlight-bash"><div class="highlight"><pre>group-install-all
+Install the metadata <span class="k">for </span>a database migration, fileset, or both from the GC Features component. Will scan the configured metadata
+Directory <span class="k">for </span>group files, and install or update all found groups.
+example jrush jfeature group-install-all --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="group-push">
+<h2>Group-push<a class="headerlink" href="#group-push" title="Permalink to this headline">¶</a></h2>
+<p>このプロセスは、ローカル ファイルへのグループ プロファイルのプッシュを実行できます。ここでユニークなグループと構成ファイルの名前を言及することができます。次のコマンドをローカルにグループ プロファイルをプッシュするために使用ファイルを保存します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>Jrush JFeature group-push
+</pre></div>
+</div>
+<p>次のスクリーン ショット ガイド グループ プッシュをインストールするユーザー。</p>
+<div class="highlight-bash"><div class="highlight"><pre>group-push
+perform a push of a group profile into a locally saved file.
+example jrush jfeature group-push --group-unique<span class="o">=</span><span class="s2">&quot;XXXXXXXXXXXXXXXX&quot;</span> --config-file<span class="o">=</span><span class="s2">&quot;/var/www/website/configuration.php&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>よくすべてのタイプのユーザーのためにサポート</li>
+<li>アップグレードが容易</li>
+<li>検索検索賢くより、</li>
+<li>強力な拡張</li>
+<li>より少ない時間で行う符号化を使うし、より jfeature コマンド</li>
+<li>Ubuntu で、セント OS かによく</li>
+<li>非大文字小文字の区別</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jfeature_jrush.rst">
+          JFeature
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

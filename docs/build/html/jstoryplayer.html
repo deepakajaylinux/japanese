@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Storyplayer &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="Sudonopass" href="jsudonopass.html" />
+    <link rel="prev" title="StandardTools" href="jstandardtools.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Storyplayer</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jstandardtools.html"
+         title="Previous Chapter: StandardTools">&laquo; StandardTools</a></li>
+  <li><a href="jsudonopass.html"
+         title="Next Chapter: Sudonopass">Sudonopass &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jstoryplayer.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="storyplayer">
+<h1>Storyplayer<a class="headerlink" href="#storyplayer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Storyplayer は機能と非機能的なソフトウェアとサービス、firehose スケールでテストをビルドのテストのための DataSift のテスト ツールです。それは素敵な PHPUnit 用の単体テストの開発者、および Behat の受け入れのプロダクト マネージャーによってテストの間座っています。</p>
+<p>Storyplayer は、新しいオープン ソースのテスト ツールです。Storyplayer 当初設計され DataSift のリアルタイム ファイアホース フィルタ リング製品をテストします。これはサービス指向のアーキテクチャで構成されます。</p>
+<ul class="simple">
+<li>データの piplines （ZeroMQ と HTTP を使用して)</li>
+<li>サービス (HTTP および時々 ZeroMQ を使用) のサポート</li>
+<li>内部および一般向け Api (JSON over HTTP を使用)</li>
+<li>(HTML を使用して) フロント エンド インターフェイス</li>
+</ul>
+<p>Storyplayer は、Storyplayer ユーザーのようにあなたのソフトウェアと対話する設計されているため、任意の言語で書かれたソフトウェアをテストできます。</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、Storyplayer の使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Storyplayer <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Storyplayer <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Storyplayer from a GC Repo.
+
+ Storyplayer
+
+       - install
+       Installs the latest GC Repo version of PHPUnit
+       example: ptconfigure storyplayer install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーのマシンで storyplayer モジュールをインストールする必要がある場合、特定のコマンドの下のインストール プロセスが実行されます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure storyplayer install
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure storyplayer install
+
+Install Storyplayer ? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          Storyplayer         *
+*******************************
+What is the program data directory? Found <span class="s2">&quot;/opt/storyplayer&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for </span>yes, no end slash<span class="o">)</span>
+
+What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for </span>yes, No Trailing Slash<span class="o">)</span>
+
+Program Data Folder /opt/storyplayer Deleted <span class="k">if </span>existed
+Creating /tmp/ptconfigure-temp-script-30388926365.sh
+chmod 755 /tmp/ptconfigure-temp-script-30388926365.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-30388926365.sh Permissions
+Executing /tmp/ptconfigure-temp-script-30388926365.sh
+--2015-03-13 09:28:16--  https://getcomposer.org/installer
+Resolving getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>... 87.98.253.108
+Connecting to getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>|87.98.253.108|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified <span class="o">[</span>text/plain<span class="o">]</span>
+Saving to: â€˜installerâ€™
+
+   <span class="o">[</span>                &lt;<span class="o">=</span>&gt;                                                                                       <span class="o">]</span> 2,74,634    38.3KB/s   in 7.0s
+Installing symfony/yaml <span class="o">(</span>v2.6.4<span class="o">)</span>
+Downloading https://api.github.com/repos/symfony/Yaml/zipball/60ed7751671113cf1ee7d7778e691642c2e9acd8
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/symfony/yaml/60ed7751671113cf1ee7d7778e691642c2e9acd8.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/symfony/yaml/Symfony/Component/Yaml/608f7b6f8cc4abc17da0dac15662c7c4&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/0d5e9897&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/0d5e9897&#39;</span>
+
+   REASON: datasift/storyplayer 1.5.8 requires symfony/yaml 2.* -&gt; satisfiable by symfony/yaml<span class="o">[</span>2.0.4, 2.0.5, 2.0.6, 2.0.7, v2.0.10, v2.0.12, v2.0.13, v2.0.14, v2.0.15, v2.0.16, v2.0.17, v2.0.18, v2.0.19, v2.0.20, v2.0.21, v2.0.22, v2.0.23, v2.0.24, v2.0.25, v2.0.9, v2.1.0, v2.1.1, v2.1.10, v2.1.11, v2.1.12, v2.1.13, v2.1.2, v2.1.3, v2.1.4, v2.1.5, v2.1.6, v2.1.7, v2.1.8, v2.1.9, v2.2.0, v2.2.1, v2.2.10, v2.2.11, v2.2.2, v2.2.3, v2.2.4, v2.2.5, v2.2.6, v2.2.7, v2.2.8, v2.2.9, v2.3.0, v2.3.1, v2.3.10, v2.3.11, v2.3.12, v2.3.13, v2.3.14, v2.3.15, v2.3.16, v2.3.17, v2.3.18, v2.3.19, v2.3.2, v2.3.20, v2.3.21, v2.3.22, v2.3.23, v2.3.24, v2.3.25, v2.3.3, v2.3.4, v2.3.5, v2.3.6, v2.3.7, v2.3.8, v2.3.9, v2.4.0, v2.4.1, v2.4.10, v2.4.2, v2.4.3, v2.4.4, v2.4.5, v2.4.6, v2.4.7, v2.4.8, v2.4.9, v2.5.0, v2.5.1, v2.5.10, v2.5.2, v2.5.3, v2.5.4, v2.5.5, v2.5.6, v2.5.7, v2.5.8, v2.5.9, v2.6.0, v2.6.1, v2.6.2, v2.6.3, v2.6.4<span class="o">]</span>.
+
+ - Installing datasift/ifconfig-parser <span class="o">(</span>0.1.1<span class="o">)</span>
+Downloading https://api.github.com/repos/datasift/ifconfig-parser-php/zipball/7a47ed1aa85e6742555724ae969c115bb637f849
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/datasift/ifconfig-parser/7a47ed1aa85e6742555724ae969c115bb637f849.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/datasift/ifconfig-parser/7a60b9e6dd74a292d2e0206419acad01&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/eadbda9d&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/eadbda9d&#39;</span>
+
+   REASON: datasift/netifaces 0.1.0 requires datasift/ifconfig-parser * -&gt; satisfiable by datasift/ifconfig-parser<span class="o">[</span>0.1.0, 0.1.1<span class="o">]</span>.
+
+ - Installing datasift/os <span class="o">(</span>0.1.2<span class="o">)</span>
+Downloading https://api.github.com/repos/datasift/os-php/zipball/e21c7483663a9407668b819416c5f7e80eded31f
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/datasift/os/e21c7483663a9407668b819416c5f7e80eded31f.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/datasift/os/7e5bf2fa027859f511091d6f1c5e8943&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/9b169e68&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/9b169e68&#39;</span>
+
+   REASON: datasift/netifaces 0.1.0 requires datasift/os * -&gt; satisfiable by datasift/os<span class="o">[</span>0.1.0, 0.1.1, 0.1.2<span class="o">]</span>.
+
+ - Installing datasift/netifaces <span class="o">(</span>0.1.0<span class="o">)</span>
+Downloading https://api.github.com/repos/datasift/netifaces/zipball/c01728273b0718bff86817e62a26fd358eb39996
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/datasift/netifaces/c01728273b0718bff86817e62a26fd358eb39996.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/datasift/netifaces/77390360a5b5ceb6a0f0bdde18368c14&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/7435e2a0&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/7435e2a0&#39;</span>
+
+   REASON: datasift/storyplayer 1.5.8 requires datasift/netifaces * -&gt; satisfiable by datasift/netifaces<span class="o">[</span>0.1.0<span class="o">]</span>.
+
+ - Installing symfony/event-dispatcher <span class="o">(</span>v2.6.4<span class="o">)</span>
+Downloading https://api.github.com/repos/symfony/EventDispatcher/zipball/f75989f3ab2743a82fe0b03ded2598a2b1546813
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/symfony/event-dispatcher/f75989f3ab2743a82fe0b03ded2598a2b1546813.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/symfony/event-dispatcher/Symfony/Component/EventDispatcher/f023f688e5c023b05e0833ab4e2e83f3&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/ba821eaa&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/ba821eaa&#39;</span>
+
+   REASON: guzzle/guzzle v3.9.2 requires symfony/event-dispatcher ~2.1 -&gt; satisfiable by symfony/event-dispatcher<span class="o">[</span>v2.1.0, v2.1.1, v2.1.10, v2.1.11, v2.1.12, v2.1.13, v2.1.2, v2.1.3, v2.1.4, v2.1.5, v2.1.6, v2.1.7, v2.1.8, v2.1.9, v2.2.0, v2.2.1, v2.2.10, v2.2.11, v2.2.2, v2.2.3, v2.2.4, v2.2.5, v2.2.6, v2.2.7, v2.2.8, v2.2.9, v2.3.0, v2.3.1, v2.3.10, v2.3.11, v2.3.12, v2.3.13, v2.3.14, v2.3.15, v2.3.16, v2.3.17, v2.3.18, v2.3.19, v2.3.2, v2.3.20, v2.3.21, v2.3.22, v2.3.23, v2.3.24, v2.3.25, v2.3.3, v2.3.4, v2.3.5, v2.3.6, v2.3.7, v2.3.8, v2.3.9, v2.4.0, v2.4.1, v2.4.10, v2.4.2, v2.4.3, v2.4.4, v2.4.5, v2.4.6, v2.4.7, v2.4.8, v2.4.9, v2.5.0, v2.5.1, v2.5.10, v2.5.2, v2.5.3, v2.5.4, v2.5.5, v2.5.6, v2.5.7, v2.5.8, v2.5.9, v2.6.0, v2.6.1, v2.6.2, v2.6.3, v2.6.4<span class="o">]</span>.
+
+ - Installing guzzle/guzzle <span class="o">(</span>v3.9.2<span class="o">)</span>
+Downloading https://api.github.com/repos/guzzle/guzzle3/zipball/54991459675c1a2924122afbb0e5609ade581155
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/guzzle/guzzle/54991459675c1a2924122afbb0e5609ade581155.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/guzzle/guzzle/c0af4c3a7828a121b4fec3476e285c9e&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/b04adeaa&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/b04adeaa&#39;</span>
+
+   REASON: aws/aws-sdk-php 2.7.22 requires guzzle/guzzle ~3.7 -&gt; satisfiable by guzzle/guzzle<span class="o">[</span>v3.7.0, v3.7.1, v3.7.2, v3.7.3, v3.7.4, v3.8.0, v3.8.1, v3.9.0, v3.9.1, v3.9.2<span class="o">]</span>.
+
+ - Installing aws/aws-sdk-php <span class="o">(</span>2.7.22<span class="o">)</span>
+Downloading https://api.github.com/repos/aws/aws-sdk-php/zipball/7c97f11ca46c47209e597ebab6e74e164cdf6216
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/aws/aws-sdk-php/7c97f11ca46c47209e597ebab6e74e164cdf6216.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/aws/aws-sdk-php/ff3c26d9e20b7d54678b52c9b5f87191&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/62e7677e&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/62e7677e&#39;</span>
+
+   REASON: datasift/storyplayer 1.5.8 requires aws/aws-sdk-php 2.* -&gt; satisfiable by aws/aws-sdk-php<span class="o">[</span>2.0.0, 2.0.1, 2.0.2, 2.0.3, 2.1.0, 2.1.1, 2.1.2, 2.2.0, 2.2.1, 2.3.0, 2.3.1, 2.3.2, 2.3.3, 2.3.4, 2.4.0, 2.4.1, 2.4.10, 2.4.11, 2.4.12, 2.4.2, 2.4.3, 2.4.4, 2.4.5, 2.4.6, 2.4.7, 2.4.8, 2.4.9, 2.5.0, 2.5.1, 2.5.2, 2.5.3, 2.5.4, 2.6.0, 2.6.1, 2.6.10, 2.6.11, 2.6.12, 2.6.13, 2.6.14, 2.6.15, 2.6.16, 2.6.2, 2.6.3, 2.6.4, 2.6.5, 2.6.6, 2.6.7, 2.6.8, 2.6.9, 2.7.0, 2.7.1, 2.7.10, 2.7.11, 2.7.12, 2.7.13, 2.7.14, 2.7.15, 2.7.16, 2.7.17, 2.7.18, 2.7.19, 2.7.2, 2.7.20, 2.7.21, 2.7.22, 2.7.3, 2.7.4, 2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9<span class="o">]</span>.
+
+ - Installing mockery/mockery <span class="o">(</span>0.9.3<span class="o">)</span>
+Downloading https://api.github.com/repos/padraic/mockery/zipball/686f85fa5b3b079cc0157d7cd3e9adb97f0b41e1
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/mockery/mockery/686f85fa5b3b079cc0157d7cd3e9adb97f0b41e1.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/mockery/mockery/785f0a3edd73b0bdb7d7966c21c5d2bb&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/7f28b98b&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/7f28b98b&#39;</span>
+
+   REASON: datasift/stone 1.9.13 requires mockery/mockery 0.9.* -&gt; satisfiable by mockery/mockery<span class="o">[</span>0.9.0, 0.9.1, 0.9.2, 0.9.3<span class="o">]</span>.
+
+ - Installing sebastian/version <span class="o">(</span>1.0.4<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/version/zipball/a77d9123f8e809db3fbdea15038c27a95da4058b
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/sebastian/version/a77d9123f8e809db3fbdea15038c27a95da4058b.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/sebastian/version/3754e43c48c06a19f73793bf8f82531a&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/6889492f&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/6889492f&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires sebastian/version ~1.0 -&gt; satisfiable by sebastian/version<span class="o">[</span>1.0.0, 1.0.1, 1.0.2, 1.0.3, 1.0.4<span class="o">]</span>.
+
+ - Installing sebastian/global-state <span class="o">(</span>1.0.0<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/global-state/zipball/c7428acdb62ece0a45e6306f1ae85e1c05b09c01
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/sebastian/global-state/c7428acdb62ece0a45e6306f1ae85e1c05b09c01.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/sebastian/global-state/2ba6b95e4ab3760fbdc0a5070386e9ec&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/483de02a&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/483de02a&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires sebastian/global-state ~1.0 -&gt; satisfiable by sebastian/global-state<span class="o">[</span>1.0.0<span class="o">]</span>.
+
+ - Installing sebastian/recursion-context <span class="o">(</span>1.0.0<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/3989662bbb30a29d20d9faa04a846af79b276252
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/sebastian/recursion-context/3989662bbb30a29d20d9faa04a846af79b276252.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/sebastian/recursion-context/b3c72f22bd17f683490b6a5282d7f3a5&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/1d071769&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/1d071769&#39;</span>
+
+   REASON: sebastian/exporter 1.2.0 requires sebastian/recursion-context ~1.0 -&gt; satisfiable by sebastian/recursion-context<span class="o">[</span>1.0.0<span class="o">]</span>.
+
+ - Installing sebastian/exporter <span class="o">(</span>1.2.0<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/exporter/zipball/84839970d05254c73cde183a721c7af13aede943
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/sebastian/exporter/84839970d05254c73cde183a721c7af13aede943.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/sebastian/exporter/2533514510f26c88718fcf7941effeba&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/7ce7bae3&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/7ce7bae3&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires sebastian/exporter ~1.2 -&gt; satisfiable by sebastian/exporter<span class="o">[</span>1.2.0<span class="o">]</span>.
+
+ - Installing sebastian/environment <span class="o">(</span>1.2.1<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/environment/zipball/6e6c71d918088c251b181ba8b3088af4ac336dd7
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/sebastian/environment/6e6c71d918088c251b181ba8b3088af4ac336dd7.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/sebastian/environment/b030989406fc2d810fd209cbc370c97b&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/b869a17e&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/b869a17e&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires sebastian/environment ~1.2 -&gt; satisfiable by sebastian/environment<span class="o">[</span>1.2.0, 1.2.1<span class="o">]</span>.
+
+ - Installing sebastian/diff <span class="o">(</span>1.2.0<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/diff/zipball/5843509fed39dee4b356a306401e9dd1a931fec7
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/sebastian/diff/5843509fed39dee4b356a306401e9dd1a931fec7.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/sebastian/diff/0275b11a00ddec6770ddcf80f45f5045&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/1796ba86&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/1796ba86&#39;</span>
+
+   REASON: sebastian/comparator 1.1.1 requires sebastian/diff ~1.2 -&gt; satisfiable by sebastian/diff<span class="o">[</span>1.2.0<span class="o">]</span>.
+
+ - Installing sebastian/comparator <span class="o">(</span>1.1.1<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/comparator/zipball/1dd8869519a225f7f2b9eb663e225298fade819e
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/sebastian/comparator/1dd8869519a225f7f2b9eb663e225298fade819e.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/sebastian/comparator/ce196c53a14ada40f3f0e52125deca9f&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/8a1fe81e&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/8a1fe81e&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires sebastian/comparator ~1.1 -&gt; satisfiable by sebastian/comparator<span class="o">[</span>1.1.0, 1.1.1<span class="o">]</span>.
+
+ - Installing doctrine/instantiator <span class="o">(</span>1.0.4<span class="o">)</span>
+Downloading https://api.github.com/repos/doctrine/instantiator/zipball/f976e5de371104877ebc89bd8fecb0019ed9c119
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/doctrine/instantiator/f976e5de371104877ebc89bd8fecb0019ed9c119.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/doctrine/instantiator/485434fe08559549c945cc95091ce33c&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/42852e57&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/42852e57&#39;</span>
+
+   REASON: phpunit/phpunit-mock-objects 2.3.0 requires doctrine/instantiator ~1.0,&gt;<span class="o">=</span>1.0.1 -&gt; satisfiable by doctrine/instantiator<span class="o">[</span>1.0.1, 1.0.2, 1.0.3, 1.0.4<span class="o">]</span>.
+
+ - Installing phpdocumentor/reflection-docblock <span class="o">(</span>2.0.4<span class="o">)</span>
+Downloading https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d68dbdc53dc358a816f00b300704702b2eaff7b8
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpdocumentor/reflection-docblock/d68dbdc53dc358a816f00b300704702b2eaff7b8.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpdocumentor/reflection-docblock/d1a0972308473be16bda65bdaa2cf8af&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/72e855c2&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/72e855c2&#39;</span>
+
+   REASON: phpspec/prophecy v1.3.1 requires phpdocumentor/reflection-docblock ~2.0 -&gt; satisfiable by phpdocumentor/reflection-docblock<span class="o">[</span>2.0.0, 2.0.1, 2.0.2, 2.0.3, 2.0.4<span class="o">]</span>.
+
+ - Installing phpspec/prophecy <span class="o">(</span>v1.3.1<span class="o">)</span>
+Downloading https://api.github.com/repos/phpspec/prophecy/zipball/9ca52329bcdd1500de24427542577ebf3fc2f1c9
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpspec/prophecy/9ca52329bcdd1500de24427542577ebf3fc2f1c9.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpspec/prophecy/78dda2d75504c0751056397b7bc0ae20&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/a8b9b8b0&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/a8b9b8b0&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires phpspec/prophecy ~1.3.1 -&gt; satisfiable by phpspec/prophecy<span class="o">[</span>v1.3.1<span class="o">]</span>.
+
+ - Installing phpunit/php-text-template <span class="o">(</span>1.2.0<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/206dfefc0ffe9cebf65c413e3d0e809c82fbf00a
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpunit/php-text-template/206dfefc0ffe9cebf65c413e3d0e809c82fbf00a.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpunit/php-text-template/3e1b52545afad3b107af424940d7fbf1&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/1f635d33&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/1f635d33&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires phpunit/php-text-template ~1.2 -&gt; satisfiable by phpunit/php-text-template<span class="o">[</span>1.2.0<span class="o">]</span>.
+
+ - Installing phpunit/phpunit-mock-objects <span class="o">(</span>2.3.0<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/c63d2367247365f688544f0d500af90a11a44c65
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpunit/phpunit-mock-objects/c63d2367247365f688544f0d500af90a11a44c65.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpunit/phpunit-mock-objects/80d5d7c80920ce66d3db4a290b0d7003&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/06696499&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/06696499&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires phpunit/phpunit-mock-objects ~2.3 -&gt; satisfiable by phpunit/phpunit-mock-objects<span class="o">[</span>2.3.0<span class="o">]</span>.
+
+ - Installing phpunit/php-timer <span class="o">(</span>1.0.5<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/php-timer/zipball/19689d4354b295ee3d8c54b4f42c3efb69cbc17c
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpunit/php-timer/19689d4354b295ee3d8c54b4f42c3efb69cbc17c.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpunit/php-timer/6af874a6494f793d2b2f16397503d95f&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/82395102&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/82395102&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires phpunit/php-timer ~1.0.2 -&gt; satisfiable by phpunit/php-timer<span class="o">[</span>1.0.3, 1.0.4, 1.0.5<span class="o">]</span>.
+
+ - Installing phpunit/php-file-iterator <span class="o">(</span>1.3.4<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/acd690379117b042d1c8af1fafd61bde001bf6bb
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpunit/php-file-iterator/acd690379117b042d1c8af1fafd61bde001bf6bb.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpunit/php-file-iterator/29860041713566d1f8eab5bbde1c27ed&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/c1800bc8&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/c1800bc8&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires phpunit/php-file-iterator ~1.3.2 -&gt; satisfiable by phpunit/php-file-iterator<span class="o">[</span>1.3.2, 1.3.3, 1.3.4<span class="o">]</span>.
+
+ - Installing phpunit/php-token-stream <span class="o">(</span>1.4.0<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/db32c18eba00b121c145575fcbcd4d4d24e6db74
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpunit/php-token-stream/db32c18eba00b121c145575fcbcd4d4d24e6db74.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpunit/php-token-stream/d8f7babec98475553410c41ce40cebf8&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/c8215ab0&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/c8215ab0&#39;</span>
+
+   REASON: phpunit/php-code-coverage 2.0.15 requires phpunit/php-token-stream ~1.3 -&gt; satisfiable by phpunit/php-token-stream<span class="o">[</span>1.3.0, 1.4.0<span class="o">]</span>.
+
+ - Installing phpunit/php-code-coverage <span class="o">(</span>2.0.15<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/34cc484af1ca149188d0d9e91412191e398e0b67
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpunit/php-code-coverage/34cc484af1ca149188d0d9e91412191e398e0b67.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpunit/php-code-coverage/070381e4e7d02391a7267ca3286dc116&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/b9bd1f43&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/b9bd1f43&#39;</span>
+
+   REASON: phpunit/phpunit 4.5.0 requires phpunit/php-code-coverage ~2.0 -&gt; satisfiable by phpunit/php-code-coverage<span class="o">[</span>2.0.0, 2.0.1, 2.0.10, 2.0.11, 2.0.12, 2.0.13, 2.0.14, 2.0.15, 2.0.2, 2.0.3, 2.0.4, 2.0.5, 2.0.6, 2.0.7, 2.0.8, 2.0.9<span class="o">]</span>.
+
+ - Installing phpunit/phpunit <span class="o">(</span>4.5.0<span class="o">)</span>
+Downloading https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5b578d3865a9128b9c209b011fda6539ec06e7a5
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phpunit/phpunit/5b578d3865a9128b9c209b011fda6539ec06e7a5.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phpunit/phpunit/c4fb13d2d024ebe94df766398785564e&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/0aa0e7f3&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/0aa0e7f3&#39;</span>
+
+   REASON: datasift/stone 1.9.13 requires phpunit/phpunit ~4.5 -&gt; satisfiable by phpunit/phpunit<span class="o">[</span>4.5.0<span class="o">]</span>.
+
+ - Installing datasift/stone <span class="o">(</span>1.9.13<span class="o">)</span>
+Downloading https://api.github.com/repos/datasift/ms-lib-stone/zipball/07ac2c438fb2fd783ed60b443805aa91062c39d0
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/datasift/stone/07ac2c438fb2fd783ed60b443805aa91062c39d0.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/datasift/stone/51d992cf8e39cf7d041bc51408514788&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/ae4de42c&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/ae4de42c&#39;</span>
+
+   REASON: datasift/storyplayer 1.5.8 requires datasift/stone &gt;<span class="o">=</span>1.5.0 -&gt; satisfiable by datasift/stone<span class="o">[</span>1.5.0, 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5, 1.6.0, 1.6.1, 1.6.2, 1.6.3, 1.6.4, 1.6.5, 1.6.6, 1.6.7, 1.6.8, 1.6.9, 1.7.0, 1.7.1, 1.7.2, 1.8.0, 1.8.1, 1.9.0, 1.9.1, 1.9.10, 1.9.11, 1.9.12, 1.9.13, 1.9.2, 1.9.3, 1.9.4, 1.9.5, 1.9.6, 1.9.7, 1.9.8, 1.9.9<span class="o">]</span>.
+
+ - Installing datasift/webdriver <span class="o">(</span>1.5.2<span class="o">)</span>
+Downloading https://api.github.com/repos/datasift/php_webdriver/zipball/3274a66007382a25fec3a5da2deb5fb55eab5927
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/datasift/webdriver/3274a66007382a25fec3a5da2deb5fb55eab5927.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/datasift/webdriver/e942c5be451d58c532a3277af5465426&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/ded7c928&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/ded7c928&#39;</span>
+
+   REASON: datasift/storyplayer 1.5.8 requires datasift/webdriver &gt;<span class="o">=</span>1.5.0 -&gt; satisfiable by datasift/webdriver<span class="o">[</span>1.5.0, 1.5.1, 1.5.2<span class="o">]</span>.
+
+ - Installing phix/exceptionslib <span class="o">(</span>1.1.6<span class="o">)</span>
+Downloading https://api.github.com/repos/stuartherbert/ExceptionsLib/zipball/b27d393a178ad664dec4a0d49263608b9ad9806c
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phix/exceptionslib/b27d393a178ad664dec4a0d49263608b9ad9806c.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phix/exceptionslib/d37a7542ee710c1d8c2ced57afafd14c&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/42ed2734&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/42ed2734&#39;</span>
+
+   REASON: phix/validationlib 4.2.0 requires phix/exceptionslib 1.* -&gt; satisfiable by phix/exceptionslib<span class="o">[</span>1.1.5, 1.1.6<span class="o">]</span>.
+
+ - Installing phix/validationlib <span class="o">(</span>4.2.0<span class="o">)</span>
+Downloading https://api.github.com/repos/stuartherbert/ValidationLib/zipball/70bc0f9f37ca2893cb55fa5d53f6a211ed22578d
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phix/validationlib/70bc0f9f37ca2893cb55fa5d53f6a211ed22578d.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phix/validationlib/dcac5c90f670780d971f2ddddd8981d1&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/0f0782b2&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/0f0782b2&#39;</span>
+
+   REASON: phix/cliengine 1.3.2 requires phix/validationlib 4.* -&gt; satisfiable by phix/validationlib<span class="o">[</span>4.0.1, 4.0.2, 4.1.0, 4.2.0<span class="o">]</span>.
+
+ - Installing phix/consoledisplaylib <span class="o">(</span>4.0.2<span class="o">)</span>
+Downloading https://api.github.com/repos/stuartherbert/ConsoleDisplayLib/zipball/d5860841db19a444266a92cc2e9420fce7a97e21
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phix/consoledisplaylib/d5860841db19a444266a92cc2e9420fce7a97e21.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phix/consoledisplaylib/c57b0aee824e9176631789e8539f3353&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/200d8b4a&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/200d8b4a&#39;</span>
+
+   REASON: phix/cliengine 1.3.2 requires phix/consoledisplaylib 4.* -&gt; satisfiable by phix/consoledisplaylib<span class="o">[</span>4.0.1, 4.0.2<span class="o">]</span>.
+
+ - Installing phix/contractlib <span class="o">(</span>2.1.4<span class="o">)</span>
+Downloading https://api.github.com/repos/stuartherbert/ContractLib/zipball/93f7a623426063f3a13f17a3a940cb80cc9a05b4
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phix/contractlib/93f7a623426063f3a13f17a3a940cb80cc9a05b4.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phix/contractlib/88dbd4c59b5d71c35ed7bb3f68702542&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/06337270&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/06337270&#39;</span>
+
+   REASON: phix/commandlinelib 4.2.0 requires phix/contractlib 2.* -&gt; satisfiable by phix/contractlib<span class="o">[</span>2.1.3, 2.1.4<span class="o">]</span>.
+
+ - Installing phix/commandlinelib <span class="o">(</span>4.2.0<span class="o">)</span>
+Downloading https://api.github.com/repos/stuartherbert/CommandLineLib/zipball/447c1608d8bfd4ffd390ae61183e023495881a21
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phix/commandlinelib/447c1608d8bfd4ffd390ae61183e023495881a21.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phix/commandlinelib/d962f3a1671e6c8b413f082df120527f&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/9db26cbf&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/9db26cbf&#39;</span>
+
+   REASON: phix/cliengine 1.3.2 requires phix/commandlinelib 4.* -&gt; satisfiable by phix/commandlinelib<span class="o">[</span>4.0.0, 4.0.1, 4.1.0, 4.2.0<span class="o">]</span>.
+
+ - Installing phix/autoloader <span class="o">(</span>4.3.3<span class="o">)</span>
+Downloading https://api.github.com/repos/stuartherbert/Autoloader/zipball/bcb15eaadc74e9debd309831b2cb47b540f8a861
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phix/autoloader/bcb15eaadc74e9debd309831b2cb47b540f8a861.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phix/autoloader/e44990011ae95de29d7711a172e7d08e&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/43adb134&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/43adb134&#39;</span>
+
+   REASON: datasift/storyplayer 1.5.8 requires phix/autoloader 4.* -&gt; satisfiable by phix/autoloader<span class="o">[</span>4.3.1, 4.3.2, 4.3.3<span class="o">]</span>.
+
+ - Installing phix/cliengine <span class="o">(</span>1.3.2<span class="o">)</span>
+Downloading https://api.github.com/repos/stuartherbert/CliEngine/zipball/ad5a66a84ec3d717ef558375442bd0becee4d992
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/phix/cliengine/ad5a66a84ec3d717ef558375442bd0becee4d992.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/phix/cliengine/a6ec29317943b4c7a36b332efe2a6477&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/73af218c&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/73af218c&#39;</span>
+
+   REASON: datasift/storyplayer 1.5.8 requires phix/cliengine @dev -&gt; satisfiable by phix/cliengine<span class="o">[</span>1.0.0, 1.1.0, 1.1.1, 1.2.0, 1.2.1, 1.3.0, 1.3.1, 1.3.2<span class="o">]</span>.
+
+ - Installing datasift/storyplayer <span class="o">(</span>1.5.8<span class="o">)</span>
+Downloading https://api.github.com/repos/datasift/storyplayer/zipball/711caccdec0dc253ca6ab08273d757a7b983f8c4
+   Downloading: 100%
+Writing /home/deepak/.composer/cache/files/datasift/storyplayer/711caccdec0dc253ca6ab08273d757a7b983f8c4.zip into cache
+   Extracting archive
+Executing <span class="nb">command</span> <span class="o">(</span>CWD<span class="o">)</span>: unzip <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/datasift/storyplayer/13b06a3ef0d79cec7fc314767c604d3f&#39;</span> -d <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/18616df3&#39;</span> <span class="o">&amp;&amp;</span> chmod -R u+w <span class="s1">&#39;/opt/storyplayer/storyplayer/vendor/composer/18616df3&#39;</span>
+
+   REASON: Required by root: Install <span class="nb">command </span>rule <span class="o">(</span>install datasift/storyplayer 1.5.5|install datasift/storyplayer 1.5.6|install datasift/storyplayer 1.5.7|install datasift/storyplayer 1.5.8|install datasift/storyplayer 2.0.0|install datasift/storyplayer 2.0.1|install datasift/storyplayer 2.0.2|install datasift/storyplayer 2.1.0|install datasift/storyplayer 2.1.1|install datasift/storyplayer 2.1.2<span class="o">)</span>
+
+symfony/event-dispatcher suggests installing symfony/dependency-injection <span class="o">()</span>
+symfony/event-dispatcher suggests installing symfony/http-kernel <span class="o">()</span>
+aws/aws-sdk-php suggests installing doctrine/cache <span class="o">(</span>Adds support <span class="k">for </span>caching of credentials and responses<span class="o">)</span>
+aws/aws-sdk-php suggests installing monolog/monolog <span class="o">(</span>Adds support <span class="k">for </span>logging HTTP requests and responses<span class="o">)</span>
+sebastian/global-state suggests installing ext-uopz <span class="o">(</span>*<span class="o">)</span>
+phpdocumentor/reflection-docblock suggests installing dflydev/markdown <span class="o">(</span>~1.0<span class="o">)</span>
+phpdocumentor/reflection-docblock suggests installing erusev/parsedown <span class="o">(</span>~1.0<span class="o">)</span>
+phpunit/php-code-coverage suggests installing ext-xdebug <span class="o">(</span>&gt;<span class="o">=</span>2.2.1<span class="o">)</span>
+phpunit/phpunit suggests installing phpunit/php-invoker <span class="o">(</span>~1.1<span class="o">)</span>
+Writing lock file
+Generating autoload files
+All settings correct <span class="k">for </span>using Composer
+Downloading...
+
+Composer successfully installed to: /opt/storyplayer/storyplayer/composer.phar
+Use it: php composer.phar
+Temp File /tmp/ptconfigure-temp-script-90378632638.sh Removed
+Program Executor Deleted <span class="k">if </span>existed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Storyplayer: Success
+------------------------------
+Installer Finished
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>各ユーザー ストーリーは、1 つの機能または製品やサービスを提供している利点の簡単な説明です。</li>
+<li>彼らは平易な英語で書かれていると明確な受け入れテストと製品やサービスを提供して何かの後ろに &#8216;なぜ&#8217; を記録する場所が含まれます。</li>
+<li>彼ら製品開発チーム、プロジェクト管理、あなたの建築家、エンジニア、テスト担当者の間で共有することができます。</li>
+<li>サービス ストーリーはユーザー ストーリーとそっくりの内部サービスおよび Api です。</li>
+</ul>
+<p>当初から設計されています Storyplayer 単体テストと製品の間でそのギャップを埋めるために - あなたのストーリーのすべてのテストを自動化する受け入れテストします。</p>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jstoryplayer.rst">
+          Storyplayer
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

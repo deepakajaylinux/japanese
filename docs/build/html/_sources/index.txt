@@ -16,10 +16,12 @@ Commands
 
 .. toctree::
    :maxdepth: 2
-   
+ 
+ jjrush_main
  jptconfigure_main
  jptdeploy_main
-
+ jpttest_main 
+ jptvirtualize_main 
 
 
 Indices and tables

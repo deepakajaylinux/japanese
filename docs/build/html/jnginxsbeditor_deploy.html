@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NginxSBEditor &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="jptdeploy_main.html" />
+    <link rel="next" title="Project" href="jproject_deploy.html" />
+    <link rel="prev" title="Nginx Control" href="jnginxcontrol_deploy.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">NginxSBEditor</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">使用方法</a></li>
+<li><a class="reference internal" href="#add">Add</a></li>
+<li><a class="reference internal" href="#remove">Remove</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#id3">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jnginxcontrol_deploy.html"
+         title="Previous Chapter: Nginx Control">&laquo; Nginx Control</a></li>
+  <li><a href="jproject_deploy.html"
+         title="Next Chapter: Project">Project &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jnginxsbeditor_deploy.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="nginxsbeditor">
+<h1>NginxSBEditor<a class="headerlink" href="#nginxsbeditor" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>このモジュールの既定のモジュールの罰金の一部であり、Nginx ServerBlocks 機能を処理します。これを使用するための方法論と今後のトピックでこの nginx エディターの下で機能についても見てみましょう。</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>ヘルプ コマンドはその主な用途は、NginxSBEditor の主な機能は、宣言で使用することができます代替のパラメーターの一覧など NginxSBEditor に関する必要な情報のすべてを包み込む (Ex: 追加、削除、一覧表示、有効にすると、無効にする)、およびそれらの興味深い関数を宣言するために使用する構文も。NginxSBEditor の下のヘルプ オプションを宣言するため、次のコマンドを使用します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor <span class="nb">help</span>
+</pre></div>
+</div>
+<p>次のスクリーン ショットは、help コマンドの働きについて絵を示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy NginxSBEditor <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>is part of Default Modules and handles Nginx ServerBlocks Functions.
+
+ NginxSBEditor, nginx-sb-editor, nginxsbe
+
+         - add
+         create a Server Block
+         example: ptdeploy nginxsbe add
+         sb-docroot
+         sb-url
+         sb-ip-port
+
+         - rm
+         remove a Server Block
+         example: ptdeploy nginxsbe rm
+
+         - list
+         List current Server Blocks
+         example: ptdeploy nginxsbe list
+
+         - <span class="nb">enable</span>
+<span class="nb">         enable </span>a Server Block
+         example: ptdeploy nginxsbe <span class="nb">enable</span>
+
+         - disable
+         disable a Server Block
+         example: ptdeploy nginxsbe disable
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>使用方法<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>として描かれていると、上記で説明した、NginxSBEditor ヘルプ コマンドは次の関数</p>
+<ul class="simple">
+<li>Add</li>
+<li>Remove</li>
+<li>List</li>
+<li>Enable</li>
+<li>Disable</li>
+</ul>
+<p>NginxSBEditor の下のこれらの興味深い関数を使用する方法を見てみましょう。</p>
+</div>
+<div class="section" id="add">
+<h2>Add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h2>
+<p>この関数の役割を作成する/ブロックを追加する、新しいサーバーです。コマンドと追加機能の働きは下図します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor add
+</pre></div>
+</div>
+<p>上記コマンドを入力し、この追加機能の働きは以下します。</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="25%" />
+<col width="34%" />
+<col width="10%" />
+<col width="4%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">代替パラメータ</th>
+<th class="head">オプション</th>
+<th class="head" colspan="2">注釈</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Do you want to add a
+ServerBlock? (Y/N)</td>
+<td>の代わりに NginxSBEditor,
+我々は使用することができます
+nginx-sb-editor, nginxsbe また</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>Y(Yes)     | ユーザーは、 Yとして入力することが</dt>
+<dd><div class="first last line-block">
+<div class="line">できる新しいサーバーブロックを追加</div>
+<div class="line">する必要がある場合</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>Do you want to add a
+ServerBlock? (Y/N)</td>
+<td>の代わりに NginxSBEditor,
+我々は使用することができます
+nginx-sb-editor, nginxsbe また</td>
+<td colspan="3"><dl class="first last docutils">
+<dt>N(No)      | ユーザーは、Nとして彼らができる新しい</dt>
+<dd><div class="first last line-block">
+<div class="line">サーバーブロック入力を追加する必要</div>
+<div class="line">にない場合|</div>
+</div>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p>ユーザーが進む場合、追加の処理中にサーバー ブロックを追加する、次の手順関与しています。</p>
+<p>Step 1:</p>
+<p>What is document root?</p>
+<p>ユーザーが彼らがないデフォルトを続行したい場合、ルートを指定します。</p>
+<p>Step 2:</p>
+<p>What URL do you want to add as server name?</p>
+<p>ユーザーを追加することになっている url を指定しなければなりません。</p>
+<p>Step 3:</p>
+<p>What IP? Port should be set?</p>
+<p>ユーザーがいないデフォルトを続行する場合、ip アドレスを指定します。</p>
+<p>Step 4:</p>
+<p>What is your ServerBlock Template directory?</p>
+<p>ない既定値を続行する場合、ユーザーが、ディレクトリを指定します。</p>
+<p>Step 5:</p>
+<p>Please check the ServerBlock</p>
+<p>ユーザーがサーバー ブロックが追加されますを確保するための出力表示を確認してください。</p>
+<p>Step 6:</p>
+<p>Is this Okay? (Y/N)</p>
+<p>他の N を Y として入力することができる場合は、ユーザーに満足している生成結果</p>
+<p>Step 7:</p>
+<p>What is your ServerBlock directory?</p>
+<p>ユーザーがディレクトリを指定している。</p>
+<p>Step 8:</p>
+<p>Do you want to enable a server block? (Y/N)</p>
+<p>ユーザー Y または N 自分のニーズに応じてとして入力する必要があります。</p>
+<p>Step 9:</p>
+<p>What is your Enabled Symlink ServerBlock directory.</p>
+<p>サーバー ブロックが有効な場合ユーザーのディレクトリを指定しなければなりません。</p>
+<p>次のスクリーンショットは、視覚的に前述したプロセスを示している。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe add
+Do you want to add a ServerBlock? (Y/N)
+Y
+What&#39;s the document root? Enter nothing for /
+/root/Nginx
+What URL do you want to add as server name?
+www.ngx.com
+What IP:Port should be set? Enter nothing for 127.0.0.1:80
+
+What is your ServerBlock Template directory? Enter nothing for default templates
+/root/Nginxdir
+Please Choose ServerBlock Template:
+--- Default Server Block Templates: ---
+(0) docroot-no-suffix
+(1) docroot-src-sfx
+(2) docroot-web-suffix
+(3) docroot-www-suffix
+(4) docroot-docroot-suffix
+
+3
+Please check ServerBlock: server {
+       listen   127.0.0.1:80 ; ## listen for ipv4; this line is default and implied
+       #listen   [::]:80 default ipv6only=on; ## listen for ipv6
+
+       root /root/Nginx/www ;
+       index index.html index.htm index.php;
+
+       # Make site accessible from http://localhost/
+       server_name www.ngx.com ;
+
+       # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+       #
+       location ~ \.php$ {
+               try_files $uri =404;
+               fastcgi_split_path_info ^(.+\.php)(/.+)$;
+               fastcgi_pass 127.0.0.1:9000;
+               fastcgi_index index.php;
+               include fastcgi_params;
+       }
+
+}
+
+Is this Okay? (Y/N)
+Y
+What is your ServerBlock directory?
+/root/Nginxdir
+Do you want to enable a ServerBlock? (Y/N)
+Y
+What is your Enabled Symlink ServerBlock directory?
+/home/Nginxsymlink
+Server Block Enabled Symlink Created
+******************************
+
+
+1ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove">
+<h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
+<p>削除機能は、不要なサーバー ブロックを削除するに使用されます。これを行うことができます、以下コマンドを使用して</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor rm
+</pre></div>
+</div>
+<p>表に示すように、次のプロセスを削除に関与する上記のコマンドを入力した後</p>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="24%" />
+<col width="32%" />
+<col width="14%" />
+<col width="31%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">代替パラメータ</th>
+<th class="head">オプション</th>
+<th class="head">注釈</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Do you want to delete
+ServerBlock/s? (Y/N)</td>
+<td>の代わりに NginxSBEditor,
+我々は使用することができます
+nginx-sb-editor, nginxsbe また</td>
+<td>Y(Yes)</td>
+<td>ユーザーは、 Yとして入力することがで
+きるサーバ·ブロックを削除する必要
+がある場合</td>
+</tr>
+<tr class="row-odd"><td>Do you want to add a
+ServerBlock/s? (Y/N)</td>
+<td>の代わりに NginxSBEditor,
+我々は使用することができます
+nginx-sb-editor, nginxsbe また</td>
+<td>N(No)</td>
+<td>ユーザは、 Nとして入力することができ
+るサーバ·ブロックを削除するため
+に必要とされていない場合|</td>
+</tr>
+</tbody>
+</table>
+<p>ユーザーが進む場合このプロセス中にサーバーのブロックを削除する、次の手順関与しています。</p>
+<p>Step 1:</p>
+<p>Deleting ServerBlock</p>
+<p>What is your ServerBlock directory?</p>
+<p>ユーザーがディレクトリを指定する必要があります。</p>
+<p>Step 2:</p>
+<p>ServerBlockを選択して下さい</p>
+<p>&#8211;All Server Blocks: &#8212;</p>
+<ol class="arabic simple" start="0">
+<li>www.ngn.com</li>
+<li>www.ngx.com</li>
+<li>www.nx.com</li>
+</ol>
+<p>ユーザーは、自分のニーズに応じて 2 ～ 0 の値を指定する必要。</p>
+<p>Step 3:</p>
+<p>!! Sure? Definitely delete ServerBlock? (Y/N) !!</p>
+<p>ユーザー Y または N 自分のニーズに応じてを指定しなければなりません。</p>
+<p>Step 4:</p>
+<p>Do you want to disable a ServerBlock? (Y/N)</p>
+<p>ユーザー Y または N 自分のニーズに応じてを指定しなければなりません。</p>
+<p>Step 5:</p>
+<p>What is your Enabled Symlink ServerBlock directory?</p>
+<p>ユーザーがディレクトリを指定する必要があります。</p>
+<p>次のスクリーンショットは、削除のプロセスについて視覚的に示している。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe rm
+Do you want to delete ServerBlock/s? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+Deleting ServerBlock
+What is your ServerBlock directory?
+/root/Nginxdir
+Please Choose ServerBlock:
+---All Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> www.ngn.com
+<span class="o">(</span>1<span class="o">)</span> www.ngx.com
+<span class="o">(</span>2<span class="o">)</span> www.nx.com
+
+2
+!! Sure? Definitely delete ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span> !!
+Y
+Do you want to disable a ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+What is your Enabled Symlink ServerBlock directory?
+/root/home/Nginxsymlink
+Server Block www.nx.com Disabled <span class="k">if </span>existed
+Server Block www.nx.com Deleted <span class="k">if </span>existed
+*******************************
+
+
+1ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>リスト オプションの機能は現在インストールされているサーバー ブロックをリストします。以下に、リストに使用するコマンドが指定されました。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy NginxSBEditor list
+</pre></div>
+</div>
+<p>リストのオプションに関与する次のプロセス上のコマンドを入力した後</p>
+<p>Step 1:</p>
+<p>What is your ServerBlock directory?</p>
+<p>ユーザーがディレクトリを指定する必要があります。</p>
+<p>Step 2:</p>
+<p>What is your Enabled Symlink ServerBlock directory?</p>
+<p>ユーザーがディレクトリを指定する必要があります。</p>
+<p>これらの手順は、現在インストールされている ServerBlocks の彼のリストが表示されます。次のスクリーン ショットはリスト オプションの作業を視覚的に示しています。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe list
+What is your ServerBlock directory?
+/root/Nginxdir
+What is your Enabled Symlink ServerBlock directory?
+
+Current Installed ServerBlocks:
+--- Enabled Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> www.ngn.com
+<span class="o">(</span>1<span class="o">)</span> www.ngx.com
+--- All Available Server Blocks: ---
+<span class="o">(</span>2<span class="o">)</span> www.ngn.com
+<span class="o">(</span>3<span class="o">)</span> www.ngx.com
+******************************
+
+
+1ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>それは裕福な両方の ubuntu と同様セント OS のように。</li>
+<li>宣言で使用されるパラメーターの大文字と小文字は区別されません。</li>
+<li>ユーザーの追加や削除、サーバー ブロックの前であってもに、利用でき、現在インストールさ
+れているサーバー ブロックのリストを表示できます。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jnginxsbeditor_deploy.rst">
+          NginxSBEditor
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

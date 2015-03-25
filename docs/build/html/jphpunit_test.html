@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PhpUnit &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTTest" href="jpttest_main.html" />
+    <link rel="next" title="SystemDetection" href="jsystemdetection_test.html" />
+    <link rel="prev" title="EnvironmentConfig" href="jenvironmentconfig_test.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PhpUnit</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id3">初期化する</a></li>
+<li><a class="reference internal" href="#execute">Execute</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jenvironmentconfig_test.html"
+         title="Previous Chapter: EnvironmentConfig">&laquo; EnvironmentConfi...</a></li>
+  <li><a href="jsystemdetection_test.html"
+         title="Next Chapter: SystemDetection">SystemDetection &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jphpunit_test.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="phpunit">
+<h1>PhpUnit<a class="headerlink" href="#phpunit" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Phpunit は、tesingkamen で PHP のプログラミング言語用の単体テスト フレームワークです。Php のテスト スイートを初期化し、pttest に人気となったある発祥した単体テスト フレームワークのアーキテクチャのインスタンスです。</p>
+<p>2 つの方法で機能します。Init であり、実行します。Ubuntu や centos を使用する価値があります。.</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>ヘルプ コマンド同様目的に関してユーザーをリードとして、Phpunit モジュールに含まれているオプションについて。Help コマンドは、pttest モジュールの下に Phpunit の代替パラメーターを一覧表示されます。また、ユーザーのマシンを初期化するための構文について説明します。Phpunit のヘルプ コマンドを以下に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest phpunit <span class="nb">help</span>
+</pre></div>
+</div>
+<p>このモジュールのための利点を追加する非大文字小文字を区別ヘルプ コマンドの構文です。次のスクリーン ショット下システムを検出する help コマンドについてユーザーを視覚化します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest PHPUnit <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to initialize a PHPUnit <span class="nb">test </span>suite.
+
+ PHPUnit, phpunit
+
+       - init, initialize
+       Initialises the PHPUnit <span class="nb">test </span>suite of this project
+       example: pttest phpunit init
+       example: pttest phpunit initialize
+
+       - execute
+       Executes the PHPUnit <span class="nb">test </span>suite of this project
+       example: pttest phpunit execute
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>代替パラメータ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Phpunit のユーザーの代わりに、次の新しいパラメーターを利用できます。</p>
+<p>PHPUnit,  phpunit</p>
+</div>
+<div class="section" id="id3">
+<h2>初期化する<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>それはこのプロジェクトの phptest スイートを初期化します。これは、一般的な使用はテストされるクラスのオートローディングを設定するスクリプトを作成するユーザーをように指示できます。Init コマンドは次のとおり、です。</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest phpunit init
+</pre></div>
+</div>
+<p>入力した後、システムは PHPUnit の初期化として質問することができます？Y/N。これは、次のスクリーン ショットによって説明することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest phpunit init
+Initialize PHPUnit? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*   Golden Contact Computing  *
+*          PHPUnit         *
+*******************************
+Creating /tmp/ptconfigure-temp-script-79746566500.sh
+chmod 755 /tmp/ptconfigure-temp-script-79746566500.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-79746566500.sh Permissions
+Executing /tmp/ptconfigure-temp-script-79746566500.sh
+Temp File /tmp/ptconfigure-temp-script-79746566500.sh Removed
+Creating /tmp/ptconfigure-temp-script-57284647129.sh
+chmod 755 /tmp/ptconfigure-temp-script-57284647129.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-57284647129.sh Permissions
+Executing /tmp/ptconfigure-temp-script-57284647129.sh
+Temp File /tmp/ptconfigure-temp-script-57284647129.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+
+
+PHPUnitInit: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="execute">
+<h2>Execute<a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h2>
+<p>この execute pttest の PHPUnit のテスト スイートを実行するユーザーに役立ちます。ユーザーはインタプリタの対話型のセッションでコマンドを入力可能性があります。 またはシステム プログラムは人間の介入無しのバッチ プロセスで実行できます。次のコマンドを使用するには、phpunit を実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>pttest phpunit execute
+</pre></div>
+</div>
+<p>コマンドの入力後それ質問します。以下のイメージによって視覚化することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# pttest phpunit execute
+Execute PHPUnit? <span class="o">(</span>Y/N<span class="o">)</span>
+Y
+*******************************
+*   Golden Contact Computing  *
+*          PHPUnit         *
+*******************************
+Creating /tmp/ptconfigure-temp-script-23757829034.sh
+chmod 755 /tmp/ptconfigure-temp-script-23757829034.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-23757829034.sh Permissions
+Executing /tmp/ptconfigure-temp-script-23757829034.sh
+/tmp/ptconfigure-temp-script-23757829034.sh: 3: /tmp/ptconfigure-temp-script-23757829034.sh: phpunit: not found
+Temp File /tmp/ptconfigure-temp-script-23757829034.sh Removed
+Creating /tmp/ptconfigure-temp-script-85280710426.sh
+chmod 755 /tmp/ptconfigure-temp-script-85280710426.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-85280710426.sh Permissions
+Executing /tmp/ptconfigure-temp-script-85280710426.sh
+Temp File /tmp/ptconfigure-temp-script-85280710426.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+
+
+PHPUnitExec: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="table-bordered docutils">
+<colgroup>
+<col width="32%" />
+<col width="14%" />
+<col width="54%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">パラメータ</th>
+<th class="head">オプション</th>
+<th class="head">注釈</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Initialize Phpunit? (Y/N)</td>
+<td>Yes</td>
+<td>PHPUnitはpttestの下で初期化することができます</td>
+</tr>
+<tr class="row-odd"><td>Execute Phpunit? (Y/N)</td>
+<td>Yes</td>
+<td>PHPUnitのはpttestの下で実行することができます</td>
+</tr>
+<tr class="row-even"><td>Initialize Phpunit/Execute
+Phpunit? (Y/N)|</td>
+<td>No</td>
+<td>それは、画面を終了することができます</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h2>メリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>PHPUnit は、コードの誤りを検出する、早ければ早いほど、早くそれらを修正することができますそのビューで作成されました。</li>
+<li>すべての単体テスト フレームワークのような PHPUnit はテスト対象のコードのユニットの動作が期待どおりに動作ことを確認するアサーションを使用
+します。</li>
+<li>PHPUnit xml など異なる形式の番号でのテスト結果を出力できます。</li>
+<li>Phpunit はケース非感受性をすることができます。</li>
+<li>Ubuntu や centos 関連 Phpunit 快適さ。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jphpunit_test.rst">
+          PhpUnit
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

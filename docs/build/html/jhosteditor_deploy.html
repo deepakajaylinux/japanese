@@ -33,7 +33,7 @@
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="PTDeploy" href="jptdeploy_main.html" />
     <link rel="next" title="Joomla" href="jjoomla_deploy.html" />
-    <link rel="prev" title="GitClone" href="jgitclone_deploy.html" />
+    <link rel="prev" title="Grafana" href="jgrafana_deploy.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -80,9 +80,12 @@
      data-toggle="dropdown">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
     ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
 </ul>
 </li>
@@ -94,12 +97,9 @@
 <li><a class="reference internal" href="#id1">概要</a></li>
 <li><a class="reference internal" href="#help">Helpコマンド</a></li>
 <li><a class="reference internal" href="#id2">代替パラメータ</a></li>
-<li><a class="reference internal" href="#id3">加える</a></li>
-<li><a class="reference internal" href="#id4">削除する</a></li>
-<li><a class="reference internal" href="#id5">リスト</a></li>
-<li><a class="reference internal" href="#id6">有効にする</a></li>
-<li><a class="reference internal" href="#id7">無効にする</a></li>
-<li><a class="reference internal" href="#id8">メリット</a></li>
+<li><a class="reference internal" href="#add">Add</a></li>
+<li><a class="reference internal" href="#id3">削除する</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
 </ul>
 </li>
 </ul>
@@ -110,8 +110,8 @@
             
               
                 
-  <li><a href="jgitclone_deploy.html"
-         title="Previous Chapter: GitClone">&laquo; GitClone</a></li>
+  <li><a href="jgrafana_deploy.html"
+         title="Previous Chapter: Grafana">&laquo; Grafana</a></li>
   <li><a href="jjoomla_deploy.html"
          title="Next Chapter: Joomla">Joomla &raquo;</a></li>
               
@@ -150,9 +150,12 @@
   <div class="row">
       <div class="col-md-3">
         <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html#id5">PTConfigureモジュールと遊ぶ</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
 </ul>
 </ul>
 
@@ -165,70 +168,36 @@
 <h1>Host Editor<a class="headerlink" href="#host-editor" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
 <h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>このモジュールは、ptdeploy下のApacheバーチャルホストエディタを処理するためにサポートしています。それは2つの方法で機能することができる。彼らは、追加および削除されます。バーチャルホストエディタは風をのapacheに、仮想ホストを追加するために書かれたPHPのツールです。バーチャルホストエディタは、追加、編集、またはユーザのウェブサーバ上の仮想ホスト情報を削除することを可能にします。これは、UbuntuとセントのOSで動作すると便利です。のは、Apacheバーチャルホストエディタで機能する方法を見てみましょう
-ptdeploy。</p>
+<p>このモジュールは ptdeploy の下で Apache 仮想ホスト エディターを処理するためにサポートします。それは 2 つの方法で機能することができます。彼らは追加し、削除します。バーチャル ホストのエディターは、apache は非常に簡単に追加する仮想ホストをように書かれて PHP ツールです。バーチャル ホストのエディターは、ユーザーを追加、編集、またはユーザーの web サーバ上の仮想ホスト情報の削除を有効になります。Ubuntu とセントを使用すると便利です OS。Ptdeploy の下で、apache のバーチャル ホストのエディターがどのように機能することができますか見てみましょう。</p>
 </div>
 <div class="section" id="help">
 <h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
-<p>このhelpコマンドは、仮想ホストを作成するためのユーザーをガイドします。これはまた、仮想ホストを追加する仮想ホストを削除し、仮想ホストを有効にして、仮想ホストを無効にする表示されます。</p>
-<p>Apachevhosteditorためのhelpコマンドを以下に示します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Apachevhosteditor <span class="nb">help</span>
+<p>このヘルプ コマンドは、hosteditor を作成するユーザーをガイドします。Hosteditor のヘルプ コマンドを以下に示します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Hosteditor <span class="nb">help</span>
 </pre></div>
 </div>
-<p>後、上記のコマンドを入力し、それが仮想ホストエディタを追加するために機能して開始します。これは、スクリーンショットで関数を教理。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy ApacheVHostEditor <span class="nb">help</span>
+<p>開始後の入力上記のコマンドでは、仮想ホスト エディターを追加する機能します。それの教理のスクリーン ショットで機能します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy HostEditor <span class="nb">help</span>
+
 ******************************
 
+ This <span class="nb">command </span>is part of Default Modules and handles Host File Management Functions.
 
- This <span class="nb">command </span>is part of Default Modules and handles Apache VHosts Functions.
-
- ApacheVHostEditor, apachevhosteditor, vhosteditor, vhe, vhosted
+ HostEditor, hosteditor, he, hostEditor
 
          - add
-         create a Virtual Host
-         example: sudo ptdeploy vhe add
-         example: sudo ptdeploy vhe add --yes --vhe-docroot<span class="o">=</span>/var/www/the-app --vhe-url<span class="o">=</span>www.dave.com --vhe-file-ext<span class="o">=</span><span class="s2">&quot;&quot;</span> --vhe-apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span> --vhe-ip-port<span class="o">=</span><span class="s2">&quot;127.0.0.1:80&quot;</span> --vhe-vhost-dir<span class="o">=</span><span class="s2">&quot;/etc/apache2/sites-available&quot;</span> --vhe-template<span class="o">=</span><span class="s2">&quot;*template data*&quot;</span>
-         example: sudo ptdeploy vhe add --yes --guess --vhe-url<span class="o">=</span>www.dave.com
-             <span class="c"># will attempt to guess the following but you can override any</span>
-             <span class="c"># --vhe-docroot=*current working dir*</span>
-             <span class="c"># --vhe-file-ext=&quot;ubuntu none, others .conf&quot;</span>
-             <span class="c"># --vhe-apache-command=&quot;apache2 or httpd depends on system&quot;</span>
-             <span class="c"># --vhe-ip-port=&quot;127.0.0.1:80&quot;</span>
-             <span class="c"># --vhe-vhost-dir=&quot;/etc/apache2/sites-available or /etc/httpd/vhosts.d&quot;</span>
-             <span class="c"># --vhe-template=&quot;*template data*&quot;</span>
-             <span class="c"># --vhe-default-template-name=&quot;docroot-src-suffix&quot; // from default templates</span>
-
-         - add-balancer
-         create a Virtual Host
-         example: sudo ptdeploy vhe add
-         example: sudo ptdeploy vhe add --yes --vhe-docroot<span class="o">=</span>/var/www/the-app --vhe-url<span class="o">=</span>www.dave.com --vhe-file-ext<span class="o">=</span><span class="s2">&quot;&quot;</span> --vhe-apache-command<span class="o">=</span><span class="s2">&quot;apache2&quot;</span> --vhe-ip-port<span class="o">=</span><span class="s2">&quot;127.0.0.1:80&quot;</span> --vhe-vhost-dir<span class="o">=</span><span class="s2">&quot;/etc/apache2/sites-available&quot;</span> --vhe-template<span class="o">=</span><span class="s2">&quot;*template data*&quot;</span>
-         example: sudo ptdeploy vhe add --yes --guess --vhe-url<span class="o">=</span>www.dave.com
-             <span class="c"># will attempt to guess the following but you can override any</span>
-             <span class="c"># --vhe-docroot=*current working dir*</span>
-             <span class="c"># --vhe-file-ext=&quot;ubuntu none, others .conf&quot;</span>
-             <span class="c"># --vhe-apache-command=&quot;apache2 or httpd depends on system&quot;</span>
-             <span class="c"># --vhe-ip-port=&quot;127.0.0.1:80&quot;</span>
-             <span class="c"># --vhe-vhost-dir=&quot;/etc/apache2/sites-available or /etc/httpd/vhosts.d&quot;</span>
-             <span class="c"># --vhe-template=&quot;*template data*&quot;</span>
-             <span class="c"># --vhe-default-template-name=&quot;docroot-src-suffix&quot; // from default templates</span>
+         add a Host File entry
+         example: ptdeploy hosteditor add
+         example: ptdeploy hosteditor add --yes
+             --host-ip<span class="o">=</span>127.0.0.1  <span class="c"># guess will assume 127.0.0.1</span>
+             --host-name<span class="o">=</span>dave.com
 
          - rm
-         example: ptdeploy vhe rm
-         example: ptdeploy vhe rm --yes --
-         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
-         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
-
-         - list
-         List current Virtual Hosts
-         example: ptdeploy vhe list
-
-         - <span class="nb">enable</span>
-<span class="nb">         enable </span>a Server Block
-         example: ptdeploy vhe <span class="nb">enable</span>
-
-         - disable
-         disable a Server Block
-         example: ptdeploy vhe disable
+         remove a Host File entry
+         example: ptdeploy hosteditor rm
+         example: ptdeploy hosteditor rm --yes
+             --host-ip<span class="o">=</span>127.0.0.1 <span class="c"># guess will ignore this, and remove any entry matching the host name</span>
+             --host-name<span class="o">=</span>dave.com
 
 ------------------------------
 End Help
@@ -238,271 +207,132 @@ End Help
 </div>
 <div class="section" id="id2">
 <h2>代替パラメータ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>次の宣言で定義することができる代替パラメータは次のとおりです。</p>
-<p>ApacheVHostEditor, apachevhosteditor, vhosteditor, vhe, vhosted.</p>
+<p>宣言で定義することができます、代替パラメーターを次に示します。</p>
+<p>HostEditor, hosteditor, he, hostEditor</p>
 </div>
-<div class="section" id="id3">
-<h2>加える<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>これは仮想ホストを作成するためのユーザーを容易にします。バーチャルホストを追加する際には、VHE-ドキュメントルート、VHE-FILE-EXT、VHE-apacheのコマンド、VHE-IPポートを尋ね、VHEホストDIR、VHE-テンプレート缶VHE-デフォルト·テンプレート名。ユーザは、自分の希望に応じて入力することができます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>sudo ptdeploy vhe add
+<div class="section" id="add">
+<h2>Add<a class="headerlink" href="#add" title="Permalink to this headline">¶</a></h2>
+<p>これは、エディターのホストを作成するユーザーを容易にします。よると、ユーザーが入力できる彼らの願いを。</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptdeploy hosteditor add
 </pre></div>
 </div>
-<p>上記のコマンドとして入力した後、ユーザーは、以下のプロセスを埋めることができます。</p>
-<table border="1" class="table-bordered docutils">
-<colgroup>
-<col width="17%" />
-<col width="18%" />
-<col width="26%" />
-<col width="39%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">パラメータ</th>
-<th class="head">パラメータ</th>
-<th class="head">オプション</th>
-<th class="head">注釈</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>ptdeploy vhe add
-(Default)</td>
-<td>Yes</td>
-<td>これは、ドキュメントルート
-をユーザーに尋ねることができます</td>
-<td>ptdeploy下に指定されたドキュメント
-ルートに追加された仮想ホスト</td>
-</tr>
-<tr class="row-odd"><td>What’s the server name</td>
-<td><ul class="first last simple">
-<li></li>
-</ul>
-</td>
-<td>これは、サーバー名の入力を
-求めることができます</td>
-<td>ptdeployの下に追加のサーバー名</td>
-</tr>
-<tr class="row-even"><td>What IP:Port (default)</td>
-<td>127.0.0.1:80</td>
-<td>これは、IPポートをユーザーに求
-めることができます</td>
-<td>ときにデフォルト値を入力として、ユーザー入力が
-IPのために追加：ポート</td>
-</tr>
-<tr class="row-odd"><td>What file extension
-should be used?
-(Default)</td>
-<td>None</td>
-<td>缶これは、拡張機能をユーザーに
-要求する</td>
-<td>ユーザーは、ファイル拡張子として入力を提供します</td>
-</tr>
-<tr class="row-even"><td>ptdeploy vhe add</td>
-<td>No</td>
-<td>できるそれはユーザーに入力を
-要求します。|</td>
-<td>これは、プロセスを終了することができ</td>
-</tr>
-</tbody>
-</table>
-<p>最後に、このシステムはバーチャルホストのtemplatesディレクトリを要求することができます。テンプレートで利用可能な5つのオプションがあります。次のように彼らは。</p>
-<p>0 for doc root-no-suffix</p>
-<p>1 for doc –src-suffix used for document screen suffix</p>
-<p>2 for doc –web-suffix used for document web suffix</p>
-<p>3 for doc –www-suffix used for world wide web suffix</p>
-<p>4 for docroot-suffix used for document root suffix</p>
-<p>ユーザーは、自分のニーズに応じて値を選択したい。その後、システムは、IPアドレスとrootユーザーなどが正しいか間違っている、バーチャルホスト名を尋ねることができます。ユーザーがイエスと言うなら、それはバーチャルホストのディレクトリが表示され、このバーチャルホストを有効にする？</p>
-<p>ユーザーの答えははい、それは他のバーチャルホストを有効にすることができ、それは終了することができます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevells@corp:/# ptdeploy vhe add
-Do you want to add a VHost? (Y/N)
-Y
-What&#39;s the document root? Enter nothing for /
-root
-What URL do you want to add as server name?
-www.vh.com
-What IP:Port should be set? Enter nothing for 127.0.0.1:80
+<p>として、上記のコマンドの入力後、ユーザーは、次のプロセスを埋めることができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy hosteditor add
 
-What File Extension should be used? Enter nothing for None (probably .conf on this system)
+Do you want to add a hosts file entry? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Do you want a non-default IP? Enter <span class="k">for </span>127.0.0.1
+127.0.0.1
+What URI <span class="k">do </span>you want to affect to the hostfile?
+karuna
+Please check host file: 127.0.0.1      localhost
+127.0.1.1      karuna
+127.0.1.1       www.kevell.com
 
-What is your VHost Template directory? Enter nothing for default templates
+127.0.1.1      www.ptbuild.tld
+<span class="c"># The following lines are desirable for IPv6 capable hosts</span>
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+             --host-ip<span class="o">=</span>127.0.0.1  <span class="c"># guess will assume 127.0.0.1              --host-name=dave.com127.0.0.1          dave.com</span>
+127.0.0.1          dave.com
+192.168.1.4
+127.0.0.1          deepak
+clear
+127.0.0.1          www.kevell.com
+127.0.0.1
+127.0.0.1          karuna
 
-Please Choose VHost Template:
---- Default Virtual Host Templates: ---
-(0) docroot-no-suffix
-(1) docroot-src-suffix
-(2) docroot-web-suffix
-(3) docroot-www-suffix
-(4) docroot-docroot-suffix
 
-0
-Please check VHost: NameVirtualHost 127.0.0.1:80
-&lt;VirtualHost 127.0.0.1:80&gt;
-       ServerAdmin webmaster@localhost
-       ServerName www.vh.com
-       DocumentRoot root
-       &lt;Directory root&gt;
-               Options Indexes FollowSymLinks MultiViews
-               AllowOverride All
-               Order allow,deny
-               allow from all
-       &lt;/Directory&gt;
-&lt;/VirtualHost&gt;
-
-Is this Okay? (Y/N)
-
+Is this Okay?  <span class="o">(</span>Y/N<span class="o">)</span>
+y
 ******************************
 
+1Host Editor Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy hosteditor add --yes
 
-Apache VHost Editor Finished
+Do you want a non-default IP? Enter <span class="k">for </span>127.0.0.1
+127.0.0.1
+What URI <span class="k">do </span>you want to affect to the hostfile?
+kumar
+******************************
+
+1Host Editor Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>削除する<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>Hosteditor を削除するためのターミナル コマンドは rm です。このコマンドの一般的な形式は、rm です。rm とあなたはいけないかどうか、それはエラー メッセージが表示されます、次のホストに移動し、正しいパスを指定した場合、ホストを削除します。</p>
+<p>次のコマンドは、仮想ホストを削除するために使用。</p>
+<div class="highlight-bash"><div class="highlight"><pre>sudo ptdeploy hosteditor rm
+</pre></div>
+</div>
+<p>以下のスクリーンショットは、その機能を説明することができます。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy hosteditor rm
+
+Do you want to remove a hosts file entry? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+Do you want a non-default IP? Enter <span class="k">for </span>127.0.0.1
+127.0.0.1
+What URI <span class="k">do </span>you want to affect to the hostfile?
+karuna
+Please check host file: 127.0.0.1      localhost
+127.0.1.1      karuna
+127.0.1.1       www.kevell.com
+
+127.0.1.1      www.ptbuild.tld
+<span class="c"># The following lines are desirable for IPv6 capable hosts</span>
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+             --host-ip<span class="o">=</span>127.0.0.1  <span class="c"># guess will assume 127.0.0.1              --host-name=dave.com127.0.0.1          dave.com</span>
+127.0.0.1          dave.com
+192.168.1.4
+127.0.0.1          deepak
+clear
+127.0.0.1          www.kevell.com
+127.0.0.1
+127.0.0.1          nithin
+127.0.0.1          kumar
+
+
+
+Is this Okay?  <span class="o">(</span>Y/N<span class="o">)</span>
+y
+******************************
+
+1Host Editor Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy hosteditor rm --yes
+
+Do you want a non-default IP? Enter <span class="k">for </span>127.0.0.1
+127.0.0.1
+What URI <span class="k">do </span>you want to affect to the hostfile?
+nithin
+******************************
+
+1Host Editor Finished
 ******************************
 </pre></div>
 </div>
 </div>
 <div class="section" id="id4">
-<h2>削除する<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>仮想ホスト（複数可）を削除するためのターミナルコマンドはRMです。このコマンドの一般的なフォーマットはRMです。あなたはそれのための正しいパスを指定した場合、RMは仮想ホストを削除し、そうでない場合は、エラー·メッセージが表示され、次のホストに移動します。時には、それは確認をお願いしますその場合には、仮想ホストの書き込み権限がない可能性があります。あなたがそれを削除したい場合は、yesと入力。</p>
-<p>削除された名前は、仮想ホストへの最後のリンクで、かつ、どのプロセスが持っていない場合</p>
-<p>仮想ホストのオープンは、仮想ホストが削除され、それが使用していたスペースは、再使用のために使用されている。</p>
-<p>名前は、仮想ホストへの最後のリンクであったが、すべてのプロセスがまだ持っている場合</p>
-<p>仮想ホストのオープンは、仮想ホストはそれを参照する最後の仮想ホスト記述子がクローズされるまでは存在し続ける。</p>
-<p>名前がシンボリックリンクを参照する場合、リンクが削除されます。次のコマンドは、仮想ホストを削除するために使用。</p>
-<div class="highlight-bash"><div class="highlight"><pre>sudo ptdeploy vhe rm –yes –guess –vhe-deletion-vhost<span class="o">=</span>www.kevell.com
-</pre></div>
-</div>
-<p>以下のスクリーンショットは、その機能を説明することができます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- rm
-         example: ptdeploy vhe rm
-         example: ptdeploy vhe rm --yes --
-         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
-         example: ptdeploy vhe rm --yes --guess --vhe-deletion-vhost<span class="o">=</span>www.site.com
-</pre></div>
-</div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe rm
-Do you want to delete VHost/s? <span class="o">(</span>Y/N<span class="o">)</span>
-y
-Deleting vhost
-What is your VHost directory? Found <span class="s2">&quot;/etc/apache2/sites-available&quot;</span> - Enter nothing to use this
-
-Please Choose VHost:
---- All Virtual Hosts: ---
-<span class="o">(</span>0<span class="o">)</span> 000-default.conf
-<span class="o">(</span>1<span class="o">)</span> default-ssl.conf
-
-0
-Do you want to disable this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
-yes
-Site 000-default disabled.
-To activate the new configuration, you need to run:
- service apache2 reload
-a2dissite 000-default.conf <span class="k">done</span>
-VHost 000-default.conf Deleted  <span class="k">if </span>existed
-******************************
-
-
-1Apache VHost Editor Finished
-******************************
-</pre></div>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>リスト<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>仮想ホスト（デフォルトではカレントディレクトリ）についての情報を一覧表示します。アルファベット順にソートエントリ。必須の引数は、あまりにも長いオプションとしてだけでなく、短いオプションがあります。リストには、リスト名と提供し、データを整理しますまた、基礎となるビューの両方を指定するURLを使用して起動。次のコマンドは、仮想ホストをリストするために使用される。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy vhe list
-</pre></div>
-</div>
-<p>リストかどうかをさまざまなビューを使用することができ、またはそのためのデータを整理するために特別に設計されたビューから精巧なページを生成するように調整することがあるので注意してください。設計ドキュメントのリスト欄の下に格納リスト。これは、スクリーンショットで可視化することができる。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- list
-         List current Virtual Hosts
-         example: ptdeploy vhe list
-</pre></div>
-</div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe list
-What is your VHost directory? Found <span class="s2">&quot;/etc/apache2/sites-available&quot;</span> - Enter nothing to use this
-
-You have a sites available dir, so also listing available sites.
-Current Installed VHosts:
---- Enabled Virtual Hosts: ---
-<span class="o">(</span>0<span class="o">)</span> 000-default.conf
-<span class="o">(</span>1<span class="o">)</span> default-ssl.conf
---- All Available Virtual Hosts: ---
-<span class="o">(</span>2<span class="o">)</span> 000-default.conf
-<span class="o">(</span>3<span class="o">)</span> default-ssl.conf
-******************************
-
-
-1Apache VHost Editor Finished
-******************************
-</pre></div>
-</div>
-</div>
-<div class="section" id="id6">
-<h2>有効にする<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<p>セキュアブートは、ブートプロセス中にロードするから悪意のあるソフトウェアや無許可のメディアを防ぐように設計機能です。この有効オプションは、サーバのブロックを可能にした。仮想ホストで使用する場合は、次のコマンドを入力した、</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy vhe <span class="nb">enable</span>
-</pre></div>
-</div>
-<p>このオプションはデフォルトで有効になっています。このオプションは、仮想ホストサーバがイネーブル可能にする。</p>
-<p>アシストモジュールは、人、プロセス、テクノロジー間の相互依存性の理解を通じて高性能環境にサービスを提供するために必要な有効な機能の多くを開発しています。次のスクリーンショットは、同じことを説明しています。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- <span class="nb">enable</span>
-<span class="nb">         enable </span>a Server Block
-         example: ptdeploy vhe <span class="nb">enable</span>
-</pre></div>
-</div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe <span class="nb">enable</span>
-Do you want to <span class="nb">enable </span>this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
-y
-Please Choose VHost:
---- All Virtual Hosts: ---
-<span class="o">(</span>0<span class="o">)</span> default-ssl.conf
-
-0
-ERROR: Site default-ssl.conf does not exist!
-a2ensite default-ssl.conf.conf <span class="k">done</span>
-******************************
-
-
-1Apache VHost Editor Finished
-******************************
-</pre></div>
-</div>
-</div>
-<div class="section" id="id7">
-<h2>無効にする<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
-<p>この無効化は、サーバーを無効にするために使用。非アクティブまたはアイドル仮想ホストエディタ接続は、通常、一定時間が経過すると、サーバーによって切断されます。以下のコマンドは、仮想ホストエディタを無効にするために使用されている。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy vhe disable
-</pre></div>
-</div>
-<p>このコマンドを入力した後、サーバーを無効にするには、ユーザーに確認することができます。それは許可されません。つまり、ユーザの入力としてはい、それがサーバーを無効にした場合はすべてのボディは、そのサーバで動作する。</p>
-<p>次のスクリーンショットは明らかにそれを視覚化する。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- disable
-
-         disable a Server Block
-         example: ptdeploy vhe disable
-</pre></div>
-</div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy vhe disable
-Do you want to disable this VHost? <span class="o">(</span>hint - ubuntu probably yes, centos probably no<span class="o">)</span> <span class="o">(</span>Y/N<span class="o">)</span>
-y
-Please Choose VHost:
---- All Virtual Hosts: ---
-<span class="o">(</span>0<span class="o">)</span> default-ssl.conf
-
-0
-Site default-ssl already disabled
-a2dissite default-ssl.conf <span class="k">done</span>
-******************************
-
-
-1Apache VHost Editor Finished
-******************************
-</pre></div>
-</div>
-</div>
-<div class="section" id="id8">
-<h2>メリット<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>マルチユーザーが一度にアクセスすることができます。</li>
-<li>ユーザーは、仮想ホストを追加または削除することができます。</li>
-<li>仮想ホストエディタは、ユーザーの希望に応じて仮想ホストを有効または無効にすることができます。</li>
-<li>非大文字と小文字の区別。</li>
+<li>マルチ ユーザーに一度にアクセスできます。</li>
+<li>ユーザーは、追加またはホストを削除できます。</li>
+<li>非大文字小文字を区別します。</li>
 </ul>
 </div>
 </div>

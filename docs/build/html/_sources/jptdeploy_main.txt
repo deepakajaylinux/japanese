@@ -236,14 +236,23 @@ Available Commands:
  jautopilot_deploy
  jdapperfy_deploy
  jdbconfigure_deploy
+ jdbinstall_deploy
  jdrupal_deploy
+ jenvironmentconfig_deploy
  jgitclone_deploy
+ jgrafana_deploy
  jhosteditor_deploy
  jjoomla_deploy
  jlighttpdcontrol_deploy
  jlogging_deploy
  jnginxcontrol_deploy 
-
-
-
+ jnginxsbeditor_deploy
+ jproject_deploy
+ jruncommand_deploy
+ jsftp_deploy
+ jsvn_deploy
+ jsystemdetection_deploy
+ jtemplating_deploy
+ jversion_deploy
+ jwordpress_deploy
 

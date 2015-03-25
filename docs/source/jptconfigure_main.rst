@@ -564,6 +564,7 @@ PTConfigureモジュールと遊ぶ
    jawsrds
    jawstats
    jbehat
+   jboxify
    jcassandra
    jchgrp
    jchmode
@@ -575,6 +576,7 @@ PTConfigureモジュールと遊ぶ
    jcomposer
    jcopy
    jdevelopertools
+   jdigitalocean
    jdnsify
    jencryption
    jenvironmentconfig
@@ -671,6 +673,7 @@ PTConfigureモジュールと遊ぶ
    jsshkeyinstall
    jsshkeystore
    jstandardtools
+   jstoryplayer
    jsudonopass
    jsvn
    jsystemdetection
@@ -678,6 +681,7 @@ PTConfigureモジュールと遊ぶ
    jtemplating
    jtomcat
    jubuntucompiler
+   juser
    jvarnish
    jvirtualbox
    jvmplayer
@@ -687,4 +691,6 @@ PTConfigureモジュールと遊ぶ
    jwireframesketcher
    jxvfb
    jzendserver
-   
+  
+
+
