@@ -15,7 +15,7 @@ Commands
 *********
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 6
  
  jjrush_main
  jptconfigure_main
@@ -24,11 +24,6 @@ Commands
  jptvirtualize_main 
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 
 
