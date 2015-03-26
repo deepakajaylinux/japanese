@@ -207,7 +207,7 @@ End Help
 <p>Y として入力を与える場合、モジュールが正常にインストールします。</p>
 <p>またロックファイル PidFile、タイムアウト、キープア ライブ、MaxKeepAliveRequest、キープア ライブ タイムアウトのデフォルト以外の値を指定するいくつかのコマンドがスローされます。場合は、ユーザーが与える Y(Yes) と入力自動的に既定値を修正します。ユーザーは N(No) として入力を与える場合、ユーザーから値について尋ねるでしょう。</p>
 <p>インストールでスクリーン ショット下記手順やコマンドについて視覚的に説明する必要があります。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure apacheconf install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ApacheConf install
 Install Apache Conf? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
@@ -215,22 +215,33 @@ y
 *         Apache Conf!        *
 *******************************
 Set non-default value <span class="k">for </span>LockFile? Default is <span class="k">${</span><span class="nv">APACHE_LOCK_DIR</span><span class="k">}</span>/accept.lock <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>LockFile?
+<span class="k">${</span><span class="nv">APACHE_LOCK_DIR</span><span class="k">}</span>/accept.lock
 Set non-default value <span class="k">for </span>PidFile? Default is <span class="k">${</span><span class="nv">APACHE_PID_FILE</span><span class="k">}</span> <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>PidFile?
+<span class="k">${</span><span class="nv">APACHE_PID_FILE</span><span class="k">}</span>
 Set non-default value <span class="k">for </span>Timeout? Default is 300 <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>Timeout?
+300
 Set non-default value <span class="k">for </span>KeepAlive? Default is On <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>KeepAlive?
+On
 Set non-default value <span class="k">for </span>MaxKeepAliveRequests? Default is 100 <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>MaxKeepAliveRequests?
+100
 Set non-default value <span class="k">for </span>KeepAliveTimeout? Default is 5 <span class="o">(</span>Y/N<span class="o">)</span>
-
+y
+What value <span class="k">for </span>KeepAliveTimeout?
+5
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
 ******************************
-
 
 Single App Installer:
 --------------------------------------------

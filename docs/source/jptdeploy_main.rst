@@ -242,6 +242,7 @@ Available Commands:
  jgitclone_deploy
  jgrafana_deploy
  jhosteditor_deploy
+ jinvoke_deploy
  jjoomla_deploy
  jlighttpdcontrol_deploy
  jlogging_deploy

@@ -579,6 +579,7 @@ PTConfigureモジュールと遊ぶ
    jdevelopertools
    jdigitalocean
    jdnsify
+   jdocker
    jencryption
    jenvironmentconfig
    jfile
@@ -601,6 +602,7 @@ PTConfigureモジュールと遊ぶ
    jinstallpackage
    jintellij
    jinvoke
+   jjasmine
    jjava
    jjenkins
    jjenkinsplugins
@@ -667,6 +669,7 @@ PTConfigureモジュールと遊ぶ
    jseleniumserver
    jservice
    jsftp
+   jsimpletest
    jskipfish
    jsshencrypt
    jsshharden
@@ -690,6 +693,7 @@ PTConfigureモジュールと遊ぶ
    jvnc
    jvncpassword
    jwireframesketcher
+   jxcache
    jxvfb
    jzendserver
   

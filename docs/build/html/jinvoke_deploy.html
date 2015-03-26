@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Invoke &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTDeploy" href="jptdeploy_main.html" />
+    <link rel="next" title="Joomla" href="jjoomla_deploy.html" />
+    <link rel="prev" title="Host Editor" href="jhosteditor_deploy.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Invoke</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">Helpコマンド</a></li>
+<li><a class="reference internal" href="#cli">Cli</a></li>
+<li><a class="reference internal" href="#script">script</a></li>
+<li><a class="reference internal" href="#data">Data</a></li>
+<li><a class="reference internal" href="#id2">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id3">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jhosteditor_deploy.html"
+         title="Previous Chapter: Host Editor">&laquo; Host Editor</a></li>
+  <li><a href="jjoomla_deploy.html"
+         title="Next Chapter: Joomla">Joomla &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jinvoke_deploy.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="invoke">
+<h1>Invoke<a class="headerlink" href="#invoke" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>呼び出しベースのマシンから仮想マシンを特定の SSH ファイルをフェッチします。コンピューティングでは、SSH ファイル転送プロトコルもセキュリティで保護されたファイル転送プロトコル (SFTP) は任意の信頼性の高いデータ ストリーム上のファイルへのアクセス、ファイル転送、ファイル管理機能を提供するネットワーク プロトコルです。</p>
+</div>
+<div class="section" id="help">
+<h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドでの使用状況を確認できますモジュールを呼び出します。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy invoke <span class="nb">help</span>
+</pre></div>
+</div>
+<p>上記のコマンドの絵の表現は以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy invoke <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>is part of Core and handles SSH Connection Functions.
+
+ Invoke, invoke, inv
+
+       - cli
+       Will ask you <span class="k">for </span>details <span class="k">for </span>servers, <span class="k">then </span>open a shell <span class="k">for </span>you to execute on multiple servers
+       example: ptdeploy invoke cli --environment-name<span class="o">=</span>staging
+
+       - script
+       Will ask you <span class="k">for </span>details <span class="k">for </span>servers, <span class="k">then </span>execute each line of a provided script file on the remote/s
+       example: ptdeploy invoke script --ssh-script<span class="o">=</span><span class="s2">&quot;/var/www/project/script.sh&quot;</span> --environment-name<span class="o">=</span>staging
+
+       - data
+       Execute php variable data on one or more remotes
+       example: ptdeploy invoke data --ssh-data<span class="o">=</span><span class="s2">&quot;ls -lah&quot;</span> --environment-name<span class="o">=</span>staging
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="cli">
+<h2>Cli<a class="headerlink" href="#cli" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーは、cli を使用してクライアント システムにサーバーからデータをフェッチする必要がある場合、以下のコマンドはすべての情報取得、シェルを開くとき</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Invoke cli
+</pre></div>
+</div>
+<p>上記のコマンドの絵の表現は以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Invoke cli
+
+Invoke SSH Shell on Server group? (Y/N)
+y
+Please Enter SSH Timeout in seconds
+2
+Please Enter remote SSH Port
+22
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.14
+Please Enter SSH User
+karthik
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SSH connections...
+[Pharaoh Logging] Connection to Server 192.168.1.14 successful.
+Last login: Thu Mar 19 19:09:01 2015 from 192.168.1.29
+echo &quot;Pharaoh Remote SSH on ...192.168.1.14&quot;
+Pharaoh Remote SSH on ...192.168.1.14
+Opening CLI...
+Enter command to be executed on remote servers? Enter none to close connection and end program
+ls
+[192.168.1.14] Executing ls...
+ls
+build                         Music
+comp.tar.gz                   nagios-4.0.8
+deon                          nagios-4.0.8.tar.gz
+Desktop                               nagios-plugins-2.0.3
+Documents                     nagios-plugins-2.0.3.tar.gz
+Downloads                     openstackgeek
+error                         papyrusfile
+error~                        Pictures
+examples.desktop              Public
+fil                           selenium-server-standalone-2.44.0.jar
+file                          Templates
+http                          test
+kibana-4.0.1-linux-x64        Untitled Document 2
+kibana-4.0.1-linux-x64.tar.gz  Videos
+kkkk
+[192.168.1.14] ls Completed...
+Enter command to be executed on remote servers? Enter none to close connection and end program
+mkdir nithin
+[192.168.1.14] Executing mkdir nithin...
+mkdir nithin
+[192.168.1.14] mkdir nithin Completed...
+Enter command to be executed on remote servers? Enter none to close connection and end program
+
+Shell Completed******************************
+
+Shell Result: Success
+Invoke Shell Cli
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="script">
+<h2>script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーはスクリプトを使用してクライアント システムにサーバーからデータをフェッチする必要がある場合、以下のコマンドは、リモートで提供されているスクリプト ファイルの各行を実行</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Invoke script
+</pre></div>
+</div>
+<p>上記のコマンドの絵の表現は以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Invoke script
+
+Invoke SSH Script on Server group? (Y/N)
+y
+Enter Location of bash script to execute
+/opt/script
+Please Enter SSH Timeout in seconds
+5
+Please Enter remote SSH Port
+22
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.14
+Please Enter SSH User
+karthik
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SSH connections...
+[Pharaoh Logging] Connection to Server 192.168.1.14 successful.
+Last login: Thu Mar 19 19:35:38 2015 from 192.168.1.29
+echo &quot;Pharaoh Remote SSH on ...192.168.1.14&quot;
+Pharaoh Remote SSH on ...192.168.1.14
+[192.168.1.14] Executing ls...
+ls
+build                         Music
+comp.tar.gz                   nagios-4.0.8
+deon                          nagios-4.0.8.tar.gz
+Desktop                               nagios-plugins-2.0.3
+Documents                     nagios-plugins-2.0.3.tar.gz
+Downloads                     nithin
+error                         openstackgeek
+error~                        papyrusfile
+examples.desktop              Pictures
+fil                           Public
+file                          selenium-server-standalone-2.44.0.jar
+http                          Templates
+kibana-4.0.1-linux-x64        test
+kibana-4.0.1-linux-x64.tar.gz  Untitled Document 2
+kkkk                          Videos
+[192.168.1.14] ls Completed...
+[192.168.1.14] Executing ...
+ [192.168.1.14]  Completed...
+Script by SSH Completed******************************
+
+Shell Result: Success
+Invoke Script
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p>ユーザー データを使用してクライアント システムにサーバーからデータをフェッチする必要がある場合、1 つまたは複数のリモコン上で php 変数以下のコマンドを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy Invoke data
+</pre></div>
+</div>
+<p>上記のコマンドの絵の表現は以下します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Invoke data
+
+Invoke SSH Data on Server group? (Y/N)
+y
+Enter data to execute via SSH
+ls -la
+Please Enter SSH Timeout in seconds
+4
+Please Enter remote SSH Port
+22
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.14
+Please Enter SSH User
+karthik
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SSH connections...
+[Pharaoh Logging] Connection to Server 192.168.1.14 successful.
+Last login: Thu Mar 19 19:20:11 2015 from 192.168.1.29
+echo &quot;Pharaoh Remote SSH on ...192.168.1.14&quot;
+Pharaoh Remote SSH on ...192.168.1.14
+[192.168.1.14] Executing ls -la...
+ls -la
+total 55112
+drwxr-xr-x 31 karthik karthik     4096 Mar 19 19:16 .
+drwxr-xr-x  4 root    root        4096 Feb 24 11:52 ..
+drwx------  3 karthik karthik     4096 Feb 24 18:23 .adobe
+-rw-------  1 karthik karthik    12029 Mar 19 19:20 .bash_history
+-rw-rw-r--  1 karthik karthik       25 Mar 19 19:21 .bash_login
+-rw-r--r--  1 karthik karthik      220 Feb 24 05:16 .bash_logout
+-rw-r--r--  1 karthik karthik     3637 Feb 24 05:16 .bashrc
+drwxr-xr-x  3 root    root        4096 Mar 18 17:18 build
+drwx------ 25 karthik karthik     4096 Mar 17 00:38 .cache
+drwx------  3 karthik karthik     4096 Feb 24 01:34 .compiz
+-rw-r--r--  1 karthik karthik  2836036 Feb 26 21:22 comp.tar.gz
+drwx------ 26 karthik karthik     4096 Mar 19 14:26 .config
+drwx------  3 root    root        4096 Feb 24 11:21 .dbus
+-rw-r--r--  1 root    root           0 Mar 19 14:58 deon
+drwxr-xr-x  5 karthik karthik     4096 Mar 19 19:05 Desktop
+-rw-r--r--  1 karthik karthik       25 Feb 24 05:22 .dmrc
+drwxr-xr-x  2 karthik karthik     4096 Mar 10 10:47 Documents
+drwxr-xr-x  3 karthik karthik     4096 Mar 19 19:02 Downloads
+-rw-rw-r--  1 karthik karthik    48711 Mar 18 19:46 error
+-rw-rw-r--  1 karthik karthik    48464 Mar 18 19:45 error~
+-rw-r--r--  1 karthik karthik     8980 Feb 24 05:16 examples.desktop
+drwxr-xr-x  2 root    root        4096 Mar 18 18:24 fil
+-rwxr-xr-x  1 root    root         395 Mar 18 18:23 file
+drwx------  3 karthik karthik     4096 Mar 19 10:18 .gconf
+-rw-r--r--  1 root    root          61 Mar  3 14:29 .gitconfig
+-rw-r--r--  1 root    root           0 Mar 19 14:59 http
+-rw-------  1 karthik karthik    11270 Mar 19 10:18 .ICEauthority
+drwxr-xr-x  7     501 staff       4096 Mar  4 21:42 kibana-4.0.1-linux-x64
+-rw-r--r--  1 root    root    13625479 Mar  4 21:42 kibana-4.0.1-linux-x64.tar.gz
+drwxrwxr-x  2 karthik karthik     4096 Mar 18 15:24 kkkk
+drwxr-xr-x  3 karthik karthik     4096 Feb 24 05:22 .local
+drwx------  3 karthik karthik     4096 Feb 24 18:23 .macromedia
+drwx------  4 karthik karthik     4096 Feb 24 00:51 .mozilla
+drwxr-xr-x  2 karthik karthik     4096 Feb 24 05:22 Music
+drwxrwxr-x 18 root    root        4096 Feb 24 11:57 nagios-4.0.8
+-rw-r--r--  1 root    root     1805059 Aug 12  2014 nagios-4.0.8.tar.gz
+drwxr-xr-x 15 root    root        4096 Feb 24 12:03 nagios-plugins-2.0.3
+-rw-r--r--  1 root    root     2659772 Jun 26  2014 nagios-plugins-2.0.3.tar.gz
+drwxrwxr-x  2 karthik karthik     4096 Mar 19 19:16 nithin
+drwxr-xr-x  7 root    root        4096 Feb 27 11:00 openstackgeek
+-rw-r--r--  1 root    root         458 Mar 18 19:29 papyrusfile
+drwxr-xr-x  2 karthik karthik     4096 Mar 19 12:08 Pictures
+-rw-r--r--  1 karthik karthik      675 Feb 24 05:16 .profile
+drwxr-xr-x  2 karthik karthik     4096 Feb 24 05:22 Public
+-rw-------  1 root    root        1024 Mar 12 17:46 .rnd
+-rw-r--r--  1 karthik karthik 35169724 Feb 27 10:49 selenium-server-standalone-2.44.0.jar
+drwx------  2 karthik karthik     4096 Mar 12 18:51 .ssh
+drwxr-xr-x  2 karthik karthik     4096 Feb 24 05:22 Templates
+drwxrwxr-x  2 karthik karthik     4096 Mar 18 15:25 test
+drwx------  4 karthik karthik     4096 Feb 26 04:48 .thunderbird
+-rw-rw-r--  1 karthik karthik      619 Mar  4 05:45 Untitled Document 2
+drwxr-xr-x  2 karthik karthik     4096 Mar 18 11:41 Videos
+drwxr-xr-x  2 root    root        4096 Mar 18 12:20 .vim
+-rw-------  1 root    root        9238 Mar 19 14:26 .viminfo
+-rw-------  1 karthik karthik       52 Mar 19 10:18 .Xauthority
+-rw-------  1 karthik karthik      820 Mar 19 11:26 .xsession-errors
+-rw-------  1 karthik karthik     1353 Mar 18 20:38 .xsession-errors.old
+[192.168.1.14] ls -la Completed...
+Data by SSH Completed
+******************************
+
+Invoke SSH Data Result: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>代替パラメータ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>2 つの代替パラメーターをコマンドラインで使用することができますがあります。</p>
+<p>Invoke, invoke, inv</p>
+</div>
+<div class="section" id="id3">
+<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>このコマンドによってフェッチ SSH ファイルまたはディレクトリに</li>
+<li>ソースから 1 つのコマンドを使用して宛先にファイルまたはディレクトリをフェッチ</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jinvoke_deploy.rst">
+          Invoke
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>
