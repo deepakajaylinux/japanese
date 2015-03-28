@@ -22,6 +22,24 @@ helpコマンドは、とだけでなく、AWStatsのモジュールに含まれ
 
 helpコマンドを宣言するための構文は、追加的な利点である大文字と小文字を区別しませんです。次のスクリーンショットは、AWStatsの下に、helpコマンドについてあなたを視覚化。
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure AWStats help
+ ******************************
+
+
+  This command allows you to update AWStats.
+
+  AWStats, Awstats, awstats
+
+        - install
+        Installs the latest version of awstats
+        example: ptconfigure awstats install
+
+ ------------------------------
+ End Help
+ ******************************
+
 インストール
 ----------------
 
@@ -57,6 +75,56 @@ helpコマンドを宣言するための構文は、追加的な利点である�
 以下のスクリーンショットに示すように、最後に、日本語化を目指して修正のインストールが正常に完了されます：
 
 .. code-block:: bash
+
+ kevell@corp:/# ptconfigure awstats install
+ Install AWStats? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *         AWStats!        *
+ *******************************
+ Reading package lists...
+ Building dependency tree...
+ Reading state information...
+ The following extra packages will be installed:
+  libnet-xwhois-perl
+ Suggested packages:
+  libgeo-ipfree-perl
+ The following NEW packages will be installed:
+  awstats libnet-xwhois-perl
+ 0 upgraded, 2 newly installed, 0 to remove and 182 not upgraded.
+ Need to get 799 kB of archives.
+ After this operation, 3,311 kB of additional disk space will be used.
+ Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/main awstats all 7.2+dfsg-1 [778 kB]
+ Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/main libnet-xwhois-perl all 0.90-4 [21.0 kB]
+ Fetched 799 kB in 12s (65.2 kB/s)
+ Selecting previously unselected package awstats.
+ (Reading database ... 199987 files and directories currently installed.)
+ Preparing to unpack .../awstats_7.2+dfsg-1_all.deb ...
+ Unpacking awstats (7.2+dfsg-1) ...
+ Selecting previously unselected package libnet-xwhois-perl.
+ Preparing to unpack .../libnet-xwhois-perl_0.90-4_all.deb ...
+ Unpacking libnet-xwhois-perl (0.90-4) ...
+ Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+ Processing triggers for doc-base (0.10.5) ...
+ Processing 1 added doc-base file...
+ Setting up awstats (7.2+dfsg-1) ...
+ Setting up libnet-xwhois-perl (0.90-4) ...
+ [Pharaoh Logging] Adding Package awstats from the Packager Apt executed correctly
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+ 
+
+ Single App Installer:
+ --------------------------------------------
+ AWStats: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+
 
 日本語化を目指して修正の特長
 ----------------------------------------------

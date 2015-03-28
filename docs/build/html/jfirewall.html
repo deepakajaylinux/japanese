@@ -299,6 +299,81 @@ rule=”ssh/tcp”</td>
 </tr>
 </tbody>
 </table>
+<p>コマンドの絵図には、許可、拒否、拒否してリセットを以下にリストされている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall allow --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+Rules updated
+Rules updated <span class="o">(</span>v6<span class="o">)</span>
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall deny --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+
+Skipping adding existing rule
+Skipping adding existing rule <span class="o">(</span>v6<span class="o">)</span>
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall reject --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+Rules updated
+Rules updated <span class="o">(</span>v6<span class="o">)</span>
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall reset --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
+
+Resetting all rules to installed defaults. Proceed with operation <span class="o">(</span>y|n<span class="o">)</span>? Backing up <span class="s1">&#39;user.rules&#39;</span> to <span class="s1">&#39;/lib/ufw/user.rules.20150324_190113&#39;</span>
+Backing up <span class="s1">&#39;after.rules&#39;</span> to <span class="s1">&#39;/etc/ufw/after.rules.20150324_190113&#39;</span>
+Backing up <span class="s1">&#39;after6.rules&#39;</span> to <span class="s1">&#39;/etc/ufw/after6.rules.20150324_190113&#39;</span>
+Backing up <span class="s1">&#39;before6.rules&#39;</span> to <span class="s1">&#39;/etc/ufw/before6.rules.20150324_190113&#39;</span>
+Backing up <span class="s1">&#39;user6.rules&#39;</span> to <span class="s1">&#39;/lib/ufw/user6.rules.20150324_190113&#39;</span>
+Backing up <span class="s1">&#39;before.rules&#39;</span> to <span class="s1">&#39;/etc/ufw/before.rules.20150324_190113&#39;</span>
+
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id4">
 <h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>

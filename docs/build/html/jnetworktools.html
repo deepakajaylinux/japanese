@@ -241,7 +241,7 @@ networktools, network-tools.</td>
 <li>リスト アウト、新しいパッケージをインストールしています。</li>
 <li>ファイルの数に関する詳細情報はアップグレード新しくインストール、削除、アップグレードされません。</li>
 </ul>
-<p>次のスクリーン ショットは、絵インストール上記に説明したプロセスを示しています。</p>
+<p>以下のスクリーンショットは、インストールおよびアンインストール上の写真で説明するプロセスを示しています。</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure NetworkTools install
 Install Network Tools? <span class="o">(</span>Y/N<span class="o">)</span>
 Y
@@ -282,6 +282,100 @@ Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span 
 
 Single App Installer:
 --------------------------------------------
+NetworkTools: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure networktools uninstall
+
+Uninstall Network Tools? (Y/N)
+y
+*******************************
+*        Pharaoh Tools        *
+*         !Network Tools!!        *
+*******************************
+[Pharaoh Logging] Removing Package traceroute
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package &#39;traceroute&#39; is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 70 not upgraded.
+[Pharaoh Logging] Package traceroute from the Packager Apt is not installed, so not removed.
+[Pharaoh Logging] Removing Package netstat
+E: Unable to locate package netstat
+Reading package lists...
+Building dependency tree...
+Reading state information...
+[Pharaoh Logging] Removing Package lsof
+php5_invoke prerm: Disable module opcache for apache2 SAPI
+php5_invoke prerm: Disable module readline for apache2 SAPI
+php5_invoke prerm: Disable module pdo for apache2 SAPI
+php5_invoke prerm: Disable module mcrypt for apache2 SAPI
+php5_invoke prerm: Disable module json for apache2 SAPI
+apache2_invoke prerm: Disable module php5
+AH00558: apache2: Could not reliably determine the server&#39;s fully qualified domain name, using 127.0.1.1. Set the &#39;ServerName&#39; directive globally to suppress this message
+php5_invoke prerm: Disable module readline for cgi SAPI
+php5_invoke prerm: Disable module readline for cli SAPI
+php5_invoke prerm: Disable module opcache for cli SAPI
+php5_invoke prerm: Disable module pdo for cli SAPI
+php5_invoke prerm: Disable module mcrypt for cli SAPI
+php5_invoke prerm: Disable module json for cli SAPI
+php5_invoke prerm: Disable module opcache for cgi SAPI
+php5_invoke prerm: Disable module pdo for cgi SAPI
+php5_invoke prerm: Disable module mcrypt for cgi SAPI
+php5_invoke prerm: Disable module json for cgi SAPI
+apache2_invoke php5-cgi prerm: No action required
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+ apache2 libmcrypt4
+Use &#39;apt-get autoremove&#39; to remove them.
+The following packages will be REMOVED:
+  libapache2-mod-php5 lsof php5 php5-cgi php5-cli php5-common php5-json
+ php5-mcrypt php5-readline
+0 upgraded, 0 newly installed, 9 to remove and 70 not upgraded.
+After this operation, 39.2 MB disk space will be freed.
+(Reading database ... 194484 files and directories currently installed.)
+Removing php5 (5.5.9+dfsg-1ubuntu4.7) ...
+Removing libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.7) ...
+Module php5 disabled.
+ * Restarting web server apache2
+  ...done.
+Removing php5-readline (5.5.9+dfsg-1ubuntu4.7) ...
+Removing php5-mcrypt (5.4.6-0ubuntu5) ...
+Removing php5-cli (5.5.9+dfsg-1ubuntu4.7) ...
+Removing php5-cgi (5.5.9+dfsg-1ubuntu4.7) ...
+Removing php5-json (1.3.2-2build1) ...
+Removing php5-common (5.5.9+dfsg-1ubuntu4.7) ...
+Removing lsof (4.86+dfsg-1ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+[Pharaoh Logging] Removed Package lsof from the Packager Apt
+[Pharaoh Logging] Removing Package telnet
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package &#39;telnet&#39; is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  apache2 libmcrypt4
+Use &#39;apt-get autoremove&#39; to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 70 not upgraded.
+[Pharaoh Logging] Package telnet from the Packager Apt is not installed, so not removed.
+[Pharaoh Logging] Removing Package ps
+E: Unable to locate package ps
+Reading package lists...
+Building dependency tree...
+Reading state information...
+... All done!
+*******************************
+Thanks for installing , visit www.pharaohtools.com for more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
 NetworkTools: Success
 ------------------------------
 Installer Finished

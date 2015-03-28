@@ -60,81 +60,94 @@ ApacheModules
 
 .. code-block:: bash
 
- kevell@corp:/#  ptconfigure apache-modules install
+
+ kevell@corp:/# ptconfigure apache-modules install
+
  Install Apache Modules? (Y/N) 
  y
  *******************************
  *        Pharaoh Tools        *
  *         Apache Mods!        *
  *******************************
+ [Pharaoh Logging] Package libxml2-dev from the Packager Apt is already installed, so not installing
+ Creating /tmp/ptconfigure-temp-script-35249017336.sh
+ chmod 755 /tmp/ptconfigure-temp-script-35249017336.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-35249017336.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-35249017336.sh
+ /tmp/ptconfigure-temp-script-35249017336.sh: 1: /tmp/ptconfigure-temp-script-35249017336.sh: a2enmod: not found
+ Temp File /tmp/ptconfigure-temp-script-35249017336.sh Removed
+ Creating /tmp/ptconfigure-temp-script-68493187412.sh
+ chmod 755 /tmp/ptconfigure-temp-script-68493187412.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-68493187412.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-68493187412.sh
+ /tmp/ptconfigure-temp-script-68493187412.sh: 1: /tmp/ptconfigure-temp-script-68493187412.sh: a2enmod: not found
+ Temp File /tmp/ptconfigure-temp-script-68493187412.sh Removed
+ Creating /tmp/ptconfigure-temp-script-47826905041.sh
+ chmod 755 /tmp/ptconfigure-temp-script-47826905041.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-47826905041.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-47826905041.sh
+ /tmp/ptconfigure-temp-script-47826905041.sh: 1: /tmp/ptconfigure-temp-script-47826905041.sh: a2enmod: not found
+ Temp File /tmp/ptconfigure-temp-script-47826905041.sh Removed
+ AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+ 
+ Creating config file /etc/php5/apache2/php.ini with new version
+ php5_invoke: Enable module opcache for apache2 SAPI
+ php5_invoke: Enable module readline for apache2 SAPI
+ php5_invoke: Enable module pdo for apache2 SAPI
+ php5_invoke: Enable module mcrypt for apache2 SAPI
+ php5_invoke: Enable module json for apache2 SAPI
+ apache2_switch_mpm Switch to prefork
+ AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+ apache2_invoke: Enable module php5
+ AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
  Reading package lists...
  Building dependency tree...
  Reading state information...
+ The following extra packages will be installed:
+   apache2
+ Suggested packages:
+   apache2-doc apache2-suexec-pristine apache2-suexec-custom apache2-utils
+   php-pear
  The following NEW packages will be installed:
-  libxml2-dev
- 0 upgraded, 1 newly installed, 0 to remove and 229 not upgraded.
- Need to get 630 kB of archives.
- After this operation, 2,928 kB of additional disk space will be used.
- Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main libxml2-dev amd64 2.9.1+dfsg1-3ubuntu4.4 [630 kB]
- Fetched 630 kB in 2min 38s (3,990 B/s)
- Selecting previously unselected package libxml2-dev:amd64.
- (Reading database ... 181481 files and directories currently installed.)
- Preparing to unpack .../libxml2-dev_2.9.1+dfsg1-3ubuntu4.4_amd64.deb ...
- Unpacking libxml2-dev:amd64 (2.9.1+dfsg1-3ubuntu4.4) ...
- Processing triggers for man-db (2.6.7.1-1) ...
- Setting up libxml2-dev:amd64 (2.9.1+dfsg1-3ubuntu4.4) ...
- [Pharaoh Logging] Adding Package libxml2-dev from the Packager Apt executed correctly
- Creating /tmp/ptconfigure-temp-script-11435369770.sh
- chmod 755 /tmp/ptconfigure-temp-script-11435369770.sh 2>/dev/null
- Changing /tmp/ptconfigure-temp-script-11435369770.sh Permissions
- Executing /tmp/ptconfigure-temp-script-11435369770.sh
- Enabling module rewrite.
- To activate the new configuration, you need to run:
-  service apache2 restart
- Temp File /tmp/ptconfigure-temp-script-11435369770.sh Removed
- Creating /tmp/ptconfigure-temp-script-95277456152.sh
- chmod 755 /tmp/ptconfigure-temp-script-95277456152.sh 2>/dev/null
- Changing /tmp/ptconfigure-temp-script-95277456152.sh Permissions
- Executing /tmp/ptconfigure-temp-script-95277456152.sh
- Considering dependency filter for deflate:
- Module filter already enabled
- Module deflate already enabled
- Temp File /tmp/ptconfigure-temp-script-95277456152.sh Removed
- Creating /tmp/ptconfigure-temp-script-1351048337.sh
- chmod 755 /tmp/ptconfigure-temp-script-1351048337.sh 2>/dev/null
- Changing /tmp/ptconfigure-temp-script-1351048337.sh Permissions
- Executing /tmp/ptconfigure-temp-script-1351048337.sh
- Considering dependency setenvif for ssl:
- Module setenvif already enabled
- Considering dependency mime for ssl:
- Module mime already enabled
- Considering dependency socache_shmcb for ssl:
- Enabling module socache_shmcb.
- Enabling module ssl.
- See /usr/share/doc/apache2/README.Debian.gz on how to configure SSL and create self-signed certificates.
- To activate the new configuration, you need to run:
-   service apache2 restart
- Temp File /tmp/ptconfigure-temp-script-1351048337.sh Removed
- [Pharaoh Logging] Package libapache2-mod-php5 from the Packager Apt is already installed, so not installing
- Creating /tmp/ptconfigure-temp-script-89813944614.sh
- chmod 755 /tmp/ptconfigure-temp-script-89813944614.sh 2>/dev/null
- Changing /tmp/ptconfigure-temp-script-89813944614.sh Permissions
- Executing /tmp/ptconfigure-temp-script-89813944614.sh
- Module php5 already enabled
- Temp File /tmp/ptconfigure-temp-script-89813944614.sh Removed
- [Pharaoh Logging] Restarting apache2 service
- Output of config test was:
- apache2: Syntax error on line 214 of /etc/apache2/apache2.conf: Could not open configuration file /etc/apache2/httpd.conf: No such file or 
- directory 
- Action 'configtest' failed.
- The Apache error log may have more information.
+  apache2 libapache2-mod-php5
+ 0 upgraded, 2 newly installed, 0 to remove and 70 not upgraded.
+ Need to get 0 B/2,295 kB of archives.
+ After this operation, 10.4 MB of additional disk space will be used.
+ Selecting previously unselected package apache2.
+ (Reading database ... 193229 files and directories currently installed.)
+ Preparing to unpack .../apache2_2.4.7-1ubuntu4.4_amd64.deb ...
+ Unpacking apache2 (2.4.7-1ubuntu4.4) ...
+ Selecting previously unselected package libapache2-mod-php5.
+ Preparing to unpack .../libapache2-mod-php5_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+ Unpacking libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.7) ...
+ Processing triggers for ureadahead (0.100.0-16) ...
+ Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+ Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+ Setting up apache2 (2.4.7-1ubuntu4.4) ...
  * Restarting web server apache2
-   ...fail!
- * The apache2 configtest failed.
+   ...done.
+ Setting up libapache2-mod-php5 (5.5.9+dfsg-1ubuntu4.7) ...
+ Module mpm_event disabled.
+ Enabling module mpm_prefork.
+ * Restarting web server apache2
+   ...done.
+ * Restarting web server apache2
+   ...done.
+ [Pharaoh Logging] Adding Package libapache2-mod-php5 from the Packager Apt executed correctly
+ Creating /tmp/ptconfigure-temp-script-70188204368.sh
+ chmod 755 /tmp/ptconfigure-temp-script-70188204368.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-70188204368.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-70188204368.sh
+ Module php5 already enabled
+ Temp File /tmp/ptconfigure-temp-script-70188204368.sh Removed
+ [Pharaoh Logging] Restarting apache2 service
+ AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+ * Restarting web server apache2
+   ...done.
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more
- ****************************** 
+ ******************************
 
 
  Single App Installer:
@@ -142,7 +155,8 @@ ApacheModules
  ApacheModules: Success
  ------------------------------
  Installer Finished
- ****************************** 
+ ******************************
+
 
 
 .. cssclass:: table-bordered

@@ -109,8 +109,7 @@ Help コマンドと同様、目的に関するユーザー ガイドとして J
 * 設定プログラムのデータ フォルダーとして表示されます。
 * 既に存在していた場合に、プログラム エグゼキュータを削除します。
 
-最後に、Jrush のインストールは完了します。次のスクリーン ショットは、JRush あなたのマシンにインストールするプロセスを示します。
-
+最後に、 Jrushのインストールが完了します。以下のスクリーンショットは、インストールしてJRushあなたのマシンをアンインストールするプロセスを示している。
 
 .. code-block:: bash
 
@@ -146,6 +145,34 @@ Help コマンドと同様、目的に関するユーザー ガイドとして J
  Installer Finished
  ******************************
 
+.. code-block:: bash
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure jRush uninstall
+ Un Install JRush - Joomla Command Line ? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *         JRush CLI !!        *
+ *******************************
+ What is the program data directory? Found "/opt/jrush" - use this? (Enter nothing for yes, no end slash)
+ 
+ What is the program executor directory? Found "/usr/bin" - use this? (Enter nothing for yes, No Trailing Slash)
+ 
+ Program Executor Deleted if existed
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Uninstaller:
+ ------------------------------
+ JRush: Success
+ ------------------------------
+ Installer Finished
+ ******************************
 
 
 利点

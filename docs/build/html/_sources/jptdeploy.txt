@@ -57,24 +57,25 @@ Ptdeploy はモジュラー、オブジェクト指向と拡張可能です。�
 .. code-block:: bash
 
  kevell@corp:/# ptconfigure ptdeploy install
- Install ptdeploy ? (Y/N) 
- Y
+
+
+ Install ptdeploy? (Y/N) 
+ y
  *******************************
  *        Pharaoh Tools        *
  *          ptdeploy         *
  *******************************
- What is the program data directory? Found "/opt/ptdeploy" - use this? (Enter nothing for yes, no end slash)
- 
- What is the program executor directory? Found "/usr/bin" - use this? (Enter nothing for yes, No Trailing Slash)
-
- git clone 'https://github.com/PharaohTools/ptdeploy.git'  /tmp/ptdeploy/ptdeployCloning into '/tmp/ptdeploy/ptdeploy'...
- remote: Counting objects: 6989, done.
- remote: Total 6989 (delta 0), reused 0 (delta 0), pack-reused 6989
- Receiving objects: 100% (6989/6989), 2.61 MiB | 176.00 KiB/s, done.
- Resolving deltas: 100% (4335/4335), done.
+ Creating /tmp/ptconfigure-temp-script-30110448761.sh
+ chmod 755 /tmp/ptconfigure-temp-script-30110448761.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-30110448761.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-30110448761.sh
+ Cloning into 'ptdeploy'...
+ remote: Counting objects: 7006, done.
+ remote: Total 7006 (delta 0), reused 0 (delta 0), pack-reused 7006
+ Receiving objects: 100% (7006/7006), 2.62 MiB | 16.00 KiB/s, done.
+ Resolving deltas: 100% (4349/4349), done.
  Checking connectivity... done.
- Program Data folder populated
- Program Executor Deleted if existed
+ Temp File /tmp/ptconfigure-temp-script-30110448761.sh Removed
  ... All done!
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more

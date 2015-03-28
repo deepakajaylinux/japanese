@@ -180,6 +180,39 @@
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure file <span class="nb">help</span>
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure File <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to modify files or check their existence
+
+ File, file
+
+       - create
+       Create a new system file
+       example: ptconfigure file create --file<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - delete
+       Delete a system file
+       example: ptconfigure file delete --file<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - exists
+       Check the existence of a file
+       example: ptconfigure file exists --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+       - append
+       Append a line to a file
+       example: ptconfigure file append --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --line<span class="o">=</span><span class="s2">&quot;a line&quot;</span>
+
+       - should-have-line
+       Ensure that a file contains a particular line
+       example: ptconfigure file should-have-line --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --line<span class="o">=</span><span class="s2">&quot;a line&quot;</span>
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id3">
 <h2>作成します。<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
@@ -195,6 +228,23 @@
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure file create –file=&quot;somename” --data=&quot;things to put in the file&quot;
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure file create --file<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Creating File somename
+File somename exists
+******************************
+
+
+File Modifications:
+--------------------------------------------
+
+File: Success
+
+------------------------------
+File Mods Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id4">
 <h2>削除<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
@@ -202,11 +252,47 @@
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure file delete --file<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure file delete --file<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Deleting File somename
+somename Deleted
+File somename not exists
+******************************
+
+
+File Modifications:
+--------------------------------------------
+
+File: Success
+
+------------------------------
+File Mods Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id5">
 <h2>存在します。<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>ユーザーは、ファイルの存在を確認する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure file exists --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure file exists --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
+Enter File Path:
+/home/kevells/Desktop/somename
+File /home/kevells/Desktop/somename exists
+******************************
+
+
+File Modifications:
+--------------------------------------------
+
+File: Success
+
+------------------------------
+File Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -217,6 +303,27 @@
 </pre></div>
 </div>
 <p>オプション-の行を追加する行を挿入します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure file append --filename<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --line<span class="o">=</span><span class="s2">&quot;a line&quot;</span>
+
+Enter File Path:
+/home/kevells/Desktop/somename
+Enter the input <span class="k">for </span>append:
+this is <span class="k">for </span><span class="nb">test</span>
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Reading File /home/kevells/Desktop/somename
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>File<span class="o">]</span> Writing File /home/kevells/Desktop/somename
+******************************
+
+
+File Modifications:
+--------------------------------------------
+
+File: Success
+
+------------------------------
+File Mods Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id7">
 <h2>べきである持っているライン<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>

@@ -98,17 +98,11 @@ Y として入力を与える場合、モジュールが正常にインストー
  y
  What value for KeepAliveTimeout?
  5
- ... All done!
+ ... All done! 
  *******************************
  Thanks for installing , visit www.pharaohtools.com for more
  ******************************
- 
- Single App Installer:
- --------------------------------------------
- ApacheConf: Success
- ------------------------------
- Installer Finished
- ****************************** 
+
 
 オプション
 ------------

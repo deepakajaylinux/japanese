@@ -57,6 +57,34 @@ helpコマンド
         
         ptconfigure ssh-key-store find --key=daveylad
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure ssh-key-store find --key=id_rsa
+ [Pharaoh Logging] Trying keystore keys
+ Enter User home directory:
+ /
+ [Pharaoh Logging] User key not found at //.ssh/id_rsa
+ Enter User home directory:
+ /
+ [Pharaoh Logging] Other User key not found at //.ssh/id_rsa
+ [Pharaoh Logging] Root key found at /root/.ssh/id_rsa
+ ******************************
+
+
+ SshHarden Modifications:
+ --------------------------------------------
+
+ Ssh Key Store: Success
+ /root/.ssh/id_rsa
+
+ ------------------------------
+ SshHarden Mods Finished
+ ******************************
+
+
+
+
 代替パラメータ
 --------------------------------
 

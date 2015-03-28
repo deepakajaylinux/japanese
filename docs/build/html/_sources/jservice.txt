@@ -90,6 +90,142 @@ Help コマンドは、指定されたコマンドに関する情報を見つけ
  +--------------+-------------------+--------------------------------------------------+---------------------------------------------------+
 
 
+コマンド開始の絵画represenation 、停止、再起動、確認ランニング、 -実行中で、ラン·アット·再起動後、以下に記載されています、コマンド開始の絵画represenation 、停止、再起動、確認ランニング、 -実行中で、ラン·アット·再起動後、以下に記載されています、
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure service start --service-name="apache2"
+
+ [Pharaoh Logging] Starting apache2 service
+ * Starting web server apache2
+ * 
+ ******************************
+
+
+ Service Modifications:
+ --------------------------------------------
+
+ Service: Success
+
+ ------------------------------
+ Service Mods Finished
+ ******************************
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure service stop --service-name="apache2"
+
+ [Pharaoh Logging] Stopping apache2 service
+ * Stopping web server apache2
+ * 
+ ******************************
+
+
+ Service Modifications:
+ --------------------------------------------
+
+ Service: Success
+
+ ------------------------------
+ Service Mods Finished
+ ******************************
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure service restart --service-name="apache2"
+
+ [Pharaoh Logging] Restarting apache2 service
+ AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+ * Restarting web server apache2
+   ...done.
+ ******************************
+
+
+ Service Modifications:
+ --------------------------------------------
+
+ Service: Success
+
+ ------------------------------
+ Service Mods Finished
+ ******************************
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure service ensure-running --service-name="apache2"
+
+ [Pharaoh Logging] Service apache2 is running...
+ ******************************
+
+
+ Service Modifications:
+ --------------------------------------------
+
+ Service: Success
+
+ ------------------------------
+ Service Mods Finished
+ ******************************
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure service is-running --service-name="apache2"
+
+ [Pharaoh Logging] Service apache2 is running...
+ ******************************
+
+
+ Service Modifications:
+ --------------------------------------------
+
+ Service: Success
+
+ ------------------------------
+ Service Mods Finished
+ ******************************
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure service run-at-reboots --service-name="apache2"
+
+ [Pharaoh Logging] Removing current apache2 service startup links
+ Removing any system startup links for /etc/init.d/apache2 ...
+   /etc/rc0.d/K09apache2
+   /etc/rc1.d/K09apache2
+   /etc/rc2.d/S91apache2
+   /etc/rc3.d/S91apache2
+   /etc/rc4.d/S91apache2
+   /etc/rc5.d/S91apache2
+   /etc/rc6.d/K09apache2
+ [Pharaoh Logging] Adding apache2 service startup links
+ Adding system startup for /etc/init.d/apache2 ...
+   /etc/rc0.d/K20apache2 -> ../init.d/apache2
+   /etc/rc1.d/K20apache2 -> ../init.d/apache2
+   /etc/rc6.d/K20apache2 -> ../init.d/apache2
+   /etc/rc2.d/S20apache2 -> ../init.d/apache2
+   /etc/rc3.d/S20apache2 -> ../init.d/apache2
+   /etc/rc4.d/S20apache2 -> ../init.d/apache2
+   /etc/rc5.d/S20apache2 -> ../init.d/apache2
+ ******************************
+
+
+ Service Modifications:
+ --------------------------------------------
+
+ Service: Success
+
+ ------------------------------
+ Service Mods Finished
+ ******************************
+
+
+
+
 代替パラメーター
 -------------------
 

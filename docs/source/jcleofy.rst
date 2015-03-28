@@ -105,6 +105,50 @@ cleofyの機能
 
 	ptconfigure cleofy standard
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure cleofy standard
+
+ Cleofy This? (Y/N) 
+ y
+ Environment 1  : 
+ Default Settings for Any App not setup for environment  enter them now.
+ Value for: Name of this Environment
+ test1
+ Value for: Default Temp Dir (should usually be /tmp/)
+
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-bastion.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-build-server.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-cleo-dapper.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-db-load-balancer.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-db-node.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-git.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-standalone-server.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-web-load-balancer.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-cm-web-node.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-bastion.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-build-server.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-cleo-dapper-new.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-cleo-dapper-update.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-db-load-balancer.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-db-node.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-git.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-standalone-server.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-web-load-balancer.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-invoke-web-node.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-prep-any-box.php
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/test1-prep-ubuntu.php
+ ******************************
+
+
+ Success
+ In Cleofy
+ ******************************
+
+
+
+
+
 小さな
 ----------
 

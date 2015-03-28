@@ -206,37 +206,96 @@ End Help
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure SFTP put
 </pre></div>
 </div>
-<p>コマンドし、システムは、問題を提起する与えた後</p>
-<p>Install SFTP server group? Y/N</p>
-<p>その後 Y として入力した場合</p>
-<p>SSh timeout section?</p>
-<p>ユーザーが値を入力するには</p>
-<p>Please enter remote ssh port</p>
-<p>既定値は 22 です。ユーザーが任意の値を入力できます。</p>
-<p>Enter server host IP?</p>
-<p>ユーザーがユーザー名、パスワード、およびキーのパスを入力します。</p>
-<p>Add another server?</p>
-<p>ユーザー入力 Y として彼がある新しいサーバー名を入力する場合</p>
-<p>それからすべては接続されます。</p>
-<p>N 以前として入力した場合はサーバー名がアクセスできます。</p>
-<p>次のスクリーン ショットは、あなたをご案内いたします。</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp put
 
-SFTP on Server group? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+SFTP on Server group? (Y/N)
+y
 Please Enter SSH Timeout in seconds
-90
+100
 Please Enter remote SSH Port
 22
-Use Environments Configured in Project? <span class="o">(</span>Y/N<span class="o">)</span>
-N
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Attempting to load SFTP connections...
-Enter <span class="nb">local source </span>file path
-/root/vv
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.4
+Please Enter SSH User
+murali
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SFTP connections...
+[Pharaoh Logging] Connection to Server 192.168.1.4 failed.
+Enter local source file path
+/home/kevells/Desktop/graphs
 Enter remote target file path
-/root/gg/vv
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Opening SFTP Connections...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> All SFTP Puts Completed
+/home/murali/Desktop/graphs
+[Pharaoh Logging] Opening SFTP Connections...
+[192.168.1.4]Connection failure. Will not execute commands on this box..
+[Pharaoh Logging] All SFTP Puts Completed
+******************************
+
+
+
+SFTP Put: Success
+
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure sftp get
+
+SFTP on Server group? (Y/N)
+y
+Please Enter SSH Timeout in seconds
+100
+Please Enter remote SSH Port
+22
+***********************************
+*   Due to a software limitation, *
+*    The user that you use here   *
+*  will have their command prompt *
+*    changed to PHARAOHPROMPT     *
+*  ... I&#39;m working on that one... *
+*  Exit program to stop (CTRL+C)  *
+***********************************
+Enter Server Info:
+Please Enter SSH Server Target Host Name/IP
+192.168.1.4
+Please Enter SSH User
+murali
+Please Enter Server Password or Key Path
+123456
+Add Another Server? (Y/N)
+n
+[Pharaoh Logging] Attempting to load SFTP connections...
+[Pharaoh Logging] Connection to Server 192.168.1.4 failed.
+Enter remote source file path
+/home/murali/Desktop/graphs
+Enter local target file path
+/hoem/kevells/Desktop/graphs1
+[Pharaoh Logging] Opening SFTP Connections...
+[Pharaoh Logging] [192.168.1.4] Executing SFTP Get...
+[Pharaoh Logging] No SFTP Object
+[Pharaoh Logging]
+[Pharaoh Logging] [192.168.1.4] SFTP Get Completed...
+[Pharaoh Logging] All SFTP Gets Completed
+******************************
+
+
+Shell Result: Success
+SFTP Get
+
+------------------------------
+Installer Finished
 ******************************
 </pre></div>
 </div>

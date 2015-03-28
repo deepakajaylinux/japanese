@@ -23,6 +23,43 @@ File
         
 	        ptconfigure file help
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure File help
+ ******************************
+
+
+  This command allows you to modify files or check their existence
+
+  File, file
+
+        - create
+        Create a new system file
+        example: ptconfigure file create --file="somename"
+
+        - delete
+        Delete a system file
+        example: ptconfigure file delete --file="somename"
+
+        - exists
+        Check the existence of a file
+        example: ptconfigure file exists --filename="somename"
+
+        - append
+        Append a line to a file
+        example: ptconfigure file append --filename="somename" --line="a line"
+
+        - should-have-line
+        Ensure that a file contains a particular line
+        example: ptconfigure file should-have-line --filename="somename" --line="a line"
+
+ ------------------------------
+ End Help
+ ******************************
+
+
+
+
 作成します。
 ------------
 
@@ -47,6 +84,27 @@ File
            
 		ptconfigure file create –file="somename” --data="things to put in the file" 
 
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure file create --file="somename"
+
+ [Pharaoh Logging] [File] Creating File somename
+ File somename exists 
+ ******************************
+
+
+ File Modifications:
+ --------------------------------------------
+
+ File: Success
+
+ ------------------------------
+ File Mods Finished
+ ******************************
+
+
+
 削除
 ----------
 
@@ -57,6 +115,28 @@ File
 	
 		ptconfigure file delete --file="somename"
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure file delete --file="somename"
+
+ [Pharaoh Logging] [File] Deleting File somename
+ somename Deleted
+ File somename not exists 
+ ******************************
+
+
+ File Modifications:
+ --------------------------------------------
+
+ File: Success
+
+ ------------------------------
+ File Mods Finished
+ ******************************
+
+
+
+
 存在します。
 -------------
 
@@ -66,6 +146,27 @@ File
 .. code-block:: bash
 
 		ptconfigure file exists --filename="somename"
+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure file exists --filename="somename"
+
+ Enter File Path:
+ /home/kevells/Desktop/somename
+ File /home/kevells/Desktop/somename exists 
+ ******************************
+
+
+ File Modifications:
+ --------------------------------------------
+
+ File: Success
+
+ ------------------------------
+ File Mods Finished
+ ******************************
+
 
 
 追加
@@ -80,6 +181,33 @@ File
 
 
 オプション-の行を追加する行を挿入します。
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure file append --filename="somename" --line="a line"
+
+ Enter File Path:
+ /home/kevells/Desktop/somename                             
+ Enter the input for append:
+ this is for test
+ [Pharaoh Logging] [File] Reading File /home/kevells/Desktop/somename
+ [Pharaoh Logging] [File] Writing File /home/kevells/Desktop/somename
+ ******************************
+
+
+ File Modifications:
+ --------------------------------------------
+
+ File: Success
+
+ ------------------------------
+ File Mods Finished
+ ******************************
+
+
+
+
+
 
 べきである持っているライン
 -----------------------------

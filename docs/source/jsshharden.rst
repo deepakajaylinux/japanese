@@ -73,38 +73,36 @@ Ssh のインストール強化 securifying できるようにする場合は、
 
 .. code-block:: bash
 
-	Kevell@corp:/# ptconfigure ssh-harden securify
-	
-	Install Ssh Hardening? (Y/N) 
-	y
-	[Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
-	PHP Notice:  Undefined index: searchline in /opt/ptconfigure/ptconfigure/src/Modules/File/Model/FileAllOS.php on line 175
-	[Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
-	[Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
-	PHP Notice:  Undefined index: searchline in /opt/ptconfigure/ptconfigure/src/Modules/File/Model/FileAllOS.php on line 149
-	[Pharaoh Logging] [File] Writing File /etc/ssh/sshd_config
-	[Pharaoh Logging] /etc/ssh/sshd_config modified to disallow root ssh login
-	[Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
-	PHP Notice:  Undefined index: searchline in /opt/ptconfigure/ptconfigure/src/Modules/File/Model/FileAllOS.php on line 175
-	[Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
-	[Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
-	PHP Notice:  Undefined index: searchline in /opt/ptconfigure/ptconfigure/src/Modules/File/Model/FileAllOS.php on line 149
-	[Pharaoh Logging] [File] Writing File /etc/ssh/sshd_config
-	[Pharaoh Logging] /etc/ssh/sshd_config modified to disallow password based ssh login
-	[Pharaoh Logging] Restarting ssh service
-	ssh stop/waiting
-	ssh start/running, process 17375
-	******************************
+
+ kevell@corp:/# ptconfigure sshharden securify
+ Install Ssh Hardening? (Y/N) 
+ y
+ [Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
+ [Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
+ [Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
+ [Pharaoh Logging] [File] Writing File /etc/ssh/sshd_config
+ [Pharaoh Logging] /etc/ssh/sshd_config modified to disallow root ssh login
+ [Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
+ [Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
+ [Pharaoh Logging] [File] Reading File /etc/ssh/sshd_config
+ [Pharaoh Logging] [File] Writing File /etc/ssh/sshd_config
+ [Pharaoh Logging] /etc/ssh/sshd_config modified to disallow password based ssh login
+ [Pharaoh Logging] Restarting ssh service
+ ssh stop/waiting
+ ssh start/running, process 12828
+ ******************************
 
 
-	SshHarden Modifications:
-	--------------------------------------------
+ SshHarden Modifications:
+ --------------------------------------------
 
-	Ssh Hardening: Success
+ Ssh Hardening: Success
 
-	------------------------------
-	SshHarden Mods Finished
-	******************************
+ ------------------------------
+ SshHarden Mods Finished
+ ******************************
+
+
 
 利点
 ------------
