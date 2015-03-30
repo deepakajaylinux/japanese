@@ -32,7 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
-    <link rel="next" title="MysqlTools" href="jmysqltools.html" />
+    <link rel="next" title="MysqlServerGalera" href="jmysqlservergalera.html" />
     <link rel="prev" title="MysqlAdmins" href="jmysqladmins.html" />
 
 
@@ -111,8 +111,8 @@
                 
   <li><a href="jmysqladmins.html"
          title="Previous Chapter: MysqlAdmins">&laquo; MysqlAdmins</a></li>
-  <li><a href="jmysqltools.html"
-         title="Next Chapter: MysqlTools">MysqlTools &raquo;</a></li>
+  <li><a href="jmysqlservergalera.html"
+         title="Next Chapter: MysqlServerGalera">MysqlServerGaler... &raquo;</a></li>
               
             
             
@@ -257,111 +257,44 @@ MysqlServer,mysql-server, mysqlserver.</td>
 <p>次のスクリーン ショットは、インストール プロセスに関してグラフィカルなプレゼンテーションを与えます。</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure mysql-server install
 Install MySQL Server? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 *******************************
 *        Pharaoh Tools        *
 *         MySQL Server!        *
 *******************************
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package debconf-utils from the Packager Apt is already installed, so not installing
-Creating /tmp/ptconfigure-temp-script-46222435876.sh
-chmod 755 /tmp/ptconfigure-temp-script-46222435876.sh 2&gt;/dev/null
-Changing /tmp/ptconfigure-temp-script-46222435876.sh Permissions
-Executing /tmp/ptconfigure-temp-script-46222435876.sh
-Temp File /tmp/ptconfigure-temp-script-46222435876.sh Removed
 Reading package lists...
 Building dependency tree...
 Reading state information...
-The following extra packages will be installed:
- libdbd-mysql-perl libdbi-perl libterm-readkey-perl mysql-client-5.5
- mysql-client-core-5.5
-Suggested packages:
- libclone-perl libmldbm-perl libnet-daemon-perl libplrpc-perl
- libsql-statement-perl
+The following packages were automatically installed and are no longer required:
+ libboost-filesystem1.54.0 libboost-program-options1.54.0
+ libboost-thread1.54.0 libgoogle-perftools4 libpcrecpp0 libsnappy1
+ libtcmalloc-minimal4 libunwind8 mongodb-clients
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
 The following NEW packages will be installed:
- libdbd-mysql-perl libdbi-perl libterm-readkey-perl mysql-client
- mysql-client-5.5 mysql-client-core-5.5
-0 upgraded, 6 newly installed, 0 to remove and 172 not upgraded.
-Need to get 2,315 kB/3,321 kB of archives.
-After this operation, 40.1 MB of additional disk space will be used.
-Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-client-core-5.5 amd64 5.5.41-0ubuntu0.14.04.1 <span class="o">[</span>710 kB<span class="o">]</span>
-Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-client-5.5 amd64 5.5.41-0ubuntu0.14.04.1 <span class="o">[</span>1,592 kB<span class="o">]</span>
-Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-client all 5.5.41-0ubuntu0.14.04.1 <span class="o">[</span>12.3 kB<span class="o">]</span>
-Fetched 2,315 kB in 44s <span class="o">(</span>51.7 kB/s<span class="o">)</span>
-Selecting previously unselected package libdbi-perl.
-<span class="o">(</span>Reading database ... 232987 files and directories currently installed.<span class="o">)</span>
-Preparing to unpack .../libdbi-perl_1.630-1_amd64.deb ...
-Unpacking libdbi-perl <span class="o">(</span>1.630-1<span class="o">)</span> ...
-Selecting previously unselected package libdbd-mysql-perl.
-Preparing to unpack .../libdbd-mysql-perl_4.025-1_amd64.deb ...
-Unpacking libdbd-mysql-perl <span class="o">(</span>4.025-1<span class="o">)</span> ...
-Selecting previously unselected package libterm-readkey-perl.
-Preparing to unpack .../libterm-readkey-perl_2.31-1_amd64.deb ...
-Unpacking libterm-readkey-perl <span class="o">(</span>2.31-1<span class="o">)</span> ...
-Selecting previously unselected package mysql-client-core-5.5.
-Preparing to unpack .../mysql-client-core-5.5_5.5.41-0ubuntu0.14.04.1_amd64.deb ...
-Unpacking mysql-client-core-5.5 <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
-Selecting previously unselected package mysql-client-5.5.
-Preparing to unpack .../mysql-client-5.5_5.5.41-0ubuntu0.14.04.1_amd64.deb ...
-Unpacking mysql-client-5.5 <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
-Selecting previously unselected package mysql-client.
-Preparing to unpack .../mysql-client_5.5.41-0ubuntu0.14.04.1_all.deb ...
-Unpacking mysql-client <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
+ debconf-utils
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 57.4 kB of archives.
+After this operation, 157 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main debconf-utils all 1.5.51ubuntu2 <span class="o">[</span>57.4 kB<span class="o">]</span>
+Fetched 57.4 kB in 14s <span class="o">(</span>4,097 B/s<span class="o">)</span>
+Selecting previously unselected package debconf-utils.
+<span class="o">(</span>Reading database ... 380784 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../debconf-utils_1.5.51ubuntu2_all.deb ...
+Unpacking debconf-utils <span class="o">(</span>1.5.51ubuntu2<span class="o">)</span> ...
 Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
-Setting up libdbi-perl <span class="o">(</span>1.630-1<span class="o">)</span> ...
-Setting up libdbd-mysql-perl <span class="o">(</span>4.025-1<span class="o">)</span> ...
-Setting up libterm-readkey-perl <span class="o">(</span>2.31-1<span class="o">)</span> ...
-Setting up mysql-client-core-5.5 <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
-Setting up mysql-client-5.5 <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
-Setting up mysql-client <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package mysql-client from the Packager Apt executed correctly
-Aborting downgrade from <span class="o">(</span>at least<span class="o">)</span> 5.6 to 5.5.
-If are sure you want to downgrade to 5.5, remove the file
-/var/lib/mysql/debian-*.flag and try installing again.
-dpkg: error processing archive /var/cache/apt/archives/mysql-server-5.5_5.5.41-0ubuntu0.14.04.1_amd64.deb <span class="o">(</span>--unpack<span class="o">)</span>:
- subprocess new pre-installation script returned error <span class="nb">exit </span>status 1
-Errors were encountered <span class="k">while </span>processing:
- /var/cache/apt/archives/mysql-server-5.5_5.5.41-0ubuntu0.14.04.1_amd64.deb
-E: Sub-process /usr/bin/dpkg returned an error code <span class="o">(</span>1<span class="o">)</span>
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following extra packages will be installed:
-  libaio1 libhtml-template-perl mysql-server-5.5 mysql-server-core-5.5
-Suggested packages:
-  libipc-sharedcache-perl tinyca mailx
-The following NEW packages will be installed:
- libaio1 libhtml-template-perl mysql-server mysql-server-5.5
- mysql-server-core-5.5
-0 upgraded, 5 newly installed, 0 to remove and 172 not upgraded.
-Need to get 4,964 kB/5,036 kB of archives.
-After this operation, 53.0 MB of additional disk space will be used.
-Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-server-core-5.5 amd64 5.5.41-0ubuntu0.14.04.1 <span class="o">[</span>3,207 kB<span class="o">]</span>
-Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-server-5.5 amd64 5.5.41-0ubuntu0.14.04.1 <span class="o">[</span>1,744 kB<span class="o">]</span>
-Get:3 http://in.archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-server all 5.5.41-0ubuntu0.14.04.1 <span class="o">[</span>12.4 kB<span class="o">]</span>
-Preconfiguring packages ...
-Fetched 4,964 kB in 1min 5s <span class="o">(</span>75.8 kB/s<span class="o">)</span>
-Selecting previously unselected package libaio1:amd64.
-<span class="o">(</span>Reading database ... 233242 files and directories currently installed.<span class="o">)</span>
-Preparing to unpack .../libaio1_0.3.109-4_amd64.deb ...
-Unpacking libaio1:amd64 <span class="o">(</span>0.3.109-4<span class="o">)</span> ...
-Selecting previously unselected package mysql-server-core-5.5.
-Preparing to unpack .../mysql-server-core-5.5_5.5.41-0ubuntu0.14.04.1_amd64.deb ...
-Unpacking mysql-server-core-5.5 <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
-Selecting previously unselected package mysql-server-5.5.
-Preparing to unpack .../mysql-server-5.5_5.5.41-0ubuntu0.14.04.1_amd64.deb ...
-Selecting previously unselected package libhtml-template-perl.
-Preparing to unpack .../libhtml-template-perl_2.95-1_all.deb ...
-Unpacking libhtml-template-perl <span class="o">(</span>2.95-1<span class="o">)</span> ...
-Selecting previously unselected package mysql-server.
-Preparing to unpack .../mysql-server_5.5.41-0ubuntu0.14.04.1_all.deb ...
-Unpacking mysql-server <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package mysql-server from the Packager Apt did not execute correctly
+Setting up debconf-utils <span class="o">(</span>1.5.51ubuntu2<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package debconf-utils from the Packager Apt executed correctly
+Creating /tmp/ptconfigure-temp-script-12002365099.sh
+chmod 755 /tmp/ptconfigure-temp-script-12002365099.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-12002365099.sh Permissions
+Executing /tmp/ptconfigure-temp-script-12002365099.sh
+Temp File /tmp/ptconfigure-temp-script-12002365099.sh Removed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package mysql-client from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package mysql-server from the Packager Apt is already installed, so not installing
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
 ******************************
-
 
 Single App Installer:
 --------------------------------------------

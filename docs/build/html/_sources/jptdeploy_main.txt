@@ -233,6 +233,7 @@ Available Commands:
    
  japachecontrol_deploy
  japachevhosteditor_deploy
+ jappsettings_deploy
  jautopilot_deploy
  jdapperfy_deploy
  jdbconfigure_deploy

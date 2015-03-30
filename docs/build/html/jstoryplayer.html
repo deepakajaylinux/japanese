@@ -96,7 +96,8 @@
 <li><a class="reference internal" href="#id1">概要</a></li>
 <li><a class="reference internal" href="#help">Helpコマンド</a></li>
 <li><a class="reference internal" href="#id2">インストール</a></li>
-<li><a class="reference internal" href="#id3">メリット</a></li>
+<li><a class="reference internal" href="#id3">アンインストール</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
 </ul>
 </li>
 </ul>
@@ -180,8 +181,7 @@
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure Storyplayer <span class="nb">help</span>
 </pre></div>
 </div>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure Storyplayer <span class="nb">help</span>
-
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure storyplayer <span class="nb">help</span>
 ******************************
 
 
@@ -190,8 +190,12 @@
  Storyplayer
 
        - install
-       Installs the latest GC Repo version of PHPUnit
-       example: ptconfigure storyplayer install
+       Install Storyplayer
+       example: cleopatra storyplayer install
+
+       - remove
+       Remove Storyplayer
+       example: cleopatra storyplayer uninstall
 
 ------------------------------
 End Help
@@ -578,7 +582,38 @@ Installer Finished
 </div>
 </div>
 <div class="section" id="id3">
-<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>アンインストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーがマシンにstoryplayerモジュールをアンインストールする必要がある場合、下記のコマンドは、アンインストールのプロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure storyplayer uninstall
+
+Uninstall Storyplayer? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          Storyplayer         *
+*******************************
+Creating /tmp/ptconfigure-temp-script-32245879129.sh
+chmod 755 /tmp/ptconfigure-temp-script-32245879129.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-32245879129.sh Permissions
+Executing /tmp/ptconfigure-temp-script-32245879129.sh
+Temp File /tmp/ptconfigure-temp-script-32245879129.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+Storyplayer: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>各ユーザー ストーリーは、1 つの機能または製品やサービスを提供している利点の簡単な説明です。</li>
 <li>彼らは平易な英語で書かれていると明確な受け入れテストと製品やサービスを提供して何かの後ろに &#8216;なぜ&#8217; を記録する場所が含まれます。</li>

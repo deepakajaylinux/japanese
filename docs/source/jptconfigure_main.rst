@@ -610,7 +610,9 @@ PTConfigureモジュールと遊ぶ
    jjetty
    jjmeter
    jjrush
+   jkvm
    jlighttpdserver
+   jloadrunner
    jlogging
    jmediatools
    jmemcached
@@ -620,6 +622,7 @@ PTConfigureモジュールと遊ぶ
    jmongodb
    jmysqladmins
    jmysqlserver
+   jmysqlservergalera
    jmysqltools
    jnagiosserver
    jnetbeans

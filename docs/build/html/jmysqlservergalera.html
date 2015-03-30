@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MysqlServerGalera &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="MysqlTools" href="jmysqltools.html" />
+    <link rel="prev" title="Mysqlserver" href="jmysqlserver.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">MysqlServerGalera</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">別のパラメータ</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jmysqlserver.html"
+         title="Previous Chapter: Mysqlserver">&laquo; Mysqlserver</a></li>
+  <li><a href="jmysqltools.html"
+         title="Next Chapter: MysqlTools">MysqlTools &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jmysqlservergalera.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="mysqlservergalera">
+<h1>MysqlServerGalera<a class="headerlink" href="#mysqlservergalera" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>ガレラクラスタは、同期レプリケーションとOracleのMySQLの/ InnoDBのに基づいて、同期式マルチマスタ·データベース·クラスタです。ガレラクラスタが使用されているときは、読み込み、任意のノードへの書き込みを指示することができ、あなたは操作で、複雑なフェールオーバーの手続きを処理するために必要とせずに中断することなく、任意の個々のノードを失う可能性があります。ガレラクラスタは、高いシステムの稼働時間、将来の成長のためのデータの損失とスケーラビリティを提供し、使いやすい、高可用性ソリューションです。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>helpコマンドは、とだけでなく、 mysqlservergaleraモジュールに含まれているオプションについての目的について、ユーザーをガイドします。それはmysqlservergaleraモジュールの別のパラメータを示しています。また、 mysqlgqleraモジュールをインストールするための構文について説明します。 mysqlservergaleraモジュールのhelpコマンドは、以下のように示されている。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure MysqlServerGalera <span class="nb">help</span>
+</pre></div>
+</div>
+<p>上記のコマンドの絵画表現は、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure MysqlServerGalera <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install the MySQL Server Galera version.
+
+ MysqlServerGalera, mysql-server-galera, mysqlservergalera
+
+       - install
+       Install the Galera Cluster compatible version of Mysql Server
+       example: ptconfigure mysql-server-galera install
+
+       - config-galera-starter
+       Configure the wsrep.cnf file <span class="k">for </span>a cluster starter
+       example: ptconfigure mysql-server-galera config-galera-starter
+
+       - config-galera-joiner
+       Configure the wsrep.cnf file <span class="k">for </span>a cluster joiner
+       example: ptconfigure mysql-server-galera config-galera-joiner
+
+
+ Notes, during mysql install a root password will be set. First, it<span class="s1">&#39;ll look for the parameter --mysql-root-pass, if</span>
+<span class="s1"> this is not set, it&#39;</span>ll look in the ptconfigure config <span class="k">for </span>a mysql-default-root-pass setting, and failing both of
+ those it will just <span class="nb">set </span>the password <span class="k">for </span>root to ptconfigure.
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>端末上のドッキングウィンドウモジュールをインストールするために使用されるコマンドは、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure mysql-server-galera install
+</pre></div>
+</div>
+<p>上記のコマンドの絵図を以下にリストされている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure mysql-server-galera install
+
+Install MySQL Server? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         MySQL Server!        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not removing Package mysql-server, it<span class="s1">&#39;s required by these Modules: PHPVM, Memcached</span>
+<span class="s1">Creating /tmp/ptconfigure-temp-script-387244026.sh</span>
+<span class="s1">chmod 755 /tmp/ptconfigure-temp-script-387244026.sh 2&gt;/dev/null</span>
+<span class="s1">Changing /tmp/ptconfigure-temp-script-387244026.sh Permissions</span>
+<span class="s1">Executing /tmp/ptconfigure-temp-script-387244026.sh</span>
+<span class="s1">--2015-03-30 16:05:52--  https://launchpad.net/codership-mysql/5.6/5.6.16-25.5/+download/mysql-server-wsrep-5.6.16-25.5-amd64.deb</span>
+<span class="s1">Resolving launchpad.net (launchpad.net)... 91.189.89.223, 91.189.89.222</span>
+<span class="s1">Connecting to launchpad.net (launchpad.net)|91.189.89.223|:443... connected.</span>
+<span class="s1">HTTP request sent, awaiting response... 302 Moved Temporarily</span>
+<span class="s1">Location: https://launchpadlibrarian.net/169360930/mysql-server-wsrep-5.6.16-25.5-amd64.deb [following]</span>
+<span class="s1">--2015-03-30 16:05:53--  https://launchpadlibrarian.net/169360930/mysql-server-wsrep-5.6.16-25.5-amd64.deb</span>
+<span class="s1">Resolving launchpadlibrarian.net (launchpadlibrarian.net)... 91.189.89.229, 91.189.89.228</span>
+<span class="s1">Connecting to launchpadlibrarian.net (launchpadlibrarian.net)|91.189.89.229|:443... connected.</span>
+<span class="s1">HTTP request sent, awaiting response... 200 OK</span>
+<span class="s1">Length: 15652198 (15M) [application/x-debian-package]</span>
+<span class="s1">Saving to: â€˜mysql-server-wsrep-5.6.16-25.5-amd64.debâ€™</span>
+
+<span class="s1">30% [===========================&gt;                                                                 ] 48,04,576   --.-K/s   in 4m 14s</span>
+
+<span class="s1">2015-03-30 16:10:09 (18.5 KB/s) - Connection closed at byte 4804576. Retrying.</span>
+
+<span class="s1">--2015-03-30 16:10:10--  (try: 2)  https://launchpadlibrarian.net/169360930/mysql-server-wsrep-5.6.16-25.5-amd64.deb</span>
+<span class="s1">Connecting to launchpadlibrarian.net (launchpadlibrarian.net)|91.189.89.229|:443... connected.</span>
+<span class="s1">HTTP request sent, awaiting response... 200 OK</span>
+<span class="s1">Length: 15652198 (15M) [application/x-debian-package]</span>
+<span class="s1">Saving to: â€˜mysql-server-wsrep-5.6.16-25.5-amd64.debâ€™</span>
+
+<span class="s1">21% [===================&gt;                                                                         ] 34,00,856   63.0KB/s   in 2m 48s</span>
+
+<span class="s1">2015-03-30 16:13:01 (19.8 KB/s) - Connection closed at byte 4804576. Retrying.</span>
+
+<span class="s1">--2015-03-30 16:13:03--  (try: 3)  https://launchpadlibrarian.net/169360930/mysql-server-wsrep-5.6.16-25.5-amd64.deb</span>
+<span class="s1">Connecting to launchpadlibrarian.net (launchpadlibrarian.net)|91.189.89.229|:443... connected.</span>
+<span class="s1">HTTP request sent, awaiting response... 200 OK</span>
+<span class="s1">Length: 15652198 (15M) [application/x-debian-package]</span>
+<span class="s1">Saving to: â€˜mysql-server-wsrep-5.6.16-25.5-amd64.debâ€™</span>
+
+<span class="s1">100%[============================================================================================&gt;] 1,56,52,198 29.0KB/s   in 8m 38s</span>
+
+<span class="s1">2015-03-30 16:21:42 (29.5 KB/s) - â€˜mysql-server-wsrep-5.6.16-25.5-amd64.debâ€™ saved [15652198/15652198]</span>
+
+<span class="s1">dpkg: error processing archive mysql-server-wsrep-5.6.16-25.5-amd64.deb (--install):</span>
+<span class="s1">trying to overwrite &#39;</span>/usr/sbin/mysqld<span class="s1">&#39;, which is also in package mysql-server-core-5.5 5.5.41-0ubuntu0.14.04.1</span>
+<span class="s1">dpkg-deb (subprocess): decompressing archive member: internal gzip write error: Broken pipe</span>
+<span class="s1">dpkg-deb: error: subprocess &lt;decompress&gt; returned error exit status 2</span>
+<span class="s1">dpkg-deb (subprocess): cannot copy archive member from &#39;</span>mysql-server-wsrep-5.6.16-25.5-amd64.deb<span class="s1">&#39; to decompressor pipe: failed to write</span>
+<span class="s1">(Broken pipe)</span>
+<span class="s1">Errors were encountered while processing:</span>
+<span class="s1">mysql-server-wsrep-5.6.16-25.5-amd64.deb</span>
+<span class="s1">Selecting previously unselected package mysql-server-wsrep.</span>
+<span class="s1">(Reading database ... 233400 files and directories currently installed.)</span>
+<span class="s1">Preparing to unpack mysql-server-wsrep-5.6.16-25.5-amd64.deb ...</span>
+<span class="s1">Unpacking mysql-server-wsrep (5.6.16-25.5) ...</span>
+<span class="s1">Replacing files in old package mysql-server-5.5 (5.5.41-0ubuntu0.14.04.1) ...</span>
+<span class="s1">Processing triggers for ureadahead (0.100.0-16) ...</span>
+<span class="s1">Reading package lists...</span>
+<span class="s1">Building dependency tree...</span>
+<span class="s1">Reading state information...</span>
+<span class="s1">0 upgraded, 0 newly installed, 0 to remove and 250 not upgraded.</span>
+<span class="s1">Temp File /tmp/ptconfigure-temp-script-387244026.sh Removed</span>
+<span class="s1">Creating /tmp/ptconfigure-temp-script-69617254643.sh</span>
+<span class="s1">chmod 755 /tmp/ptconfigure-temp-script-69617254643.sh 2&gt;/dev/null</span>
+<span class="s1">Changing /tmp/ptconfigure-temp-script-69617254643.sh Permissions</span>
+<span class="s1">Executing /tmp/ptconfigure-temp-script-69617254643.sh</span>
+<span class="s1">/usr/bin/mysqladmin: connect to server at &#39;</span>localhost<span class="s1">&#39; failed</span>
+<span class="s1">error: &#39;</span>Access denied <span class="k">for </span>user <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> <span class="o">(</span>using password: NO<span class="o">)</span><span class="s1">&#39;</span>
+<span class="s1">/tmp/ptconfigure-temp-script-69617254643.sh: 4: /tmp/ptconfigure-temp-script-69617254643.sh: password: not found</span>
+<span class="s1">150330 16:21:54 [Warning] Using unique option prefix key_buffer instead of key_buffer_size is deprecated and will be removed in a future</span>
+<span class="s1">release. Please use the full name instead.</span>
+
+<span class="s1">/usr/bin/mysqladmin  Ver 8.42 Distrib 5.5.41, for debian-linux-gnu on x86_64</span>
+<span class="s1">Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.</span>
+
+<span class="s1">Oracle is a registered trademark of Oracle Corporation and/or its</span>
+<span class="s1">affiliates. Other names may be trademarks of their respective</span>
+<span class="s1">owners.</span>
+
+<span class="s1">Administration program for the mysqld daemon.</span>
+<span class="s1">Usage: /usr/bin/mysqladmin [OPTIONS] command command....</span>
+<span class="s1"> -c, --count=#       Number of iterations to make. This works with -i</span>
+<span class="s1">                     (--sleep) only.</span>
+<span class="s1"> --debug-check       Check memory and open file usage at exit.</span>
+<span class="s1"> --debug-info        Print some debug info at exit.</span>
+<span class="s1"> -f, --force         Don&#39;</span>t ask <span class="k">for </span>confirmation on drop database; with
+                     multiple commands, <span class="k">continue </span>even <span class="k">if </span>an error occurs.
+ -C, --compress      Use compression in server/client protocol.
+ --character-sets-dir<span class="o">=</span>name
+                     Directory <span class="k">for </span>character <span class="nb">set </span>files.
+ --default-character-set<span class="o">=</span>name
+                     Set the default character set.
+ -?, --help          Display this <span class="nb">help </span>and exit.
+ -h, --host<span class="o">=</span>name     Connect to host.
+ -b, --no-beep       Turn off beep on error.
+ -p, --password<span class="o">[=</span>name<span class="o">]</span>
+                     Password to use when connecting to server. If password is
+                     not given it<span class="s1">&#39;s asked from the tty.</span>
+<span class="s1"> -P, --port=#        Port number to use for connection or 0 for default to, in</span>
+<span class="s1">                     order of preference, my.cnf, $MYSQL_TCP_PORT,</span>
+<span class="s1">                     /etc/services, built-in default (3306).</span>
+<span class="s1"> --protocol=name     The protocol to use for connection (tcp, socket, pipe,</span>
+<span class="s1">                     memory).</span>
+<span class="s1"> -r, --relative      Show difference between current and previous values when</span>
+<span class="s1">                     used with -i. Currently only works with extended-status.</span>
+<span class="s1"> -s, --silent        Silently exit if one can&#39;</span>t connect to server.
+ -S, --socket<span class="o">=</span>name   The socket file to use <span class="k">for </span>connection.
+ -i, --sleep<span class="o">=</span><span class="c">#       Execute commands repeatedly with a sleep between.</span>
+ --ssl               Enable SSL <span class="k">for </span>connection <span class="o">(</span>automatically enabled with
+                     other flags<span class="o">)</span>.
+ --ssl-ca<span class="o">=</span>name       CA file in PEM format <span class="o">(</span>check OpenSSL docs, implies
+                     --ssl<span class="o">)</span>.
+ --ssl-capath<span class="o">=</span>name   CA directory <span class="o">(</span>check OpenSSL docs, implies --ssl<span class="o">)</span>.
+ --ssl-cert<span class="o">=</span>name     X509 cert in PEM format <span class="o">(</span>implies --ssl<span class="o">)</span>.
+ --ssl-cipher<span class="o">=</span>name   SSL cipher to use <span class="o">(</span>implies --ssl<span class="o">)</span>.
+ --ssl-key<span class="o">=</span>name      X509 key in PEM format <span class="o">(</span>implies --ssl<span class="o">)</span>.
+ --ssl-verify-server-cert
+                     Verify server<span class="s1">&#39;s &quot;Common Name&quot; in its cert against</span>
+<span class="s1">                     hostname used when connecting. This option is disabled by</span>
+<span class="s1">                     default.</span>
+<span class="s1"> -u, --user=name     User for login if not current user.</span>
+<span class="s1"> -v, --verbose       Write more information.</span>
+<span class="s1"> -V, --version       Output version information and exit.</span>
+<span class="s1"> -E, --vertical      Print output vertically. Is similar to --relative, but</span>
+<span class="s1">                     prints output vertically.</span>
+<span class="s1"> -w, --wait[=#]      Wait and retry if connection is down.</span>
+<span class="s1"> --connect-timeout=#</span>
+<span class="s1"> --shutdown-timeout=#</span>
+<span class="s1"> --plugin-dir=name   Directory for client-side plugins.</span>
+<span class="s1"> --default-auth=name Default authentication client-side plugin to use.</span>
+<span class="s1"> --enable-cleartext-plugin</span>
+<span class="s1">                     Enable/disable the clear text authentication plugin.</span>
+
+<span class="s1">Variables (--variable-name=value)</span>
+<span class="s1">and boolean options {FALSE|TRUE}  Value (after reading options)</span>
+<span class="s1">--------------------------------- ----------------------------------------</span>
+<span class="s1">count                             0</span>
+<span class="s1">debug-check                       FALSE</span>
+<span class="s1">debug-info                        FALSE</span>
+<span class="s1">force                             FALSE</span>
+<span class="s1">compress                          FALSE</span>
+<span class="s1">character-sets-dir                (No default value)</span>
+<span class="s1">default-character-set             auto</span>
+<span class="s1">host                              murali</span>
+<span class="s1">no-beep                           FALSE</span>
+<span class="s1">port                              3306</span>
+<span class="s1">relative                          FALSE</span>
+<span class="s1">socket                            /var/run/mysqld/mysqld.sock</span>
+<span class="s1">sleep                             0</span>
+<span class="s1">ssl                               FALSE</span>
+<span class="s1">ssl-ca                            (No default value)</span>
+<span class="s1">ssl-capath                        (No default value)</span>
+<span class="s1">ssl-cert                          (No default value)</span>
+<span class="s1">ssl-cipher                        (No default value)</span>
+<span class="s1">ssl-key                           (No default value)</span>
+<span class="s1">ssl-verify-server-cert            FALSE</span>
+<span class="s1">user                              root</span>
+<span class="s1">verbose                           FALSE</span>
+<span class="s1">vertical                          FALSE</span>
+<span class="s1">connect-timeout                   43200</span>
+<span class="s1">shutdown-timeout                  3600</span>
+<span class="s1">plugin-dir                        (No default value)</span>
+<span class="s1">default-auth                      (No default value)</span>
+<span class="s1">enable-cleartext-plugin           FALSE</span>
+
+<span class="s1">Default options are read from the following files in the given order:</span>
+<span class="s1">/etc/my.cnf /etc/mysql/my.cnf /usr/etc/my.cnf ~/.my.cnf</span>
+<span class="s1">The following groups are read: mysqladmin client</span>
+<span class="s1">The following options may be given as the first argument:</span>
+<span class="s1">--print-defaults        Print the program argument list and exit.</span>
+<span class="s1">--no-defaults           Don&#39;</span>t <span class="nb">read </span>default options from any option file.
+--defaults-file<span class="o">=</span><span class="c">#       Only read default options from the given file #.</span>
+--defaults-extra-file<span class="o">=</span><span class="c"># Read this file after the global files are read.</span>
+
+Where <span class="nb">command </span>is a one or more of: <span class="o">(</span>Commands may be shortened<span class="o">)</span>
+ create databasename   Create a new database
+ debug                 Instruct server to write debug information to log
+ drop databasename     Delete a database and all its tables
+ extended-status       Gives an extended status message from the server
+ flush-hosts           Flush all cached hosts
+ flush-logs            Flush all logs
+ flush-status          Clear status variables
+ flush-tables          Flush all tables
+ flush-threads         Flush the thread cache
+ flush-privileges      Reload grant tables <span class="o">(</span>same as reload<span class="o">)</span>
+ <span class="nb">kill </span>id,id,...        Kill mysql threads
+ password <span class="o">[</span>new-password<span class="o">]</span> Change old password to new-password in current format
+ old-password <span class="o">[</span>new-password<span class="o">]</span> Change old password to new-password in old format
+ ping                  Check <span class="k">if </span>mysqld is alive
+ processlist           Show list of active threads in server
+ reload                Reload grant tables
+ refresh               Flush all tables and close and open logfiles
+ shutdown              Take server down
+ status                Gives a short status message from the server
+ start-slave           Start slave
+ stop-slave            Stop slave
+ variables             Prints variables available
+ version               Get version info from server
+Temp File /tmp/ptconfigure-temp-script-69617254643.sh Removed
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ mysql-client
+0 upgraded, 1 newly installed, 0 to remove and 250 not upgraded.
+Need to get 12.3 kB of archives.
+After this operation, 129 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main mysql-client all 5.5.41-0ubuntu0.14.04.1 <span class="o">[</span>12.3 kB<span class="o">]</span>
+Fetched 12.3 kB in 1s <span class="o">(</span>7,469 B/s<span class="o">)</span>
+Selecting previously unselected package mysql-client.
+<span class="o">(</span>Reading database ... 233400 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../mysql-client_5.5.41-0ubuntu0.14.04.1_all.deb ...
+Unpacking mysql-client <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
+Setting up mysql-client <span class="o">(</span>5.5.41-0ubuntu0.14.04.1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package mysql-client from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+MysqlServerGalera: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>別のパラメータ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>コマンドラインで使用することができる2つの別のパラメータがある。</p>
+<p>MysqlServerGalera, mysql-server-galera, mysqlservergalera</p>
+</div>
+<div class="section" id="id4">
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>ガレラクラスタは、MySQLのエコシステムのための高可用性が大幅に改善を提供しています。高可用性を実現するための様々な方法は、典型的には、高可用性ソリューションの選択のトレードオフで練習をする、唯一ガレラクラスタで使用可能な機能の一部を提供している。</p>
+<p>次の機能がガレラクラスタで入手できます。</p>
+<ul class="simple">
+<li>真のマルチマスター読むは、いつでも任意のノードに書き込みをして。</li>
+<li>同期レプリケーションなしスレーブ遅れは、データはノードのクラッシュで失われることはありません。</li>
+<li>しっかりすべてのノードが同じ状態を保持する結合。ノード間の無発散のデータは許可されません。</li>
+<li>パフォーマンスを向上させるために奴隷をマルチスレッド。すべてのワークロードのために。</li>
+<li>NOマスタ·スレーブ·フェイルオーバー操作やVIPの使用。</li>
+<li>ホットスタンバイフェイルオーバー中ノーダウンタイム（フェールオーバーがないため） 。</li>
+<li>自動ノードプロビジョニングなしに手動でデータベースをバックアップ必要はなく、それが新しいノードにコピーします。</li>
+<li>InnoDBはサポートしています。</li>
+<li>アプリケーションへの（または最小限の）変更を必須いいえアプリケーション）への透過的。</li>
+<li>NO読み取りと書き込みの分割が必要。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jmysqlservergalera.rst">
+          MysqlServerGalera
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

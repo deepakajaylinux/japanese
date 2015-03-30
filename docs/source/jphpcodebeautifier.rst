@@ -56,50 +56,50 @@ helpコマンドは、とだけでなく、PhpCodeBeautifierモジュールに�
 .. code-block:: bash 
 
 
- kevell@corp:/# ptconfigure PHPCodeBeautifier install 
 
+ kevell@corp:/# ptconfigure PHPCodeBeautifier install 
  Install PHPCodeBeautifier? (Y/N) 
  y 
  ******************************* 
  *        Pharaoh Tools        * 
  *         PHPCodeBeautifier!        * 
  ******************************* 
- [Pharaoh Logging] Package php-pear from the Packager Apt is already installed, so not installing 
- Creating /tmp/ptconfigure-temp-script-47226840682.sh 
- chmod 755 /tmp/ptconfigure-temp-script-47226840682.sh 2>/dev/null 
- Changing /tmp/ptconfigure-temp-script-47226840682.sh Permissions 
- Executing /tmp/ptconfigure-temp-script-47226840682.sh 
- PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/lib/php5/20121212/mcrypt.so' - /usr/lib/php5/20121212/mcrypt.so: cannot open shared object file: No such file or directory in Unknown on line 0 
- WARNING: "pear/Console_Getopt" is deprecated in favor of "pear/Console_GetoptPlus" 
- Did not download optional dependencies: pear/PHP_DocBlockGenerator, use --alldeps to download automatically 
- WARNING: "pear/DB" is deprecated in favor of "pear/MDB2" 
- Did not download optional dependencies: pear/DB, pear/MDB2, pear/Mail, use --alldeps to download automatically 
- pear/PHP_Beautifier can optionally use package "pear/PHP_DocBlockGenerator" (version >= 1, excluded versions: 1) 
- pear/Log can optionally use package "pear/DB" (version >= 1.3) 
- pear/Log can optionally use package "pear/MDB2" (version >= 2.0.0RC1) 
- pear/Log can optionally use package "pear/Mail" 
- pear/Log can optionally use PHP extension "sqlite" 
- downloading PHP_Beautifier-0.1.15.tgz ... 
- Starting to download PHP_Beautifier-0.1.15.tgz (74,408 bytes) 
- .................done: 74,408 bytes 
- downloading Log-1.12.8.tgz ... 
- Starting to download Log-1.12.8.tgz (46,725 bytes) 
- ...done: 46,725 bytes 
- install ok: channel://pear.php.net/Log-1.12.8 
- install ok: channel://pear.php.net/PHP_Beautifier-0.1.15 
- Temp File /tmp/ptconfigure-temp-script-47226840682.sh Removed 
+ Reading package lists... 
+ Building dependency tree... 
+ Reading state information... 
+ The following NEW packages will be installed: 
+  php-pear 
+ 0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded. 
+ Need to get 0 B/267 kB of archives. 
+ After this operation, 2,287 kB of additional disk space will be used. 
+ Selecting previously unselected package php-pear. 
+ (Reading database ... 391909 files and directories currently installed.) 
+ Preparing to unpack .../php-pear_5.5.9+dfsg-1ubuntu4.7_all.deb ... 
+ Unpacking php-pear (5.5.9+dfsg-1ubuntu4.7) ... 
+ Processing triggers for doc-base (0.10.5) ... 
+ Processing 1 added doc-base file... 
+ Setting up php-pear (5.5.9+dfsg-1ubuntu4.7) ... 
+ [Pharaoh Logging] Adding Package php-pear from the Packager Apt executed correctly 
+ Creating /tmp/ptconfigure-temp-script-40069326632.sh 
+ chmod 755 /tmp/ptconfigure-temp-script-40069326632.sh 2>/dev/null 
+ Changing /tmp/ptconfigure-temp-script-40069326632.sh Permissions 
+ Executing /tmp/ptconfigure-temp-script-40069326632.sh 
+ pear/PHP_Beautifier is already installed and is the same as the released version 0.1.15 
+ install failed 
+ Temp File /tmp/ptconfigure-temp-script-40069326632.sh Removed 
  ... All done! 
  ******************************* 
  Thanks for installing , visit www.pharaohtools.com for more 
  ****************************** 
- 
+
 
  Single App Installer: 
  -------------------------------------------- 
  PHPCodeBeautifier: Success 
  ------------------------------ 
  Installer Finished 
- ******************************  
+ ****************************** 
+
 
 オプション
 -------------

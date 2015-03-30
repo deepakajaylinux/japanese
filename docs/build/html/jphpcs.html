@@ -176,13 +176,17 @@
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPCS <span class="nb">help</span>
 ******************************
 
+ This <span class="nb">command </span>allows you to install PHPCS from a GC Repo.
 
-This <span class="nb">command </span>allows you to install PHPCS from a GC Repo.
+ PHPCS
 
-PHPCS
-- install
-Installs the latest version of PHPCS
-example: ptconfigure phpcs install
+       - install
+       Installs the latest version of PHPCS
+       example: ptconfigure phpcs install
+
+       - uninstall
+       Uninstalls the latest version of PHPCS
+       example: ptconfigure phpcs uninstall
 
 ------------------------------
 End Help
@@ -279,26 +283,28 @@ directory</td>
 </tr>
 </tbody>
 </table>
-<p>これらのプロセスの後、表形式で示すように、結果はステータスと共に明確に報告されます。次のスクリーン ショットについて説明しますをグラフィカルに PHPCS のインストールに関与するプロセス。</p>
-<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure PHPCS install
-Install PHP Code Sniffer ? <span class="o">(</span>Y/N<span class="o">)</span>
+<p>表形式で示すように、これらの工程の後、結果は、明らかにステータスとともに報告される。以下のスクリーンショットは、インストールとPHPCSのアンインストールに関わるプロセスについてグラフィカルにご説明します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPCS install
+Install PHP Code Sniffer? <span class="o">(</span>Y/N<span class="o">)</span>
 y
 *******************************
 *        Pharaoh Tools        *
 *         PHP CSniffer        *
 *******************************
-What is the program data directory? Found <span class="s2">&quot;/opt/phpcs&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for </span>yes, no end slash<span class="o">)</span>
-
-What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for </span>yes, No Trailing Slash<span class="o">)</span>
-
-git clone <span class="s1">&#39;https://github.com/phpengine/ptconfigure-phpcs.git&#39;</span>  /tmp/phpcs/phpcsCloning into <span class="s1">&#39;/tmp/phpcs/phpcs&#39;</span>...
-remote: Counting objects: 862, <span class="k">done</span>.
-remote: Total 862 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
-Receiving objects: 100% <span class="o">(</span>862/862<span class="o">)</span>, 491.23 KiB | 64.00 KiB/s, <span class="k">done</span>.
-Resolving deltas: 100% <span class="o">(</span>378/378<span class="o">)</span>, <span class="k">done</span>.
-Checking connectivity... <span class="k">done</span>.
-Program Data folder populated
-Program Executor Deleted <span class="k">if </span>existed
+Creating /tmp/ptconfigure-temp-script-74085209498.sh
+chmod 755 /tmp/ptconfigure-temp-script-74085209498.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-74085209498.sh Permissions
+Executing /tmp/ptconfigure-temp-script-74085209498.sh
+Reading package lists...
+Building dependency tree...
+Reading state information...
+php-pear is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+downloading PHP_CodeSniffer-2.3.0.tgz ...
+Starting to download PHP_CodeSniffer-2.3.0.tgz <span class="o">(</span>464,453 bytes<span class="o">)</span>
+.............................................................................................done: 464,453 bytes
+install ok: channel://pear.php.net/PHP_CodeSniffer-2.3.0
+Temp File /tmp/ptconfigure-temp-script-74085209498.sh Removed
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
@@ -310,7 +316,34 @@ Single App Installer:
 PHPCS: Success
 ------------------------------
 Installer Finished
-****************************
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PHPCS uninstall
+Uninstall PHP Code Sniffer? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         PHP CSniffer        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-50071430908.sh
+chmod 755 /tmp/ptconfigure-temp-script-50071430908.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-50071430908.sh Permissions
+Executing /tmp/ptconfigure-temp-script-50071430908.sh
+uninstall ok: channel://pear.php.net/PHP_CodeSniffer-2.3.0
+Temp File /tmp/ptconfigure-temp-script-50071430908.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+PHPCS: Success
+------------------------------
+Installer Finished
+******************************
 </pre></div>
 </div>
 </div>

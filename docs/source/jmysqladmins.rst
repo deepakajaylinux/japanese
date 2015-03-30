@@ -87,41 +87,42 @@ Mysql 管理者コンピューターにインストールする、指定およ�
 .. code-block:: bash
 
 
- kevell@corp:/# ptconfigure mysql-admins install
+ kevell@corp:/# ptconfigure mysql-admins install 
  Install Admin User for MySQL? (Y/N) 
- y
- *******************************
- *        Pharaoh Tools        *
- *         MySQL Admins!        *
- *******************************
- Enter MySQL Root User:
- root
- Enter MySQL Root Pass:
- root123
- Enter MySQL New Admin User:
+ y 
+ ******************************* 
+ *        Pharaoh Tools        * 
+ *         MySQL Admins!        * 
+ ******************************* 
+ Enter MySQL Root User: 
+ root 
+ Enter MySQL Root Pass: 
+ root123 
+ Enter MySQL New Admin User: 
+ kevells 
+ Enter MySQL New Admin Pass: 
  kevells
- Enter MySQL New Admin Pass:
- kevells123
- Enter MySQL Host: Enter nothing for 127.0.0.1
-
- Creating /tmp/ptconfigure-temp-script-74285705785.sh
- chmod 755 /tmp/ptconfigure-temp-script-74285705785.sh 2>/dev/null
- Changing /tmp/ptconfigure-temp-script-74285705785.sh Permissions
- Executing /tmp/ptconfigure-temp-script-74285705785.sh
- ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
- Temp File /tmp/ptconfigure-temp-script-74285705785.sh Removed
- ... All done!
- *******************************
- Thanks for installing , visit www.pharaohtools.com for more
- ******************************
+ Enter MySQL Host: Enter nothing for 127.0.0.1 
+ 127.0.0.1   
+ Creating /tmp/ptconfigure-temp-script-4745646149.sh 
+ chmod 755 /tmp/ptconfigure-temp-script-4745646149.sh 2>/dev/null 
+ Changing /tmp/ptconfigure-temp-script-4745646149.sh Permissions 
+ Executing /tmp/ptconfigure-temp-script-4745646149.sh 
+ Warning: Using a password on the command line interface can be insecure. 
+ Temp File /tmp/ptconfigure-temp-script-4745646149.sh Removed 
+ ... All done! 
+ ******************************* 
+ Thanks for installing , visit www.pharaohtools.com for more 
+ ****************************** 
 
 
- Single App Installer:
- --------------------------------------------
- MysqlAdmins: Success
- ------------------------------
- Installer Finished
- ******************************
+ Single App Installer: 
+ -------------------------------------------- 
+ MysqlAdmins: Success 
+ ------------------------------ 
+ Installer Finished 
+ ******************************  
+
 
 
 利点

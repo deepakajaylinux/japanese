@@ -52,6 +52,63 @@ Helpコマンド
 
 次のスクリーンショットは、それを説明しています。
 
+.. code-block:: bash
+
+
+
+ kevell@corp:/# ptconfigure minify install 
+ Install Minify? (Y/N) 
+ y 
+ ******************************* 
+ *        Pharaoh Tools        * 
+ *         Minify!        * 
+ ******************************* 
+ Reading package lists... 
+ Building dependency tree... 
+ Reading state information... 
+ The following packages were automatically installed and are no longer required: 
+  libmemcached10 pear-channels php5-xdebug 
+ Use 'apt-get autoremove' to remove them. 
+ The following extra packages will be installed: 
+  java-wrappers libjargs-java 
+ Suggested packages: 
+  libjargs-java-doc 
+ The following NEW packages will be installed: 
+  java-wrappers libjargs-java yui-compressor 
+ 0 upgraded, 3 newly installed, 0 to remove and 34 not upgraded. 
+ Need to get 587 kB of archives. 
+ After this operation, 776 kB of additional disk space will be used. 
+ Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main java-wrappers all 0.1.27 [9,908 B] 
+ Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main libjargs-java all 1.0.0-4 [14.3 kB] 
+ Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main yui-compressor all 2.4.7-1 [563 kB] 
+ Fetched 587 kB in 41s (14.2 kB/s) 
+ Selecting previously unselected package java-wrappers. 
+ (Reading database ... 362717 files and directories currently installed.) 
+ Preparing to unpack .../java-wrappers_0.1.27_all.deb ... 
+ Unpacking java-wrappers (0.1.27) ... 
+ Selecting previously unselected package libjargs-java. 
+ Preparing to unpack .../libjargs-java_1.0.0-4_all.deb ... 
+ Unpacking libjargs-java (1.0.0-4) ... 
+ Selecting previously unselected package yui-compressor. 
+ Preparing to unpack .../yui-compressor_2.4.7-1_all.deb ... 
+ Unpacking yui-compressor (2.4.7-1) ... 
+ Processing triggers for man-db (2.6.7.1-1ubuntu1) ... 
+ Setting up java-wrappers (0.1.27) ... 
+ Setting up libjargs-java (1.0.0-4) ... 
+ Setting up yui-compressor (2.4.7-1) ... 
+ [Pharaoh Logging] Adding Package yui-compressor from the Packager Apt executed correctly 
+ ... All done! 
+ ******************************* 
+ Thanks for installing , visit www.pharaohtools.com for more 
+ ****************************** 
+
+
+ Single App Installer: 
+ -------------------------------------------- 
+ Minify: Success 
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
 
 
 オプション
