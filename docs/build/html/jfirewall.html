@@ -300,6 +300,40 @@ rule=”ssh/tcp”</td>
 </tbody>
 </table>
 <p>コマンドの絵図には、許可、拒否、拒否してリセットを以下にリストされている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall <span class="nb">enable</span>
+
+
+Firewall is active and enabled on system startup
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall disable
+
+
+Firewall stopped and disabled on system startup
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall allow --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh/tcp&quot;</span>
 
 Rules updated
@@ -361,6 +395,77 @@ Backing up <span class="s1">&#39;before6.rules&#39;</span> to <span class="s1">&
 Backing up <span class="s1">&#39;user6.rules&#39;</span> to <span class="s1">&#39;/lib/ufw/user6.rules.20150324_190113&#39;</span>
 Backing up <span class="s1">&#39;before.rules&#39;</span> to <span class="s1">&#39;/etc/ufw/before.rules.20150324_190113&#39;</span>
 
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall limit --firewall-rule<span class="o">=</span><span class="s2">&quot;1&quot;</span>
+
+
+Rules updated
+Rules updated <span class="o">(</span>v6<span class="o">)</span>
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall delete --firewall-rule<span class="o">=</span><span class="s2">&quot;1&quot;</span>
+
+
+Rules updated
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall insert --RowNum<span class="o">=</span><span class="s2">&quot;1&quot;</span> --firewall-rule<span class="o">=</span><span class="s2">&quot;ssh&quot;</span>
+
+Rules updated
+Rules updated <span class="o">(</span>v6<span class="o">)</span>
+******************************
+
+
+Firewall Modifications:
+--------------------------------------------
+
+Firewall: Success
+
+------------------------------
+Firewall Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure firewall default --policy<span class="o">=</span><span class="s2">&quot;deny&quot;</span>
+
+
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Policy param <span class="k">for </span><span class="nb">set </span>default must be allow, deny or reject
+Default incoming policy changed to <span class="s1">&#39;deny&#39;</span>
+<span class="o">(</span>be sure to update your rules accordingly<span class="o">)</span>
 ******************************
 
 

@@ -200,15 +200,83 @@ End Help
 </div>
 <p>コマンドを与えた後 Ubuntu コンパイラは新しい更新プログラムでインストールされます。</p>
 <p>N を入力した場合、次の画面になります。</p>
-<div class="highlight-bash"><div class="highlight"><pre>Kevell@corp:/# ptconfigure UbuntuCompiler install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure ubuntu-compiler install
 Install Ubuntu Compiler? <span class="o">(</span>Y/N<span class="o">)</span>
-n
+y
+*******************************
+*        Pharaoh Tools        *
+*         Ubuntu Comp!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+ dh-apparmor libalgorithm-diff-perl libalgorithm-diff-xs-perl
+ libalgorithm-merge-perl libmail-sendmail-perl libsys-hostname-long-perl
+ po-debconf
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+Suggested packages:
+ g++-multilib
+The following NEW packages will be installed:
+ g++
+0 upgraded, 1 newly installed, 0 to remove and 3 not upgraded.
+Need to get 1,490 B of archives.
+After this operation, 34.8 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main g++ amd64 4:4.8.2-1ubuntu6 <span class="o">[</span>1,490 B<span class="o">]</span>
+Fetched 1,490 B in 1s <span class="o">(</span>1,438 B/s<span class="o">)</span>
+Selecting previously unselected package g++.
+<span class="o">(</span>Reading database ... 393110 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../g++_4%3a4.8.2-1ubuntu6_amd64.deb ...
+Unpacking g++ <span class="o">(</span>4:4.8.2-1ubuntu6<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up g++ <span class="o">(</span>4:4.8.2-1ubuntu6<span class="o">)</span> ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ <span class="o">(</span>c++<span class="o">)</span> in auto mode
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package g++ from the Packager Apt executed correctly
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages were automatically installed and are no longer required:
+ dh-apparmor libmail-sendmail-perl libsys-hostname-long-perl po-debconf
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+The following extra packages will be installed:
+ dpkg-dev make
+Suggested packages:
+ debian-keyring make-doc
+The following NEW packages will be installed:
+ build-essential dpkg-dev make
+0 upgraded, 3 newly installed, 0 to remove and 3 not upgraded.
+Need to get 850 kB of archives.
+After this operation, 2,039 kB of additional disk space will be used.
+Get:1 http://security.ubuntu.com/ubuntu/ trusty-security/main dpkg-dev all 1.17.5ubuntu5.3 <span class="o">[</span>726 kB<span class="o">]</span>
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty/main make amd64 3.81-8.2ubuntu3 <span class="o">[</span>119 kB<span class="o">]</span>
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main build-essential amd64 11.6ubuntu6 <span class="o">[</span>4,838 B<span class="o">]</span>
+Fetched 850 kB in 37s <span class="o">(</span>22.5 kB/s<span class="o">)</span>
+Selecting previously unselected package make.
+<span class="o">(</span>Reading database ... 393115 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../make_3.81-8.2ubuntu3_amd64.deb ...
+Unpacking make <span class="o">(</span>3.81-8.2ubuntu3<span class="o">)</span> ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../dpkg-dev_1.17.5ubuntu5.3_all.deb ...
+Unpacking dpkg-dev <span class="o">(</span>1.17.5ubuntu5.3<span class="o">)</span> ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../build-essential_11.6ubuntu6_amd64.deb ...
+Unpacking build-essential <span class="o">(</span>11.6ubuntu6<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up make <span class="o">(</span>3.81-8.2ubuntu3<span class="o">)</span> ...
+Setting up dpkg-dev <span class="o">(</span>1.17.5ubuntu5.3<span class="o">)</span> ...
+Setting up build-essential <span class="o">(</span>11.6ubuntu6<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package build-essential from the Packager Apt executed correctly
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package make from the Packager Apt is already installed, so not installing
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
 ******************************
 
 
 Single App Installer:
 --------------------------------------------
-UbuntuCompiler: Failure
+UbuntuCompiler: Success
 ------------------------------
 Installer Finished
 ******************************

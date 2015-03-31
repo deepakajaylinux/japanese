@@ -62,57 +62,62 @@ Help コマンドと同様、目的に関するユーザー ガイドとして�
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure selenium install
+ kevell@corp:/# ptconfigure selenium install 
 
- Install Selenium Server? (Y/N)
- y
- *******************************
- *        Pharaoh Tools        *
- *         Selenium Srv        *
- *******************************
- Enter Selenium Version
- (0) 2.39
- (1) 2.40
- (2) 2.41
- (3) 2.42
- (4) 2.43
- (5) 2.44
- 5
- PHP Notice:  Undefined index: version in /opt/ptconfigure/ptconfigure/src/Modules/SeleniumServer/Model/SeleniumServerAllLinux.php on line 50
- [Pharaoh Logging] Ensure module install is not checking versions
- [Pharaoh Logging] Command 'git' found
- [Pharaoh Logging] Command 'gitk' found
- [Pharaoh Logging] Command 'git-cola' found
- [Pharaoh Logging] Not installing as already installed
- [Pharaoh Logging] Ensure module install is not checking versions
- [Pharaoh Logging] Module Java reports itself as Installed
- [Pharaoh Logging] Not installing as already installed
- Creating /tmp/ptconfigure-temp-script-96670533394.sh
- chmod 755 /tmp/ptconfigure-temp-script-96670533394.sh 2>/dev/null
- Changing /tmp/ptconfigure-temp-script-96670533394.sh Permissions
- Executing /tmp/ptconfigure-temp-script-96670533394.sh
- --2015-02-12 15:31:34--  http://selenium-release.storage.googleapis.com//selenium-server-standalone-.0.jar
- Resolving selenium-release.storage.googleapis.com (selenium-release.storage.googleapis.com)... 74.125.236.43, 74.125.236.42, 74.125.236.44, ...
- Connecting to selenium-release.storage.googleapis.com (selenium-release.storage.googleapis.com)|74.125.236.43|:80... connected.
- HTTP request sent, awaiting response... 404 Not Found
- 2015-02-12 15:31:35 ERROR 404: Not Found.
- 
- mv: cannot stat ‘/tmp/selenium/*’: No such file or directory
- mv: cannot stat ‘selenium-server-standalone-.0.jar’: No such file or directory
- Temp File /tmp/ptconfigure-temp-script-96670533394.sh Removed
- Program Executor Deleted if existed
- ... All done!
- *******************************
- Thanks for installing , visit www.pharaohtools.com for more
- ******************************
- 
+ Install Selenium Server? (Y/N) 
+ y 
+ ******************************* 
+ *        Pharaoh Tools        * 
+ *         Selenium Srv        * 
+ ******************************* 
+ Enter Selenium Version 
+ (0) 2.39 
+ (1) 2.40 
+ (2) 2.41 
+ (3) 2.42 
+ (4) 2.43 
+ (5) 2.44 
+ 0 
 
- Single App Installer:
- --------------------------------------------
- SeleniumServer: Success
- ------------------------------
- Installer Finished
- ******************************
+ [Pharaoh Logging] Ensure module install is not checking versions 
+ [Pharaoh Logging] Command 'git' found 
+ [Pharaoh Logging] Command 'gitk' found 
+ [Pharaoh Logging] Command 'git-cola' found 
+ [Pharaoh Logging] Not installing as already installed 
+ [Pharaoh Logging] Ensure module install is not checking versions 
+ [Pharaoh Logging] Module Java reports itself as Installed 
+ [Pharaoh Logging] Not installing as already installed 
+ Creating /tmp/ptconfigure-temp-script-5204575277.sh 
+ chmod 755 /tmp/ptconfigure-temp-script-5204575277.sh 2>/dev/null 
+ Changing /tmp/ptconfigure-temp-script-5204575277.sh Permissions 
+ Executing /tmp/ptconfigure-temp-script-5204575277.sh 
+ --2015-03-26 15:54:02--  http://selenium-release.storage.googleapis.com/2.39/selenium-server-standalone-2.39.0.jar 
+ Resolving selenium-release.storage.googleapis.com (selenium-release.storage.googleapis.com)... 216.58.220.33, 2404:6800:4007:805::2001 
+ Connecting to selenium-release.storage.googleapis.com (selenium-release.storage.googleapis.com)|216.58.220.33|:80... connected. 
+ HTTP request sent, awaiting response... 200 OK 
+ Length: 34603971 (33M) [application/x-java-archive] 
+ Saving to: ‘selenium-server-standalone-2.39.0.jar’ 
+
+ 100%[========================================================================================================>] 3,46,03,971 48.6KB/s   in 19m
+ 15s 
+
+ 2015-03-26 16:13:18 (29.3 KB/s) - ‘selenium-server-standalone-2.39.0.jar’ saved [34603971/34603971] 
+
+ Temp File /tmp/ptconfigure-temp-script-5204575277.sh Removed 
+ Program Executor Deleted if existed 
+ ... All done! 
+ ******************************* 
+ Thanks for installing , visit www.pharaohtools.com for more 
+ ****************************** 
+
+
+ Single App Installer: 
+ -------------------------------------------- 
+ SeleniumServer: Success 
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
+
 
 
 

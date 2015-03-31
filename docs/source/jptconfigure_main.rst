@@ -597,6 +597,7 @@ PTConfigureモジュールと遊ぶ
    jgitlab
    jgittools
    jhaproxy
+   jhardycssregression
    jhhvm
    jhostname
    jinstallpackage
@@ -610,6 +611,7 @@ PTConfigureモジュールと遊ぶ
    jjetty
    jjmeter
    jjrush
+   jjsunit
    jkvm
    jlighttpdserver
    jloadrunner
@@ -669,6 +671,7 @@ PTConfigureモジュールと遊ぶ
    jrubyrvm
    jrubysystem
    jruncommand
+   jsaucelab
    jseleniumserver
    jservice
    jsftp

@@ -158,6 +158,50 @@ cleofyの機能
 
 	ptconfigure cleofy tiny
 
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure cleofy tiny 
+
+ Cleofy This? (Y/N) 
+ y 
+ Use existing environment settings? (Y/N) 
+ y 
+ Do you want to modify entries applicable to any app in environment kevells (Y/N) 
+ n 
+ Settings for cleo not setup for environment kevells enter them manually. 
+ Environment 1 kevells : 
+ Do you want to add another environment? (Y/N) 
+ n 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-bastion.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-build-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-cleo-dapper.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-db-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-db-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-git.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-standalone-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-web-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-web-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-bastion.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-build-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-cleo-dapper-new.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-cleo-dapper-update.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-db-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-db-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-git.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-standalone-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-web-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-web-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-prep-any-box.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-prep-ubuntu.php 
+ ****************************** 
+
+
+ Success 
+ In Cleofy 
+ ****************************** 
+
+
 メディア
 -----------
 
@@ -167,6 +211,57 @@ cleofyの機能
 
 	ptconfigure cleofy medium
 
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure cleofy medium 
+
+ Cleofy This? (Y/N) 
+ y 
+ Use existing environment settings? (Y/N) 
+ y 
+ Do you want to modify entries applicable to any app in environment kevells (Y/N) 
+ n 
+ Settings for cleo not setup for environment kevells enter them manually. 
+ Environment 1 kevells : 
+ Do you want to add another environment? (Y/N) 
+ n 
+ Enter name of environment with your Stage web nodes 
+ kevells 
+ Enter name of environment with your Stage database nodes 
+ kevells 
+ Enter name of environment with your Prod web nodes 
+ kevells 
+ Enter name of environment with your Prod database nodes 
+ kevells 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-bastion.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-build-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-cleo-dapper.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-db-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-db-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-git.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-standalone-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-web-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-web-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-bastion.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-build-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-cleo-dapper-new.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-cleo-dapper-update.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-db-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-db-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-git.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-standalone-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-web-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-web-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-prep-any-box.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-prep-ubuntu.php 
+ ******************************    
+
+
+ Success 
+ In Cleofy 
+ ****************************** 
+
+
 Medium_Web
 -------------------
 
@@ -175,6 +270,54 @@ Medium_Web
 .. code-block:: bash
 
 	ptconfigure cleofy medium-web
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure cleofy medium-web 
+
+ Cleofy This? (Y/N) 
+ y 
+ Use existing environment settings? (Y/N) 
+ y 
+ Do you want to modify entries applicable to any app in environment kevells (Y/N) 
+ n 
+ Settings for cleo not setup for environment kevells enter them manually. 
+ Environment 1 kevells : 
+ Do you want to add another environment? (Y/N) 
+ n 
+ Enter name of environment with your Stage web nodes 
+ kevells 
+ Enter name of environment with your Prod web nodes 
+ kevells 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-bastion.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-build-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-cleo-dapper.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-db-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-db-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-git.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-standalone-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-web-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-web-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-bastion.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-build-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-cleo-dapper-new.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-cleo-dapper-update.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-db-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-db-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-git.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-standalone-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-web-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-web-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-prep-any-box.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-prep-ubuntu.php 
+ ****************************** 
+
+
+ Success 
+ In Cleofy 
+ ****************************** 
+
 
 DB_cluster
 ---------------
@@ -189,6 +332,52 @@ DB_cluster
  --yes                    
  --guess                    
  --database-nodes-env=*db-nodes-environment-name*                    
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure cleofy db-cluster 
+
+ Cleofy This? (Y/N) 
+ y 
+ Use existing environment settings? (Y/N) 
+ y 
+ Do you want to modify entries applicable to any app in environment kevells (Y/N) 
+ n 
+ Settings for cleo not setup for environment kevells enter them manually. 
+ Environment 1 kevells : 
+ Do you want to add another environment? (Y/N) 
+ n 
+ Enter name of environment with your Databasenodes 
+ kevells 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-bastion.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-build-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-cleo-dapper.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-db-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-db-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-git.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-standalone-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-web-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-cm-web-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-bastion.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-build-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-cleo-dapper-new.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-cleo-dapper-update.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-db-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-db-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-git.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-standalone-server.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-web-load-balancer.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-invoke-web-node.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-prep-any-box.php 
+ /home/kevells/build/config/ptconfigure/cleofy/autopilots/generated/kevells-prep-ubuntu.php 
+ ****************************** 
+
+
+ Success 
+ In Cleofy 
+ ****************************** 
+
 
 Install_generic_autopilots
 --------------------------------
@@ -213,6 +402,31 @@ Or
 
 * destination dir
 * template group
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure cleofy install-generic-autopilots 
+
+ Enter Template Group: 
+ (0) tiny 
+ (1) medium 
+ 0 
+ Enter Destination Directory: 
+ /tmp/ 
+ [Pharaoh Logging] Performing file copy from /opt/ptconfigure-enterprise/src/Modules/Cleofy/Templates/Generic/Tiny to /tmp/ 
+ ****************************** 
+  
+
+ Cleofy Listing: 
+ --------------------------------------------  
+
+ Success 
+
+ ------------------------------ 
+ Cleofy Generic Autopilot Install Finished 
+ ****************************** 
+
 
 別のパラメータ
 -----------------------------

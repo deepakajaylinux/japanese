@@ -96,15 +96,10 @@
 <li><a class="reference internal" href="#id1">概要</a></li>
 <li><a class="reference internal" href="#help">helpコマンド</a></li>
 <li><a class="reference internal" href="#id2">宝石の異なる特徴</a></li>
-<li><a class="reference internal" href="#id3">作る</a></li>
 <li><a class="reference internal" href="#remove">REMOVE</a></li>
-<li><a class="reference internal" href="#set-password">SET PASSWORD</a></li>
-<li><a class="reference internal" href="#exists">EXISTS</a></li>
-<li><a class="reference internal" href="#show">SHOWのグループ</a></li>
-<li><a class="reference internal" href="#add-to-group">Add_TO_GROUP</a></li>
-<li><a class="reference internal" href="#remove-from-group">REMOVE_FROM_GROUP</a></li>
-<li><a class="reference internal" href="#id4">別のパラメータ</a></li>
-<li><a class="reference internal" href="#id5">メリット</a></li>
+<li><a class="reference internal" href="#ensure">Ensure</a></li>
+<li><a class="reference internal" href="#id3">別のパラメータ</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
 </ul>
 </li>
 </ul>
@@ -184,7 +179,6 @@ RubyGemsのは、Rubyのプログラムとライブラリを配布するため�
 </div>
 <p>次のスクリーンショットは、このモジュールの下にヘルプオプションの出力と作業を視覚化する。</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gem <span class="nb">help</span>
-
 ******************************
 
 
@@ -192,33 +186,17 @@ RubyGemsのは、Rubyのプログラムとライブラリを配布するため�
 
  Gem, gem
 
-       - create
-       Create a new system gem, overwriting <span class="k">if </span>it exists
-       example: ptconfigure gem create --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       - install
+       Install
+       example: ptconfigure gem pkg-install --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
        - remove
-       Remove a system gem
-       example: ptconfigure gem remove --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       Remove
+       example: ptconfigure gem pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
-       - <span class="nb">set</span>-password
-       Set the password of a system gem
-       example: ptconfigure gem <span class="nb">set</span>-password --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span>                                                                                        <span class="s2">&quot;somepassword&quot;</span>
-
-       - exists
-       Check the existence of a gem
-       example: ptconfigure gem exists --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-
-       - show-groups
-       Show groups to which a gem belongs
-       example: ptconfigure gem show-groups --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-
-       - add-to-group
-       Add gem to a group
-       example: ptconfigure gem add-to-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;so                                                                                        megroupname&quot;</span>
-
-       - remove-from-group
-       Remove gem from a group
-       example: ptconfigure gem remove-from-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupnam                                                                                        <span class="nv">e</span><span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+       - ensure
+       Ensure
+       example: ptconfigure gem pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
 ------------------------------
 End Help
@@ -230,23 +208,10 @@ End Help
 <h2>宝石の異なる特徴<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>上記のhelpコマンドから示されているように、宝石の様々な特徴は以下のように記載されている、</p>
 <ul class="simple">
-<li>Create</li>
 <li>Remove</li>
-<li>Set Password</li>
-<li>Exists</li>
-<li>Show_groups</li>
-<li>Add_to_group</li>
-<li>Remove_from_group</li>
+<li>Ensure</li>
 </ul>
 <p>私たちはこれらの機能について詳細に見てみましょう。</p>
-</div>
-<div class="section" id="id3">
-<h2>作る<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>この関数は、新しいシステムの宝石を作成することを目的、とだけでなく、既存の例で上書きされます。このモジュールを使用して、宝石のこの機能は、次の構文によって達成することができる</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem create --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-</pre></div>
-</div>
-<p>gemnameの代わりに、ユーザーが作成される宝石の名前を指定することができます。上記の指定されたコマンドを入力した後、新たな宝石は、指定した名前で作成されます。</p>
 </div>
 <div class="section" id="remove">
 <h2>REMOVE<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
@@ -256,69 +221,40 @@ End Help
 </div>
 <p>gemnameの代わりに、ユーザーが削除する宝石の名前を指定することができます。上記の指定されたコマンドを入力した後、指定された宝石が削除されます。</p>
 </div>
-<div class="section" id="set-password">
-<h2>SET PASSWORD<a class="headerlink" href="#set-password" title="Permalink to this headline">¶</a></h2>
-<p>この機能は、要件に応じて、システムの宝石に新しいパスワードを設定することが容易になります。これは、下記のようにコマンドを適用することによって行うことができる</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem <span class="nb">set</span>-password --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+<div class="section" id="ensure">
+<h2>Ensure<a class="headerlink" href="#ensure" title="Permalink to this headline">¶</a></h2>
+<p>この関数は、パッケージが、マシンに正しくインストールされている保証します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem pkg-ensure --package<span class="o">=</span><span class="s2">&quot;ssh&quot;</span>
 </pre></div>
 </div>
-<p>この機能を実現するために、ユーザは、2つのフィールドを指定する必要があり、</p>
-<ul class="simple">
-<li>Gem name</li>
-<li>New password</li>
-</ul>
-<p>上記のコマンドの形式で2つのフィールドが指定した後、指定された宝石の新しいパスワードが作成されます。</p>
-</div>
-<div class="section" id="exists">
-<h2>EXISTS<a class="headerlink" href="#exists" title="Permalink to this headline">¶</a></h2>
-<p>この関数は、宝石の存在を確認することを目的としている。これは、以下のコマンドを使用して、簡単に行うことができる</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem exists --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure gem pkg-ensure --package<span class="o">=</span><span class="s2">&quot;ssh&quot;</span>
+
+<span class="nb">true</span>
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package ssh from the Packager Gem is Installed
+******************************
+
+
+Gem Modifications:
+--------------------------------------------
+
+Gem: Success
+
+------------------------------
+Gem Mods Finished
+******************************
 </pre></div>
 </div>
-<p>上記のようにコマンドを適用した後、前述の宝石の存在が結果と確保することとしております。</p>
 </div>
-<div class="section" id="show">
-<h2>SHOWのグループ<a class="headerlink" href="#show" title="Permalink to this headline">¶</a></h2>
-<p>この機能により、ユーザーはへのグループについて知って支援する宝石が所属ん。これは、単純に以下のコマンドを使用することによって達成することができる</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem show-groups --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-</pre></div>
-</div>
-<p>ユーザーは、そのグループの詳細を知るために、gemnameの分野で宝石の名前を指定する必要があります。</p>
-</div>
-<div class="section" id="add-to-group">
-<h2>Add_TO_GROUP<a class="headerlink" href="#add-to-group" title="Permalink to this headline">¶</a></h2>
-<p>この関数の主な目的は、下記のように単純にコマンドを適用することにより、必要なグループに必要な宝石を追加することです、</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem add-to-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
-</pre></div>
-</div>
-<p>この機能を実現するために、ユーザは、上記のコマンドの形式で自分のニーズに従って以下の二つのフィールドを指定する必要があり、</p>
-<ul class="simple">
-<li>Gemname</li>
-<li>group name</li>
-</ul>
-</div>
-<div class="section" id="remove-from-group">
-<h2>REMOVE_FROM_GROUP<a class="headerlink" href="#remove-from-group" title="Permalink to this headline">¶</a></h2>
-<p>この機能の主な目的は、下記のように単純にコマンドを適用することによってグループから宝石を除去することで、</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure gem remove-from-group --gemname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
-</pre></div>
-</div>
-<p>この機能を実現するために、ユーザは、上記のコマンドの形式で自分のニーズに従って以下の二つのフィールドを指定する必要があり、</p>
-<ul class="simple">
-<li>Gemname</li>
-<li>group name</li>
-</ul>
-</div>
-<div class="section" id="id4">
-<h2>別のパラメータ<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>別のパラメータ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>宣言で使用することができるいずれかがこのモジュールの別のパラメータであり、</p>
 <ul class="simple">
 <li>Gem</li>
 <li>gem</li>
 </ul>
 </div>
-<div class="section" id="id5">
-<h2>メリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>ヘルプと宝石の他のさまざまな機能を宣言に使用されるパラメータは、大文字と小文字は区別されません。</li>
 <li>これは、裕福な両方セントOSのと同様にUbuntuののようである。</li>

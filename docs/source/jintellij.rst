@@ -65,47 +65,50 @@ Help コマンドと同様、目的に関するユーザー ガイドとして I
 
 .. code-block:: bash
 
- kevells@corp:/# ptconfigure IntelliJ install
+
+
+ kevell@corp:/# ptconfigure intellij install 
+
  Install IntelliJ IDE? (Y/N) 
- Y
- *******************************
- *        Pharaoh Tools        *
- *         IntelliJ IDE        *
- *******************************
- Enter IntelliJ Version
- PHP Notice:  Undefined offset: 0 in /opt/ptconfigure/ptconfigure/src/Core/Base/Model/Base.php on line 187
- (0)  
- PHP Notice:  Undefined offset: 1 in /opt/ptconfigure/ptconfigure/src/Core/Base/Model/Base.php on line 187
- (1)  
-
- [Pharaoh Logging] Ensure module install is not checking versions
- [Pharaoh Logging] Module Java reports itself as Installed
- [Pharaoh Logging] Not installing as already installed
- Creating /tmp/ptconfigure-temp-script-98824051629.sh
- chmod 755 /tmp/ptconfigure-temp-script-98824051629.sh 2>/dev/null
- Changing /tmp/ptconfigure-temp-script-98824051629.sh Permissions
- Executing /tmp/ptconfigure-temp-script-98824051629.sh
- Cloning into 'intellij'...
- remote: Counting objects: 1026, done.
- remote: Total 1026 (delta 0), reused 0 (delta 0)
- Receiving objects: 100% (1026/1026), 205.06 MiB | 410.00 KiB/s, done.
- Resolving deltas: 100% (60/60), done.
- Checking connectivity... done.
- Checking out files: 100% (744/744), done.
- Temp File /tmp/ptconfigure-temp-script-98824051629.sh Removed
- Program Executor Deleted if existed
- ... All done!
- *******************************
- Thanks for installing , visit www.pharaohtools.com for more
- ******************************
+ y 
+ ******************************* 
+ *        Pharaoh Tools        * 
+ *         IntelliJ IDE        * 
+ ******************************* 
+ Enter IntelliJ Version 
+ (0) 12.1 
+ 0 
+ [Pharaoh Logging] Ensure module install is not checking versions 
+ [Pharaoh Logging] Module Java reports itself as Installed 
+ [Pharaoh Logging] Not installing as already installed 
+ Creating /tmp/ptconfigure-temp-script-88128552364.sh 
+ chmod 755 /tmp/ptconfigure-temp-script-88128552364.sh 2>/dev/null 
+ Changing /tmp/ptconfigure-temp-script-88128552364.sh Permissions 
+ Executing /tmp/ptconfigure-temp-script-88128552364.sh 
+ Cloning into 'intellij'... 
+ remote: Counting objects: 1026, done. 
+ remote: Total 1026 (delta 0), reused 0 (delta 0), pack-reused 1026 
+ Receiving objects: 100% (1026/1026), 205.06 MiB | 138.00 KiB/s, done. 
+ Resolving deltas: 100% (60/60), done. 
+ Checking connectivity... done. 
+ Checking out files: 100% (744/744), done. 
+ Temp File /tmp/ptconfigure-temp-script-88128552364.sh Removed 
+ Program Executor Deleted if existed 
+ ... All done! 
+ ******************************* 
+ Thanks for installing , visit www.pharaohtools.com for more 
+ ****************************** 
 
 
- Single App Installer:
- --------------------------------------------
- IntelliJ: Success
- ------------------------------
- Installer Finished
- ******************************
+ Single App Installer: 
+ -------------------------------------------- 
+ IntelliJ: Success 
+ ------------------------------ 
+ Installer Finished 
+ ****************************** 
+
+
+
 
 パラメーター
 ----------------------------
