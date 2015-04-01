@@ -95,15 +95,11 @@
 <li><a class="reference internal" href="#">Pear</a><ul>
 <li><a class="reference internal" href="#id1">あらすじ</a></li>
 <li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
-<li><a class="reference internal" href="#id3">作成します。</a></li>
-<li><a class="reference internal" href="#id4">削除</a></li>
-<li><a class="reference internal" href="#id5">パスワードの設定</a></li>
-<li><a class="reference internal" href="#id6">存在します。</a></li>
-<li><a class="reference internal" href="#id7">グループ表示</a></li>
-<li><a class="reference internal" href="#id8">グループを追加します。</a></li>
-<li><a class="reference internal" href="#id9">グループから削除します。</a></li>
-<li><a class="reference internal" href="#id10">代替パラメーター</a></li>
-<li><a class="reference internal" href="#id11">利点</a></li>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#remove">Remove</a></li>
+<li><a class="reference internal" href="#ensure">Ensure</a></li>
+<li><a class="reference internal" href="#id3">代替パラメータ</a></li>
+<li><a class="reference internal" href="#id4">利点</a></li>
 </ul>
 </li>
 </ul>
@@ -196,99 +192,108 @@
 
  Pear, pear
 
-       - create
-       Create a new system pear, overwriting <span class="k">if </span>it exists
-       example: ptconfigure pear create --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       - install
+       Install
+       example: ptconfigure pear pkg-install --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
        - remove
-       Remove a system pear
-       example: ptconfigure pear remove --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       Remove
+       example: ptconfigure pear pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
-       - <span class="nb">set</span>-password
-       Set the password of a system pear
-       example: ptconfigure pear <span class="nb">set</span>-password --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
-
-       - exists
-       Check the existence of a pear
-       example: ptconfigure pear exists --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-
-       - show-groups
-       Show groups to which a pear belongs
-       example: ptconfigure pear show-groups --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-
-       - add-to-group
-       Add pear to a group
-       example: ptconfigure pear add-to-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
-
-       - remove-from-group
-       Remove pear from a group
-       example: ptconfigure pear remove-from-group --pearname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+       - ensure
+       Ensure
+       example: ptconfigure pear pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
 ------------------------------
 End Help
+</pre></div>
+</div>
+</div>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーが梨をインストールする必要がある場合は、以下のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear pkg-install --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear pkg-install --package-name<span class="o">=</span><span class="s2">&quot;file&quot;</span>
+downloading File-1.4.1.tgz ...
+Starting to download File-1.4.1.tgz <span class="o">(</span>8,164 bytes<span class="o">)</span>
+.....done: 8,164 bytes
+install ok: channel://pear.php.net/File-1.4.1
+******************************
+
+
+Pear Modifications:
+--------------------------------------------
+
+Pear: Success
+
+------------------------------
+Pear Mods Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove">
+<h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
+<p>ユーザがシステム梨を除去する必要がある場合、下記のコマンドは、プロセスを実行する。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;file&quot;</span>
+pear/File <span class="o">(</span>version &gt;<span class="o">=</span> 1.4.0<span class="o">)</span> is required by installed package <span class="s2">&quot;pear/File_CSV&quot;</span>
+pear/File <span class="o">(</span>version &gt;<span class="o">=</span> 1.4.0<span class="o">)</span> is required by installed package <span class="s2">&quot;pear/File_Util&quot;</span>
+pear/File cannot be uninstalled, other installed packages depend on this package
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Removing Package file from the Packager Pear did not execute correctly
+******************************
+
+
+Pear Modifications:
+--------------------------------------------
+
+Pear: Failure
+
+------------------------------
+Pear Mods Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="ensure">
+<h2>Ensure<a class="headerlink" href="#ensure" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーが梨を確保する必要がある場合、下記のコマンドは、プロセスを実行します</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pear pkg-ensure --package-name<span class="o">=</span><span class="s2">&quot;file&quot;</span>
+downloading File-1.4.1.tgz ...
+Starting to download File-1.4.1.tgz <span class="o">(</span>8,164 bytes<span class="o">)</span>
+.....done: 8,164 bytes
+install ok: channel://pear.php.net/File-1.4.1
+******************************
+
+
+Pear Modifications:
+--------------------------------------------
+
+Pear: Success
+
+------------------------------
+Pear Mods Finished
 ******************************
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
-<h2>作成します。<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>ユーザーは新しいシステム ナシまたは既存のものを上書きする必要があります作成する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear create --pearname<span class="o">=</span>”somename”
-</pre></div>
-</div>
-</div>
-<div class="section" id="id4">
-<h2>削除<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>ユーザー システム梨を削除する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove --pearname<span class="o">=</span>”somename”
-</pre></div>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>パスワードの設定<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>ユーザー システム pear のパスワードを設定する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear setpassword --pearname<span class="o">=</span>”somename”-- new-password<span class="o">=</span>”somepassword”
-</pre></div>
-</div>
-</div>
-<div class="section" id="id6">
-<h2>存在します。<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<p>ユーザーは、pear の存在を知る必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear exists --pearname<span class="o">=</span>”somename”
-</pre></div>
-</div>
-</div>
-<div class="section" id="id7">
-<h2>グループ表示<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
-<p>ユーザーは、pear が属するグループを知る必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear show-groups --pearname<span class="o">=</span>”somename”
-</pre></div>
-</div>
-</div>
-<div class="section" id="id8">
-<h2>グループを追加します。<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
-<p>ユーザーはナシ、特定のグループに割り当てる必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear add-to-group --pearname<span class="o">=</span>”somename” -- <span class="nv">groupname</span><span class="o">=</span>”somegroupname”
-</pre></div>
-</div>
-</div>
-<div class="section" id="id9">
-<h2>グループから削除します。<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
-<p>Pear をグループから削除する必要があるとき、特定のコマンドの下、プロセスが実行されます。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pear remove-from-group --pearname<span class="o">=</span>”name” --groupname<span class="o">=</span>”groupname”
-</pre></div>
-</div>
-</div>
-<div class="section" id="id10">
-<h2>代替パラメーター<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<h2>代替パラメータ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>2 つの代替パラメーターをコマンドラインで使用することができますがあります。</p>
 <p>Pear, pear</p>
 <div class="highlight-bash"><div class="highlight"><pre>Eg: ptconfigure pear create --pearname<span class="o">=</span>”somename”/ ptconfigure Pear create --pearname<span class="o">=</span>”somename”
 </pre></div>
 </div>
 </div>
-<div class="section" id="id11">
-<h2>利点<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>利点<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>Pear.php.net は pear.php.net から利用可能なパッケージに、人にやさしい (HTML) とマシン向け (現在残り) インターフェイスを提供します。すべての通信に HTTP プロトコルで発生します。Pear.php.net サイト提供するその他の機能は次のとおりです。</p>
 <ul class="simple">
 <li>ユーザ アカウント管理 (SVN サーバーの独立した)</li>

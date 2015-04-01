@@ -53,6 +53,100 @@ helpコマンドを宣言するための構文は、追加的な利点である�
 .. code-block:: bash 
 
 
+ kevell@corp:/# ptconfigure phpedit install
+ Install PHPEdit? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *         PHPEdit!        *
+ *******************************
+ Reading package lists...
+ Building dependency tree...
+ Reading state information...
+ Suggested packages:
+  bluefish-dbg libxml2-utils tidy weblint-perl weblint
+ The following NEW packages will be installed:
+  bluefish
+ 0 upgraded, 1 newly installed, 0 to remove and 187 not upgraded.
+ Need to get 0 B/243 kB of archives.
+ After this operation, 762 kB of additional disk space will be used.
+ Selecting previously unselected package bluefish.
+ (Reading database ... 196191 files and directories currently installed.)
+ Preparing to unpack .../bluefish_2.2.5-1_amd64.deb ...
+ Unpacking bluefish (2.2.5-1) ...
+ Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+ Processing triggers for mime-support (3.54ubuntu1.1) ...
+ Processing triggers for gnome-menus (3.10.1-0ubuntu2) ...
+ Processing triggers for desktop-file-utils (0.22-1ubuntu1) ...
+ Processing triggers for bamfdaemon (0.5.1+14.04.20140409-0ubuntu1) ...
+ Rebuilding /usr/share/applications/bamf-2.index...
+ Setting up bluefish (2.2.5-1) ...
+ [Pharaoh Logging] Adding Package bluefish from the Packager Apt executed correctly
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ****************************** 
+
+
+ Single App Installer:
+ --------------------------------------------
+ PHPEdit: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+アンインストール
+------------------
+
+モジュールのアンインストールに使用するコマンドは、以下に記載されている
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptconfigure phpedit install
+ Install PHPEdit? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *         PHPEdit!        *
+ *******************************
+ Reading package lists...
+ Building dependency tree...
+ Reading state information...
+ Suggested packages:
+  bluefish-dbg libxml2-utils tidy weblint-perl weblint
+ The following NEW packages will be installed:
+  bluefish
+ 0 upgraded, 1 newly installed, 0 to remove and 187 not upgraded.
+ Need to get 0 B/243 kB of archives.
+ After this operation, 762 kB of additional disk space will be used.
+ Selecting previously unselected package bluefish.
+ (Reading database ... 196191 files and directories currently installed.)
+ Preparing to unpack .../bluefish_2.2.5-1_amd64.deb ...
+ Unpacking bluefish (2.2.5-1) ...
+ Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+ Processing triggers for mime-support (3.54ubuntu1.1) ...
+ Processing triggers for gnome-menus (3.10.1-0ubuntu2) ...
+ Processing triggers for desktop-file-utils (0.22-1ubuntu1) ...
+ Processing triggers for bamfdaemon (0.5.1+14.04.20140409-0ubuntu1) ...
+ Rebuilding /usr/share/applications/bamf-2.index...
+ Setting up bluefish (2.2.5-1) ...
+ [Pharaoh Logging] Adding Package bluefish from the Packager Apt executed correctly
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ****************************** 
+
+
+ Single App Installer:
+ --------------------------------------------
+ PHPEdit: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+
 オプション
 -----------
 

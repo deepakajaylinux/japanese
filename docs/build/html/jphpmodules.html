@@ -32,7 +32,7 @@
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
-    <link rel="next" title="PHPSSH" href="jphpssh.html" />
+    <link rel="next" title="PHPSpec" href="jphpsepc.html" />
     <link rel="prev" title="PHPMD" href="jphpmd.html" />
 
 
@@ -109,8 +109,8 @@
                 
   <li><a href="jphpmd.html"
          title="Previous Chapter: PHPMD">&laquo; PHPMD</a></li>
-  <li><a href="jphpssh.html"
-         title="Next Chapter: PHPSSH">PHPSSH &raquo;</a></li>
+  <li><a href="jphpsepc.html"
+         title="Next Chapter: PHPSpec">PHPSpec &raquo;</a></li>
               
             
             
@@ -248,27 +248,164 @@ phpmodules.|</td>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpmods install
 
 Install PHP Modules? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 *******************************
 *        Pharaoh Tools        *
 *         PHP Mods!        *
 *******************************
-E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php-apc from the Packager Apt did not execute correctly
-E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-gd from the Packager Apt did not execute correctly
-E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists
+/packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: You may want to run apt-get update to correct these problems
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+php5_invoke: Enable module apcu <span class="k">for </span>cgi SAPI
+php5_invoke: Enable module apcu <span class="k">for </span>cli SAPI
+rmdir: failed to remove â€˜/usr/share/doc/php-apcâ€™: Directory not empty
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ php5-apcu
+Suggested packages:
+ php5-gd
+The following NEW packages will be installed:
+ php-apc php5-apcu
+0 upgraded, 2 newly installed, 0 to remove and 252 not upgraded.
+Need to get 75.9 kB of archives.
+After this operation, 344 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/universe php5-apcu amd64 4.0.2-2build1 <span class="o">[</span>73.2 kB<span class="o">]</span>
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty/universe php-apc all 4.0.2-2build1 <span class="o">[</span>2,762 B<span class="o">]</span>
+Fetched 75.9 kB in 42s <span class="o">(</span>1,783 B/s<span class="o">)</span>
+Selecting previously unselected package php5-apcu.
+<span class="o">(</span>Reading database ... 233423 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../php5-apcu_4.0.2-2build1_amd64.deb ...
+Unpacking php5-apcu <span class="o">(</span>4.0.2-2build1<span class="o">)</span> ...
+Selecting previously unselected package php-apc.
+Preparing to unpack .../php-apc_4.0.2-2build1_all.deb ...
+Unpacking php-apc <span class="o">(</span>4.0.2-2build1<span class="o">)</span> ...
+Setting up php5-apcu <span class="o">(</span>4.0.2-2build1<span class="o">)</span> ...
+Setting up php-apc <span class="o">(</span>4.0.2-2build1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php-apc from the Packager Apt executed correctly
+php5_invoke: Enable module gd <span class="k">for </span>cgi SAPI
+php5_invoke: Enable module gd <span class="k">for </span>cli SAPI
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  php5-gd
+0 upgraded, 1 newly installed, 0 to remove and 252 not upgraded.
+Need to get 0 B/28.0 kB of archives.
+After this operation, 163 kB of additional disk space will be used.
+Selecting previously unselected package php5-gd.
+<span class="o">(</span>Reading database ... 233448 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../php5-gd_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+Unpacking php5-gd <span class="o">(</span>5.5.9+dfsg-1ubuntu4.7<span class="o">)</span> ...
+Setting up php5-gd <span class="o">(</span>5.5.9+dfsg-1ubuntu4.7<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-gd from the Packager Apt executed correctly
+E: Unable to correct problems, you have held broken packages.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or <span class="k">if </span>you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may <span class="nb">help </span>to resolve the situation:
+
+The following packages have unmet dependencies:
+ php5-imagick : Depends: libmagickcore3 <span class="o">(</span>&gt;<span class="o">=</span> 8:6.6.0.4<span class="o">)</span> but it is not installable
+               Depends: libmagickwand3 <span class="o">(</span>&gt;<span class="o">=</span> 8:6.6.0.4<span class="o">)</span> but it is not installable
+               Depends: libtiff4 but it is not installable
+               Depends: php5-common <span class="o">(=</span> 5.3.29-1~dotdeb.0<span class="o">)</span> but 5.5.9+dfsg-1ubuntu4.7 is to be installed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-imagick from the Packager Apt did not execute correctly
-E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-curl from the Packager Apt did not execute correctly
-E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-mysql from the Packager Apt did not execute correctly
-E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+php5_invoke: Enable module curl <span class="k">for </span>cgi SAPI
+php5_invoke: Enable module curl <span class="k">for </span>cli SAPI
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ php5-curl
+0 upgraded, 1 newly installed, 0 to remove and 252 not upgraded.
+Need to get 0 B/27.4 kB of archives.
+After this operation, 142 kB of additional disk space will be used.
+Selecting previously unselected package php5-curl.
+<span class="o">(</span>Reading database ... 233455 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../php5-curl_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+Unpacking php5-curl <span class="o">(</span>5.5.9+dfsg-1ubuntu4.7<span class="o">)</span> ...
+Setting up php5-curl <span class="o">(</span>5.5.9+dfsg-1ubuntu4.7<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-curl from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+php5-mysql is already the newest version.
+0 upgraded, 0 newly installed, 0 to remove and 252 not upgraded.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package php5-mysql from the Packager Apt is already installed, so not installing.
+E: Unable to correct problems, you have held broken packages.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or <span class="k">if </span>you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may <span class="nb">help </span>to resolve the situation:
+
+The following packages have unmet dependencies:
+php5-memcache : Depends: php5-common <span class="o">(=</span> 5.3.29-1~dotdeb.0<span class="o">)</span> but 5.5.9+dfsg-1ubuntu4.7 is to be installed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-memcache from the Packager Apt did not execute correctly
-E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  php5-memcached
+0 upgraded, 0 newly installed, 0 to remove and 251 not upgraded.
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-memcached from the Packager Apt did not execute correctly
-E: dpkg was interrupted, you must manually run <span class="s1">&#39;sudo dpkg --configure -a&#39;</span> to correct the problem.
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-mongo from the Packager Apt did not execute correctly
+php5_invoke: Enable module mongo <span class="k">for </span>cgi SAPI
+php5_invoke: Enable module mongo <span class="k">for </span>cli SAPI
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+ php5-mongo
+0 upgraded, 1 newly installed, 0 to remove and 252 not upgraded.
+Need to get 94.5 kB of archives.
+After this operation, 334 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/universe php5-mongo amd64 1.4.5-1build1 <span class="o">[</span>94.5 kB<span class="o">]</span>
+Fetched 94.5 kB in 45s <span class="o">(</span>2,096 B/s<span class="o">)</span>
+Selecting previously unselected package php5-mongo.
+<span class="o">(</span>Reading database ... 233462 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../php5-mongo_1.4.5-1build1_amd64.deb ...
+Unpacking php5-mongo <span class="o">(</span>1.4.5-1build1<span class="o">)</span> ...
+Setting up php5-mongo <span class="o">(</span>1.4.5-1build1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-mongo from the Packager Apt executed correctly
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more

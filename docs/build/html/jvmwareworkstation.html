@@ -33,7 +33,7 @@
     <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
     <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
     <link rel="next" title="VNC" href="jvnc.html" />
-    <link rel="prev" title="Vmplayer" href="jvmplayer.html" />
+    <link rel="prev" title="VMWarePlayer" href="jvmplayer.html" />
 
 
 <script src="_static/labibi.js"></script>
@@ -109,7 +109,7 @@
               
                 
   <li><a href="jvmplayer.html"
-         title="Previous Chapter: Vmplayer">&laquo; Vmplayer</a></li>
+         title="Previous Chapter: VMWarePlayer">&laquo; VMWarePlayer</a></li>
   <li><a href="jvnc.html"
          title="Next Chapter: VNC">VNC &raquo;</a></li>
               
@@ -174,6 +174,23 @@
 </pre></div>
 </div>
 <p>後、上記のコマンドを入力し、それがに機能して開始します。ユーザーはいつでもそこに戻ることができるように、VMwareのワークステーションの状態を保存するスナップショット機能を活用。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure VMWareWorkstation <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to install Logstash.
+
+ VMWareWorkstation
+
+       - install
+       Installs VMWareWorkstation
+       example: ptconfigure VMWareWorkstation install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id2">
 <h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
@@ -183,7 +200,110 @@
 </div>
 <p>コマンドを活性化した後、入力をcatechizeます。</p>
 <p>はい自動的にシステムから確認するとVMwareWork駅をインストールするようにすると、ユーザー入力。インストールを終了しない場合。次のスクリーンショットVMwareWorkステーションとその機能を発揮。</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure VMWareWorkstation install
+Install VMWareWorkstation? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! VMWare Workstation !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-59050143457.sh
+chmod 755 /tmp/ptconfigure-temp-script-59050143457.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-59050143457.sh Permissions
+Executing /tmp/ptconfigure-temp-script-59050143457.sh
+--2015-03-26 11:33:55--  https://download3.vmware.com/software/wkst/file/VMware-Workstation-Full-11.0.0-2305329.x86_64.bundle
+Resolving download3.vmware.com <span class="o">(</span>download3.vmware.com<span class="o">)</span>... 23.65.99.51, 2600:1411:0:1a0::2ef, 2600:1411:0:193::2ef, ...
+Connecting to download3.vmware.com <span class="o">(</span>download3.vmware.com<span class="o">)</span>|23.65.99.51|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 438023042 <span class="o">(</span>418M<span class="o">)</span> <span class="o">[</span>application/x-octet-stream<span class="o">]</span>
+Saving to: Ã¢â‚¬ËœVMware-Workstation-Full-11.0.0-2305329.x86_64.bundleÃ¢â‚¬â„¢
+
+100%<span class="o">[======================================================================================================</span>&gt;<span class="o">]</span> 43,80,23,042  197KB/s   in 37m
+57s
+
+2015-03-26 12:11:53 <span class="o">(</span>188 KB/s<span class="o">)</span> - Ã¢â‚¬ËœVMware-Workstation-Full-11.0.0-2305329.x86_64.bundleÃ¢â‚¬â„¢ saved <span class="o">[</span>438023042/438023042<span class="o">]</span>
+
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+
+<span class="o">(</span>vmware-installer.py:6280<span class="o">)</span>: Gtk-WARNING **: Unable to locate theme engine in module_path: <span class="s2">&quot;murrine&quot;</span>,
+Gtk-Message: Failed to load module <span class="s2">&quot;canberra-gtk-module&quot;</span>: libcanberra-gtk-module.so: cannot open shared object file: No such file or directory
+Extracting VMware Installer...done.
+Temp File /tmp/ptconfigure-temp-script-59050143457.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+VMWareWorkstation: Success
+------------------------------
+Installer Finished
+******************************
 </pre></div>
 </div>
 </div>

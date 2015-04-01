@@ -99,7 +99,7 @@ Help コマンドの入力後の結果の表示は、以下のスクリーン �
 
 .. code-block:: bash
 
-	ptconfigure parallax cli
+	ptconfigure parallax cli child
 
 上記のコマンドを入力した後、次のプロセスが発生します。
 
@@ -123,7 +123,7 @@ Help コマンドの入力後の結果の表示は、以下のスクリーン �
 .. code-block:: bash
 
    
-	kevell@corp:/# ptconfigure parallax cli 
+	kevell@corp:/# ptconfigure parallax cli child
 	
 	Run Commands in Parallel? (Y/N) 
 	y

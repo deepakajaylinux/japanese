@@ -96,8 +96,9 @@
 <li><a class="reference internal" href="#id1">概要</a></li>
 <li><a class="reference internal" href="#help">Helpコマンド</a></li>
 <li><a class="reference internal" href="#id2">インストール</a></li>
-<li><a class="reference internal" href="#id3">オプション</a></li>
-<li><a class="reference internal" href="#id4">メリット</a></li>
+<li><a class="reference internal" href="#id3">アンインストール</a></li>
+<li><a class="reference internal" href="#id4">オプション</a></li>
+<li><a class="reference internal" href="#id5">メリット</a></li>
 </ul>
 </li>
 </ul>
@@ -200,12 +201,99 @@ End Help
 </pre></div>
 </div>
 <p>スクリーンショットは、このモジュールについて明らかにしている。</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpedit install
+Install PHPEdit? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         PHPEdit!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ bluefish-dbg libxml2-utils tidy weblint-perl weblint
+The following NEW packages will be installed:
+ bluefish
+0 upgraded, 1 newly installed, 0 to remove and 187 not upgraded.
+Need to get 0 B/243 kB of archives.
+After this operation, 762 kB of additional disk space will be used.
+Selecting previously unselected package bluefish.
+<span class="o">(</span>Reading database ... 196191 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../bluefish_2.2.5-1_amd64.deb ...
+Unpacking bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Setting up bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package bluefish from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPEdit: Success
+------------------------------
+Installer Finished
+******************************
 </pre></div>
 </div>
 </div>
 <div class="section" id="id3">
-<h2>オプション<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>アンインストール<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>モジュールのアンインストールに使用するコマンドは、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpedit install
+Install PHPEdit? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         PHPEdit!        *
+*******************************
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+ bluefish-dbg libxml2-utils tidy weblint-perl weblint
+The following NEW packages will be installed:
+ bluefish
+0 upgraded, 1 newly installed, 0 to remove and 187 not upgraded.
+Need to get 0 B/243 kB of archives.
+After this operation, 762 kB of additional disk space will be used.
+Selecting previously unselected package bluefish.
+<span class="o">(</span>Reading database ... 196191 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../bluefish_2.2.5-1_amd64.deb ...
+Unpacking bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Setting up bluefish <span class="o">(</span>2.2.5-1<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package bluefish from the Packager Apt executed correctly
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPEdit: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="table-bordered docutils">
 <colgroup>
 <col width="22%" />
@@ -234,8 +322,8 @@ End Help
 </tbody>
 </table>
 </div>
-<div class="section" id="id4">
-<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>メリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>すべての利用可能なコードアシスタントとコードジェネレータで高速なユーザーコードを記述します。</li>
 <li>統合デバッガを使用して、プロジェクトの品質、及びユニットテストモジュールを改善</li>

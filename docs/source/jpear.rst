@@ -40,118 +40,119 @@ PEAR のコードは、「パッケージ」に分割されます。各パッケ
 
   Pear, pear
 
-        - create
-        Create a new system pear, overwriting if it exists
-        example: ptconfigure pear create --pearname="somename"
+        - install
+        Install
+        example: ptconfigure pear pkg-install --package-name="somename"
 
         - remove
-        Remove a system pear
-        example: ptconfigure pear remove --pearname="somename"
+        Remove
+        example: ptconfigure pear pkg-remove --package-name="somename"
 
-        - set-password
-        Set the password of a system pear
-        example: ptconfigure pear set-password --pearname="somename" --new-password="somepassword"
-
-        - exists
-        Check the existence of a pear
-        example: ptconfigure pear exists --pearname="somename"
-
-        - show-groups
-        Show groups to which a pear belongs
-        example: ptconfigure pear show-groups --pearname="somename"
-
-        - add-to-group
-        Add pear to a group
-        example: ptconfigure pear add-to-group --pearname="somename" --groupname="somegroupname"
-
-        - remove-from-group
-        Remove pear from a group
-        example: ptconfigure pear remove-from-group --pearname="somename" --groupname="somegroupname"
-
+        - ensure
+        Ensure
+        example: ptconfigure pear pkg-ensure --package-name="somename"
+        
  ------------------------------
  End Help
+
+
+Install
+----------
+
+
+ユーザーが梨をインストールする必要がある場合は、以下のコマンドは、プロセスを実行します。
+
+.. code-block:: bash
+
+	ptconfigure pear pkg-install --package-name="somename"
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure pear pkg-install --package-name="file"
+ downloading File-1.4.1.tgz ...
+ Starting to download File-1.4.1.tgz (8,164 bytes)
+ .....done: 8,164 bytes
+ install ok: channel://pear.php.net/File-1.4.1
  ******************************
 
 
-作成します。
+ Pear Modifications:
+ --------------------------------------------
+
+ Pear: Success
+
+ ------------------------------
+ Pear Mods Finished
+ ******************************
+
+
+
+Remove
 ------------
 
 
-ユーザーは新しいシステム ナシまたは既存のものを上書きする必要があります作成する必要がある場合、特定のコマンドの下、プロセスが実行されます。
-
-
-
-.. code-block:: bash
-	
-	ptconfigure pear create --pearname=”somename”
-
-削除
-------------
-
-ユーザー システム梨を削除する必要がある場合、特定のコマンドの下、プロセスが実行されます。
-
+ユーザがシステム梨を除去する必要がある場合、下記のコマンドは、プロセスを実行する。
 
 .. code-block:: bash
 
-	ptconfigure pear remove --pearname=”somename”
+	ptconfigure pear pkg-remove --package-name="somename"
 
-パスワードの設定
----------------------
+.. code-block:: bash
 
-ユーザー システム pear のパスワードを設定する必要がある場合、特定のコマンドの下、プロセスが実行されます。
+ kevell@corp:/# ptconfigure pear pkg-remove --package-name="file"
+ pear/File (version >= 1.4.0) is required by installed package "pear/File_CSV"
+ pear/File (version >= 1.4.0) is required by installed package "pear/File_Util"
+ pear/File cannot be uninstalled, other installed packages depend on this package
+ [Pharaoh Logging] Removing Package file from the Packager Pear did not execute correctly
+ ******************************
+
+
+ Pear Modifications:
+ --------------------------------------------
+
+ Pear: Failure
+
+ ------------------------------
+ Pear Mods Finished
+ ******************************
+
+
+
+Ensure
+---------
+
+ユーザーが梨を確保する必要がある場合、下記のコマンドは、プロセスを実行します
 
 
 .. code-block:: bash
-	
-	ptconfigure pear setpassword --pearname=”somename”-- new-password=”somepassword”
 
-
-存在します。
----------------------
-
-ユーザーは、pear の存在を知る必要がある場合、特定のコマンドの下、プロセスが実行されます。
-
+	ptconfigure pear pkg-ensure --package-name="somename"
 
 .. code-block:: bash
-	
-	ptconfigure pear exists --pearname=”somename”
+
+ kevell@corp:/# ptconfigure pear pkg-ensure --package-name="file"
+ downloading File-1.4.1.tgz ...
+ Starting to download File-1.4.1.tgz (8,164 bytes)
+ .....done: 8,164 bytes
+ install ok: channel://pear.php.net/File-1.4.1
+ ******************************
 
 
-グループ表示
----------------------
+ Pear Modifications:
+ --------------------------------------------
 
-ユーザーは、pear が属するグループを知る必要がある場合、特定のコマンドの下、プロセスが実行されます。
+ Pear: Success
 
-.. code-block:: bash
-	
-	ptconfigure pear show-groups --pearname=”somename”
-
-
-グループを追加します。
------------------------
-
-ユーザーはナシ、特定のグループに割り当てる必要がある場合、特定のコマンドの下、プロセスが実行されます。
-
-
-.. code-block:: bash
-	
- 	ptconfigure pear add-to-group --pearname=”somename” -- groupname=”somegroupname”
-
-
-グループから削除します。
-----------------------------
-
-Pear をグループから削除する必要があるとき、特定のコマンドの下、プロセスが実行されます。
-
-
-.. code-block:: bash
-	
- 		ptconfigure pear remove-from-group --pearname=”name” --groupname=”groupname”
+ ------------------------------
+ Pear Mods Finished
+ ******************************
 
 
 
 
-代替パラメーター
+
+
+代替パラメータ
 --------------------
 
 2 つの代替パラメーターをコマンドラインで使用することができますがあります。

@@ -1,6 +1,6 @@
-===========
-Vmplayer
-===========
+==============
+VMWarePlayer
+==============
 
 概要
 ----------------
@@ -15,7 +15,8 @@ Helpコマンド
 
 .. code-block:: bash
 		
-	ptconfigure vmplayer help.
+	ptconfigure VMWarePlayer help
+
 
 後に上記のコマンドを入力すると、プレーヤ設定を作成する機能を開始する。これは、スクリーンショットでvmplayerの機能を教理。
 
@@ -26,7 +27,8 @@ vmplayerのインストールが更新されたバージョンでインストー
 
 .. code-block:: bash
 
-	ptconfigure vmplayer Install
+	ptconfigure VMWarePlayer install
+
 
 コマンドを活性化した後、入力をcatechizeます。
 
@@ -46,6 +48,115 @@ vmplayerのインストールが更新されたバージョンでインストー
  +-----------------------+------------------------------------+--------------+-----------------------------------------------+
  |Install vmplayer?(Y/N) | vmplayer, VMPlayer, VM-player      | N            | システム出口インストール|                     |
  +-----------------------+------------------------------------+--------------+-----------------------------------------------+
+
+.. code-block:: bash
+
+ kevell@corp:/# ptconfigure VMWarePlayer install
+ Install VMWarePlayer? (Y/N) 
+ y
+ *******************************
+ *        Pharaoh Tools        *
+ *          ! VMWare Player !        *
+ *******************************
+ Creating /tmp/ptconfigure-temp-script-7944529549.sh
+ chmod 755 /tmp/ptconfigure-temp-script-7944529549.sh 2>/dev/null
+ Changing /tmp/ptconfigure-temp-script-7944529549.sh Permissions
+ Executing /tmp/ptconfigure-temp-script-7944529549.sh
+ --2015-03-26 10:24:11--  https://download3.vmware.com/software/player/file/VMware-Player-7.0.0-2305329.x86_64.bundle
+ Resolving download3.vmware.com (download3.vmware.com)... 23.65.99.51, 2600:1411:0:193::2ef, 2600:1411:0:1a0::2ef, ...
+ Connecting to download3.vmware.com (download3.vmware.com)|23.65.99.51|:443... connected.
+ HTTP request sent, awaiting response... 200 OK
+ Length: 210911382 (201M) [application/x-octet-stream]
+ Saving to: â€˜VMware-Player-7.0.0-2305329.x86_64.bundleâ€™ 
+
+ 100%[======================================================================================================>] 21,09,11,382 44.1KB/s   in 2h
+ 36m 
+
+ 2015-03-26 13:01:08 (21.9 KB/s) - â€˜VMware-Player-7.0.0-2305329.x86_64.bundleâ€™ saved [210911382/210911382]
+
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine", 
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+
+ (vmware-installer.py:25874): Gtk-WARNING **: Unable to locate theme engine in module_path: "murrine",
+ Gtk-Message: Failed to load module "canberra-gtk-module": libcanberra-gtk-module.so: cannot open shared object file: No such file or directory
+ Extracting VMware Installer...done.
+ Temp File /tmp/ptconfigure-temp-script-7944529549.sh Removed
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Installer:
+ --------------------------------------------
+ VMWarePlayer: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+
 
 メリット
 ----------------

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>PHPSpec &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="PHPSSH" href="jphpssh.html" />
+    <link rel="prev" title="PHPModules" href="jphpmodules.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">PHPSpec</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jphpmodules.html"
+         title="Previous Chapter: PHPModules">&laquo; PHPModules</a></li>
+  <li><a href="jphpssh.html"
+         title="Next Chapter: PHPSSH">PHPSSH &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jphpsepc.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="phpspec">
+<h1>PHPSpec<a class="headerlink" href="#phpspec" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>PHPSpecのはあなたが行動駆動開発やBDDを使用して清潔で作業PHPコードを書くことができます設計ツールです。 BDDはテクニックです
+テストファースト開発から派生。したがってSpecBDD - PHPSpecのは、PHP言語で小さな&#8221;スペック&#8221;を書き込むことにより、アプリケーションの内部動作を説明しに役立ちます。これらの仕様は、コードが目的の動作を持っていることをテストしている。 PHPSpecのは、クラスの内部から、低いレベルでの動作に応答します。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>helpコマンドは、とだけでなく、 PHPSpecのモジュールに含まれているオプションについての目的について、ユーザーをガイドします。また、
+PHPSpecのモジュールをインストールするための構文について説明します。 PHPSpecのモジュールのhelpコマンドは以下の通りである。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure phpspec <span class="nb">help</span>
+</pre></div>
+</div>
+<p>上記のコマンドの絵画表現は、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpspec <span class="nb">help</span>
+
+******************************
+
+
+ This <span class="nb">command </span>allows you to install PHPSpec from a GC Repo.
+
+ PHPSpec
+
+       - install
+       Installs Phpspec
+       example: ptconfigure phpspec install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>端末上PHPSpecのモジュールをインストールするために使用されるコマンドは、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure phpspec install
+</pre></div>
+</div>
+<p>上記のコマンドの絵画表現は、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure phpspec install
+
+Install PHPSpec? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         PHPSpec!        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-55050674265.sh
+chmod 755 /tmp/ptconfigure-temp-script-55050674265.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-55050674265.sh Permissions
+Executing /tmp/ptconfigure-temp-script-55050674265.sh
+Cloning into <span class="s1">&#39;phpspec&#39;</span>...
+remote: Counting objects: 13282, <span class="k">done</span>.
+remote: Compressing objects: 100% <span class="o">(</span>177/177<span class="o">)</span>, <span class="k">done</span>.
+remote: Total 13282 <span class="o">(</span>delta 105<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 13084
+Receiving objects: 100% <span class="o">(</span>13282/13282<span class="o">)</span>, 3.01 MiB | 61.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>6944/6944<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+--2015-03-31 17:39:51--  http://getcomposer.org/composer.phar
+Resolving getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>... 87.98.253.108
+Connecting to getcomposer.org <span class="o">(</span>getcomposer.org<span class="o">)</span>|87.98.253.108|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1075150 <span class="o">(</span>1.0M<span class="o">)</span> <span class="o">[</span>application/octet-stream<span class="o">]</span>
+Saving to: â€˜composer.pharâ€™
+
+100%<span class="o">[============================================================================================</span>&gt;<span class="o">]</span> 10,75,150   51.1KB/s   in 39s
+
+2015-03-31 17:40:30 <span class="o">(</span>27.2 KB/s<span class="o">)</span> - â€˜composer.pharâ€™ saved <span class="o">[</span>1075150/1075150<span class="o">]</span>
+
+PHP Warning:  Module <span class="s1">&#39;mcrypt&#39;</span> already loaded in Unknown on line 0
+Loading composer repositories with package information
+Installing dependencies <span class="o">(</span>including require-dev<span class="o">)</span>
+  - Installing phpspec/php-diff <span class="o">(</span>v1.0.2<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing sebastian/recursion-context <span class="o">(</span>1.0.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/finder <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/process <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing phpdocumentor/reflection-docblock <span class="o">(</span>2.0.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/class-loader <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/yaml <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/translation <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/event-dispatcher <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/dependency-injection <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/filesystem <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/config <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing symfony/console <span class="o">(</span>v2.6.5<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing behat/transliterator <span class="o">(</span>v1.0.1<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing behat/gherkin <span class="o">(</span>v4.3.0<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing behat/behat <span class="o">(</span>v3.0.15<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing doctrine/instantiator <span class="o">(</span>1.0.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/exporter <span class="o">(</span>1.2.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/diff <span class="o">(</span>1.2.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/comparator <span class="o">(</span>1.1.1<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpspec/prophecy <span class="o">(</span>1.4.0<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing bossa/phpspec2-expect <span class="o">(</span>1.0.3<span class="o">)</span>
+   Downloading: 100%
+
+ - Installing sebastian/version <span class="o">(</span>1.0.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/global-state <span class="o">(</span>1.0.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing sebastian/environment <span class="o">(</span>1.2.1<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-text-template <span class="o">(</span>1.2.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/phpunit-mock-objects <span class="o">(</span>2.3.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-timer <span class="o">(</span>1.0.5<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-token-stream <span class="o">(</span>1.4.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-file-iterator <span class="o">(</span>1.3.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/php-code-coverage <span class="o">(</span>2.0.15<span class="o">)</span>
+   Loading from cache
+
+ - Installing phpunit/phpunit <span class="o">(</span>4.5.1<span class="o">)</span>
+   Downloading: 100%
+
+phpdocumentor/reflection-docblock suggests installing dflydev/markdown <span class="o">(</span>~1.0<span class="o">)</span>
+phpdocumentor/reflection-docblock suggests installing erusev/parsedown <span class="o">(</span>~1.0<span class="o">)</span>
+symfony/translation suggests installing psr/log <span class="o">(</span>To use logging capability in translator<span class="o">)</span>
+symfony/event-dispatcher suggests installing symfony/http-kernel <span class="o">()</span>
+symfony/dependency-injection suggests installing symfony/proxy-manager-bridge <span class="o">(</span>Generate service proxies to lazy load them<span class="o">)</span>
+symfony/console suggests installing psr/log <span class="o">(</span>For using the console logger<span class="o">)</span>
+behat/behat suggests installing behat/symfony2-extension <span class="o">(</span><span class="k">for </span>integration with Symfony2 web framework<span class="o">)</span>
+behat/behat suggests installing behat/yii-extension <span class="o">(</span><span class="k">for </span>integration with Yii web framework<span class="o">)</span>
+behat/behat suggests installing behat/mink-extension <span class="o">(</span><span class="k">for </span>integration with Mink testing framework<span class="o">)</span>
+sebastian/global-state suggests installing ext-uopz <span class="o">(</span>*<span class="o">)</span>
+phpunit/php-code-coverage suggests installing ext-xdebug <span class="o">(</span>&gt;<span class="o">=</span>2.2.1<span class="o">)</span>
+phpunit/phpunit suggests installing phpunit/php-invoker <span class="o">(</span>~1.1<span class="o">)</span>
+Writing lock file
+Generating autoload files
+Temp File /tmp/ptconfigure-temp-script-55050674265.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+PHPSpec: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>メリット<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>コンテキスト固有の</li>
+<li>期待</li>
+<li>出力はドキュメントがある</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jphpsepc.rst">
+          PHPSpec
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

@@ -596,6 +596,7 @@ PTConfigureモジュールと遊ぶ
    jgitkeysafe
    jgitlab
    jgittools
+   jgo
    jhaproxy
    jhardycssregression
    jhhvm
@@ -650,6 +651,7 @@ PTConfigureモジュールと遊ぶ
    jphpedit
    jphpmd
    jphpmodules
+   jphpsepc
    jphpssh
    jphpstorm
    jphpunit
@@ -702,6 +704,6 @@ PTConfigureモジュールと遊ぶ
    jxcache
    jxvfb
    jzendserver
-  
+   jzendstudio  
 
 
