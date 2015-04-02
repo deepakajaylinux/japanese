@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Zephir &mdash; KEVELL 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/labibi.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="KEVELL 0.1 documentation" href="index.html" />
+    <link rel="up" title="PTConfigure" href="jptconfigure_main.html" />
+    <link rel="next" title="PTDeploy" href="jptdeploy_main.html" />
+    <link rel="prev" title="ZendStudio" href="jzendstudio.html" />
+
+
+<script src="_static/labibi.js"></script>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-16853172-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+  </head>
+  <body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">KEVELL</a>
+<!--        <span class="navbar-text navbar-version pull-left"><b>0.1</b></span>-->
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a href="index.html"
+     class="dropdown-toggle"
+     data-toggle="dropdown">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+    ><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Zephir</a><ul>
+<li><a class="reference internal" href="#id1">概要</a></li>
+<li><a class="reference internal" href="#help">helpコマンド</a></li>
+<li><a class="reference internal" href="#id2">インストール</a></li>
+<li><a class="reference internal" href="#id3">別のパラメータ</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li><a href="jzendstudio.html"
+         title="Previous Chapter: ZendStudio">&laquo; ZendStudio</a></li>
+  <li><a href="jptdeploy_main.html"
+         title="Next Chapter: PTDeploy">PTDeploy &raquo;</a></li>
+              
+            
+            
+            
+            
+<!--              <li>
+<div id="sourcelink">
+  <a href="_sources/jzephir.txt"
+     rel="nofollow">Source</a>
+</div></li>-->
+            
+  <li><a href="http://testpage.readthedocs.org">English</a></li>
+   <li><a href="http://kevellgerman.readthedocs.org">Deutsch</a></li>
+    <li><a href="http://kevelljapanese.readthedocs.org">日本人</a></li>
+    <li><a href="http://kevellfrench.readthedocs.org">français</a></li>
+    <li><a href="http://kevellspanish.readthedocs.org/">spanish</a></li>
+      </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="globaltoc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="jjrush_main.html">Jrush</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="jptconfigure_main.html">PTConfigure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptdeploy_main.html">PTDeploy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jpttest_main.html">PTTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jptvirtualize_main.html">PTVirtualize</a></li>
+</ul>
+</ul>
+
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  
+  <div class="section" id="zephir">
+<h1>Zephir<a class="headerlink" href="#zephir" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>概要<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Zephir - Ze(nd Engine) Ph(p) I(nt)r(mediate) - PHP用の拡張機能の作成と保守性を緩和し、高レベルの言語である。 ZEPHIR拡張は++などのgcc /打ち鳴らす/ VCなどの主要なCコンパイラでコンパイルし、最適化することができるCコードに輸出されている。機能は、 PHP言語にさらされる。 ZEPHIRはオープンソースであり、高レベルの開発者は低レベルのPHP拡張を行うことができます。</p>
+</div>
+<div class="section" id="help">
+<h2>helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>このコマンドは、 ZEPHIRモジュールの使用方法について説明します。それはZEPHIRのパラメータとZEPHIRモジュールの機能の構文を示しています。ザ·
+ZEPHIRモジュールのhelpコマンドは、以下の通りである</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure Zephir <span class="nb">help</span>
+</pre></div>
+</div>
+<p>上記のコマンドの絵画表現は、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevvell@corp:/# ptconfigure Zephir <span class="nb">help</span>
+******************************
+
+
+ This <span class="nb">command </span>allows you to update Zephir.
+
+ Zephir, zephir
+
+       - install
+       Installs the latest version of zephir
+       example: ptconfigure zephir install
+
+------------------------------
+End Help
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>インストール<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>端末上ZEPHIRモジュールをインストールするために使用されるコマンドは、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure zephir install
+</pre></div>
+</div>
+<p>上記のコマンドの絵画表現は、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure zephir install
+
+Install Zephir? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Zephir!        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-19147788395.sh
+chmod 755 /tmp/ptconfigure-temp-script-19147788395.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-19147788395.sh Permissions
+Executing /tmp/ptconfigure-temp-script-19147788395.sh
+W: GPG error: http://oss.oracle.com unstable Release: The following signatures were invalid: KEYEXPIRED 1378511808 KEYEXPIRED 1378511808
+KEYEXPIRED 1378511808
+W: Failed to fetch http://apt.appneta.com/murali/dists/trusty/main/binary-amd64/Packages  404  Not Found <span class="o">[</span>IP: 107.20.222.96 80<span class="o">]</span>
+
+W: Failed to fetch http://apt.appneta.com/murali/dists/trusty/main/binary-i386/Packages  404  Not Found <span class="o">[</span>IP: 107.20.222.96 80<span class="o">]</span>
+
+W: Failed to fetch http://oss.oracle.com/debian/dists/unstable/main/binary-amd64/Packages  HttpError404
+
+W: Failed to fetch http://oss.oracle.com/debian/dists/unstable/non-free/binary-amd64/Packages  HttpError404
+
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+Ign http://archive.ubuntu.com trusty InRelease
+Ign http://ppa.launchpad.net trusty InRelease
+Ign http://packages.elasticsearch.org stable InRelease
+Ign http://archive.ubuntu.com trusty-updates InRelease
+Ign http://extras.ubuntu.com trusty InRelease
+Ign http://apt.appneta.com trusty InRelease
+Ign http://ppa.launchpad.net trusty InRelease
+Ign http://packages.dotdeb.org squeeze InRelease
+Hit http://packages.elasticsearch.org stable Release.gpg
+Ign http://pkg.jenkins-ci.org binary/ InRelease
+Ign http://archive.ubuntu.com trusty-backports InRelease
+Get:1 http://extras.ubuntu.com trusty Release.gpg <span class="o">[</span>72 B<span class="o">]</span>
+Ign http://apt.appneta.com trusty Release.gpg
+Ign http://ppa.launchpad.net trusty InRelease
+Hit http://packages.dotdeb.org squeeze Release.gpg
+Hit http://packages.elasticsearch.org stable Release
+Ign http://archive.ubuntu.com trusty-security InRelease
+Ign http://apt.appneta.com trusty Release
+Hit http://extras.ubuntu.com trusty Release
+Hit http://packages.dotdeb.org squeeze Release
+Hit http://ppa.launchpad.net trusty Release.gpg
+Hit http://pkg.jenkins-ci.org binary/ Release.gpg
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://packages.elasticsearch.org stable/main amd64 Packages
+Hit http://extras.ubuntu.com trusty/main Sources
+Hit http://packages.dotdeb.org squeeze/all amd64 Packages
+Hit http://ppa.launchpad.net trusty Release.gpg
+Get:2 http://archive.ubuntu.com trusty-updates Release.gpg <span class="o">[</span>933 B<span class="o">]</span>
+
+Hit http://packages.elasticsearch.org stable/main i386 Packages
+Hit http://packages.dotdeb.org squeeze/all i386 Packages
+Hit http://extras.ubuntu.com trusty/main amd64 Packages
+Hit http://pkg.jenkins-ci.org binary/ Release
+Hit http://archive.ubuntu.com trusty-backports Release.gpg
+Hit http://ppa.launchpad.net trusty Release.gpg
+Hit http://extras.ubuntu.com trusty/main i386 Packages
+Get:3 http://archive.ubuntu.com trusty-security Release.gpg <span class="o">[</span>933 B<span class="o">]</span>
+Hit http://ppa.launchpad.net trusty Release
+Hit http://pkg.jenkins-ci.org binary/ Packages
+Hit http://archive.ubuntu.com trusty Release
+Hit http://ppa.launchpad.net trusty Release
+Get:4 http://archive.ubuntu.com trusty-updates Release <span class="o">[</span>63.5 kB<span class="o">]</span>
+Hit http://ppa.launchpad.net trusty Release
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Hit http://ppa.launchpad.net trusty/main i386 Packages
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Ign http://packages.dotdeb.org squeeze/all Translation-en_IN
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Ign http://packages.elasticsearch.org stable/main Translation-en_IN
+Ign http://packages.dotdeb.org squeeze/all Translation-en
+Hit http://ppa.launchpad.net trusty/main i386 Packages
+Ign http://packages.elasticsearch.org stable/main Translation-en
+Ign http://extras.ubuntu.com trusty/main Translation-en_IN
+Hit http://archive.ubuntu.com trusty-backports Release
+Ign http://extras.ubuntu.com trusty/main Translation-en
+Get:5 http://archive.ubuntu.com trusty-security Release <span class="o">[</span>63.5 kB<span class="o">]</span>
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Get:6 http://oss.oracle.com unstable InRelease
+Ign http://oss.oracle.com unstable InRelease
+Hit http://ppa.launchpad.net trusty/main i386 Packages
+Err http://apt.appneta.com trusty/main amd64 Packages
+ 404  Not Found <span class="o">[</span>IP: 107.20.222.96 80<span class="o">]</span>
+Err http://apt.appneta.com trusty/main i386 Packages
+ 404  Not Found <span class="o">[</span>IP: 107.20.222.96 80<span class="o">]</span>
+Hit http://oss.oracle.com unstable Release
+Ign http://oss.oracle.com unstable Release
+Ign http://apt.appneta.com trusty/main Translation-en_IN
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Ign http://apt.appneta.com trusty/main Translation-en
+
+Get:7 http://oss.oracle.com unstable/main amd64 Packages
+Ign http://pkg.jenkins-ci.org binary/ Translation-en_IN
+Ign http://oss.oracle.com unstable/main i386 Packages/DiffIndex
+Hit http://archive.ubuntu.com trusty/main Sources
+Ign http://oss.oracle.com unstable/non-free i386 Packages/DiffIndex
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Ign http://pkg.jenkins-ci.org binary/ Translation-en
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Ign http://ppa.launchpad.net trusty/main Translation-en_IN
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Ign http://ppa.launchpad.net trusty/main Translation-en
+Hit http://oss.oracle.com unstable/main i386 Packages
+Hit http://oss.oracle.com unstable/non-free i386 Packages
+Get:8 http://oss.oracle.com unstable/main Translation-en_IN
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main i386 Packages
+Hit http://archive.ubuntu.com trusty/restricted i386 Packages
+Hit http://archive.ubuntu.com trusty/universe i386 Packages
+Hit http://archive.ubuntu.com trusty/multiverse i386 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Get:9 http://archive.ubuntu.com trusty-updates/main Sources <span class="o">[</span>189 kB<span class="o">]</span>
+Err http://oss.oracle.com unstable/main amd64 Packages
+ HttpError404
+Err http://oss.oracle.com unstable/non-free amd64 Packages
+ HttpError404
+
+Ign http://oss.oracle.com unstable/main Translation-en_IN
+Ign http://oss.oracle.com unstable/main Translation-en
+Ign http://oss.oracle.com unstable/non-free Translation-en_IN
+Ign http://oss.oracle.com unstable/non-free Translation-en
+Get:10 http://archive.ubuntu.com trusty-updates/restricted Sources <span class="o">[</span>2,564 B<span class="o">]</span>
+Get:11 http://archive.ubuntu.com trusty-updates/universe Sources <span class="o">[</span>107 kB<span class="o">]</span>
+Get:12 http://archive.ubuntu.com trusty-updates/multiverse Sources <span class="o">[</span>4,765 B<span class="o">]</span>
+Get:13 http://archive.ubuntu.com trusty-updates/main amd64 Packages <span class="o">[</span>489 kB<span class="o">]</span>
+Get:14 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages <span class="o">[</span>9,238 B<span class="o">]</span>
+Get:15 http://archive.ubuntu.com trusty-updates/universe amd64 Packages <span class="o">[</span>260 kB<span class="o">]</span>
+Get:16 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages <span class="o">[</span>11.7 kB<span class="o">]</span>
+Get:17 http://archive.ubuntu.com trusty-updates/main i386 Packages <span class="o">[</span>478 kB<span class="o">]</span>
+Get:18 http://archive.ubuntu.com trusty-updates/restricted i386 Packages <span class="o">[</span>9,256 B<span class="o">]</span>
+Get:19 http://archive.ubuntu.com trusty-updates/universe i386 Packages <span class="o">[</span>262 kB<span class="o">]</span>
+Get:20 http://archive.ubuntu.com trusty-updates/multiverse i386 Packages <span class="o">[</span>11.9 kB<span class="o">]</span>
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main i386 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted i386 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe i386 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse i386 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Get:21 http://archive.ubuntu.com trusty-security/main Sources <span class="o">[</span>76.1 kB<span class="o">]</span>
+Get:22 http://archive.ubuntu.com trusty-security/restricted Sources <span class="o">[</span>2,061 B<span class="o">]</span>
+Get:23 http://archive.ubuntu.com trusty-security/universe Sources <span class="o">[</span>18.0 kB<span class="o">]</span>
+Get:24 http://archive.ubuntu.com trusty-security/multiverse Sources <span class="o">[</span>1,905 B<span class="o">]</span>
+Get:25 http://archive.ubuntu.com trusty-security/main amd64 Packages <span class="o">[</span>251 kB<span class="o">]</span>
+Get:26 http://archive.ubuntu.com trusty-security/restricted amd64 Packages <span class="o">[</span>8,875 B<span class="o">]</span>
+Get:27 http://archive.ubuntu.com trusty-security/universe amd64 Packages <span class="o">[</span>89.7 kB<span class="o">]</span>
+Get:28 http://archive.ubuntu.com trusty-security/multiverse amd64 Packages <span class="o">[</span>3,459 B<span class="o">]</span>
+Get:29 http://archive.ubuntu.com trusty-security/main i386 Packages <span class="o">[</span>242 kB<span class="o">]</span>
+Get:30 http://archive.ubuntu.com trusty-security/restricted i386 Packages <span class="o">[</span>8,846 B<span class="o">]</span>
+Get:31 http://archive.ubuntu.com trusty-security/universe i386 Packages <span class="o">[</span>89.7 kB<span class="o">]</span>
+Get:32 http://archive.ubuntu.com trusty-security/multiverse i386 Packages <span class="o">[</span>3,628 B<span class="o">]</span>
+Hit http://archive.ubuntu.com trusty-security/main Translation-en
+Hit http://archive.ubuntu.com trusty-security/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-security/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-security/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_IN
+
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_IN
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_IN
+Ign http://archive.ubuntu.com trusty/universe Translation-en_IN
+Fetched 2,759 kB in 1min 53s <span class="o">(</span>24.4 kB/s<span class="o">)</span>
+Temp File /tmp/ptconfigure-temp-script-19147788395.sh Removed
+W: Duplicate sources.list entry http://oss.oracle.com/debian/ unstable/main i386 Packages <span class="o">(</span>/var/lib/apt/lists/
+oss.oracle.com_debian_dists_unstable_main_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://oss.oracle.com/debian/ unstable/non-free i386 Packages <span class="o">(</span>/var/lib/apt/lists
+oss.oracle.com_debian_dists_unstable_non-free_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all amd64 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-amd64_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists/<span class="se">\</span>
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: Duplicate sources.list entry http://packages.dotdeb.org/ squeeze/all i386 Packages <span class="o">(</span>/var/lib/apt/lists/
+packages.dotdeb.org_dists_squeeze_all_binary-i386_Packages<span class="o">)</span>
+W: You may want to run apt-get update to correct these problems
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package git from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package gcc from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package make from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package re2c from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package php5 from the Packager Apt is already installed, so not installing
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package php5-json from the Packager Apt is already installed, so not installing
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+ debhelper dh-apparmor libmail-sendmail-perl pkg-php-tools po-debconf shtool
+
+Suggested packages:
+ dh-make libmail-box-perl
+The following NEW packages will be installed:
+ debhelper dh-apparmor libmail-sendmail-perl php5-dev pkg-php-tools
+ po-debconf shtool
+0 upgraded, 7 newly installed, 0 to remove and 263 not upgraded.
+Need to get 1,380 kB of archives.
+After this operation, 6,097 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main po-debconf all 1.0.16+nmu2ubuntu1 <span class="o">[</span>210 kB<span class="o">]</span>
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main dh-apparmor all 2.8.95~2430-0ubuntu5.1 <span class="o">[</span>11.5 kB<span class="o">]</span>
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main debhelper all 9.20131227ubuntu1 <span class="o">[</span>604 kB<span class="o">]</span>
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libmail-sendmail-perl all 0.79.16-1 <span class="o">[</span>26.5 kB<span class="o">]</span>
+Get:5 http://archive.ubuntu.com/ubuntu/ trusty/main shtool all 2.0.8-6 <span class="o">[</span>149 kB<span class="o">]</span>
+Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main php5-dev amd64 5.5.9+dfsg-1ubuntu4.7 <span class="o">[</span>357 kB<span class="o">]</span>
+Get:7 http://archive.ubuntu.com/ubuntu/ trusty/main pkg-php-tools all 1.11 <span class="o">[</span>21.6 kB<span class="o">]</span>
+Fetched 1,276 kB in 28s <span class="o">(</span>44.6 kB/s<span class="o">)</span>
+Selecting previously unselected package po-debconf.
+<span class="o">(</span>Reading database ... 233467 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../po-debconf_1.0.16+nmu2ubuntu1_all.deb ...
+Unpacking po-debconf <span class="o">(</span>1.0.16+nmu2ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package dh-apparmor.
+Preparing to unpack .../dh-apparmor_2.8.95~2430-0ubuntu5.1_all.deb ...
+Unpacking dh-apparmor <span class="o">(</span>2.8.95~2430-0ubuntu5.1<span class="o">)</span> ...
+Selecting previously unselected package debhelper.
+Preparing to unpack .../debhelper_9.20131227ubuntu1_all.deb ...
+Unpacking debhelper <span class="o">(</span>9.20131227ubuntu1<span class="o">)</span> ...
+Selecting previously unselected package libmail-sendmail-perl.
+Preparing to unpack .../libmail-sendmail-perl_0.79.16-1_all.deb ...
+Unpacking libmail-sendmail-perl <span class="o">(</span>0.79.16-1<span class="o">)</span> ...
+Selecting previously unselected package shtool.
+Preparing to unpack .../shtool_2.0.8-6_all.deb ...
+Unpacking shtool <span class="o">(</span>2.0.8-6<span class="o">)</span> ...
+Selecting previously unselected package php5-dev.
+Preparing to unpack .../php5-dev_5.5.9+dfsg-1ubuntu4.7_amd64.deb ...
+Unpacking php5-dev <span class="o">(</span>5.5.9+dfsg-1ubuntu4.7<span class="o">)</span> ...
+
+Selecting previously unselected package pkg-php-tools.
+Preparing to unpack .../pkg-php-tools_1.11_all.deb ...
+Unpacking pkg-php-tools <span class="o">(</span>1.11<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>doc-base <span class="o">(</span>0.10.5<span class="o">)</span> ...
+Processing 1 added doc-base file...
+Registering documents with scrollkeeper...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up po-debconf <span class="o">(</span>1.0.16+nmu2ubuntu1<span class="o">)</span> ...
+Setting up dh-apparmor <span class="o">(</span>2.8.95~2430-0ubuntu5.1<span class="o">)</span> ...
+Setting up debhelper <span class="o">(</span>9.20131227ubuntu1<span class="o">)</span> ...
+Setting up libmail-sendmail-perl <span class="o">(</span>0.79.16-1<span class="o">)</span> ...
+Setting up shtool <span class="o">(</span>2.0.8-6<span class="o">)</span> ...
+Setting up php5-dev <span class="o">(</span>5.5.9+dfsg-1ubuntu4.7<span class="o">)</span> ...
+update-alternatives: using /usr/bin/php-config5 to provide /usr/bin/php-config <span class="o">(</span>php-config<span class="o">)</span> in auto mode
+update-alternatives: using /usr/bin/phpize5 to provide /usr/bin/phpize <span class="o">(</span>phpize<span class="o">)</span> in auto mode
+Setting up pkg-php-tools <span class="o">(</span>1.11<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-dev from the Packager Apt executed correctly
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  libpcrecpp0
+The following NEW packages will be installed:
+ libpcre3-dev libpcrecpp0
+0 upgraded, 2 newly installed, 0 to remove and 263 not upgraded.
+Need to get 237 kB/251 kB of archives.
+After this operation, 951 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main libpcre3-dev amd64 1:8.31-2ubuntu2 <span class="o">[</span>237 kB<span class="o">]</span>
+Fetched 237 kB in 12s <span class="o">(</span>19.5 kB/s<span class="o">)</span>
+Selecting previously unselected package libpcrecpp0:amd64.
+<span class="o">(</span>Reading database ... 234310 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../libpcrecpp0_1%3a8.31-2ubuntu2_amd64.deb ...
+Unpacking libpcrecpp0:amd64 <span class="o">(</span>1:8.31-2ubuntu2<span class="o">)</span> ...
+Selecting previously unselected package libpcre3-dev:amd64.
+Preparing to unpack .../libpcre3-dev_1%3a8.31-2ubuntu2_amd64.deb ...
+Unpacking libpcre3-dev:amd64 <span class="o">(</span>1:8.31-2ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Setting up libpcrecpp0:amd64 <span class="o">(</span>1:8.31-2ubuntu2<span class="o">)</span> ...
+Setting up libpcre3-dev:amd64 <span class="o">(</span>1:8.31-2ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>libc-bin <span class="o">(</span>2.19-0ubuntu6.5<span class="o">)</span> ...
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package libpcre3-dev from the Packager Apt executed correctly
+Creating /tmp/ptconfigure-temp-script-37330975073.sh
+chmod 755 /tmp/ptconfigure-temp-script-37330975073.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-37330975073.sh Permissions
+Executing /tmp/ptconfigure-temp-script-37330975073.sh
+Cloning into <span class="s1">&#39;zephir&#39;</span>...
+remote: Counting objects: 22313, <span class="k">done</span>.
+remote: Compressing objects: 100% <span class="o">(</span>194/194<span class="o">)</span>, <span class="k">done</span>.
+remote: Total 22313 <span class="o">(</span>delta 118<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 22119
+Receiving objects: 100% <span class="o">(</span>22313/22313<span class="o">)</span>, 12.33 MiB | 40.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>16296/16296<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+Cloning into <span class="s1">&#39;json-c&#39;</span>...
+remote: Counting objects: 1531, <span class="k">done</span>.
+remote: Total 1531 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>, pack-reused 1531
+Receiving objects: 100% <span class="o">(</span>1531/1531<span class="o">)</span>, 941.13 KiB | 59.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: 100% <span class="o">(</span>828/828<span class="o">)</span>, <span class="k">done</span>.
+Checking connectivity... <span class="k">done</span>.
+autoreconf: Entering directory <span class="sb">`</span>.<span class="s1">&#39;</span>
+<span class="s1">autoreconf: configure.ac: not using Gettext</span>
+<span class="s1">autoreconf: running: aclocal</span>
+<span class="s1">configure.ac:43: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body</span>
+<span class="s1">../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">configure.ac:43: the top level</span>
+<span class="s1">autoreconf: configure.ac: tracing</span>
+
+<span class="s1">configure.ac:43: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body</span>
+<span class="s1">../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">configure.ac:43: the top level</span>
+<span class="s1">autoreconf: running: libtoolize --copy</span>
+<span class="s1">configure.ac:43: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body</span>
+<span class="s1">../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">configure.ac:43: the top level</span>
+<span class="s1">autoreconf: running: /usr/bin/autoconf</span>
+<span class="s1">configure.ac:43: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body</span>
+<span class="s1">../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">configure.ac:43: the top level</span>
+<span class="s1">autoreconf: running: /usr/bin/autoheader</span>
+<span class="s1">configure.ac:43: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body</span>
+<span class="s1">../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">configure.ac:43: the top level</span>
+<span class="s1">autoreconf: running: automake --add-missing --copy --no-force</span>
+<span class="s1">configure.ac:43: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body</span>
+<span class="s1">../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...</span>
+<span class="s1">configure.ac:43: the top level</span>
+<span class="s1">configure.ac:15: installing &#39;</span>./compile<span class="s1">&#39;</span>
+<span class="s1">configure.ac:57: installing &#39;</span>./config.guess<span class="s1">&#39;</span>
+<span class="s1">configure.ac:57: installing &#39;</span>./config.sub<span class="s1">&#39;</span>
+<span class="s1">configure.ac:6: installing &#39;</span>./install-sh<span class="s1">&#39;</span>
+<span class="s1">configure.ac:6: installing &#39;</span>./missing<span class="s1">&#39;</span>
+<span class="s1">Makefile.am: installing &#39;</span>./INSTALL<span class="s1">&#39;</span>
+
+<span class="s1">Makefile.am: installing &#39;</span>./depcomp<span class="s1">&#39;</span>
+<span class="s1">parallel-tests: installing &#39;</span>./test-driver<span class="s1">&#39;</span>
+<span class="s1">autoreconf: Leaving directory `.&#39;</span>
+configure.ac:43: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+../../lib/autoconf/lang.m4:193: AC_LANG_CONFTEST is expanded from...
+../../lib/autoconf/general.m4:2661: _AC_LINK_IFELSE is expanded from...
+../../lib/autoconf/general.m4:2678: AC_LINK_IFELSE is expanded from...
+configure.ac:43: the top level
+Submodule <span class="s1">&#39;json-c&#39;</span> <span class="o">(</span>git://github.com/phalcon/json-c.git<span class="o">)</span> registered <span class="k">for </span>path <span class="s1">&#39;json-c&#39;</span>
+Submodule path <span class="s1">&#39;json-c&#39;</span>: checked out <span class="s1">&#39;aa31af396a5b928ac29ba30f960f3d6f7072c5ae&#39;</span>
+libtoolize: putting auxiliary files in <span class="sb">`</span>.<span class="s1">&#39;.</span>
+<span class="s1">libtoolize: copying file `./ltmain.sh&#39;</span>
+libtoolize: Consider adding <span class="sb">`</span>AC_CONFIG_MACRO_DIR<span class="o">([</span>m4<span class="o">])</span><span class="s1">&#39; to configure.ac and</span>
+<span class="s1">libtoolize: rerunning libtoolize, to keep the correct libtool macros in-tree.</span>
+<span class="s1">libtoolize: Consider adding `-I m4&#39;</span> to ACLOCAL_AMFLAGS in Makefile.am.
+checking <span class="k">for </span>a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking <span class="k">for </span>a thread-safe mkdir -p... /bin/mkdir -p
+checking <span class="k">for </span>gawk... gawk
+checking whether make sets <span class="k">$(</span>MAKE<span class="k">)</span>... yes
+checking whether make supports nested variables... yes
+checking whether make sets <span class="k">$(</span>MAKE<span class="k">)</span>... <span class="o">(</span>cached<span class="o">)</span> yes
+checking <span class="k">for </span>style of include used by make... GNU
+checking <span class="k">for </span>gcc... gcc
+checking whether the C compiler works... yes
+checking <span class="k">for </span>C compiler default output file name... a.out
+checking <span class="k">for </span>suffix of executables...
+checking whether we are cross compiling... no
+checking <span class="k">for </span>suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking <span class="k">for </span>gcc option to accept ISO C89... none needed
+
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking <span class="k">for </span>grep that handles long lines and -e... /bin/grep
+checking <span class="k">for </span>egrep... /bin/grep -E
+checking <span class="k">for </span>ANSI C header files... yes
+checking <span class="k">for </span>sys/types.h... yes
+checking <span class="k">for </span>sys/stat.h... yes
+checking <span class="k">for </span>stdlib.h... yes
+checking <span class="k">for </span>string.h... yes
+checking <span class="k">for </span>memory.h... yes
+checking <span class="k">for </span>strings.h... yes
+checking <span class="k">for </span>inttypes.h... yes
+checking <span class="k">for </span>stdint.h... yes
+checking <span class="k">for </span>unistd.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking <span class="k">for </span>fcntl.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking <span class="k">for </span>limits.h... yes
+checking <span class="k">for </span>strings.h... <span class="o">(</span>cached<span class="o">)</span> yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking <span class="k">for </span>syslog.h... yes
+checking <span class="k">for </span>unistd.h... <span class="o">(</span>cached<span class="o">)</span> yes
+checking sys/cdefs.h usability... yes
+checking sys/cdefs.h presence... yes
+checking <span class="k">for </span>sys/cdefs.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking <span class="k">for </span>sys/param.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+
+checking <span class="k">for </span>stdarg.h... yes
+checking locale.h usability... yes
+checking locale.h presence... yes
+checking <span class="k">for </span>locale.h... yes
+checking <span class="k">for </span>inttypes.h... <span class="o">(</span>cached<span class="o">)</span> yes
+checking <span class="k">for </span>an ANSI C-conforming const... yes
+checking <span class="k">for </span>size_t... yes
+checking <span class="k">for </span>vprintf... yes
+checking <span class="k">for </span>_doprnt... no
+checking <span class="k">for </span>working memcmp... yes
+checking <span class="k">for </span>stdlib.h... <span class="o">(</span>cached<span class="o">)</span> yes
+checking <span class="k">for </span>GNU libc compatible malloc... yes
+checking <span class="k">for </span>stdlib.h... <span class="o">(</span>cached<span class="o">)</span> yes
+checking <span class="k">for </span>GNU libc compatible realloc... yes
+checking <span class="k">for </span>strcasecmp... yes
+checking <span class="k">for </span>strdup... yes
+checking <span class="k">for </span>strerror... yes
+checking <span class="k">for </span>snprintf... yes
+checking <span class="k">for </span>vsnprintf... yes
+checking <span class="k">for </span>vasprintf... yes
+checking <span class="k">for </span>open... yes
+checking <span class="k">for </span>vsyslog... yes
+checking <span class="k">for </span>strncasecmp... yes
+checking <span class="k">for </span>setlocale... yes
+checking whether INFINITY is declared... yes
+checking whether nan is declared... yes
+checking whether isnan is declared... yes
+checking whether isinf is declared... yes
+checking whether _isnan is declared... no
+checking whether _finite is declared... no
+checking <span class="k">if</span> .gnu.warning accepts long strings... no
+checking build system type... x86_64-unknown-linux-gnu
+
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... <span class="nb">printf</span>
+checking <span class="k">for </span>a sed that does not truncate output... /bin/sed
+checking <span class="k">for </span>fgrep... /bin/grep -F
+checking <span class="k">for </span>ld used by gcc... /usr/bin/ld
+checking <span class="k">if </span>the linker <span class="o">(</span>/usr/bin/ld<span class="o">)</span> is GNU ld... yes
+checking <span class="k">for </span>BSD- or MS-compatible name lister <span class="o">(</span>nm<span class="o">)</span>... /usr/bin/nm -B
+checking the name lister <span class="o">(</span>/usr/bin/nm -B<span class="o">)</span> interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of <span class="nb">command </span>line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands <span class="s2">&quot;+=&quot;</span>... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking <span class="k">for</span> /usr/bin/ld option to reload object files... -r
+checking <span class="k">for </span>objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking <span class="k">for </span>dlltool... no
+checking how to associate runtime and link libraries... <span class="nb">printf</span> %s<span class="se">\n</span>
+checking <span class="k">for </span>ar... ar
+checking <span class="k">for </span>archiver @FILE support... @
+checking <span class="k">for </span>strip... strip
+checking <span class="k">for </span>ranlib... ranlib
+checking <span class="nb">command </span>to parse /usr/bin/nm -B output from gcc object... ok
+checking <span class="k">for </span>sysroot... no
+checking <span class="k">for </span>mt... mt
+checking <span class="k">if </span>mt is a manifest tool... no
+checking <span class="k">for </span>dlfcn.h... yes
+checking <span class="k">for </span>objdir... .libs
+checking <span class="k">if </span>gcc supports -fno-rtti -fno-exceptions... no
+checking <span class="k">for </span>gcc option to produce PIC... -fPIC -DPIC
+checking <span class="k">if </span>gcc PIC flag -fPIC -DPIC works... yes
+checking <span class="k">if </span>gcc static flag -static works... yes
+checking <span class="k">if </span>gcc supports -c -o file.o... yes
+checking <span class="k">if </span>gcc supports -c -o file.o... <span class="o">(</span>cached<span class="o">)</span> yes
+checking whether the gcc linker <span class="o">(</span>/usr/bin/ld -m elf_x86_64<span class="o">)</span> supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+
+checking whether stripping libraries is possible... yes
+checking <span class="k">if </span>libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking <span class="k">for</span> -Bsymbolic-functions linker flag... yes
+checking that generated files are newer than configure... <span class="k">done</span>
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating json-c.pc
+config.status: creating tests/Makefile
+config.status: creating json-c-uninstalled.pc
+config.status: creating config.h
+config.status: creating json_config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+<span class="o">(</span><span class="nv">CDPATH</span><span class="o">=</span><span class="s2">&quot;${ZSH_VERSION+.}:&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">cd</span> . <span class="o">&amp;&amp;</span> /bin/bash /home/murali/zephir/json-c/missing autoheader<span class="o">)</span>
+rm -f stamp-h1
+touch config.h.in
+<span class="nb">cd</span> . <span class="o">&amp;&amp;</span> /bin/bash ./config.status config.h
+config.status: creating config.h
+config.status: config.h is unchanged
+make  all-recursive
+make<span class="o">[</span>1<span class="o">]</span>: Entering directory <span class="sb">`</span>/home/murali/zephir/json-c<span class="s1">&#39;</span>
+<span class="s1">Making all in .</span>
+<span class="s1">make[2]: Entering directory `/home/murali/zephir/json-c&#39;</span>
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT arraylist.lo -MD -MP -MF .deps/arraylist.Tpo -c -o arraylist.lo arraylist.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT arraylist.lo -MD -MP -MF .deps/arraylist.Tpo -c arraylist.c  -fPIC -DPIC -o .libs/arraylist.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT arraylist.lo -MD -MP -MF .deps/arraylist.Tpo -c arraylist.c -o arraylist.o &gt;/dev/null 2&gt;&amp;1
+mv -f .deps/arraylist.Tpo .deps/arraylist.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT debug.lo -MD -MP -MF .deps/debug.Tpo -c -o debug.lo debug.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT debug.lo -MD -MP -MF .deps/debug.Tpo -c debug.c  -fPIC -DPIC -o .libs/debug.o
+l ibtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+-g -O2 -MT debug.lo -MD -MP -MF .deps/debug.Tpo -c debug.c -o debug.o &gt;/dev/null 2&gt;&amp;1
+mv -f .deps/debug.Tpo .deps/debug.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT json_c_version.lo -MD -MP -MF .deps/json_c_version.Tpo -c -o json_c_version.lo
+json_c_version.c
+
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -
+MT json_c_version.lo -MD -MP -MF .deps/json_c_version.Tpo -c json_c_version.c  -fPIC -DPIC -o .libs/json_c_version.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_c_version.lo -MD -MP -MF .deps/json_c_version.Tpo -c json_c_version.c -o json_c_version.o &gt;/dev/null 2&gt;&amp;1
+mv -f .deps/json_c_version.Tpo .deps/json_c_version.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT json_object.lo -MD -MP -MF .deps/json_object.Tpo -c -o json_object.lo json_object.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_object.lo -MD -MP -MF .deps/json_object.Tpo -c json_object.c  -fPIC -DPIC -o .libs/json_object.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_object.lo -MD -MP -MF .deps/json_object.Tpo -c json_object.c -o json_object.o &gt;/dev/null 2&gt;&amp;1
+mv -f .deps/json_object.Tpo .deps/json_object.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT json_object_iterator.lo -MD -MP -MF .deps/json_object_iterator.Tpo -c -o
+json_object_iterator.lo json_object_iterator.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_object_iterator.lo -MD -MP -MF .deps/json_object_iterator.Tpo -c json_object_iterator.c  -fPIC -DPIC -o .libs/
+json_object_iterator.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_object_iterator.lo -MD -MP -MF .deps/json_object_iterator.Tpo -c json_object_iterator.c -o json_object_iterator.o &gt;/dev/
+null  2&gt;&amp;1
+mv -f .deps/json_object_iterator.Tpo .deps/json_object_iterator.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT json_tokener.lo -MD -MP -MF .deps/json_tokener.Tpo -c -o json_tokener.lo json_tokener.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_tokener.lo -MD -MP -MF .deps/json_tokener.Tpo -c json_tokener.c  -fPIC -DPIC -o .libs/json_tokener.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_tokener.lo -MD -MP -MF .deps/json_tokener.Tpo -c json_tokener.c -o json_tokener.o &gt;/dev/null 2&gt;&amp;1
+mv -f .deps/json_tokener.Tpo .deps/json_tokener.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT json_util.lo -MD -MP -MF .deps/json_util.Tpo -c -o json_util.lo json_util.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_util.lo -MD -MP -MF .deps/json_util.Tpo -c json_util.c  -fPIC -DPIC -o .libs/json_util.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT json_util.lo -MD -MP -MF .deps/json_util.Tpo -c json_util.c -o json_util.o &gt;/dev/null 2&gt;&amp;1
+mv -f .deps/json_util.Tpo .deps/json_util.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT linkhash.lo -MD -MP -MF .deps/linkhash.Tpo -c -o linkhash.lo linkhash.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT linkhash.lo -MD -MP -MF .deps/linkhash.Tpo -c linkhash.c  -fPIC -DPIC -o .libs/linkhash.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT linkhash.lo -MD -MP -MF .deps/linkhash.Tpo -c linkhash.c -o linkhash.o &gt;/dev/null 2&gt;&amp;1
+mv -f .deps/linkhash.Tpo .deps/linkhash.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>compile gcc -DHAVE_CONFIG_H -I.    -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -
+<span class="nv">std</span><span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT -g -O2 -MT printbuf.lo -MD -MP -MF .deps/printbuf.Tpo -c -o printbuf.lo printbuf.c
+
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT printbuf.lo -MD -MP -MF .deps/printbuf.Tpo -c printbuf.c  -fPIC -DPIC -o .libs/printbuf.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -D_REENTRANT
+- g -O2 -MT printbuf.lo -MD -MP -MF .deps/printbuf.Tpo -c printbuf.c -o printbuf.o &gt;/dev/null 2&gt;&amp;1
+mv -f .deps/printbuf.Tpo .deps/printbuf.Plo
+/bin/bash ./libtool  --tag<span class="o">=</span>CC   --mode<span class="o">=</span>link gcc -Wall -Werror -Wextra -Wwrite-strings -Wno-unused-parameter -std<span class="o">=</span>gnu99 -D_GNU_SOURCE -
+D_REENTRANT -g -O2 -version-info 2:0:0 -no-undefined -Wl,-Bsymbolic-functions  -o libjson-c.la -rpath /usr/local/lib arraylist.lo debug.lo
+json_c_version.lo json_object.lo json_object_iterator.lo json_tokener.lo json_util.lo linkhash.lo printbuf.lo
+libtool: link: gcc -shared  -fPIC -DPIC  .libs/arraylist.o .libs/debug.o .libs/json_c_version.o .libs/json_object.o .libs/
+json_object_iterator.o .libs/json_tokener.o .libs/json_util.o .libs/linkhash.o .libs/printbuf.o    -O2 -Wl,-Bsymbolic-functions   -Wl,-
+soname  -Wl,libjson-c.so.2 -o .libs/libjson-c.so.2.0.0
+libtool: link: <span class="o">(</span><span class="nb">cd</span> <span class="s2">&quot;.libs&quot;</span> <span class="o">&amp;&amp;</span> rm -f <span class="s2">&quot;libjson-c.so.2&quot;</span> <span class="o">&amp;&amp;</span> ln -s <span class="s2">&quot;libjson-c.so.2.0.0&quot;</span> <span class="s2">&quot;libjson-c.so.2&quot;</span><span class="o">)</span>
+libtool: link: <span class="o">(</span><span class="nb">cd</span> <span class="s2">&quot;.libs&quot;</span> <span class="o">&amp;&amp;</span> rm -f <span class="s2">&quot;libjson-c.so&quot;</span> <span class="o">&amp;&amp;</span> ln -s <span class="s2">&quot;libjson-c.so.2.0.0&quot;</span> <span class="s2">&quot;libjson-c.so&quot;</span><span class="o">)</span>
+libtool: link: ar cru .libs/libjson-c.a  arraylist.o debug.o json_c_version.o json_object.o json_object_iterator.o json_tokener.o json_util.o
+linkhash.o printbuf.o
+libtool: link: ranlib .libs/libjson-c.a
+libtool: link: <span class="o">(</span> <span class="nb">cd</span> <span class="s2">&quot;.libs&quot;</span> <span class="o">&amp;&amp;</span> rm -f <span class="s2">&quot;libjson-c.la&quot;</span> <span class="o">&amp;&amp;</span> ln -s <span class="s2">&quot;../libjson-c.la&quot;</span> <span class="s2">&quot;libjson-c.la&quot;</span> <span class="o">)</span>
+make<span class="o">[</span>2<span class="o">]</span>: Leaving directory <span class="sb">`</span>/home/murali/zephir/json-c<span class="s1">&#39;</span>
+<span class="s1">Making all in tests</span>
+<span class="s1">make[2]: Entering directory `/home/murali/zephir/json-c/tests&#39;</span>
+make<span class="o">[</span>2<span class="o">]</span>: Nothing to be <span class="k">done for</span> <span class="sb">`</span>all<span class="s1">&#39;.</span>
+<span class="s1">make[2]: Leaving directory `/home/murali/zephir/json-c/tests&#39;</span>
+make<span class="o">[</span>1<span class="o">]</span>: Leaving directory <span class="sb">`</span>/home/murali/zephir/json-c<span class="s1">&#39;</span>
+<span class="s1">Making install in .</span>
+<span class="s1">make[1]: Entering directory `/home/murali/zephir/json-c&#39;</span>
+make<span class="o">[</span>2<span class="o">]</span>: Entering directory <span class="sb">`</span>/home/murali/zephir/json-c<span class="s1">&#39;</span>
+<span class="s1">/bin/mkdir -p &#39;</span>/usr/local/lib<span class="s1">&#39;</span>
+<span class="s1">/bin/bash ./libtool   --mode=install /usr/bin/install -c   libjson-c.la &#39;</span>/usr/local/lib<span class="s1">&#39;</span>
+<span class="s1">libtool: install: /usr/bin/install -c .libs/libjson-c.so.2.0.0 /usr/local/lib/libjson-c.so.2.0.0</span>
+<span class="s1">libtool: install: (cd /usr/local/lib &amp;&amp; { ln -s -f libjson-c.so.2.0.0 libjson-c.so.2 || { rm -f libjson-c.so.2 &amp;&amp; ln -s libjson-c.so.2.0.0</span>
+<span class="s1">libjson-c.so.2; }; })</span>
+<span class="s1">libtool: install: (cd /usr/local/lib &amp;&amp; { ln -s -f libjson-c.so.2.0.0 libjson-c.so || { rm -f libjson-c.so &amp;&amp; ln -s libjson-c.so.2.0.0</span>
+<span class="s1">libjson-c.so; }; })</span>
+
+<span class="s1">libtool: install: /usr/bin/install -c .libs/libjson-c.lai /usr/local/lib/libjson-c.la</span>
+<span class="s1">libtool: install: /usr/bin/install -c .libs/libjson-c.a /usr/local/lib/libjson-c.a</span>
+<span class="s1">libtool: install: chmod 644 /usr/local/lib/libjson-c.a</span>
+<span class="s1">libtool: install: ranlib /usr/local/lib/libjson-c.a</span>
+<span class="s1">libtool: finish: PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin&quot; ldconfig -n /usr/local/lib</span>
+<span class="s1">----------------------------------------------------------------------</span>
+<span class="s1">Libraries have been installed in:</span>
+<span class="s1">  /usr/local/lib</span>
+
+<span class="s1">If you ever happen to want to link against installed libraries</span>
+<span class="s1">in a given directory, LIBDIR, you must either use libtool, and</span>
+<span class="s1">specify the full pathname of the library, or use the `-LLIBDIR&#39;</span>
+flag during linking and <span class="k">do </span>at least one of the following:
+  - add LIBDIR to the <span class="sb">`</span>LD_LIBRARY_PATH<span class="s1">&#39; environment variable</span>
+<span class="s1">    during execution</span>
+<span class="s1">  - add LIBDIR to the `LD_RUN_PATH&#39;</span> environment variable
+    during linking
+  - use the <span class="sb">`</span>-Wl,-rpath -Wl,LIBDIR<span class="s1">&#39; linker flag</span>
+<span class="s1">  - have your system administrator add LIBDIR to `/etc/ld.so.conf&#39;</span>
+
+See any operating system documentation about shared libraries <span class="k">for</span>
+more information, such as the ld<span class="o">(</span>1<span class="o">)</span> and ld.so<span class="o">(</span>8<span class="o">)</span> manual pages.
+----------------------------------------------------------------------
+/bin/mkdir -p <span class="s1">&#39;/usr/local/include/json-c&#39;</span>
+/usr/bin/install -c -m 644 arraylist.h bits.h debug.h json.h json_config.h json_c_version.h json_inttypes.h json_object.h
+json_object_iterator.h json_object_private.h json_tokener.h json_util.h linkhash.h printbuf.h <span class="s1">&#39;/usr/local/include/json-c&#39;</span>
+ /bin/mkdir -p <span class="s1">&#39;/usr/local/lib/pkgconfig&#39;</span>
+/usr/bin/install -c -m 644 json-c.pc <span class="s1">&#39;/usr/local/lib/pkgconfig&#39;</span>
+make<span class="o">[</span>2<span class="o">]</span>: Leaving directory <span class="sb">`</span>/home/murali/zephir/json-c<span class="s1">&#39;</span>
+<span class="s1">make[1]: Leaving directory `/home/murali/zephir/json-c&#39;</span>
+
+Making install in tests
+make<span class="o">[</span>1<span class="o">]</span>: Entering directory <span class="sb">`</span>/home/murali/zephir/json-c/tests<span class="s1">&#39;</span>
+<span class="s1">make[2]: Entering directory `/home/murali/zephir/json-c/tests&#39;</span>
+make<span class="o">[</span>2<span class="o">]</span>: Nothing to be <span class="k">done for</span> <span class="sb">`</span>install-exec-am<span class="s1">&#39;.</span>
+<span class="s1">make[2]: Nothing to be done for `install-data-am&#39;</span>.
+make<span class="o">[</span>2<span class="o">]</span>: Leaving directory <span class="sb">`</span>/home/murali/zephir/json-c/tests<span class="s1">&#39;</span>
+<span class="s1">make[1]: Leaving directory `/home/murali/zephir/json-c/tests&#39;</span>
+Parser statistics: 124 terminals, 99 nonterminals, 449 rules
+                   925 states, 0 parser table entries, 0 conflicts
+Temp File /tmp/ptconfigure-temp-script-37330975073.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+Zephir: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>別のパラメータ<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>コマンドラインで使用することができる2つの別のパラメータがある。</p>
+<p>Zephir, zephir</p>
+</div>
+<div class="section" id="id4">
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>ZEPHIRは、コンパイルされた両方の利点だけでなく、インタープリタ言語を提供しています</li>
+<li>メモリの安全性</li>
+<li>どちらの動的/静的型付け、など。</li>
+</ul>
+</div>
+</div>
+
+
+
+
+  
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kevellsrdoc'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015, kevell.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
+    </p>
+  </div>
+</footer>
+
+
+
+<!--
+<div id="editor-trap">
+      <h3>Edit this document!</h3>
+
+      <p>
+        This file can be edited directly through the Web. Anyone can
+        update and fix errors in this document with few clicks --
+        no downloads needed.
+      </p>
+
+<!--      <ol>
+
+        <li>
+          Go to
+        <a href="https://github.com/deepakajaylinux/kevellphara/blob/master/jzephir.rst">
+          Zephir
+        </a> on GitHub.
+      </li>
+
+        <li>
+        <b>Edit</b> files using GitHub's text editor in your web browser (see the 'Edit' tab on the top right of the file)
+      </li>
+
+      <li>
+        Fill in the <b>Commit message</b> text box at the bottom of the page describing <i>why</i>
+        you made the changes. Press the <b>Propose file change</b> button next to it when done.
+      </li>
+
+      <li>
+        Then click <b>Send a pull request</b>.
+      </li>
+
+      <li>
+        Your changes are now queued for review under the project's <a href="https://github.com/deepakajaylinux/kevellphara/pulls">Pull requests</a> tab on GitHub!
+      </li>
+      </ol>
+
+      <p>
+        For an introduction to the documentation format please see <a href="http://docutils.sourceforge.net/docs/user/rst/quickstart.html">the reST primer</a>.
+      </p>
+
+  </div> -->
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', UA-58804904-1]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+  </body>
+</html>

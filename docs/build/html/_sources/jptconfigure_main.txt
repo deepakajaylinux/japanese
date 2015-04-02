@@ -593,6 +593,7 @@ PTConfigureモジュールと遊ぶ
    jgenerator
    jgimp
    jgitbucket
+   jgitcommand
    jgitkeysafe
    jgitlab
    jgittools
@@ -705,5 +706,5 @@ PTConfigureモジュールと遊ぶ
    jxvfb
    jzendserver
    jzendstudio  
-
+   jzephir
 

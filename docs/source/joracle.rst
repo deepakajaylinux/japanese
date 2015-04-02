@@ -22,12 +22,30 @@ Oracle用のhelpコマンドを以下に示します。
 .. code-block:: bash
 
 
+ kevell@corp:/# ptconfigure oracle help
+
+ ******************************
+
+
+  This command allows you to update Oracle.
+
+  oracle, Ora-cle, Oracle
+
+        - install
+        Installs the latest version of Zephir
+        example: ptconfigure oracle install
+
+ ------------------------------
+ End Help
+ ******************************
+
+
 インストール
 ------------------
 
 インストールが更新されたバージョンでインストールを行うために必要なOracleのインストールが含まれています。それはちょうど下記のコマンドを使用して、ptconfigure Oracleの下にOracleモジュールをインストールするには、マニフェストプロセスであり、
 
-.. Code-block:: bash
+.. code-block:: bash
 
 	ptconfigure Oracle Install
 

@@ -185,29 +185,39 @@
 <p>上記のコマンドのためのスクリーンショットは、以下に記載されている</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user <span class="nb">help</span>
 ******************************
- This <span class="nb">command </span>allows you to modify create or modify users
- User, user
+
+This <span class="nb">command </span>allows you to modify create or modify users
+
+User, user
+
        - create
        Create a new system user, overwriting <span class="k">if </span>it exists
        example: ptconfigure user create --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
        - remove
        Remove a system user
        example: ptconfigure user remove --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
        - <span class="nb">set</span>-password
        Set the password of a system user
        example: ptconfigure user <span class="nb">set</span>-password --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+
        - exists
        Check the existence of a user
        example: ptconfigure user exists --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
        - show-groups
        Show groups to which a user belongs
        example: ptconfigure user show-groups --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+
        - add-to-group
        Add user to a group
        example: ptconfigure user add-to-group --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
        - remove-from-group
        Remove user from a group
        example: ptconfigure user remove-from-group --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+
 ------------------------------
 End Help
 ******************************
@@ -220,11 +230,45 @@ End Help
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure user create --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user create
+
+Enter Username:
+kevell
+******************************
+
+
+User Modifications:
+--------------------------------------------
+
+User: 1
+
+------------------------------
+User Mods Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="remove">
 <h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
 <p>ユーザーはシステムのユーザー アカウントを削除する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure user remove --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user remove
+
+Enter Username:
+kevell
+******************************
+
+
+User Modifications:
+--------------------------------------------
+
+User: 1
+
+------------------------------
+User Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -234,11 +278,66 @@ End Help
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure user <span class="nb">set</span>-password --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user <span class="nb">set</span>-password
+
+Enter Username:
+kevell
+Enter New Password:
+kevell
+******************************
+
+
+User Modifications:
+--------------------------------------------
+
+User:
+
+------------------------------
+User Mods Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="exists">
 <h2>Exists<a class="headerlink" href="#exists" title="Permalink to this headline">¶</a></h2>
 <p>ユーザー、ユーザーの存在を確認する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure user exists --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user exists
+
+Enter Username:
+kevell
+******************************
+
+
+User Modifications:
+--------------------------------------------
+
+User: <span class="nv">Success</span> <span class="o">=</span> User Exists
+User Name:
+
+------------------------------
+User Mods Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user exists
+
+Enter Username:
+karuna
+******************************
+
+
+User Modifications:
+--------------------------------------------
+
+User: Failure - User Does Not Exist
+User Name:
+
+------------------------------
+User Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
@@ -248,6 +347,24 @@ End Help
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure user show-groups --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user show-groups
+
+Enter Username:
+kevell
+******************************
+
+
+User Modifications:
+--------------------------------------------
+
+User: kevell
+
+
+------------------------------
+User Mods Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="add-to-group">
 <h2>Add-to-group<a class="headerlink" href="#add-to-group" title="Permalink to this headline">¶</a></h2>
@@ -255,11 +372,48 @@ End Help
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure user add-to-group --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
 </pre></div>
 </div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user add-to-group --username<span class="o">=</span><span class="s2">&quot;kevell&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;kumar&quot;</span>
+
+Enter New Password:
+kevell
+******************************
+
+
+User Modifications:
+--------------------------------------------
+
+User: 1
+
+------------------------------
+User Mods Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="remove-from-group">
 <h2>Remove-from-group<a class="headerlink" href="#remove-from-group" title="Permalink to this headline">¶</a></h2>
 <p>ユーザー、グループからユーザーを削除する必要がある場合、特定のコマンドの下、プロセスが実行されます。</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure user remove-from-group --username<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure user remove-from-group --username<span class="o">=</span><span class="s2">&quot;kevell&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;kumar&quot;</span>
+
+Enter New Password:
+kevell
+
+/usr/sbin/deluser: You may not remove the user from their primary group.
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> <span class="o">[</span>User<span class="o">]</span> Removing User kevell from the Group kevell did not execute correctly
+******************************
+
+
+User Modifications:
+--------------------------------------------
+
+User:
+
+------------------------------
+User Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
