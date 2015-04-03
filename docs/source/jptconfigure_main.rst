@@ -652,7 +652,7 @@ PTConfigureモジュールと遊ぶ
    jphpedit
    jphpmd
    jphpmodules
-   jphpsepc
+   jphpspec
    jphpssh
    jphpstorm
    jphpunit
