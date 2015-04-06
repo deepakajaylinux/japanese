@@ -693,6 +693,7 @@ PTConfigureモジュールと遊ぶ
    jteamcity   
    jtemplating
    jtomcat
+   jtracelytics
    jubuntucompiler
    juser
    jvarnish
