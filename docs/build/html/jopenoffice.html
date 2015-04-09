@@ -174,17 +174,20 @@
 </div>
 <p>helpコマンドを宣言するための構文は、追加的な利点である大文字と小文字を区別しませんです。次のスクリーンショットは、オープンオフィスの下に、helpコマンドについてあなたを視覚化。</p>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure openoffice <span class="nb">help</span>
-
 ******************************
 
 
- This <span class="nb">command </span>allows you to install OpenOffice.
+ This <span class="nb">command </span>allows you to install and uninstall OpenOffice.
 
- OpenOffice,openoffice,Openoffice
+ Openoffice, openoffice
 
        - install
        Installs OpenOffice.
        example: ptconfigure openoffice install
+
+       - uninstall
+       Uninstalls OpenOffice.
+       example: ptconfigure openoffice uninstall
 
 ------------------------------
 End Help
@@ -241,8 +244,533 @@ Openoffice</td>
 <li>リストアウトインストールする新しいパッケージ。</li>
 <li>、新しくインストールされ、アップグレードされた削除され、アップグレードされていないファイルの数に関する詳細。</li>
 </ul>
-<p>最後に、インストールのプロセスが完了して取得します。次のスクリーンショットは、視覚的にオープンオフィスをインストールするプロセスを表している。</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<p>最後に、インストールのプロセスが完了して取得します。次のスクリーンショットは、視覚的にインストールすると、彼は事務所を開いてアンインストールするプロセスを表す。</p>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure openoffice install
+
+Install OpenOffice? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          OpenOffice !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-47988758288.sh
+chmod 755 /tmp/ptconfigure-temp-script-47988758288.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-47988758288.sh Permissions
+Executing /tmp/ptconfigure-temp-script-47988758288.sh
+--2015-04-07 10:55:59--  http://sourceforge.net/projects/openofficeorg.mirror/files/4.1.1/binaries/en-US/
+Apache_OpenOffice_4.1.1_Linux_x86_install-deb_en-US.tar.gz
+Resolving sourceforge.net <span class="o">(</span>sourceforge.net<span class="o">)</span>... 216.34.181.60
+Connecting to sourceforge.net <span class="o">(</span>sourceforge.net<span class="o">)</span>|216.34.181.60|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://sourceforge.net/projects/openofficeorg.mirror/files/4.1.1/binaries/en-US/Apache_OpenOffice_4.1.1_Linux_x86_install-deb_en-
+US.tar.gz/download <span class="o">[</span>following<span class="o">]</span>
+--2015-04-07 10:56:00--  http://sourceforge.net/projects/openofficeorg.mirror/files/4.1.1/binaries/en-US/
+Apache_OpenOffice_4.1.1_Linux_x86_install-deb_en-US.tar.gz/download
+Connecting to sourceforge.net <span class="o">(</span>sourceforge.net<span class="o">)</span>|216.34.181.60|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://downloads.sourceforge.net/project/openofficeorg.mirror/4.1.1/binaries/en-US/Apache_OpenOffice_4.1.1_Linux_x86_install-
+deb_en- US.tar.gz?r<span class="o">=</span>&amp;ts<span class="o">=</span>1428384361&amp;use_mirror<span class="o">=</span>softlayer-sng <span class="o">[</span>following<span class="o">]</span>
+--2015-04-07 10:56:01--  http://downloads.sourceforge.net/project/openofficeorg.mirror/4.1.1/binaries/en-US/
+Apache_OpenOffice_4.1.1_Linux_x86_install-deb_en-US.tar.gz?r<span class="o">=</span>&amp;ts<span class="o">=</span>1428384361&amp;use_mirror<span class="o">=</span>softlayer-sng
+Resolving downloads.sourceforge.net <span class="o">(</span>downloads.sourceforge.net<span class="o">)</span>... 216.34.181.59
+Connecting to downloads.sourceforge.net <span class="o">(</span>downloads.sourceforge.net<span class="o">)</span>|216.34.181.59|:80... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: http://softlayer-sng.dl.sourceforge.net/project/openofficeorg.mirror/4.1.1/binaries/en-US/
+Apache_OpenOffice_4.1.1_Linux_x86_install- deb_en-US.tar.gz <span class="o">[</span>following<span class="o">]</span>
+--2015-04-07 10:56:02--  http://softlayer-sng.dl.sourceforge.net/project/openofficeorg.mirror/4.1.1/binaries/en-US/
+Apache_OpenOffice_4.1.1_Linux_x86_install-deb_en-US.tar.gz
+Resolving softlayer-sng.dl.sourceforge.net <span class="o">(</span>softlayer-sng.dl.sourceforge.net<span class="o">)</span>... 216.12.198.152
+Connecting to softlayer-sng.dl.sourceforge.net <span class="o">(</span>softlayer-sng.dl.sourceforge.net<span class="o">)</span>|216.12.198.152|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 152829286 <span class="o">(</span>146M<span class="o">)</span> <span class="o">[</span>application/x-gzip<span class="o">]</span>
+Saving to: â€˜Apache_OpenOffice_4.1.1_Linux_x86_install-deb_en-US.tar.gzâ€™
+
+100%<span class="o">[======================================================================================================</span>&gt;<span class="o">]</span> 15,28,29,286  356KB/s   in 11m
+2s
+
+2015-04-07 11:07:04 <span class="o">(</span>226 KB/s<span class="o">)</span> - â€˜Apache_OpenOffice_4.1.1_Linux_x86_install-deb_en-US.tar.gzâ€™ saved <span class="o">[</span>152829286/152829286<span class="o">]</span>
+
+gtk-update-icon-cache: Cache file created successfully.
+gtk-update-icon-cache: Cache file created successfully.
+gtk-update-icon-cache: Cache file created successfully.
+gtk-update-icon-cache: Cache file created successfully.
+en-US/
+en-US/DEBS/
+en-US/DEBS/openoffice-ooofonts_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-brand-calc_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us-writer_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-brand-draw_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-javafilter_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-core07_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-impress_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us-impress_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-core04_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-brand-impress_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-core01_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-graphicfilter_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-brand-math_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-pyuno_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-brand-writer_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-ure_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us-res_4.1.1-6_i386.deb
+en-US/DEBS/openoffice_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-images_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us-draw_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-base_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-draw_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-core06_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-writer_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-core02_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-math_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us-base_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-core05_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-onlineupdate_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-brand-en-us_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us-calc_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-xsltfilter_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us-math_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-ooolinguistic_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-core03_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-en-us-help_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-gnome-integration_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-calc_4.1.1-6_i386.deb
+en-US/DEBS/desktop-integration/
+en-US/DEBS/desktop-integration/openoffice4.1-debian-menus_4.1.1-9775_all.deb
+en-US/DEBS/openoffice-ogltrans_4.1.1-6_i386.deb
+en-US/DEBS/openoffice-brand-base_4.1.1-6_i386.deb
+en-US/readmes/
+en-US/readmes/README_en-US
+en-US/readmes/README_en-US.html
+en-US/licenses/
+en-US/licenses/LICENSE
+en-US/licenses/NOTICE
+<span class="o">(</span>Reading database ... 415747 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../openoffice-base_4.1.1-6_i386.deb ...
+Unpacking openoffice-base <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-brand-base_4.1.1-6_i386.deb ...
+Unpacking openoffice-brand-base <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-brand-calc_4.1.1-6_i386.deb ...
+Unpacking openoffice-brand-calc <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-brand-draw_4.1.1-6_i386.deb ...
+Unpacking openoffice-brand-draw <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-brand-en-us_4.1.1-6_i386.deb ...
+Unpacking openoffice-brand-en-us <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-brand-impress_4.1.1-6_i386.deb ...
+Unpacking openoffice-brand-impress <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-brand-math_4.1.1-6_i386.deb ...
+Unpacking openoffice-brand-math <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-brand-writer_4.1.1-6_i386.deb ...
+Unpacking openoffice-brand-writer <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-calc_4.1.1-6_i386.deb ...
+Unpacking openoffice-calc <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-core01_4.1.1-6_i386.deb ...
+Unpacking openoffice-core01 <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-core02_4.1.1-6_i386.deb ...
+Unpacking openoffice-core02 <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-core03_4.1.1-6_i386.deb ...
+Unpacking openoffice-core03 <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-core04_4.1.1-6_i386.deb ...
+Unpacking openoffice-core04 <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-core05_4.1.1-6_i386.deb ...
+Unpacking openoffice-core05 <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-core06_4.1.1-6_i386.deb ...
+Unpacking openoffice-core06 <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-core07_4.1.1-6_i386.deb ...
+Unpacking openoffice-core07 <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-draw_4.1.1-6_i386.deb ...
+Unpacking openoffice-draw <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us-base_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us-base <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us-calc_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us-calc <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us-draw_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us-draw <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us-help_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us-help <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us-impress_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us-impress <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us-math_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us-math <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us-res_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us-res <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us-writer_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us-writer <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-en-us_4.1.1-6_i386.deb ...
+Unpacking openoffice-en-us <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-gnome-integration_4.1.1-6_i386.deb ...
+Unpacking openoffice-gnome-integration <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-graphicfilter_4.1.1-6_i386.deb ...
+Unpacking openoffice-graphicfilter <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-images_4.1.1-6_i386.deb ...
+Unpacking openoffice-images <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-impress_4.1.1-6_i386.deb ...
+Unpacking openoffice-impress <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-javafilter_4.1.1-6_i386.deb ...
+Unpacking openoffice-javafilter <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-math_4.1.1-6_i386.deb ...
+Unpacking openoffice-math <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-ogltrans_4.1.1-6_i386.deb ...
+Unpacking openoffice-ogltrans <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-onlineupdate_4.1.1-6_i386.deb ...
+Unpacking openoffice-onlineupdate <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-ooofonts_4.1.1-6_i386.deb ...
+Unpacking openoffice-ooofonts <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-ooolinguistic_4.1.1-6_i386.deb ...
+Unpacking openoffice-ooolinguistic <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-pyuno_4.1.1-6_i386.deb ...
+Unpacking openoffice-pyuno <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-ure_4.1.1-6_i386.deb ...
+Unpacking openoffice-ure <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-writer_4.1.1-6_i386.deb ...
+Unpacking openoffice-writer <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice-xsltfilter_4.1.1-6_i386.deb ...
+Unpacking openoffice-xsltfilter <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Preparing to unpack .../openoffice_4.1.1-6_i386.deb ...
+Unpacking openoffice <span class="o">(</span>4.1.1-6<span class="o">)</span> over <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-ure <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-core01 <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-core02 <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-core03 <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-core04 <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-core05 <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-core06 <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-core07 <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-draw <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-gnome-integration <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-graphicfilter <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-images <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-impress <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-javafilter <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-math <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-ogltrans <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-onlineupdate <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-ooofonts <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-ooolinguistic <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-pyuno <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-writer <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-xsltfilter <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-base <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-brand-base <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-brand-draw <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-brand-impress <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-brand-math <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-brand-writer <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-calc <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us-base <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us-calc <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us-draw <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us-help <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us-impress <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us-math <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us-res <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-en-us-writer <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-brand-calc <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+Setting up openoffice-brand-en-us <span class="o">(</span>4.1.1-6<span class="o">)</span> ...
+<span class="o">(</span>Reading database ... 415747 files and directories currently installed.<span class="o">)</span>
+Preparing to unpack .../openoffice4.1-debian-menus_4.1.1-9775_all.deb ...
+Unpacking openoffice-debian-menus <span class="o">(</span>4.1.1-9775<span class="o">)</span> over <span class="o">(</span>4.1.1-9775<span class="o">)</span> ...
+/usr/bin/gtk-update-icon-cache
+/usr/bin/gtk-update-icon-cache
+Setting up openoffice-debian-menus <span class="o">(</span>4.1.1-9775<span class="o">)</span> ...
+/usr/bin/gtk-update-icon-cache
+/usr/bin/gtk-update-icon-cache
+Processing triggers <span class="k">for </span>shared-mime-info <span class="o">(</span>1.2-0ubuntu3<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers <span class="k">for </span>hicolor-icon-theme <span class="o">(</span>0.13-1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>gnome-icon-theme <span class="o">(</span>3.10.0-0ubuntu2<span class="o">)</span> ...
+Temp File /tmp/ptconfigure-temp-script-47988758288.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Installer:
+--------------------------------------------
+OpenOffice: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure openoffice uninstall
+
+Uninstall OpenOffice? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          OpenOffice !        *
+*******************************
+Creating /tmp/ptconfigure-temp-script-27028685322.sh
+chmod 755 /tmp/ptconfigure-temp-script-27028685322.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-27028685322.sh Permissions
+Executing /tmp/ptconfigure-temp-script-27028685322.sh
+gtk-update-icon-cache: Cache file created successfully.
+gtk-update-icon-cache: Cache file created successfully.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package <span class="s1">&#39;openoffice.org-thesaurus-it&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hunspell&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-core&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-spellcheck-en-us&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-dev-doc&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-bundled&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-dict-es&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-dict-en&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-dict-fr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-writer&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openofficeorg-desktop-integration&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-debian-menus&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-en-us&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-impress&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-draw&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-calc&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-ure&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-math&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org3-base&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-base&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-calc&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-common&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-draw&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-emailmerge&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-filter-binfilter&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-gnome&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-gtk&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-ca&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-cs&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-da&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-de&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-dz&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-el&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-en-gb&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-en-us&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-es&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-et&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-eu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-fi&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-fr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-gl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-hi-in&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-hu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-it&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-ja&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-km&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-ko&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-nl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-om&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-pl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-pt&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-pt-br&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-ru&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-sl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-sv&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-zh-cn&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-help-zh-tw&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-af&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-ca&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-de&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-en-us&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-fr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-hr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-hu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-it&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-ro&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-sh&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-sl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-sr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-zu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-impress&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-java-common&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-kde&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-af&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ar&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-as&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ast&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-be-by&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-bg&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-bn&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-br&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-bs&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ca&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-cs&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-cy&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-da&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-de&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-dz&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-el&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-en-gb&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-en-za&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-eo&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-es&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-et&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-eu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-fa&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-fi&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-fr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ga&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-gl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-gu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-he&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-hi-in&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-hr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-hu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-id&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-in&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-it&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ja&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ka&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-km&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ko&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ku&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-lt&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-lv&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-mk&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ml&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-mn&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-mr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-nb&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ne&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-nl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-nn&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-nr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ns&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-oc&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-om&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-or&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-pa-in&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-pl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-pt&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-pt-br&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ro&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ru&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-rw&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-si&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-sk&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-sl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-sr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ss&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-st&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-sv&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ta&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-te&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-tg&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-th&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-tn&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-tr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ts&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ug&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-uk&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-uz&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-ve&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-vi&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-xh&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-za&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-zh-cn&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-zh-tw&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-l10n-zu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-math&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-officebean&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-style-andromeda&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-style-oxygen&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-style-tango&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-ca&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-cs&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-de&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-de-ch&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-en-au&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-en-us&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-fr&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-hu&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-ne&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-ro&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-ru&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-thesaurus-sk&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-voikko&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-writer&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;docvert-openoffice.org&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;kde-thumbnailer-openoffice&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;mozilla-openoffice.org&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openclipart-openoffice.org&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-dmaths&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-filter-mobiledev&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-mysql-connector&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-ogltrans&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-pdfimport&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-presentation-minimizer&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-presenter-console&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-report-builder&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-sdbc-postgresql&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-starter-guide&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-style-crystal&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-style-galaxy&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-style-hicontrast&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-wiki-publisher&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-writer2latex&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-writer2xhtml&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-zemberek&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;python-openoffice&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;libopenoffice-oodoc-perl&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation-lt&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-hyphenation&#39;</span> is not installed, so not removed
+Package <span class="s1">&#39;openoffice.org-dtd-officedocument1.0&#39;</span> is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+ jsvc libcommons-daemon-java libjetty-java libslf4j-java
+Use <span class="s1">&#39;apt-get autoremove&#39;</span> to remove them.
+The following packages will be REMOVED:
+  openoffice-debian-menus*
+0 upgraded, 0 newly installed, 1 to remove and 8 not upgraded.
+After this operation, 2,224 kB disk space will be freed.
+<span class="o">(</span>Reading database ... 415746 files and directories currently installed.<span class="o">)</span>
+Removing openoffice-debian-menus <span class="o">(</span>4.1.1-9775<span class="o">)</span> ...
+/usr/bin/gtk-update-icon-cache
+/usr/bin/gtk-update-icon-cache
+Purging configuration files <span class="k">for </span>openoffice-debian-menus <span class="o">(</span>4.1.1-9775<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>mime-support <span class="o">(</span>3.54ubuntu1.1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>gnome-menus <span class="o">(</span>3.10.1-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>desktop-file-utils <span class="o">(</span>0.22-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>bamfdaemon <span class="o">(</span>0.5.1+14.04.20140409-0ubuntu1<span class="o">)</span> ...
+Rebuilding /usr/share/applications/bamf-2.index...
+Processing triggers <span class="k">for </span>gnome-icon-theme <span class="o">(</span>3.10.0-0ubuntu2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>hicolor-icon-theme <span class="o">(</span>0.13-1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>shared-mime-info <span class="o">(</span>1.2-0ubuntu3<span class="o">)</span> ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  jsvc libcommons-daemon-java libjetty-java libslf4j-java
+0 upgraded, 0 newly installed, 4 to remove and 8 not upgraded.
+After this operation, 1,844 kB disk space will be freed.
+<span class="o">(</span>Reading database ... 415423 files and directories currently installed.<span class="o">)</span>
+Removing jsvc <span class="o">(</span>1.0.15-5ubuntu2<span class="o">)</span> ...
+Removing libcommons-daemon-java <span class="o">(</span>1.0.15-5ubuntu2<span class="o">)</span> ...
+Removing libjetty-java <span class="o">(</span>6.1.26-1ubuntu1<span class="o">)</span> ...
+Removing libslf4j-java <span class="o">(</span>1.7.5-2<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>man-db <span class="o">(</span>2.6.7.1-1ubuntu1<span class="o">)</span> ...
+Processing triggers <span class="k">for </span>doc-base <span class="o">(</span>0.10.5<span class="o">)</span> ...
+Processing 1 removed doc-base file...
+Temp File /tmp/ptconfigure-temp-script-27028685322.sh Removed
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+OpenOffice: Success
+------------------------------
+Installer Finished
+******************************
 </pre></div>
 </div>
 </div>

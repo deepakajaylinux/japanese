@@ -17,7 +17,7 @@ Citadel
 
 .. code-block:: bash
      	
-		ptconfigure  Citadel help
+	ptconfigure  Citadel help
 
 
 スクリーン ショットの絵の表現は以下します。
@@ -231,7 +231,81 @@ Citadel
 
 .. code-block:: bash
          
-	        ptconfigure Citadel configure
+        ptconfigure Citadel configure
+
+.. code-block:: bash
+
+ kevell@corp# ptconfigure citadel configure
+
+ *******************************
+ *        Pharaoh Tools        *
+ *         Citadel Server!        *
+ *******************************
+ [Pharaoh Logging] No environment name provided for Load Balancing
+ What is the environment name you want to balance load to? 
+ kevell
+ Set non-default value for global_log? Default is 127.0.0.1 local0 notice (Y/N) 
+ n
+ Set non-default value for global_maxconn? Default is 2000 (Y/N) 
+ n
+ Set non-default value for global_user? Default is citadel (Y/N) 
+ n
+ Set non-default value for global_group? Default is citadel (Y/N) 
+ n
+ Set non-default value for defaults_log? Default is global (Y/N) 
+ n
+ Set non-default value for defaults_mode? Default is http (Y/N) 
+ n
+ Set non-default value for defaults_option_string? Default is option httplog
+    option dontlognull
+    option redispatch (Y/N) 
+ n
+ Set non-default value for defaults_retries? Default is 3 (Y/N) 
+ n
+ Set non-default value for defaults_timeout_connect? Default is 5000 (Y/N) 
+ n
+ Set non-default value for defaults_timeout_client? Default is 10000 (Y/N) 
+ n
+ Set non-default value for defaults_timeout_server? Default is 10000 (Y/N) 
+ n
+ Set non-default value for listen_appname? Default is appname (Y/N) 
+ n
+ Set non-default value for listen_ip_port? Default is 0.0.0.0:80 (Y/N) 
+ n
+ Set non-default value for listen_mode? Default is http (Y/N) 
+ n
+ Set non-default value for listen_stats_enable? Default is enable (Y/N) 
+ n
+ Set non-default value for listen_stats_uri_string? Default is stats uri /citadel?stats (Y/N) 
+ n
+ Set non-default value for listen_stats_realm_string? Default is stats realm Strictly\ Private (Y/N) 
+ n
+ Set non-default value for listen_stats_auth_string? Default is stats auth ptconfigure:ptconfigure (Y/N) 
+ n
+ Set non-default value for listen_balance? Default is roundrobin (Y/N) 
+ n
+ Set non-default value for listen_option_string? Default is option httpclose
+    option forwardfor (Y/N) 
+ n
+ Set non-default value for listen_server_string? Default is server  192.168.1.10:80 check
+ (Y/N) 
+ n
+ ... All done!
+ *******************************
+ Thanks for installing , visit www.pharaohtools.com for more
+ ******************************
+
+
+ Single App Installer:
+ --------------------------------------------
+ Citadel Server: Success
+ ------------------------------
+ Installer Finished
+ ******************************
+
+
+
+
 
 利点
 --------

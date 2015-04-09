@@ -220,13 +220,26 @@ End Help
 <li>encryption file owner</li>
 <li>encryption file group</li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# sudo ptconfigure encryption install --yes --unencrypted-data<span class="o">=</span><span class="s2">&quot;/home/kevells/Desktop/graphs&quot;</span> --encryption-target-file<span class="o">=</span><span class="s2">&quot;/home/kevells/Desktop/graphs&quot;</span> --encryption-key<span class="o">=</span>/root/.ptconfigure/SSH/key --encryption-file-permissions<span class="o">=</span><span class="s2">&quot;755&quot;</span> --encryption-file-owner<span class="o">=</span><span class="s2">&quot;kevells&quot;</span> --encryption-file-group<span class="o">=</span><span class="s2">&quot;kevells&quot;</span>
-
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp# ptconfigure encryption install
+Install Encryption Functionality? <span class="o">(</span>Y/N<span class="o">)</span>
+y
 *******************************
 *        Pharaoh Tools        *
 *         Encryption !        *
 *******************************
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package php5-mcrypt from the Packager Apt is already installed, so not installing
+Enter either a filepath or raw data to encrypt
+/home/kevell/Desktop/test
+Enter output file path:
+/home/kevell/Desktop/tester
+Enter Encryption Key
+123
+Enter permissions <span class="k">for </span>output file <span class="o">(</span>Empty is okay<span class="o">)</span>:
+
+Enter Owner <span class="k">for </span>output file <span class="o">(</span>Empty is okay<span class="o">)</span>:
+
+Enter Group <span class="k">for </span>output file <span class="o">(</span>Empty is okay<span class="o">)</span>:
+
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
@@ -258,6 +271,40 @@ Installer Finished
 <li>encryption file owner</li>
 <li>encryption file group</li>
 </ul>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure encryption uninstall
+Uninstall Encryption Functionality? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         Encryption !        *
+*******************************
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Package php5-mcrypt from the Packager Apt is already installed, so not installing
+Enter either a filepath or raw data to decrypt
+/home/kevell/Desktop/tester
+Enter output file path:
+/home/kevell/Desktop/testing
+Enter Encryption Key
+123
+Enter permissions <span class="k">for </span>output file <span class="o">(</span>Empty is okay<span class="o">)</span>:
+
+Enter Owner <span class="k">for </span>output file <span class="o">(</span>Empty is okay<span class="o">)</span>:
+
+Enter Group <span class="k">for </span>output file <span class="o">(</span>Empty is okay<span class="o">)</span>:
+
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+
+Single App Uninstaller:
+------------------------------
+Encryption: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
 </div>
 <div class="section" id="id4">
 <h2>別のパラメータ<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>

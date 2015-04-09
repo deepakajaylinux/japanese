@@ -236,61 +236,40 @@ Java, java, java17|</td>
 </table>
 <div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure java17 install
 Install The Oracle Java JDK 1.7? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 *******************************
 *        Pharaoh Tools        *
 *         !!Java JDK!!        *
 *******************************
 Enter Java Install Directory <span class="o">(</span>no trailing slash<span class="o">)</span>:
-
-Creating /tmp/ptconfigure-temp-script-37090112192.sh
-chmod 755 /tmp/ptconfigure-temp-script-37090112192.sh 2&gt;/dev/null
-Changing /tmp/ptconfigure-temp-script-37090112192.sh Permissions
-Executing /tmp/ptconfigure-temp-script-37090112192.sh
---2015-03-16 15:52:21--  https://bitbucket.org/phpengine/cleo-jdk-64/get/6c383e2868bd.zip
-Resolving bitbucket.org <span class="o">(</span>bitbucket.org<span class="o">)</span>... 131.103.20.167, 131.103.20.168
-Connecting to bitbucket.org <span class="o">(</span>bitbucket.org<span class="o">)</span>|131.103.20.167|:443... connected.
+/opt
+Creating /tmp/ptconfigure-temp-script-96883431452.sh
+chmod 755 /tmp/ptconfigure-temp-script-96883431452.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-96883431452.sh Permissions
+Executing /tmp/ptconfigure-temp-script-96883431452.sh
+--2015-04-09 16:27:08--  https://bitbucket.org/phpengine/cleo-jdk-64/get/6c383e2868bd.zip
+Resolving bitbucket.org <span class="o">(</span>bitbucket.org<span class="o">)</span>... 131.103.20.168, 131.103.20.167
+Connecting to bitbucket.org <span class="o">(</span>bitbucket.org<span class="o">)</span>|131.103.20.168|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: unspecified <span class="o">[</span>application/zip<span class="o">]</span>
-Saving to: ‘6c383e2868bd.zip’
+Length: 141966331 <span class="o">(</span>135M<span class="o">)</span> <span class="o">[</span>application/zip<span class="o">]</span>
+Saving to: Ã¢â‚¬Ëœ/tmp/oraclejdk/6c383e2868bd.zipÃ¢â‚¬â„¢
 
-   <span class="o">[</span>          &lt;<span class="o">=</span>&gt;                                                                                          <span class="o">]</span> 2,06,54,011 2.98KB/s   in 12m 14s
+100%<span class="o">[====================================================================================================</span>&gt;<span class="o">]</span> 14,19,66,331  110KB/s   in 12m 36s
 
-2015-03-16 16:04:59 <span class="o">(</span>27.5 KB/s<span class="o">)</span> - ‘6c383e2868bd.zip’ saved <span class="o">[</span>20654011<span class="o">]</span>
+2015-04-09 16:39:46 <span class="o">(</span>183 KB/s<span class="o">)</span> - Ã¢â‚¬Ëœ/tmp/oraclejdk/6c383e2868bd.zipÃ¢â‚¬â„¢ saved <span class="o">[</span>141966331/141966331<span class="o">]</span>
 
-/tmp/oraclejdk: Scheme missing.
-FINISHED --2015-03-16 16:04:59--
-Total wall clock <span class="nb">time</span>: 12m 39s
-Downloaded: 1 files, 20M in 12m 14s <span class="o">(</span>27.5 KB/s<span class="o">)</span>
- End-of-central-directory signature not found.  Either this file is not
- a zipfile, or it constitutes one disk of a multi-part archive.  In the
- latter <span class="k">case </span>the central directory and zipfile comment will be found on
- the last disk<span class="o">(</span>s<span class="o">)</span> of this archive.
-unzip:  cannot find zipfile directory in one of /tmp/oraclejdk.zip or
-       /tmp/oraclejdk.zip.zip, and cannot find /tmp/oraclejdk.zip.ZIP, period.
-/tmp/ptconfigure-temp-script-37090112192.sh: 6: <span class="nb">cd</span>: can<span class="s1">&#39;t cd to /tmp/oraclejdk</span>
-<span class="s1">mv: cannot stat ‘/tmp/oraclejdk/phpengine-cleo-jdk-64-6c383e2868bd/jdk-7u60-linux-x64.tar.gz’: No such file or directory</span>
-<span class="s1">tar: jdk-7u60-linux-x64.tar.gz: Cannot open: No such file or directory</span>
-<span class="s1">tar: Error is not recoverable: exiting now</span>
-<span class="s1">mkdir: missing operand</span>
-<span class="s1">Try &#39;</span>mkdir --help<span class="s1">&#39; for more information.</span>
-<span class="s1">cp: missing destination file operand after ‘/tmp/oraclejdk/jdk1.7.0_60/*’</span>
-<span class="s1">Try &#39;</span>cp --help<span class="s1">&#39; for more information.</span>
-<span class="s1">chmod: missing operand after ‘a+x’</span>
-<span class="s1">Try &#39;</span>chmod --help<span class="s1">&#39; for more information.</span>
-<span class="s1">update-alternatives: error: alternative path /bin/java doesn&#39;</span>t exist
-update-alternatives: error: alternative path /bin/javac doesn<span class="s1">&#39;t exist</span>
-<span class="s1">update-alternatives: error: alternative path /bin/javaws doesn&#39;</span>t exist
-update-alternatives: error: alternative /bin/java <span class="k">for </span>java not registered; not setting
-update-alternatives: error: alternative /bin/javac <span class="k">for </span>javac not registered; not setting
-update-alternatives: error: alternative /bin/javaws <span class="k">for </span>javaws not registered; not setting
 Archive:  /tmp/oraclejdk.zip
-Temp File /tmp/ptconfigure-temp-script-37090112192.sh Removed
+6c383e2868bd47e56385921e11ec155ac54faa13
+  creating: /tmp/oraclejdk/phpengine-cleo-jdk-64-6c383e2868bd/
+ inflating: /tmp/oraclejdk/phpengine-cleo-jdk-64-6c383e2868bd/jdk-7u60-linux-x64.tar.gz
+update-alternatives: using /opt/bin/java to provide /usr/bin/java <span class="o">(</span>java<span class="o">)</span> in auto mode
+update-alternatives: using /opt/bin/javac to provide /usr/bin/javac <span class="o">(</span>javac<span class="o">)</span> in auto mode
+update-alternatives: using /opt/bin/javaws to provide /usr/bin/javaws <span class="o">(</span>javaws<span class="o">)</span> in auto mode
+Temp File /tmp/ptconfigure-temp-script-96883431452.sh Removed
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
 ******************************
-
 
 Single App Installer:
 --------------------------------------------

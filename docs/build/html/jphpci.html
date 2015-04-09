@@ -306,101 +306,113 @@ directory</td>
 </tbody>
 </table>
 <p>次のスクリーン ショットは、絵インストール上記に説明したプロセスを示しています。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#  ptconfigure phpci install
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#ptconfigure PHPCI install
 Install PHPCI? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 *******************************
 *        Pharaoh Tools        *
 *          ! PHPCI !        *
 *******************************
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following extra packages will be installed:
- libmcrypt4
-Suggested packages:
- libmcrypt-dev mcrypt
-The following NEW packages will be installed:
- libmcrypt4 php5-mcrypt
-0 upgraded, 2 newly installed, 0 to remove and 301 not upgraded.
-Need to get 77.3 kB of archives.
-After this operation, 324 kB of additional disk space will be used.
-Get:1 http://in.archive.ubuntu.com/ubuntu/ trusty/universe libmcrypt4 amd64 2.5.8-3.1ubuntu1 <span class="o">[</span>61.9 kB<span class="o">]</span>
-Get:2 http://in.archive.ubuntu.com/ubuntu/ trusty/universe php5-mcrypt amd64 5.4.6-0ubuntu5 <span class="o">[</span>15.4 kB<span class="o">]</span>
-Fetched 77.3 kB in 4s <span class="o">(</span>19.1 kB/s<span class="o">)</span>
-Selecting previously unselected package libmcrypt4.
-<span class="o">(</span>Reading database ... 182037 files and directories currently installed.<span class="o">)</span>
-Preparing to unpack .../libmcrypt4_2.5.8-3.1ubuntu1_amd64.deb ...
-Unpacking libmcrypt4 <span class="o">(</span>2.5.8-3.1ubuntu1<span class="o">)</span> ...
-Selecting previously unselected package php5-mcrypt.
-Preparing to unpack .../php5-mcrypt_5.4.6-0ubuntu5_amd64.deb ...
-Unpacking php5-mcrypt <span class="o">(</span>5.4.6-0ubuntu5<span class="o">)</span> ...
-Setting up libmcrypt4 <span class="o">(</span>2.5.8-3.1ubuntu1<span class="o">)</span> ...
-Setting up php5-mcrypt <span class="o">(</span>5.4.6-0ubuntu5<span class="o">)</span> ...
-Processing triggers <span class="k">for </span>libc-bin <span class="o">(</span>2.19-0ubuntu6<span class="o">)</span> ...
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package php5-mcrypt from the Packager Apt executed correctly
-Creating /tmp/ptconfigure-temp-script-82480901916.sh
-chmod 755 /tmp/ptconfigure-temp-script-82480901916.sh 2&gt;/dev/null
-Changing /tmp/ptconfigure-temp-script-82480901916.sh Permissions
-Executing /tmp/ptconfigure-temp-script-82480901916.sh
-Temp File /tmp/ptconfigure-temp-script-82480901916.sh Removed
-Creating /tmp/ptconfigure-temp-script-43828918328.sh
-chmod 755 /tmp/ptconfigure-temp-script-43828918328.sh 2&gt;/dev/null
-Changing /tmp/ptconfigure-temp-script-43828918328.sh Permissions
-Executing /tmp/ptconfigure-temp-script-43828918328.sh
-Enabling module rewrite.
-To activate the new configuration, you need to run:
- service apache2 restart
-Temp File /tmp/ptconfigure-temp-script-43828918328.sh Removed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Packages php5-mcrypt, curl from the Packager Apt are already installed, so not installing
+Creating /tmp/ptconfigure-temp-script-45785693692.sh
+chmod 755 /tmp/ptconfigure-temp-script-45785693692.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-45785693692.sh Permissions
+Executing /tmp/ptconfigure-temp-script-45785693692.sh
+Temp File /tmp/ptconfigure-temp-script-45785693692.sh Removed
+Creating /tmp/ptconfigure-temp-script-47686609771.sh
+chmod 755 /tmp/ptconfigure-temp-script-47686609771.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-47686609771.sh Permissions
+Executing /tmp/ptconfigure-temp-script-47686609771.sh
+Module rewrite already enabled
+Temp File /tmp/ptconfigure-temp-script-47686609771.sh Removed
 <span class="o">[</span>Pharaoh Logging<span class="o">]</span> Ensure module install is not checking versions
-sh: 1: composer: not found
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Composer reports itself as Not Installed
-<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Installing as not installed
-*******************************
-*        Pharaoh Tools        *
-*          Composer!         *
-*******************************
-What is the program data directory? Found <span class="s2">&quot;/opt/composer&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for </span>yes, no end slash<span class="o">)</span>
-
-What is the program executor directory? Found <span class="s2">&quot;/usr/bin&quot;</span> - use this? <span class="o">(</span>Enter nothing <span class="k">for </span>yes, No Trailing Slash<span class="o">)</span>
-
-git clone <span class="s1">&#39;https://github.com/phpengine/composer-phar.git&#39;</span>  /tmp/composer/composerCloning into <span class="s1">&#39;/tmp/composer/composer&#39;</span>...
-
-
-remote: Counting objects: 6, <span class="k">done</span>.
-remote: Total 6 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
-Unpacking objects: 100% <span class="o">(</span>6/6<span class="o">)</span>, <span class="k">done</span>.
-Checking connectivity... <span class="k">done</span>.
-Program Data folder populated
-Program Executor Deleted <span class="k">if </span>existed
-... All <span class="k">done</span>!
-*******************************
-Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
-Creating /tmp/ptconfigure-temp-script-34508236330.sh
-chmod 755 /tmp/ptconfigure-temp-script-34508236330.sh 2&gt;/dev/null
-Changing /tmp/ptconfigure-temp-script-34508236330.sh Permissions
-Executing /tmp/ptconfigure-temp-script-34508236330.sh
-<span class="c">#!/usr/bin/env php</span>
-Installing block8/phpci <span class="o">(</span>1.5.2<span class="o">)</span>
- - Installing block8/phpci <span class="o">(</span>1.5.2<span class="o">)</span>
-   Downloading: 100%
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Module Composer reports itself as Installed
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Not installing as already installed
+Creating /tmp/ptconfigure-temp-script-71236381661.sh
+chmod 755 /tmp/ptconfigure-temp-script-71236381661.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-71236381661.sh Permissions
+Executing /tmp/ptconfigure-temp-script-71236381661.sh
+Installing block8/phpci <span class="o">(</span>1.6.0<span class="o">)</span>
+  - Installing block8/phpci <span class="o">(</span>1.6.0<span class="o">)</span>
+   Loading from cache
 
 Created project in phpci
 Loading composer repositories with package information
 Installing dependencies from lock file
-Warning: The lock file is not up to date with the latest changes in composer.json. You may be getting outdated dependencies. Run update to update them.
-Your requirements could not be resolved to an installable <span class="nb">set </span>of packages.
+ - Installing symfony/yaml <span class="o">(</span>v2.6.4<span class="o">)</span>
+   Loading from cache
 
- Problem 1
-   - The requested PHP extension ext-pdo_mysql * is missing from your system.
+ - Installing block8/b8framework <span class="o">(</span>1.1.9<span class="o">)</span>
+   Loading from cache
 
-Temp File /tmp/ptconfigure-temp-script-34508236330.sh Removed
-Creating /tmp/ptconfigure-temp-script-28990655696.sh
-chmod 755 /tmp/ptconfigure-temp-script-28990655696.sh 2&gt;/dev/null
-Changing /tmp/ptconfigure-temp-script-28990655696.sh Permissions
-Executing /tmp/ptconfigure-temp-script-28990655696.sh
-sudo: dapperstrano: <span class="nb">command </span>not found
-Temp File /tmp/ptconfigure-temp-script-28990655696.sh Removed
+ - Installing ircmaxell/password-compat <span class="o">(</span>v1.0.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing psr/log <span class="o">(</span>1.0.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing monolog/monolog <span class="o">(</span>1.12.0<span class="o">)</span>
+   Loading from cache
+
+ - Installing pimple/pimple <span class="o">(</span>v1.1.1<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/console <span class="o">(</span>v2.6.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/filesystem <span class="o">(</span>v2.6.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing symfony/config <span class="o">(</span>v2.6.4<span class="o">)</span>
+   Loading from cache
+
+ - Installing robmorgan/phinx <span class="o">(</span>v0.4.2.1<span class="o">)</span>
+   Loading from cache
+
+ - Installing swiftmailer/swiftmailer <span class="o">(</span>v5.3.1<span class="o">)</span>
+   Loading from cache
+
+Generating autoload files
+Temp File /tmp/ptconfigure-temp-script-42085224634.sh Removed
+Creating /tmp/ptconfigure-temp-script-47565859655.sh
+chmod 755 /tmp/ptconfigure-temp-script-47565859655.sh 2&gt;/dev/null
+Changing /tmp/ptconfigure-temp-script-47565859655.sh Permissions
+Executing /tmp/ptconfigure-temp-script-47565859655.sh
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Lets begin Configuration of a Web Server <span class="k">for </span>PHPCI
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Lets Add our Apache VHost
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Now lets restart Apache so we are serving our new application
+
+Logging Starting
+Logging Complete
+Logging Starting
+Logging Complete
+&lt;VirtualHost 127.0.0.1:80&gt;
+       ServerAdmin webmaster@localhost
+       ServerName www.phpci.local
+       DocumentRoot /opt/phpci/phpci/public/
+       &lt;Directory /opt/phpci/phpci/public/&gt;
+               Options Indexes FollowSymLinks MultiViews
+               AllowOverride All
+               Require all granted
+
+       &lt;IfModule mod_rewrite.c&gt;
+         RewriteEngine On
+         RewriteBase /opt/phpci/phpci/public/
+         RewriteCond %<span class="o">{</span>REQUEST_FILENAME<span class="o">}</span> !-f
+         RewriteCond %<span class="o">{</span>REQUEST_FILENAME<span class="o">}</span> !-d
+         RewriteRule . /index.php <span class="o">[</span>L<span class="o">]</span>
+       &lt;/IfModule&gt;
+
+       &lt;/Directory&gt;
+
+&lt;/VirtualHost&gt;
+
+Assuming Okay due to yes parameter
+Site www.phpci.local already enabled
+a2ensite www.phpci.local <span class="k">done</span>
+Logging Starting
+Logging Complete
+Temp File /tmp/ptconfigure-temp-script-47565859655.sh Removed
 ... All <span class="k">done</span>!
 *******************************
 Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
@@ -410,6 +422,69 @@ Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span 
 Single App Installer:
 --------------------------------------------
 PHPCI: Success
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#ptconfigure PHPCI config-default
+
+Install PHP CI Default Configuration? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*         PHPCI Defaults        *
+*******************************
+Set non-default value <span class="k">for </span>db_read_host? Default is 127.0.0.1 <span class="o">(</span>Y/N<span class="o">)</span>
+n
+Set non-default value <span class="k">for </span>db_write_host? Default is 127.0.0.1 <span class="o">(</span>Y/N<span class="o">)</span>
+n
+Set non-default value <span class="k">for </span>db_name? Default is phpci <span class="o">(</span>Y/N<span class="o">)</span>
+n
+Set non-default value <span class="k">for </span>db_username? Default is phpci <span class="o">(</span>Y/N<span class="o">)</span>
+n
+Set non-default value <span class="k">for </span>db_pass? Default is phpci_pass <span class="o">(</span>Y/N<span class="o">)</span>
+n
+Set non-default value <span class="k">for </span>phpci_url? Default is http://www.phpci.local <span class="o">(</span>Y/N<span class="o">)</span>
+n
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+Single App Installer:
+--------------------------------------------
+No Data.
+------------------------------
+Installer Finished
+******************************
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/#ptconfigure phpci install-default-database
+Install PHPCI? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*        Pharaoh Tools        *
+*          ! PHPCI !        *
+*******************************
+What<span class="s1">&#39;s the MySQL Admin User?</span>
+<span class="s1">root</span>
+<span class="s1">What&#39;</span>s the MySQL Admin Password?
+root
+Database script executed
+******************************
+
+Seems Fine...Database Actions Finished
+******************************
+
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.pharaohtools.com <span class="k">for </span>more
+******************************
+
+Single App Installer:
+--------------------------------------------
+No Data.
 ------------------------------
 Installer Finished
 ******************************
