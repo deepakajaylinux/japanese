@@ -99,6 +99,8 @@
 <li><a class="reference internal" href="#add">Add</a></li>
 <li><a class="reference internal" href="#remove">Remove</a></li>
 <li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#enable">Enable</a></li>
+<li><a class="reference internal" href="#disable">Disable</a></li>
 <li><a class="reference internal" href="#id3">メリット</a></li>
 </ul>
 </li>
@@ -495,6 +497,88 @@ Current Installed ServerBlocks:
 
 
 1ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="enable">
+<h2>Enable<a class="headerlink" href="#enable" title="Permalink to this headline">¶</a></h2>
+<p>イネーブル機能はserverblockを有効にするために使用されます。有効に使用するコマンドは、以下の通りです</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy nginxsbe <span class="nb">enable</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe <span class="nb">enable</span>
+
+Do you want to <span class="nb">enable </span>a ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is your Enabled Symlink ServerBlock directory? Found <span class="s2">&quot;/etc/nginx/sites-enabled&quot;</span> - Enter nothing to use this
+
+Please Choose ServerBlock:
+--- All Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> ServerBlocktemp
+<span class="o">(</span>1<span class="o">)</span> aaaaaa
+<span class="o">(</span>2<span class="o">)</span> as
+<span class="o">(</span>3<span class="o">)</span> ddd
+<span class="o">(</span>4<span class="o">)</span> default
+<span class="o">(</span>5<span class="o">)</span> default.dpkg-old
+<span class="o">(</span>6<span class="o">)</span> dfdkdfsd.com
+<span class="o">(</span>7<span class="o">)</span> dfsdfssfdfdfdf.com
+<span class="o">(</span>8<span class="o">)</span> google
+<span class="o">(</span>9<span class="o">)</span> karuna
+<span class="o">(</span>10<span class="o">)</span> kkkkkkk
+<span class="o">(</span>11<span class="o">)</span> kumark
+<span class="o">(</span>12<span class="o">)</span> sites-available
+<span class="o">(</span>13<span class="o">)</span> vijay
+<span class="o">(</span>14<span class="o">)</span> www.amazon.com
+<span class="o">(</span>15<span class="o">)</span> www.deepak.com
+<span class="o">(</span>16<span class="o">)</span> www.google.com
+<span class="o">(</span>17<span class="o">)</span> www.kkk.com
+
+1
+Server Block Enabled Symlink Created
+******************************
+ServerBlock Creator Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="disable">
+<h2>Disable<a class="headerlink" href="#disable" title="Permalink to this headline">¶</a></h2>
+<p>禁止機能は、サーバーのブロックを無効にするために使用される。無効にするためのコマンドは、以下に記載されている</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy nginxsbe disable
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy nginxsbe disable
+
+Do you want to disable a ServerBlock? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+What is your Enabled Symlink ServerBlock directory? Found <span class="s2">&quot;/etc/nginx/sites-enabled&quot;</span> - Enter nothing to use this
+
+Please Choose ServerBlock:
+--- All Server Blocks: ---
+<span class="o">(</span>0<span class="o">)</span> ServerBlocktemp
+<span class="o">(</span>1<span class="o">)</span> aaaaaa
+<span class="o">(</span>2<span class="o">)</span> as
+<span class="o">(</span>3<span class="o">)</span> ddd
+<span class="o">(</span>4<span class="o">)</span> default
+<span class="o">(</span>5<span class="o">)</span> default.dpkg-old
+<span class="o">(</span>6<span class="o">)</span> dfdkdfsd.com
+<span class="o">(</span>7<span class="o">)</span> dfsdfssfdfdfdf.com
+<span class="o">(</span>8<span class="o">)</span> google
+<span class="o">(</span>9<span class="o">)</span> karuna
+<span class="o">(</span>10<span class="o">)</span> kkkkkkk
+<span class="o">(</span>11<span class="o">)</span> kumark
+<span class="o">(</span>12<span class="o">)</span> sites-available
+<span class="o">(</span>13<span class="o">)</span> vijay
+<span class="o">(</span>14<span class="o">)</span> www.amazon.com
+<span class="o">(</span>15<span class="o">)</span> www.deepak.com
+<span class="o">(</span>16<span class="o">)</span> www.google.com
+<span class="o">(</span>17<span class="o">)</span> www.kkk.com
+
+1
+Server Block aaaaaa Disabled  <span class="k">if </span>exist
+******************************
+ServerBlock Creator Finished
 ******************************
 </pre></div>
 </div>

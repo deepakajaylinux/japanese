@@ -23,8 +23,7 @@ Helpコマンド
 
 
  kevell@corp:/# ptdeploy EnvironmentConfig help
- ******************************
-
+ **************************************************
 
   This command is part of a default Module and provides you with a method by which you can
   configure environments for your project from the command line. Currently compliant with
@@ -35,18 +34,17 @@ Helpコマンド
 
         - list
         List current environments
-        example: ptconfigure envconfig list --yes
+        example: ptdeploy envconfig list --yes
 
         - configure, config
         Configure the environments for your project to use
-        example: ptconfigure envconfig config
-        example: ptconfigure envconfig config --keep-current-environments
+        example: ptdeploy envconfig config
+        example: ptdeploy envconfig config --keep-current-environments
 
         - delete, del
         Configure the environments for your project to use
-        example: ptconfigure envconfig delete
-        example: ptconfigure envconfig del --environment-name="staging"
-
+        example: ptdeploy envconfig delete
+        example: ptdeploy envconfig del --environment-name="staging"
 
  ------------------------------
  End Help
@@ -97,30 +95,35 @@ Add Another Server? (Y/N)
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure envconfig config
+
+ kevell@corp:/# ptdeploy envconfig config
+
  Configure Environments Here? (Y/N) 
- Y
- Environment 1  : 
+ y
+ Do you want to add another environment? (Y/N) 
+ y
+ Environment 3  : 
  Default Settings for Any App not setup for environment  enter them now.
  Value for: Name of this Environment
- kevells
+ deepak
  Value for: Default Temp Dir (should usually be /tmp/)
-
+ /tmp/
  Enter Servers - this is an array of entries
  Enter target ?
- /home/kevells
+ 192.168.1.7
  Enter user ?
- kevells
+ deepak
  Enter password ?
- 123456
+ 123
  Add Another Server? (Y/N)
- N
+ n
  ******************************
-
-
  Success
  In Environment Configuration
- ******************************
+ ****************************** 
+
+
+
 
 
 環境を構成するとき、ユーザーが現在の環境と設定したい場合彼ら使用できます、次のコマンド:
@@ -167,19 +170,19 @@ Add Another Server? (Y/N)
 .. code-block:: bash
 
 
+
  kevell@corp:/# ptdeploy envconfig config --keep-current-environments
+
  Configure Environments Here? (Y/N) 
- Y
+ y
  Use existing environment settings? (Y/N) 
- Y
+ y
  Do you want to add another environment? (Y/N) 
- N
+ n
  ******************************
-
-
  Success
  In Environment Configuration
- ******************************
+ ****************************** 
 
 
 
@@ -219,20 +222,18 @@ Step 2: Environment Kevells(Name of the specified environment that is supposed t
 
 .. code-block:: bash
 
- kevell@corp:/# ptconfigure envconfig del --environment-name="kevells"
+ kevell@corp:/# ptdeploy envconfig del --environment-name="kevells"
+
  Delete Environments Here?
  WARNING: Deleting an environment from papyrus is final. You may be looking for boxify box-destroy instead (Y/N) 
- Y
+ y
  Environment kevells found. Are you sure you want to delete it? (Y/N) 
- Y
+ y
  [Pharaoh Logging] Removing environment kevells.
- ******************************
-
-
+ ****************************
  Success
  In Environment Configuration
- ******************************
-
+ ****************************
 
 
 環境の名前を指定せずによって環境を削除する別の方法は、コマンドを使用して示すように。
@@ -261,18 +262,22 @@ Step 1: Delete Environments Here?
 .. code-block:: bash
 
 
+
  kevell@corp:/# ptdeploy envconfig delete
+
  Delete Environments Here?
  WARNING: Deleting an environment from papyrus is final. You may be looking for boxify box-destroy instead (Y/N) 
- Y
- PHP Notice:  Undefined index: environment-name in /opt/ptdeploy/ptdeploy/src/Modules/EnvironmentConfig/Model/EnvironmentConfigAllLinux .php on line 161
- PHP Notice:  Undefined index: environment-name in /opt/ptdeploy/ptdeploy/src/Modules/EnvironmentConfig/Model/EnvironmentConfigAllLinux .php on line 161
+ y
+ Enter Environment Name To delete
+ deepak
+ Environment deepak found. Are you sure you want to delete it? (Y/N) 
+ y
+ [Pharaoh Logging] Removing environment deepak.
  ******************************
-
-
  Success
  In Environment Configuration
- ******************************
+ ****************************** 
+
 
 
 
@@ -293,13 +298,12 @@ Y として指定した場合の出力のスクリーン ショットに示す�
 
 .. code-block:: bash
 
- kevell@corp:/# ptdeploy envconfig list
- List Environments Here? (Y/N) 
- Y
- ******************************
 
 
- array(2) {
+ kevell@corp:/# ptdeploy envconfig list --yes
+ ************************************************
+
+ array(3) {
   [0]=>
   array(2) {
     ["any-app"]=>
@@ -344,10 +348,34 @@ Y として指定した場合の出力のスクリーン ショットに示す�
       }
     }
   }
+  [2]=>
+  array(2) {
+    ["any-app"]=>
+    array(2) {
+      ["gen_env_name"]=>
+      string(6) "deepak"
+      ["gen_env_tmp_dir"]=>
+      string(5) "/tmp/"
+    }
+    ["servers"]=>
+    array(1) {
+      [0]=>
+      array(3) {
+        ["target"]=>
+        string(11) "192.168.1.7"
+        ["user"]=>
+        string(6) "deepak"
+        ["password"]=>
+        string(3) "123"
+      }
+    }
+  }
  }
 
  In Environment Configuration
  ******************************
+
+
 
 
 代替パラメータ

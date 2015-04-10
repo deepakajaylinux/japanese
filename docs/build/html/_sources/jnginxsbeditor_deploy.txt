@@ -378,6 +378,102 @@ What is your Enabled Symlink ServerBlock directory?
  1ServerBlock Creator Finished
  ******************************
 
+
+Enable
+----------
+
+イネーブル機能はserverblockを有効にするために使用されます。有効に使用するコマンドは、以下の通りです
+
+.. code-block:: bash
+
+	ptdeploy nginxsbe enable
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy nginxsbe enable
+
+ Do you want to enable a ServerBlock? (Y/N) 
+ y
+ What is your Enabled Symlink ServerBlock directory? Found "/etc/nginx/sites-enabled" - Enter nothing to use this
+
+ Please Choose ServerBlock:
+ --- All Server Blocks: ---
+ (0) ServerBlocktemp
+ (1) aaaaaa
+ (2) as
+ (3) ddd
+ (4) default
+ (5) default.dpkg-old
+ (6) dfdkdfsd.com
+ (7) dfsdfssfdfdfdf.com
+ (8) google
+ (9) karuna
+ (10) kkkkkkk
+ (11) kumark
+ (12) sites-available
+ (13) vijay
+ (14) www.amazon.com
+ (15) www.deepak.com
+ (16) www.google.com
+ (17) www.kkk.com
+
+ 1
+ Server Block Enabled Symlink Created
+ ******************************
+ ServerBlock Creator Finished
+ ******************************
+
+
+Disable
+---------
+
+禁止機能は、サーバーのブロックを無効にするために使用される。無効にするためのコマンドは、以下に記載されている
+
+.. code-block:: bash
+
+	ptdeploy nginxsbe disable
+
+
+.. code-block:: bash
+
+
+ kevell@corp:/# ptdeploy nginxsbe disable
+
+ Do you want to disable a ServerBlock? (Y/N) 
+ y
+ What is your Enabled Symlink ServerBlock directory? Found "/etc/nginx/sites-enabled" - Enter nothing to use this
+
+ Please Choose ServerBlock:
+ --- All Server Blocks: ---
+ (0) ServerBlocktemp
+ (1) aaaaaa
+ (2) as
+ (3) ddd
+ (4) default
+ (5) default.dpkg-old
+ (6) dfdkdfsd.com
+ (7) dfsdfssfdfdfdf.com
+ (8) google
+ (9) karuna
+ (10) kkkkkkk
+ (11) kumark
+ (12) sites-available
+ (13) vijay
+ (14) www.amazon.com
+ (15) www.deepak.com
+ (16) www.google.com
+ (17) www.kkk.com
+
+ 1
+ Server Block aaaaaa Disabled  if exist
+ ******************************
+ ServerBlock Creator Finished
+ ******************************
+
+
+
+
 メリット
 ----------
 

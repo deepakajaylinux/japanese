@@ -70,7 +70,7 @@ Helpコマンド
 
 
 
-インストール
+Installation
 ----------------
 
 インストールする必要があるとき、ユーザーは DBIstall のため、次のコマンドを発行できます。システムがインストールの手順を実行します。
@@ -81,46 +81,44 @@ Helpコマンド
 		 ptdeploy dbinstall install
 
 
-システムの既定のホストを使用して Enter キーを押して、Mysql のホストを求めます。
-
-
 .. code-block:: bash
 
- What's the Mysql Host? Enter for 127.0.0.1
 
+ kevell@corp:/# ptdeploy DBInstall install
+ Do you want to install a database? (Y/N) 
+ y
+ What's the Mysql Host? Enter for 127.0.0.1 
 
-システムを求める Mysql 管理者ユーザー ユーザー名は"root"となりますと、Mysql の管理者パスワードです。
+ What's the MySQL Admin User? 
 
+ You must enter a value. Please try again.
+ What's the MySQL Admin User?
 
-.. code-block:: bash
-
+ You must enter a value. Please try again.
  What's the MySQL Admin User?
  root
  What's the MySQL Admin Password?
- 123456
+ root
+ What's the application DB User?
+ (0) **CREATE NEW USER** 
+ (1) phpci 
+ (2) debian-sys-maint 
+ (3) phpci 
+ (4) phpmyadmin 
+ 1
+ What's the application DB Password?
+ phpci_pass
+ What's the application DB Name?
+ Current Db's are:
+ hps
+ phpci
+ phpmyadmin
 
- 
-その後、システムを求めるアプリケーション DB ユーザー既存ユーザーを続行または新しいユーザーを作成することができます。一度提供するオプションの '0' で新しいユーザー、システム、新しいユーザー名やアプリケーション DB パスワード アプリケーション DB 名を求めるため。
-
-
-.. code-block:: bash
-
-
-
-
-
-
-一度上記記載システム確認を求めます。確認の後、システムは、プロセスを実行します。
-
-
-.. code-block:: bash
-
-
-
-
-
-
-
+ phpci
+ Database script executed
+ **************************************
+ Seems Fine...Database Actions Finished
+ **************************************
 
 
 
@@ -135,40 +133,34 @@ Save
 	
 		ptdeploy dbinstall save	
 
-処刑の前に、システムを求める続行、続行する場合は、'Y' を入力する確認場合ない enter ' ñ '。
-
-
 .. code-block:: bash
 
 
-
-
-
-
-
-
-
-システムの既定のホストを使用して Enter キーを押して、Mysql のホストを求めます。
-
-.. code-block:: bash
-
+ kevell@corp:/# ptdeploy DBInstall save
+ Do you want to save a database? (Y/N) 
+ y
  What's the Mysql Host? Enter for 127.0.0.1
-
-
-システムを求める Mysql 管理者ユーザー ユーザー名は"root"となりますと、Mysql の管理者パスワードです。
-
-
-.. code-block:: bash
 
  What's the MySQL Admin User?
  root
  What's the MySQL Admin Password?
- 123456
+ root
+ What's the application DB Name?
+ Current Db's are:
+ asdf
+ hps
+ phpci 
 
- 
-その後、システムは、アプリケーションDBユーザーをお願いいたします。
+ asdf
+ Cannot connect with these details. Sure you want to continue? (Y/N) 
+ y
+ Exporting DB to /opt/db/database.sql 
+ Database Dumping...
+ **************************************
+ Seems Fine...Database Actions Finished
+ ************************************** 
 
-.. code-block:: bash
+
 
 
 Drop
@@ -180,37 +172,32 @@ Drop
 	
 		ptdeploy dbinstall drop      
 
-処刑の前に、システムを求める続行、続行する場合は、'Y' を入力する確認場合ない enter ' ñ '。                   
 
 .. code-block:: bash
 
 
+ kevell@corp:/# ptdeploy db-install drop 
 
-
-
-
-
-
-システムの既定のホストを使用して Enter キーを押して、Mysql のホストを求めます。
-
-
-.. code-block:: bash
-
- What's the Mysql Host? Enter for 127.0.0.1
-
-システムを求める Mysql 管理者ユーザー ユーザー名は"root"となりますと、Mysql の管理者パスワードです。
-
-.. code-block:: bash
+ Do you want to perform drop actions (user/db)? (Y/N) 
+ y
+ Do you want to drop a database? (Y/N) 
+ y
+ What's the Mysql Host? Enter for 127.0.0.1 
 
  What's the MySQL Admin User?
  root
  What's the MySQL Admin Password?
- 123456
+ root123
+ What's the application DB Name?
+ (0) karuna 
+ (1) test1 
+ (2) test2 
+ 2
+ Database test2 dropped
+ **************************************
+ Seems Fine...Database Actions Finished
+ **************************************
 
- 
-その後、システムは、アプリケーションDBユーザーをお願いいたします。
-
-.. code-block:: bash
 
 
 

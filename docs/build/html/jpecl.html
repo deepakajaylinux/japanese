@@ -95,14 +95,11 @@
 <li><a class="reference internal" href="#">PECL</a><ul>
 <li><a class="reference internal" href="#id1">あらすじ</a></li>
 <li><a class="reference internal" href="#id2">ヘルプ コマンド</a></li>
-<li><a class="reference internal" href="#id3">作成します。</a></li>
-<li><a class="reference internal" href="#id4">削除</a></li>
-<li><a class="reference internal" href="#id5">設定するパスワード</a></li>
-<li><a class="reference internal" href="#id6">存在します。</a></li>
-<li><a class="reference internal" href="#id7">グループを表示します。</a></li>
-<li><a class="reference internal" href="#id8">グループへの追加</a></li>
-<li><a class="reference internal" href="#id9">グループからの削除</a></li>
-<li><a class="reference internal" href="#id10">利点</a></li>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#ensure">Ensure</a></li>
+<li><a class="reference internal" href="#remove">Remove</a></li>
+<li><a class="reference internal" href="#update">Update</a></li>
+<li><a class="reference internal" href="#id3">利点</a></li>
 </ul>
 </li>
 </ul>
@@ -179,141 +176,337 @@
 </pre></div>
 </div>
 <p>次のスクリーン ショットでは、その機能について説明します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure PECL <span class="nb">help</span>
-
-******************************
-
-
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pecl <span class="nb">help</span>
+************************************
  This <span class="nb">command </span>allows you to modify create or modify pecls
 
  PECL, pecl
 
-       - create
-       Create a new system pecl, overwriting <span class="k">if </span>it exists
-       example: ptconfigure pecl create --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       - install
+       Install
+       example: ptconfigure pecl pkg-install --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
        - remove
-       Remove a system pecl
-       example: ptconfigure pecl remove --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+       Remove
+       example: ptconfigure pecl pkg-remove --package-name<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
-       - <span class="nb">set</span>-password
-       Set the password of a system pecl
-       example: ptconfigure pecl <span class="nb">set</span>-password --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
+       - ensure
+       Ensure
+       example: ptconfigure pecl pkg-ensure --package<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
 
-       - exists
-       Check the existence of a pecl
-       example: ptconfigure pecl exists --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-
-       - show-groups
-       Show groups to which a pecl belongs
-       example: ptconfigure pecl show-groups --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-
-       - add-to-group
-       Add pecl to a group
-       example: ptconfigure pecl add-to-group --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
-
-       - remove-from-group
-       Remove pecl from a group
-       example: ptconfigure pecl remove-from-group --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
-
+       - update
+       Update
+       example: ptconfigure pecl update
 ------------------------------
-End Help
 ******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>作成します。<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>このコマンドを使用すると新しいシステム pecl を作成することができます。上書きが存在場合可能です。新しい pecl 名前は単一コマンド自体に言及することができます。</p>
-<p>作成するために使用されるコマンドのとおりです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl create
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーはPECLをインストールする必要がある場合には、以下のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl pkg-install
 </pre></div>
 </div>
-<p>上記のコマンドとして入力後、それ pecl の作成を開始します。ファイルの場合既存の指示メッセージが表示されます。スクリーン ショットは、コマンドとその機能について説明します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- create
-Create a new system pecl, overwriting <span class="k">if </span>it exists
-example: ptconfigure pecl create --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pecl pkg-install
+
+Enter Package Name:
+timezonedb
+yes: standard output: Broken pipe
+yes: write error
+downloading timezonedb-2015.2.tgz ...
+Starting to download timezonedb-2015.2.tgz <span class="o">(</span>198,675 bytes<span class="o">)</span>
+.........................................done: 198,675 bytes
+5 <span class="nb">source </span>files, building
+running: phpize
+Configuring <span class="k">for</span>:
+PHP Api Version:         20121113
+Zend Module Api No:      20121212
+Zend Extension Api No:   220121212
+building in /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2
+running: /tmp/pear/temp/timezonedb/configure
+checking <span class="k">for </span>grep that handles long lines and -e... /bin/grep
+checking <span class="k">for </span>egrep... /bin/grep -E
+checking <span class="k">for </span>a sed that does not truncate output... /bin/sed
+checking <span class="k">for </span>cc... cc
+checking whether the C compiler works... yes
+checking <span class="k">for </span>C compiler default output file name... a.out
+checking <span class="k">for </span>suffix of executables...
+checking whether we are cross compiling... no
+checking <span class="k">for </span>suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking <span class="k">for </span>cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking <span class="k">for </span>icc... no
+checking <span class="k">for </span>suncc... no
+checking whether cc understands -c and -o together... yes
+checking <span class="k">for </span>system library directory... lib
+checking <span class="k">if </span>compiler supports -R... no
+checking <span class="k">if </span>compiler supports -Wl,-rpath,... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking <span class="k">for </span>PHP prefix... /usr
+checking <span class="k">for </span>PHP includes... -I/usr/include/php5 -I/usr/include/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/
+php5/ext -I/usr/include/php5/ext/date/lib
+checking <span class="k">for </span>PHP extension directory... /usr/lib/php5/20121212
+checking <span class="k">for </span>PHP installed headers prefix... /usr/include/php5
+checking <span class="k">if </span>debug is enabled... no
+checking <span class="k">if </span>zts is enabled... no
+checking <span class="k">for </span>re2c... no
+configure: WARNING: You will need re2c 0.13.4 or later <span class="k">if </span>you want to regenerate PHP parsers.
+checking <span class="k">for </span>gawk... no
+checking <span class="k">for </span>nawk... nawk
+checking <span class="k">if </span>nawk is broken... no
+checking whether to <span class="nb">enable </span>timezonedb support... yes, shared
+checking how to print strings... <span class="nb">printf</span>
+checking <span class="k">for </span>a sed that does not truncate output... <span class="o">(</span>cached<span class="o">)</span> /bin/sed
+checking <span class="k">for </span>fgrep... /bin/grep -F
+checking <span class="k">for </span>ld used by cc... /usr/bin/ld
+checking <span class="k">if </span>the linker <span class="o">(</span>/usr/bin/ld<span class="o">)</span> is GNU ld... yes
+checking <span class="k">for </span>BSD- or MS-compatible name lister <span class="o">(</span>nm<span class="o">)</span>... /usr/bin/nm -B
+checking the name lister <span class="o">(</span>/usr/bin/nm -B<span class="o">)</span> interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of <span class="nb">command </span>line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands <span class="s2">&quot;+=&quot;</span>... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking <span class="k">for</span> /usr/bin/ld option to reload object files... -r
+checking <span class="k">for </span>objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking <span class="k">for </span>dlltool... no
+checking how to associate runtime and link libraries... <span class="nb">printf</span> %s<span class="se">\n</span>
+checking <span class="k">for </span>ar... ar
+checking <span class="k">for </span>archiver @FILE support... @
+checking <span class="k">for </span>strip... strip
+checking <span class="k">for </span>ranlib... ranlib
+checking <span class="k">for </span>gawk... <span class="o">(</span>cached<span class="o">)</span> nawk
+checking <span class="nb">command </span>to parse /usr/bin/nm -B output from cc object... ok
+checking <span class="k">for </span>sysroot... no
+checking <span class="k">for </span>mt... mt
+checking <span class="k">if </span>mt is a manifest tool... no
+checking <span class="k">for </span>ANSI C header files... yes
+checking <span class="k">for </span>sys/types.h... yes
+checking <span class="k">for </span>sys/stat.h... yes
+checking <span class="k">for </span>stdlib.h... yes
+checking <span class="k">for </span>string.h... yes
+checking <span class="k">for </span>memory.h... yes
+checking <span class="k">for </span>strings.h... yes
+checking <span class="k">for </span>inttypes.h... yes
+checking <span class="k">for </span>stdint.h... yes
+checking <span class="k">for </span>unistd.h... yes
+checking <span class="k">for </span>dlfcn.h... yes
+checking <span class="k">for </span>objdir... .libs
+checking <span class="k">if </span>cc supports -fno-rtti -fno-exceptions... no
+checking <span class="k">for </span>cc option to produce PIC... -fPIC -DPIC
+checking <span class="k">if </span>cc PIC flag -fPIC -DPIC works... yes
+checking <span class="k">if </span>cc static flag -static works... yes
+checking <span class="k">if </span>cc supports -c -o file.o... yes
+checking <span class="k">if </span>cc supports -c -o file.o... <span class="o">(</span>cached<span class="o">)</span> yes
+checking whether the cc linker <span class="o">(</span>/usr/bin/ld -m elf_x86_64<span class="o">)</span> supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking <span class="k">if </span>libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+configure: creating ./config.status
+config.status: creating config.h
+config.status: executing libtool commands
+running: make
+/bin/bash /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/libtool --mode<span class="o">=</span>compile cc  -I. -I/tmp/pear/temp/timezonedb -DPHP_ATOM_INC -
+I/ tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/include -I/tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/main -I/tmp/pear/
+te  mp/timezonedb -I/usr/include/php5 -I/usr/include/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/php5/ext -I/
+usr/include/php5/ext/date/lib -I/usr/include/php/ext/date/lib  -Wall -DHAVE_CONFIG_H  -g -O2   -c /tmp/pear/temp/timezonedb/timezonedb.c -o
+timezonedb.lo
+libtool: compile:  cc -I. -I/tmp/pear/temp/timezonedb -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/include -I/tmp/
+pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/main -I/tmp/pear/temp/timezonedb -I/usr/include/php5 -I/usr/include/php5/main -I/usr/
+include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/php5/ext -I/usr/include/php5/ext/date/lib -I/usr/include/php/ext/date/lib -Wall -
+DHAVE_CONFIG_H -g -O2 -c /tmp/pear/temp/timezonedb/timezonedb.c  -fPIC -DPIC -o .libs/timezonedb.o
+/tmp/pear/temp/timezonedb/timezonedb.c: In <span class="k">function</span> <span class="s1">&#39;zm_startup_timezonedb&#39;</span>:
+/tmp/pear/temp/timezonedb/timezonedb.c:83:2: warning: passing argument 1 of <span class="s1">&#39;php_date_set_tzdb&#39;</span> discards <span class="s1">&#39;const&#39;</span> qualifier from pointer
+target <span class="nb">type</span> <span class="o">[</span>enabled by default<span class="o">]</span>
+ php_date_set_tzdb<span class="o">(</span>&amp;timezonedb_external<span class="o">)</span>;
+ ^
+In file included from /tmp/pear/temp/timezonedb/timezonedb.c:30:0:
+/usr/include/php5/ext/date/php_date.h:196:13: note: expected <span class="s1">&#39;struct timelib_tzdb *&#39;</span> but argument is of <span class="nb">type</span> <span class="s1">&#39;const struct timelib_tzdb *&#39;</span>
+PHPAPI void php_date_set_tzdb<span class="o">(</span>timelib_tzdb *tzdb<span class="o">)</span>;
+            ^
+/tmp/pear/temp/timezonedb/timezonedb.c: In <span class="k">function</span> <span class="s1">&#39;zm_info_timezonedb&#39;</span>:
+/tmp/pear/temp/timezonedb/timezonedb.c:100:23: warning: initialization discards <span class="s1">&#39;const&#39;</span> qualifier from pointer target <span class="nb">type</span> <span class="o">[</span>enabled by
+default<span class="o">]</span>
+ timelib_tzdb *tzdb <span class="o">=</span> &amp;timezonedb_external;
+                      ^
+/bin/bash /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/libtool --mode<span class="o">=</span>link cc -DPHP_ATOM_INC -I/tmp/pear/temp/pear-build-
+rootalLvFn/ timezonedb-2015.2/include -I/tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/main -I/tmp/pear/temp/timezonedb -I/usr/
+include/php5 -I/usr/include/php5/main -I/usr/include/php5/TSRM -I/usr/include/php5/Zend -I/usr/include/php5/ext -I/usr/include/php5/ext/date/
+lib -I/usr/include/php/ext/date/lib  -Wall -DHAVE_CONFIG_H  -g -O2   -o timezonedb.la -export-dynamic -avoid-version -prefer-pic -module -
+rpath /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/modules  timezonedb.lo
+libtool: link: cc -shared  -fPIC -DPIC  .libs/timezonedb.o    -O2   -Wl,-soname -Wl,timezonedb.so -o .libs/timezonedb.so
+libtool: link: <span class="o">(</span> <span class="nb">cd</span> <span class="s2">&quot;.libs&quot;</span> <span class="o">&amp;&amp;</span> rm -f <span class="s2">&quot;timezonedb.la&quot;</span> <span class="o">&amp;&amp;</span> ln -s <span class="s2">&quot;../timezonedb.la&quot;</span> <span class="s2">&quot;timezonedb.la&quot;</span> <span class="o">)</span>
+/bin/bash /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/libtool --mode<span class="o">=</span>install cp ./timezonedb.la /tmp/pear/temp/pear-build-
+rootalLvFn/timezonedb-2015.2/modules
+libtool: install: cp ./.libs/timezonedb.so /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/modules/timezonedb.so
+libtool: install: cp ./.libs/timezonedb.lai /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/modules/timezonedb.la
+libtool: finish: <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/karunakaran/bin:/home/karunakaran/karunak/</span>
+<span class="s2">bin:/sbin&quot;</span> ldconfig -n /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/modules
+----------------------------------------------------------------------
+Libraries have been installed in:
+  /tmp/pear/temp/pear-build-rootalLvFn/timezonedb-2015.2/modules
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the <span class="sb">`</span>-LLIBDIR<span class="s1">&#39;</span>
+<span class="s1">flag during linking and do at least one of the following:</span>
+<span class="s1">  - add LIBDIR to the `LD_LIBRARY_PATH&#39;</span> environment variable
+    during execution
+  - add LIBDIR to the <span class="sb">`</span>LD_RUN_PATH<span class="s1">&#39; environment variable</span>
+<span class="s1">    during linking</span>
+<span class="s1">  - use the `-Wl,-rpath -Wl,LIBDIR&#39;</span> linker flag
+  - have your system administrator add LIBDIR to <span class="sb">`</span>/etc/ld.so.conf<span class="s1">&#39;</span>
+
+<span class="s1">See any operating system documentation about shared libraries for</span>
+<span class="s1">more information, such as the ld(1) and ld.so(8) manual pages.</span>
+<span class="s1">----------------------------------------------------------------------</span>
+
+<span class="s1">Build complete.</span>
+<span class="s1">Don&#39;</span>t forget to run <span class="s1">&#39;make test&#39;</span>.
+
+running: make <span class="nv">INSTALL_ROOT</span><span class="o">=</span><span class="s2">&quot;/tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2&quot;</span> install
+Installing shared extensions:     /tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2/usr/lib/php5/20121212/
+running: find <span class="s2">&quot;/tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2&quot;</span> | xargs ls -dils
+524332   4 drwxr-xr-x 3 root root   4096 Apr  9 18:11 /tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2
+524354   4 drwxr-xr-x 3 root root   4096 Apr  9 18:11 /tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2/usr
+524355   4 drwxr-xr-x 3 root root   4096 Apr  9 18:11 /tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2/usr/lib
+524356   4 drwxr-xr-x 3 root root   4096 Apr  9 18:11 /tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2/usr/lib/php5
+524357   4 drwxr-xr-x 2 root root   4096 Apr  9 18:11 /tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2/usr/lib/php5/20121212
+524353 320 -rwxr-xr-x 1 root root 326764 Apr  9 18:11 /tmp/pear/temp/pear-build-rootalLvFn/install-timezonedb-2015.2/usr/lib/php5/20121212/
+timezonedb.so
+
+Build process completed successfully
+Installing <span class="s1">&#39;/usr/lib/php5/20121212/timezonedb.so&#39;</span>
+install ok: channel://pecl.php.net/timezonedb-2015.2
+configuration option <span class="s2">&quot;php_ini&quot;</span> is not <span class="nb">set </span>to php.ini location
+You should add <span class="s2">&quot;extension=timezonedb.so&quot;</span> to php.ini
+<span class="o">[</span>Pharaoh Logging<span class="o">]</span> Adding Package timezonedb from the Packager PECL executed correctly
+******************************
+PECL Modifications:
+--------------------------------------------
+PECL: Success
+------------------------------
+PECL Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>削除<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ensure">
+<h2>Ensure<a class="headerlink" href="#ensure" title="Permalink to this headline">¶</a></h2>
+<p>ユーザーはPECLを確保する必要がある場合、下記のコマンドは、プロセスを実行します。</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl pkg-ensure
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pecl pkg-ensure
+
+Enter Package:
+timezonedb
+ABOUT PECL.PHP.NET/TIMEZONEDB-2015.2
+====================================
+Release Type          PECL-style PHP extension (source code)
+Name                  timezonedb
+Channel               pecl.php.net
+Summary               Timezone Database to be used with PHP&#39;s date and
+                     time functions
+Description           This extension is a drop-in replacement for the
+                     builtin timezone database that
+                     comes with PHP. You should only install this
+                     extension in case you need to get
+                     a later version of the timezone database than
+                     the one that ships with PHP.
+
+                     The data that this extension uses comes from the
+                     &quot;Olson&quot; database, which is
+                     located at http://www.iana.org/time-zones.
+Maintainers           Derick Rethans &lt;derick@php.net&gt; (lead)
+Release Date          2015-03-21 13:51:19
+Release Version       2015.2 (stable)
+API Version           2015.2 (stable)
+License               PHP (http://www.php.net/license)
+Release Notes         Updated to version 2015.2 (2015b)
+Required Dependencies PHP version 4.0.0
+                     PEAR installer version 1.4.0b1 or newer
+package.xml version   2.0
+Last Modified         2015-04-09 12:41
+Previous Installed    - None -
+Version
+[Pharaoh Logging] Package timezonedb from the Packager PECL is Installed
+******************************
+
+PECL Modifications:
+--------------------------------------------
+PECL: Success
+------------------------------
+PECL Mods Finished
+******************************
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove">
+<h2>Remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドを使用すると、pecl を削除することができます。リムーバブル pecl 名前は単一コマンドライン自体に言及することができます。
 作成するために使用されるコマンドのとおりです。</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl remove
 </pre></div>
 </div>
 <p>開始後の上記のコマンドとして入力、pecl の取り外し。ファイル、pecl から既に削除した場合を示すメッセージが表示されます。スクリーン ショットは、コマンドとその機能について説明します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- remove
-Remove a system pecl
-example: ptconfigure pecl remove --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pecl pkg-remove
+
+Enter Package Name:
+timezonedb
+Unable to remove <span class="s2">&quot;extension=timezonedb.so&quot;</span> from php.ini
+uninstall ok: channel://pecl.php.net/timezonedb-2015.2
+******************************
+
+PECL Modifications:
+--------------------------------------------
+PECL: Success
+------------------------------
+PECL Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>設定するパスワード<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>Setpassward は、モジュールを pecl で root 権限で特定のコマンドを実行に使用されます。興味深いは、ユーザー パスワードを使用して、特定のコマンドと、システムの現在のユーザーのパスワードをユーザーを要求します。作成するために使用されるコマンドのとおりです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl  <span class="nb">set</span>-passward
+<div class="section" id="update">
+<h2>Update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h2>
+<p>PECLパッケージを更新するために使用されるコマンドは、以下の通りです</p>
+<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl update
 </pre></div>
 </div>
-<p>Pecl 名と新しいパスワードが同じコマンド行に言及も。これにより、このモジュールの別の利点。次のスクリーン ショットは、その機能を視覚化します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- <span class="nb">set</span>-password
-Set the password of a system pecl
-example: ptconfigure pecl <span class="nb">set</span>-password --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --new-password<span class="o">=</span><span class="s2">&quot;somepassword&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id6">
-<h2>存在します。<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<p>このコマンドは、pecl の存在を確認するために使用します。単純なコマンドは、このコマンドが正常に動作します。まずそれシステム pecl 名をチェックし、それかどうか既存かどうかを示します。次のコマンドはこの機能を実行するために使用</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl Exists
-</pre></div>
-</div>
-<p>次のスクリーン ショットは、その機能を視覚化します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- exists
-Check the existence of a pecl
-example: ptconfigure pecl exists --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id7">
-<h2>グループを表示します。<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
-<p>このコマンドは、pecl の作業グループをチェックするために使用します。単純なコマンドは、このコマンドが正常に動作します。まずグループ名 pecl 名の順にチェックイン システム、pecl が属しているグループ名を示していて、。次のコマンドはこの機能を実行するために使用します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- show-groups
-Show groups to which a pecl belongs
-example: ptconfigure pecl show-groups --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptconfigure pecl update
+Updating channel <span class="s2">&quot;doc.php.net&quot;</span>
+Channel <span class="s2">&quot;doc.php.net&quot;</span> is up to date
+Updating channel <span class="s2">&quot;pear.pdepend.org&quot;</span>
+Channel <span class="s2">&quot;pear.pdepend.org&quot;</span> is up to date
+Updating channel <span class="s2">&quot;pear.php.net&quot;</span>
+Channel <span class="s2">&quot;pear.php.net&quot;</span> is up to date
+Updating channel <span class="s2">&quot;pear.phpmd.org&quot;</span>
+Channel <span class="s2">&quot;pear.phpmd.org&quot;</span> is up to date
+Updating channel <span class="s2">&quot;pecl.php.net&quot;</span>
+Update of Channel <span class="s2">&quot;pecl.php.net&quot;</span> succeeded
+******************************
+PECL Modifications:
+--------------------------------------------
+PECL: Success
+------------------------------
+PECL Mods Finished
+******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="id8">
-<h2>グループへの追加<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
-<p>これは、pecl をグループに追加するユーザーを容易にします。追加するときそれは pecl 名とグループ名を要求することができます。よると、ユーザーが入力できる彼らの願いを。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl add-to-group
-</pre></div>
-</div>
-<p>コマンドの入力後それはグループでは pecl を追加します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- add-to-group
-Add pecl to a group
-example: ptconfigure pecl add-to-group --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id9">
-<h2>グループからの削除<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
-<p>このコマンドを使用すると、pecl グループから削除することができます。リムーバブル pecl 名前は単一コマンドライン自体に言及することができます。
-作成するために使用されるコマンドのとおりです。</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptconfigure pecl remove-from-group
-</pre></div>
-</div>
-<p>開始後の上記のコマンドとして入力、pecl グループから削除します。ファイル、pecl から既に削除した場合を示すメッセージが表示されます。スクリーン ショットは、コマンドとその機能について説明します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>- remove-from-group
-Remove pecl from a group
-example: ptconfigure pecl remove-from-group --peclname<span class="o">=</span><span class="s2">&quot;somename&quot;</span> --groupname<span class="o">=</span><span class="s2">&quot;somegroupname&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id10">
-<h2>利点<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>利点<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>非大文字小文字を区別します。</li>
 <li>Ubuntu や CentOS で裕福な。</li>
