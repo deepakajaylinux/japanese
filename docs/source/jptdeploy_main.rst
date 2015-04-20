@@ -235,6 +235,7 @@ Available Commands:
  japachevhosteditor_deploy
  jappsettings_deploy
  jautopilot_deploy
+ jbuilderfyer_deploy
  jdapperfy_deploy
  jdbconfigure_deploy
  jdbinstall_deploy
