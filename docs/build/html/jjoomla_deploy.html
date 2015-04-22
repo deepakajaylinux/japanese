@@ -98,9 +98,9 @@
 <li><a class="reference internal" href="#id2">インストール</a></li>
 <li><a class="reference internal" href="#dapperfy">Dapperfy</a></li>
 <li><a class="reference internal" href="#builderfy">Builderfy</a></li>
-<li><a class="reference internal" href="#id3">実行する</a></li>
-<li><a class="reference internal" href="#id4">オプション</a></li>
-<li><a class="reference internal" href="#id5">メリット</a></li>
+<li><a class="reference internal" href="#execute">Execute</a></li>
+<li><a class="reference internal" href="#id3">オプション</a></li>
+<li><a class="reference internal" href="#id4">メリット</a></li>
 </ul>
 </li>
 </ul>
@@ -289,16 +289,72 @@ In Dapperfy
 <div class="section" id="builderfy">
 <h2>Builderfy<a class="headerlink" href="#builderfy" title="Permalink to this headline">¶</a></h2>
 <p>これは、ビルドをインストールするためのテンプレートを作成します。ユーザーは複数のテンプレートを追加することができます。我々は、ユーザーのターゲット生産に新しいバージョンを展開する、ユーザー·リポジトリに変更を加えると。次のようにbuilderfyのために使用されるコマンドは、ある</p>
-<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy joomla
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy builderfy continuous-joomla
 </pre></div>
 </div>
 <p>次のスクリーンショットは、その機能を説明しています。</p>
-<div class="highlight-bash"><div class="highlight"><pre>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy builderfy continuous-joomla
+Install Builderfy? <span class="o">(</span>Y/N<span class="o">)</span>
+y
+*******************************
+*   Golden Contact Computing  *
+*           Builderfy!          *
+*******************************
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+checkWhat is your Jenkins home? Found <span class="s2">&quot;/var/lib/jenkins&quot;</span> - use this?
+
+What is the target Job Name?
+my-project-continuous
+Enter a description <span class="k">for </span>your project
+This is the Continuous Delivery build <span class="k">for </span>My Project
+Enter a Primary SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter a Source Branch Spec <span class="k">for </span>your project
+origin/master
+Enter a Source SCM URL <span class="k">for </span>your project
+http://146.185.129.66:8080/git/root/first-pharaoh-cd.git
+Enter the number of days to keep builds <span class="k">for</span>
+1
+Enter the max number of builds results to keep
+10
+Enter the path of the autopilot <span class="nb">test </span>environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the path of the autopilot prod environment invoke install file <span class="o">(</span>Relative to project root<span class="o">)</span>
+build/config/ptdeploy/autopilots/tiny-staging-invoke-code-no-dbconf.php
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Enter build failure Email address. Whitespace-separated list of recipient addresses
+phpengine@hotmail.co.uk
+Copying Files...
+Enter the data handling <span class="nb">type</span>
+<span class="o">(</span>0<span class="o">)</span> code
+<span class="o">(</span>1<span class="o">)</span> replication
+<span class="o">(</span>2<span class="o">)</span> capture
+0
+Changing Folder Permissions...
+Changing Folder Owner...
+Changing Folder Group...
+... All <span class="k">done</span>!
+*******************************
+Thanks <span class="k">for </span>installing , visit www.gcsoftshop.co.uk <span class="k">for </span>more
+******************************
+
+
+Success
+In Builderfy
+******************************
 </pre></div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>実行する<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="execute">
+<h2>Execute<a class="headerlink" href="#execute" title="Permalink to this headline">¶</a></h2>
 <p>このプロセスは、自動操縦ビルドクリエーターを実行します。クイックアクセスが可能です。実行のためのコマンドは、次のように</p>
 <div class="highlight-bash"><div class="highlight"><pre>ptdeploy autopilot execute
 </pre></div>
@@ -308,8 +364,8 @@ In Dapperfy
 </pre></div>
 </div>
 </div>
-<div class="section" id="id4">
-<h2>オプション<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>オプション<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="table-bordered docutils">
 <colgroup>
 <col width="20%" />
@@ -358,8 +414,8 @@ environment?(Y/N)|</td>
 </tbody>
 </table>
 </div>
-<div class="section" id="id5">
-<h2>メリット<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>メリット<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>ITプロフェッショナルのための*さてサポート</p>
 <ul class="simple">
 <li>多言語プロセス</li>

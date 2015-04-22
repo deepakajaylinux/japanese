@@ -173,10 +173,10 @@
 <div class="section" id="help">
 <h2>Helpコマンド<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、プロジェクト モジュールの使用状況を判断するのに役立ちます。ユーザーはこのモジュールを実行する別の方法/形式について知っているに来る。このコマンドをこのコマンドの目的を知っているエンド ・ ユーザーをガイドします。以下に、コマンドと同じのスクリーン ショット。</p>
-<div class="highlight-bash"><div class="highlight"><pre>               ptdeploy project <span class="nb">help</span>
-
-
-kevell@corp:/# ptdeploy Project <span class="nb">help</span>
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy project <span class="nb">help</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy Project <span class="nb">help</span>
 ******************************
 
 
@@ -215,18 +215,19 @@ End Help
 <h2>Container<a class="headerlink" href="#container" title="Permalink to this headline">¶</a></h2>
 <p>このコマンドは、改定のコンテナー フォルダーを作ることができます （のように/var/www/アプリケーション/* アプリ名 * )。</p>
 <p>インストールする必要があるとき、ユーザーは DBIstall のため、次のコマンドを発行できます。システムがインストールの手順を実行します。</p>
-<div class="highlight-bash"><div class="highlight"><pre>                ptdeploy proj container
-
-kevell@corp:/# ptdeploy proj container
+<div class="highlight-bash"><div class="highlight"><pre>ptdeploy proj container
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre>kevell@corp:/# ptdeploy proj container
 Do you want to Modify Project Container Settings? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 Do you want to initialize this as a ptdeploy project Container? <span class="o">(</span>Y/N<span class="o">)</span>
-Y
+y
 What is your Project Container directory?
-/root/gg
+/var/www/applications/the-app
 Project Container directory created
-/root/gg space /root/ggMoving to Container
-/root/gg
+/var/www/applications/the-app space /var/www/applications/the-appMoving to Container
+/var/www/applications/the-app
 Showing Container Directory
 Project Container file created
 ******************************
